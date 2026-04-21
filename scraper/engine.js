@@ -3,42 +3,17 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import puppeteer from 'puppeteer';
 
+// Import Scraper Modules
+import { scrapeVNN } from './modules/vnn.js';
+import { scrapeLeagueApps } from './modules/fxa.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Import configuration
 const fieldsConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'fieldsConfig.json'), 'utf8'));
 
-// Mock parsers for MVP demonstration.
-const scrapePlayOn = async (page, targetId, dateStr) => {
-  const hasEvent = Math.random() > 0.6; // randomly 40% chance of an event on any given day
-  if (hasEvent) {
-    // Show that we pick up non-soccer activities
-    const types = [
-      [{ time: "3:30 PM - 5:30 PM", title: "Girls Varsity Lacrosse Game" }],
-      [{ time: "8:00 AM - 11:00 AM", title: "Weekend Football Camp" }, { time: "6:00 PM - 8:00 PM", title: "Boys Varsity Soccer" }],
-      [{ time: "6:00 PM - 8:30 PM", title: "Varsity Field Hockey" }],
-      [{ time: "8:00 AM - 10:00 AM", title: "Track & Field Meet Config" }]
-    ];
-    return types[Math.floor(Math.random() * types.length)];
-  }
-  return [];
-};
-
-const scrapeAFAR = async (page, targetId, dateStr) => {
-  const hasLeagueEvent = Math.random() > 0.7; // 30% chance for parks
-  if (hasLeagueEvent) {
-    const types = [
-      [{ time: "6:00 PM - 7:30 PM", title: "Youth Soccer Practice Permit" }],
-      [{ time: "8:00 AM - 12:00 PM", title: "FXA Flag Football League matches" }],
-      [{ time: "1:00 PM - 5:00 PM", title: "NCSL Soccer Tournament" }],
-      [{ time: "8:00 PM - 10:00 PM", title: "Adult Rec League Matches Permit" }],
-      [{ time: "8:00 AM - 11:00 AM", title: "Private Event Permit" }]
-    ];
-    return types[Math.floor(Math.random() * types.length)];
-  }
-  return [];
-};
+// Parsers imported from modules
 
 async function runScraper() {
   console.log("🚀 Starting Pitch Scout Data Aggregator (30-Day Lookahead)...");
@@ -71,10 +46,17 @@ async function runScraper() {
       let statusReason = 'Schedule Clear';
 
       try {
-        if (field.scraperTarget === 'playon') {
-          events = await scrapePlayOn(page, field.targetId, dateStr);
-        } else if (field.scraperTarget === 'afar') {
-          events = await scrapeAFAR(page, field.targetId, dateStr);
+        if (field.scraperTarget === 'playon' || field.scraperTarget === 'vnn') {
+          // Pass the high school website domains
+          let domain = 'chantillyathletics.com'; 
+          if(field.targetId.includes('centreville')) domain = 'centrevilleathletics.com';
+          if(field.targetId.includes('westfield')) domain = 'westfieldathletics.com';
+          
+          events = await scrapeVNN(page, domain, dateStr);
+          
+        } else if (field.scraperTarget === 'afar' || field.scraperTarget === 'league') {
+          // Pass the league domains for park fields
+          events = await scrapeLeagueApps(page, "fxasports.com", dateStr);
         }
         
         if (events.length > 0) {
