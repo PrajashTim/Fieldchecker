@@ -1,0 +1,35 @@
+name: Pitch Scout Daily Scraper
+
+on:
+  schedule:
+    # Run every day at 12:00 PM EST (16:00 UTC)
+    - cron: '0 16 * * *'
+  workflow_dispatch: # Allow manual triggering from GitHub UI
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Scraper
+        run: node scraper/engine.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'pitchscout-bot'
+          git config --global user.email 'bot@pitchscout.local'
+          git add src/data/mockState.json
+          git commit -m "Auto-update field schedules [skip ci]" || echo "No changes to commit"
+          git push
