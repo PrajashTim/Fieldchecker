@@ -23,24 +23,28 @@ const Dashboard = () => {
 
     if (!filter630 && !filter800) return true;
 
-    // Determine availability logic
-    if (field.status === 'open' && field.events.length === 0) return true;
-    
     if (filter630) {
       const hasEveningBlock = field.events.some(e => 
-        e.time.includes('6:00') || e.time.includes('6:30') || e.time.includes('7:00')
+        e.time.includes('6:00') || e.time.includes('6:30') || e.time.includes('7:00') || e.time.includes('8:00 PM') || e.time.includes('8:30 PM')
       );
-      if (hasEveningBlock && field.status === 'occupied') return false;
+      if (hasEveningBlock) return false;
     }
 
     if (filter800) {
       const hasMorningBlock = field.events.some(e => 
-        e.time.includes('8:00 AM') || e.time.includes('8:30 AM') || e.time.includes('9:00 AM')
+        e.time.includes('8:00 AM') || e.time.includes('8:30 AM') || e.time.includes('9:00 AM') || e.time.includes('10:00 AM')
       );
-      if (hasMorningBlock && field.status === 'occupied') return false;
+      if (hasMorningBlock) return false;
     }
     
-    return field.status === 'open';
+    // If the filters are active and the specific block isn't taken, it is available for that block regardless of daytime events!
+    return true;
+  };
+
+  const formatDateLabel = (dateStr, index) => {
+    if (index === 0) return `Today (${dateStr})`;
+    if (index === 1) return `Tomorrow (${dateStr})`;
+    return dateStr;
   };
 
   const displayedFields = fieldsForDate.filter(checkAvailability);
@@ -62,8 +66,8 @@ const Dashboard = () => {
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
             >
-              {availableDates.map(dateStr => (
-                <option key={dateStr} value={dateStr}>{dateStr}</option>
+              {availableDates.map((dateStr, idx) => (
+                <option key={dateStr} value={dateStr}>{formatDateLabel(dateStr, idx)}</option>
               ))}
             </select>
           </div>
