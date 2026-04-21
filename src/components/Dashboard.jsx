@@ -97,7 +97,7 @@ const Dashboard = () => {
 
       <div className="fields-grid">
         {displayedFields.map((field) => (
-          <FieldCard key={field.id} field={field} />
+          <FieldCard key={field.id} field={field} filter630={filter630} filter800={filter800} />
         ))}
       </div>
       

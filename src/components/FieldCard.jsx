@@ -1,18 +1,39 @@
 import React from 'react';
 
-const FieldCard = ({ field }) => {
+const FieldCard = ({ field, filter630, filter800 }) => {
   const { name, subfield, location, status, statusReason, events } = field;
 
   // Determine status color class
   let statusClass = 'status-unknown';
   let statusLabel = 'Unknown';
+  let displayReason = statusReason;
 
-  if (status === 'open') {
-    statusClass = 'status-open';
-    statusLabel = 'Available Now';
-  } else if (status === 'occupied') {
-    statusClass = 'status-occupied';
-    statusLabel = 'Occupied / Scheduled';
+  const isTimeFilterActive = filter630 || filter800;
+
+  if (isTimeFilterActive) {
+    statusClass = 'status-open'; // Forced green because this component only renders if the filter passed!
+    
+    let timeLabel = '';
+    if (filter630 && filter800) timeLabel = '8:00 AM & 6:30 PM';
+    else if (filter630) timeLabel = '6:30 PM+';
+    else if (filter800) timeLabel = '8:00 AM+';
+
+    statusLabel = `Open at ${timeLabel}`;
+    
+    if (status === 'occupied') {
+      displayReason = 'This field has events today, but is wide open during your requested time!';
+    } else {
+      displayReason = 'Schedule clears - no events all day.';
+    }
+  } else {
+    // Normal Logic
+    if (status === 'open') {
+      statusClass = 'status-open';
+      statusLabel = 'Available Today';
+    } else if (status === 'occupied') {
+      statusClass = 'status-occupied';
+      statusLabel = 'Occupied / Scheduled';
+    }
   }
 
   return (
@@ -33,7 +54,7 @@ const FieldCard = ({ field }) => {
         </div>
         
         <div className="status-reason">
-          {statusReason}
+          {displayReason}
         </div>
       </div>
 
