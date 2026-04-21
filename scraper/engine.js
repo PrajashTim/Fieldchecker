@@ -13,10 +13,14 @@ const fieldsConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'fieldsConf
 const scrapePlayOn = async (page, targetId, dateStr) => {
   const hasEvent = Math.random() > 0.6; // randomly 40% chance of an event on any given day
   if (hasEvent) {
-    return [
-      { time: "5:00 PM - 7:00 PM", title: "Boys JV Soccer Game" },
-      { time: "7:00 PM - 9:00 PM", title: "Boys Varsity Soccer Game" }
+    // Show that we pick up non-soccer activities
+    const types = [
+      [{ time: "3:30 PM - 5:30 PM", title: "Girls Varsity Lacrosse Game" }],
+      [{ time: "8:00 AM - 11:00 AM", title: "Weekend Football Camp" }, { time: "6:00 PM - 8:00 PM", title: "Boys Varsity Soccer" }],
+      [{ time: "6:00 PM - 8:30 PM", title: "Varsity Field Hockey" }],
+      [{ time: "8:00 AM - 10:00 AM", title: "Track & Field Meet Config" }]
     ];
+    return types[Math.floor(Math.random() * types.length)];
   }
   return [];
 };
@@ -24,10 +28,14 @@ const scrapePlayOn = async (page, targetId, dateStr) => {
 const scrapeAFAR = async (page, targetId, dateStr) => {
   const hasLeagueEvent = Math.random() > 0.7; // 30% chance for parks
   if (hasLeagueEvent) {
-    return [
-      { time: "6:00 PM - 7:30 PM", title: "Youth Soccer Practice Permit" },
-      { time: "8:00 PM - 10:00 PM", title: "Adult League Matches Permit" }
+    const types = [
+      [{ time: "6:00 PM - 7:30 PM", title: "Youth Soccer Practice Permit" }],
+      [{ time: "8:00 AM - 12:00 PM", title: "FXA Flag Football League matches" }],
+      [{ time: "1:00 PM - 5:00 PM", title: "NCSL Soccer Tournament" }],
+      [{ time: "8:00 PM - 10:00 PM", title: "Adult Rec League Matches Permit" }],
+      [{ time: "8:00 AM - 11:00 AM", title: "Private Event Permit" }]
     ];
+    return types[Math.floor(Math.random() * types.length)];
   }
   return [];
 };

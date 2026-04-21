@@ -9,6 +9,7 @@ const Dashboard = () => {
   // Default to the first available date (today)
   const [selectedDate, setSelectedDate] = useState(availableDates[0]);
   const [filter630, setFilter630] = useState(false);
+  const [filter800, setFilter800] = useState(false);
   const [filterTurf, setFilterTurf] = useState(false);
 
   // Get the fields for the currently selected date
@@ -20,17 +21,23 @@ const Dashboard = () => {
       return false;
     }
 
-    if (!filter630) return true;
+    if (!filter630 && !filter800) return true;
 
-    // 6:30 PM+ Logic
+    // Determine availability logic
     if (field.status === 'open' && field.events.length === 0) return true;
     
-    const hasEveningBlock = field.events.some(e => 
-      e.time.includes('6:00') || e.time.includes('6:30') || e.time.includes('7:00')
-    );
-    
-    if (hasEveningBlock && field.status === 'occupied') {
-      return false;
+    if (filter630) {
+      const hasEveningBlock = field.events.some(e => 
+        e.time.includes('6:00') || e.time.includes('6:30') || e.time.includes('7:00')
+      );
+      if (hasEveningBlock && field.status === 'occupied') return false;
+    }
+
+    if (filter800) {
+      const hasMorningBlock = field.events.some(e => 
+        e.time.includes('8:00 AM') || e.time.includes('8:30 AM') || e.time.includes('9:00 AM')
+      );
+      if (hasMorningBlock && field.status === 'occupied') return false;
     }
     
     return field.status === 'open';
@@ -72,7 +79,14 @@ const Dashboard = () => {
             className={`filter-btn ${filter630 ? 'active' : ''}`}
             onClick={() => setFilter630(!filter630)}
           >
-            {filter630 ? '⏱️ 6:30+ Available' : '⏱️ Open 6:30 PM'}
+            {filter630 ? '⏱️ 6:30 PM+ Open' : '⏱️ Check 6:30 PM'}
+          </button>
+          
+          <button 
+            className={`filter-btn ${filter800 ? 'active' : ''}`}
+            onClick={() => setFilter800(!filter800)}
+          >
+            {filter800 ? '☀️ 8:00 AM+ Open' : '☀️ Check 8:00 AM'}
           </button>
         </div>
       </div>
