@@ -35,16 +35,18 @@ const LOCATION_TO_FIELD = {
   'Stringfellow Park (Turf Front)':    'stringfellow-1',
   'Stringfellow Park (Field 1)':       'stringfellow-1',
   'Stringfellow Park':                 'stringfellow-1',
-  // Arrowhead Park — IDs confirmed in LeagueApps (loc 31722 / 119569)
-  // Exact strings verified from unmapped-location log on first run
-  'Arrowhead Park (Field 1)':          'arrowhead-1',
-  'Arrowhead Park (Field 1A)':         'arrowhead-1a',
-  'Arrowhead Park (Field 1B)':         'arrowhead-1b',
-  'Arrowhead Park (Field 3)':          'arrowhead-3',
-  'Arrowhead Park (Field 3A)':         'arrowhead-3a',
-  'Arrowhead Park (Field 3B)':         'arrowhead-3b',
-  'Arrowhead Park (Field 3C)':         'arrowhead-3c',
+  // Arrowhead Park — FXA uses "Arrowhead Park Turf (Field X)" format
   'Arrowhead Park Turf':               'arrowhead-1',
+  'Arrowhead Park Turf (Field 1)':     'arrowhead-1',
+  'Arrowhead Park Turf (Field 1A)':    'arrowhead-1a',
+  'Arrowhead Park Turf (Field 1B)':    'arrowhead-1b',
+  'Arrowhead Park Turf (Field 3)':     'arrowhead-3',
+  'Arrowhead Park Turf (Field 3A)':    'arrowhead-3a',
+  'Arrowhead Park Turf (Field 3B)':    'arrowhead-3b',
+  'Arrowhead Park Turf (Field 3C)':    'arrowhead-3c',
+  // FXA also books these school stadium fields for adult leagues
+  'Chantilly High School (Stadium Field)':  'chantilly-hs-turf',
+  'Westfield High School (Stadium Field)':  'westfield-hs-turf',
 };
 
 function httpsGet(url, extraHeaders = {}) {

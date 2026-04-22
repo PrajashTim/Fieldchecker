@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T02:11:56.359Z",
+  "lastUpdated": "2026-04-22T03:11:23.575Z",
   "schedule": {
     "2026-04-21": [
       {
@@ -29,9 +29,20 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "5:45 PM",
+            "title": "Girls JV Soccer — vs Oakton High School",
+            "location": "Centreville High School"
+          },
+          {
+            "time": "7:15 PM",
+            "title": "Girls Varsity Soccer — vs Oakton High School",
+            "location": "Centreville High School"
+          }
+        ]
       },
       {
         "id": "westfield-hs-turf",
@@ -39,9 +50,20 @@
         "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "5:45 PM",
+            "title": "Girls JV Soccer — vs Chantilly High School",
+            "location": "Westfield High School"
+          },
+          {
+            "time": "7:15 PM",
+            "title": "Girls Varsity Soccer — vs Chantilly High School",
+            "location": "Westfield High School"
+          }
+        ]
       },
       {
         "id": "poplar-tree-3",
@@ -198,6 +220,76 @@
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-22": [
@@ -396,6 +488,76 @@
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-23": [
@@ -462,33 +624,33 @@
         "events": [
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           }
         ]
       },
@@ -642,6 +804,76 @@
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-24": [
@@ -818,6 +1050,76 @@
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-25": [
@@ -937,6 +1239,76 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
@@ -1163,6 +1535,76 @@
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-27": [
@@ -1361,6 +1803,76 @@
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ]
   }

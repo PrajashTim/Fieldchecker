@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 import { fetchFxaEvents } from './modules/fxa.js';
 import { fetchChantillyEvents } from './modules/chantilly.js';
+import { fetchHighSchoolEvents } from './modules/highschools.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,26 +35,18 @@ async function runScraper() {
   console.log('🚀 Pitch Scout — scraping next 7 days...');
 
   const today = new Date();
-  // Use local date string to avoid UTC offset issues
-  const todayStr = [
-    today.getFullYear(),
-    String(today.getMonth() + 1).padStart(2, '0'),
-    String(today.getDate()).padStart(2, '0'),
-  ].join('-');
+  const todayStr = localDateStr(today);
   const endDate = new Date(today);
   endDate.setDate(today.getDate() + 7);
-  const endStr = [
-    endDate.getFullYear(),
-    String(endDate.getMonth() + 1).padStart(2, '0'),
-    String(endDate.getDate()).padStart(2, '0'),
-  ].join('-');
+  const endStr = localDateStr(endDate);
 
   const dates = dateRange(today, 7);
 
   // Fetch all data sources in parallel
-  const [fxaByField, chantillyByDate] = await Promise.all([
+  const [fxaByField, chantillyByDate, hsByField] = await Promise.all([
     fetchFxaEvents(today, endDate),
     fetchChantillyEvents(todayStr, endStr),
+    fetchHighSchoolEvents(todayStr, endStr),
   ]);
 
   // Build schedule output
@@ -64,9 +57,14 @@ async function runScraper() {
       let events = [];
 
       if (field.scraperTarget === 'fxa') {
-        events = fxaByField[field.id]?.[dateStr] ?? [];
+        // FXA adult leagues + school athletics both contribute to the same field
+        const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
+        const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
+        events = [...fxaEvents, ...hsEvents];
       } else if (field.scraperTarget === 'chantilly') {
-        events = chantillyByDate[dateStr] ?? [];
+        const chantillyEvents = chantillyByDate[dateStr] ?? [];
+        const hsEvents        = hsByField[field.id]?.[dateStr] ?? [];
+        events = [...chantillyEvents, ...hsEvents];
       }
 
       const status = events.length > 0 ? 'occupied' : 'open';
