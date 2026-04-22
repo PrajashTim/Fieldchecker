@@ -5,79 +5,8 @@
     "name": "Chantilly High School",
     "subfield": "Stadium Turf",
     "type": "Turf",
-    "location": "Chantilly, VA"
-  },
-  {
-    "id": "centreville-hs-turf",
-    "scraperTarget": "fxa",
-    "fxaLocation": "Centreville High School (Aux Field)",
-    "name": "Centreville High School",
-    "subfield": "Aux Turf Field",
-    "type": "Turf",
-    "location": "Clifton, VA"
-  },
-  {
-    "id": "westfield-hs-turf",
-    "scraperTarget": "fxa",
-    "fxaLocation": "Westfield High School (Aux Field 1)",
-    "name": "Westfield High School",
-    "subfield": "Aux Turf Field 1",
-    "type": "Turf",
-    "location": "Chantilly, VA"
-  },
-  {
-    "id": "poplar-tree-3",
-    "scraperTarget": "fxa",
-    "fxaLocation": "Poplar Tree Park (Field 3)",
-    "name": "Poplar Tree Park",
-    "subfield": "Turf Field 3",
-    "type": "Turf",
-    "location": "Chantilly, VA"
-  },
-  {
-    "id": "sully-highlands-1",
-    "scraperTarget": "fxa",
-    "fxaLocation": "Sully Highlands Park (Field 1)",
-    "name": "Sully Highlands Park",
-    "subfield": "Turf Field 1",
-    "type": "Turf",
-    "location": "Herndon, VA"
-  },
-  {
-    "id": "sully-highlands-2",
-    "scraperTarget": "fxa",
-    "fxaLocation": "Sully Highlands Park (Field 2)",
-    "name": "Sully Highlands Park",
-    "subfield": "Turf Field 2",
-    "type": "Turf",
-    "location": "Herndon, VA"
-  },
-  {
-    "id": "eclawrence-2",
-    "scraperTarget": "fxa",
-    "fxaLocation": "EC Lawrence Park (Field 2)",
-    "name": "E.C. Lawrence Park",
-    "subfield": "Turf Field 2",
-    "type": "Turf",
-    "location": "Chantilly, VA"
-  },
-  {
-    "id": "eclawrence-3a",
-    "scraperTarget": "fxa",
-    "fxaLocation": "EC Lawrence Park (Field 3A)",
-    "name": "E.C. Lawrence Park",
-    "subfield": "Turf Field 3A",
-    "type": "Turf",
-    "location": "Chantilly, VA"
-  },
-  {
-    "id": "eclawrence-3b",
-    "scraperTarget": "fxa",
-    "fxaLocation": "EC Lawrence Park (Field 3B)",
-    "name": "E.C. Lawrence Park",
-    "subfield": "Turf Field 3B",
-    "type": "Turf",
-    "location": "Chantilly, VA"
+    "location": "Chantilly, VA",
+    "distanceMi": 0
   },
   {
     "id": "stringfellow-1",
@@ -86,7 +15,178 @@
     "name": "Stringfellow Park",
     "subfield": "Turf Field",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Centreville, VA",
+    "distanceMi": 0.5
+  },
+  {
+    "id": "poplar-tree-3",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Poplar Tree Park (Field 3)",
+    "name": "Poplar Tree Park",
+    "subfield": "Turf Field 3",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.1
+  },
+  {
+    "id": "poplar-tree-2",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Poplar Tree Park (Field 2)",
+    "name": "Poplar Tree Park",
+    "subfield": "Turf Field 2",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.1
+  },
+  {
+    "id": "westfield-hs-turf",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Westfield High School (Aux Field 1)",
+    "name": "Westfield High School",
+    "subfield": "Aux Turf Field",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.3
+  },
+  {
+    "id": "eclawrence-2",
+    "scraperTarget": "fxa",
+    "fxaLocation": "EC Lawrence Park (Field 2)",
+    "name": "E.C. Lawrence Park",
+    "subfield": "Turf Field 2",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.4
+  },
+  {
+    "id": "eclawrence-3a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "EC Lawrence Park (Field 3A)",
+    "name": "E.C. Lawrence Park",
+    "subfield": "Turf Field 3A",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.4
+  },
+  {
+    "id": "eclawrence-3b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "EC Lawrence Park (Field 3B)",
+    "name": "E.C. Lawrence Park",
+    "subfield": "Turf Field 3B",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.4
+  },
+  {
+    "id": "arrowhead-1",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 1)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 1",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-1a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 1A)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 1A",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-1b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 1B)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 1B",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-3",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 3)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 3",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-3a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 3A)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 3A",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-3b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 3B)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 3B",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "arrowhead-3c",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Arrowhead Park Turf (Field 3C)",
+    "name": "Arrowhead Park",
+    "subfield": "Turf Field 3C",
+    "type": "Turf",
+    "location": "Centreville, VA",
+    "distanceMi": 2.3
+  },
+  {
+    "id": "centreville-hs-turf",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Centreville High School (Aux Field)",
+    "name": "Centreville High School",
+    "subfield": "Aux Turf Field",
+    "type": "Turf",
+    "location": "Clifton, VA",
+    "distanceMi": 2.5
+  },
+  {
+    "id": "sully-highlands-1",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Sully Highlands Park (Field 1)",
+    "name": "Sully Highlands Park",
+    "subfield": "Turf Field 1",
+    "type": "Turf",
+    "location": "Herndon, VA",
+    "distanceMi": 3.5
+  },
+  {
+    "id": "sully-highlands-2",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Sully Highlands Park (Field 2)",
+    "name": "Sully Highlands Park",
+    "subfield": "Turf Field 2",
+    "type": "Turf",
+    "location": "Herndon, VA",
+    "distanceMi": 3.5
+  },
+  {
+    "id": "greenbriar-5",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Greenbriar Park (Field 5)",
+    "name": "Greenbriar Park",
+    "subfield": "Field 5",
+    "type": "Turf",
+    "location": "Fairfax, VA",
+    "distanceMi": 3.6
   },
   {
     "id": "greenbriar-5a",
@@ -95,7 +195,8 @@
     "name": "Greenbriar Park",
     "subfield": "Field 5A",
     "type": "Turf",
-    "location": "Fairfax, VA"
+    "location": "Fairfax, VA",
+    "distanceMi": 3.6
   },
   {
     "id": "greenbriar-5b",
@@ -104,69 +205,207 @@
     "name": "Greenbriar Park",
     "subfield": "Field 5B",
     "type": "Turf",
-    "location": "Fairfax, VA"
+    "location": "Fairfax, VA",
+    "distanceMi": 3.6
   },
   {
-    "id": "arrowhead-1",
+    "id": "cunningham-1",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 1)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 1",
+    "fxaLocation": "Cunningham Park (Field 1)",
+    "name": "Cunningham Park",
+    "subfield": "Field 1",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Fairfax, VA",
+    "distanceMi": 4.0
   },
   {
-    "id": "arrowhead-1a",
+    "id": "nottoway-4a",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 1A)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 1A",
+    "fxaLocation": "Nottoway Park (Field 4A)",
+    "name": "Nottoway Park",
+    "subfield": "Field 4A",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Fairfax, VA",
+    "distanceMi": 5.2
   },
   {
-    "id": "arrowhead-1b",
+    "id": "nottoway-4b",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 1B)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 1B",
+    "fxaLocation": "Nottoway Park (Field 4B)",
+    "name": "Nottoway Park",
+    "subfield": "Field 4B",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Fairfax, VA",
+    "distanceMi": 5.2
   },
   {
-    "id": "arrowhead-3",
+    "id": "arrowbrook-1",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 3)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 3",
+    "fxaLocation": "Arrowbrook Park Turf",
+    "name": "Arrowbrook Park",
+    "subfield": "Turf Field",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Herndon, VA",
+    "distanceMi": 5.3
   },
   {
-    "id": "arrowhead-3a",
+    "id": "oakmont-1",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 3A)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 3A",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 1)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 1",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
   },
   {
-    "id": "arrowhead-3b",
+    "id": "oakmont-1a",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 3B)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 3B",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 1A)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 1A",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
   },
   {
-    "id": "arrowhead-3c",
+    "id": "oakmont-1b",
     "scraperTarget": "fxa",
-    "fxaLocation": "Arrowhead Park (Field 3C)",
-    "name": "Arrowhead Park",
-    "subfield": "Turf Field 3C",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 1B)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 1B",
     "type": "Turf",
-    "location": "Centreville, VA"
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
+  },
+  {
+    "id": "oakmont-1c",
+    "scraperTarget": "fxa",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 1C)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 1C",
+    "type": "Turf",
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
+  },
+  {
+    "id": "oakmont-2",
+    "scraperTarget": "fxa",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 2)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 2",
+    "type": "Turf",
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
+  },
+  {
+    "id": "oakmont-2a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 2A)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 2A",
+    "type": "Turf",
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
+  },
+  {
+    "id": "oakmont-2b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "OakMont Park (Oak Marr) (Field 2B)",
+    "name": "OakMont Park (Oak Marr)",
+    "subfield": "Field 2B",
+    "type": "Turf",
+    "location": "Oakton, VA",
+    "distanceMi": 5.9
+  },
+  {
+    "id": "lake-fairfax-1",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Lake Fairfax Park (Field 1)",
+    "name": "Lake Fairfax Park",
+    "subfield": "Field 1",
+    "type": "Turf",
+    "location": "Reston, VA",
+    "distanceMi": 7.7
+  },
+  {
+    "id": "lake-fairfax-3",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Lake Fairfax Park (Field 3)",
+    "name": "Lake Fairfax Park",
+    "subfield": "Field 3",
+    "type": "Turf",
+    "location": "Reston, VA",
+    "distanceMi": 7.7
+  },
+  {
+    "id": "lake-fairfax-5",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Lake Fairfax Park (Field 5)",
+    "name": "Lake Fairfax Park",
+    "subfield": "Field 5",
+    "type": "Turf",
+    "location": "Reston, VA",
+    "distanceMi": 7.7
+  },
+  {
+    "id": "bready-1a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Bready Park (Field 1A)",
+    "name": "Bready Park",
+    "subfield": "Field 1A",
+    "type": "Turf",
+    "location": "Springfield, VA",
+    "distanceMi": 8.4
+  },
+  {
+    "id": "bready-1b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Bready Park (Field 1B)",
+    "name": "Bready Park",
+    "subfield": "Field 1B",
+    "type": "Turf",
+    "location": "Springfield, VA",
+    "distanceMi": 8.4
+  },
+  {
+    "id": "braddock-7",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Braddock Park Turf (Field 7)",
+    "name": "Braddock Park",
+    "subfield": "Turf Field 7",
+    "type": "Turf",
+    "location": "Burke, VA",
+    "distanceMi": 9.2
+  },
+  {
+    "id": "braddock-7a",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Braddock Park Turf (Field 7A)",
+    "name": "Braddock Park",
+    "subfield": "Turf Field 7A",
+    "type": "Turf",
+    "location": "Burke, VA",
+    "distanceMi": 9.2
+  },
+  {
+    "id": "braddock-7b",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Braddock Park Turf (Field 7B)",
+    "name": "Braddock Park",
+    "subfield": "Turf Field 7B",
+    "type": "Turf",
+    "location": "Burke, VA",
+    "distanceMi": 9.2
+  },
+  {
+    "id": "south-county-hs-turf",
+    "scraperTarget": "fxa",
+    "fxaLocation": "South County High School (Aux Field)",
+    "name": "South County High School",
+    "subfield": "Aux Turf Field",
+    "type": "Turf",
+    "location": "Lorton, VA",
+    "distanceMi": 15.8
   }
 ]

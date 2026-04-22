@@ -16,26 +16,25 @@ const FXA_API_KEY = 'asd2wsdasdasdasdasdasdgasdgxvasd';
 const NOVA_SITE_ID = 15768;
 
 // Maps FXA location name → our field ID(s)
+// Ordered roughly by distance from Chantilly HS
 const LOCATION_TO_FIELD = {
+  // Chantilly HS — FXA adult leagues also book the stadium
+  'Chantilly High School (Stadium Field)':  'chantilly-hs-turf',
+  // Stringfellow Park (0.5 mi)
+  'Stringfellow Park':                 'stringfellow-1',
+  'Stringfellow Park (Field 1)':       'stringfellow-1',
+  'Stringfellow Park (Turf Front)':    'stringfellow-1',
+  // Poplar Tree Park (1.1 mi)
+  'Poplar Tree Park (Field 2)':        'poplar-tree-2',
+  'Poplar Tree Park (Field 3)':        'poplar-tree-3',
+  // Westfield HS (1.3 mi)
+  'Westfield High School (Aux Field 1)':   'westfield-hs-turf',
+  'Westfield High School (Stadium Field)': 'westfield-hs-turf',
+  // EC Lawrence Park (1.4 mi)
   'EC Lawrence Park (Field 2)':        'eclawrence-2',
   'EC Lawrence Park (Field 3A)':       'eclawrence-3a',
   'EC Lawrence Park (Field 3B)':       'eclawrence-3b',
-  'Greenbriar Park (Field 5A)':        'greenbriar-5a',
-  'Greenbriar Park (Field 5B)':        'greenbriar-5b',
-  'Poplar Tree Park (Field 2)':        'poplar-tree-2',
-  'Poplar Tree Park (Field 3)':        'poplar-tree-3',
-  'Sully Highlands Park (Field 1)':    'sully-highlands-1',
-  'Sully Highlands Park (Field 1A)':   'sully-highlands-1',
-  'Sully Highlands Park (Field 1B)':   'sully-highlands-1',
-  'Sully Highlands Park (Field 2)':    'sully-highlands-2',
-  'Sully Highlands Park (Field 2A)':   'sully-highlands-2',
-  'Sully Highlands Park (Field 2B)':   'sully-highlands-2',
-  'Westfield High School (Aux Field 1)': 'westfield-hs-turf',
-  'Centreville High School (Aux Field)': 'centreville-hs-turf',
-  'Stringfellow Park (Turf Front)':    'stringfellow-1',
-  'Stringfellow Park (Field 1)':       'stringfellow-1',
-  'Stringfellow Park':                 'stringfellow-1',
-  // Arrowhead Park — FXA uses "Arrowhead Park Turf (Field X)" format
+  // Arrowhead Park (2.3 mi) — FXA uses "Arrowhead Park Turf (Field X)" format
   'Arrowhead Park Turf':               'arrowhead-1',
   'Arrowhead Park Turf (Field 1)':     'arrowhead-1',
   'Arrowhead Park Turf (Field 1A)':    'arrowhead-1a',
@@ -44,9 +43,47 @@ const LOCATION_TO_FIELD = {
   'Arrowhead Park Turf (Field 3A)':    'arrowhead-3a',
   'Arrowhead Park Turf (Field 3B)':    'arrowhead-3b',
   'Arrowhead Park Turf (Field 3C)':    'arrowhead-3c',
-  // FXA also books these school stadium fields for adult leagues
-  'Chantilly High School (Stadium Field)':  'chantilly-hs-turf',
-  'Westfield High School (Stadium Field)':  'westfield-hs-turf',
+  // Centreville HS (2.5 mi)
+  'Centreville High School (Aux Field)':   'centreville-hs-turf',
+  // Sully Highlands Park (3.5 mi)
+  'Sully Highlands Park (Field 1)':    'sully-highlands-1',
+  'Sully Highlands Park (Field 1A)':   'sully-highlands-1',
+  'Sully Highlands Park (Field 1B)':   'sully-highlands-1',
+  'Sully Highlands Park (Field 2)':    'sully-highlands-2',
+  'Sully Highlands Park (Field 2A)':   'sully-highlands-2',
+  'Sully Highlands Park (Field 2B)':   'sully-highlands-2',
+  // Greenbriar Park (3.6 mi)
+  'Greenbriar Park (Field 5)':         'greenbriar-5',
+  'Greenbriar Park (Field 5A)':        'greenbriar-5a',
+  'Greenbriar Park (Field 5B)':        'greenbriar-5b',
+  // Cunningham Park (4.0 mi)
+  'Cunningham Park (Field 1)':         'cunningham-1',
+  // Nottoway Park (5.2 mi)
+  'Nottoway Park (Field 4A)':          'nottoway-4a',
+  'Nottoway Park (Field 4B)':          'nottoway-4b',
+  // Arrowbrook Park (5.3 mi)
+  'Arrowbrook Park Turf':              'arrowbrook-1',
+  // OakMont Park / Oak Marr (5.9 mi)
+  'OakMont Park (Oak Marr) (Field 1)':  'oakmont-1',
+  'OakMont Park (Oak Marr) (Field 1A)': 'oakmont-1a',
+  'OakMont Park (Oak Marr) (Field 1B)': 'oakmont-1b',
+  'OakMont Park (Oak Marr) (Field 1C)': 'oakmont-1c',
+  'OakMont Park (Oak Marr) (Field 2)':  'oakmont-2',
+  'OakMont Park (Oak Marr) (Field 2A)': 'oakmont-2a',
+  'OakMont Park (Oak Marr) (Field 2B)': 'oakmont-2b',
+  // Lake Fairfax Park (7.7 mi)
+  'Lake Fairfax Park (Field 1)':       'lake-fairfax-1',
+  'Lake Fairfax Park (Field 3)':       'lake-fairfax-3',
+  'Lake Fairfax Park (Field 5)':       'lake-fairfax-5',
+  // Bready Park (8.4 mi)
+  'Bready Park (Field 1A)':            'bready-1a',
+  'Bready Park (Field 1B)':            'bready-1b',
+  // Braddock Park (9.2 mi)
+  'Braddock Park Turf (Field 7)':      'braddock-7',
+  'Braddock Park Turf (Field 7A)':     'braddock-7a',
+  'Braddock Park Turf (Field 7B)':     'braddock-7b',
+  // South County HS (15.8 mi)
+  'South County High School (Aux Field)': 'south-county-hs-turf',
 };
 
 function httpsGet(url, extraHeaders = {}) {
