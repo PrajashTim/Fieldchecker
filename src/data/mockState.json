@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T21:21:28.752Z",
+  "lastUpdated": "2026-04-22T02:11:56.359Z",
   "schedule": {
     "2026-04-21": [
       {
@@ -12,100 +12,31 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
+            "time": "5:45 PM",
+            "title": "Boys JV Soccer — vs Westfield High School",
+            "location": "Chantilly High School"
+          },
+          {
+            "time": "7:15 PM",
+            "title": "Boys Varsity Soccer — vs Westfield High School",
+            "location": "Chantilly High School"
           }
         ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
       },
       {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -128,9 +59,20 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -138,9 +80,20 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          }
+        ]
       },
       {
         "id": "eclawrence-2",
@@ -153,24 +106,51 @@
         "events": []
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
           }
         ]
       },
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "open",
@@ -178,24 +158,46 @@
         "events": []
       },
       {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5a",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          }
+        ]
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       }
     ],
     "2026-04-22": [
@@ -210,24 +212,9 @@
         "events": []
       },
       {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
         "status": "open",
@@ -237,62 +224,7 @@
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -309,8 +241,14 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
+            "time": "8:30 PM",
+            "title": "Wednesday Ultimate Frisbee",
+            "location": "Poplar Tree Park (Field 3)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Wednesday Ultimate Frisbee",
+            "location": "Poplar Tree Park (Field 3)"
           }
         ]
       },
@@ -340,62 +278,122 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Ultimate Frisbee",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Wednesday Ultimate Frisbee",
+            "location": "EC Lawrence Park (Field 2)"
+          }
+        ]
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
           }
         ]
       },
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
+        "id": "greenbriar-5a",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "8:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          }
+        ]
+      },
+      {
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
           }
         ]
       }
@@ -407,114 +405,35 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
+            "time": "9:00 PM",
+            "title": "Thursday Co-ed 11v11 Soccer",
+            "location": "Westfield High School (Aux Field 1)"
           }
         ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
       },
       {
         "id": "poplar-tree-3",
@@ -522,9 +441,15 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Thursday Co-ed 11v11 Soccer",
+            "location": "Poplar Tree Park (Field 3)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-1",
@@ -536,8 +461,34 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "8:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           }
         ]
       },
@@ -547,9 +498,40 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2B)"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2B)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 2A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-2",
@@ -557,54 +539,109 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "8:30 PM",
+            "title": "Thursday Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
           }
         ]
       },
       {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "id": "eclawrence-3a",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
-        "location": "Fairfax, VA",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          }
+        ]
+      },
+      {
+        "id": "stringfellow-1",
+        "name": "Stringfellow Park",
+        "subfield": "Turf Field",
+        "type": "Turf",
+        "location": "Centreville, VA",
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "id": "greenbriar-5a",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          }
+        ]
+      },
+      {
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       }
     ],
     "2026-04-24": [
@@ -619,99 +656,19 @@
         "events": []
       },
       {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
+        "id": "centreville-hs-turf",
+        "name": "Centreville High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Clifton, VA",
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
       },
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -759,24 +716,51 @@
         "events": []
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
+            "time": "8:30 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
           }
         ]
       },
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "open",
@@ -784,29 +768,56 @@
         "events": []
       },
       {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5a",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "8:00 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
           }
         ]
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Friday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       }
     ],
     "2026-04-25": [
@@ -821,94 +832,19 @@
         "events": []
       },
       {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -921,14 +857,9 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "sully-highlands-1",
@@ -961,24 +892,29 @@
         "events": []
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "open",
@@ -986,9 +922,9 @@
         "events": []
       },
       {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5a",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
         "status": "open",
@@ -996,11 +932,11 @@
         "events": []
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
         "status": "open",
         "statusReason": "Schedule Clear",
         "events": []
@@ -1018,94 +954,51 @@
         "events": []
       },
       {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
+            "time": "8:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Centreville High School (Aux Field)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Centreville High School (Aux Field)"
           }
         ]
       },
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Westfield High School (Aux Field 1)"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Westfield High School (Aux Field 1)"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Westfield High School (Aux Field 1)"
+          }
+        ]
       },
       {
         "id": "poplar-tree-3",
@@ -1113,9 +1006,25 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Poplar Tree Park (Field 3)"
+          },
+          {
+            "time": "7:30 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Poplar Tree Park (Field 3)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Poplar Tree Park (Field 3)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-1",
@@ -1123,9 +1032,20 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -1133,9 +1053,20 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          }
+        ]
       },
       {
         "id": "eclawrence-2",
@@ -1147,15 +1078,56 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "8:00 AM",
+            "title": "Sunday Morning Men's Football",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Sunday Morning Men's Football",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "10:00 AM",
+            "title": "Sunday Morning Men's Football",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Sunday Morning Men's Football",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "7:30 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
           }
         ]
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -1165,7 +1137,7 @@
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "open",
@@ -1173,34 +1145,24 @@
         "events": []
       },
       {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5a",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       }
     ],
     "2026-04-27": [
@@ -1215,19 +1177,9 @@
         "events": []
       },
       {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
         "id": "centreville-hs-turf",
         "name": "Centreville High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
         "status": "open",
@@ -1237,254 +1189,7 @@
       {
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      }
-    ],
-    "2026-04-28": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Aux Turf Field 1",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "open",
@@ -1511,8 +1216,14 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
+            "time": "8:00 PM",
+            "title": "Monday Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Monday Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
           }
         ]
       },
@@ -1522,204 +1233,18 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "8:00 PM",
+            "title": "Monday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          },
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-04-29": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
+            "time": "9:30 PM",
+            "title": "Monday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
           }
         ]
       },
@@ -1734,999 +1259,51 @@
         "events": []
       },
       {
-        "id": "eclawrence-3",
+        "id": "eclawrence-3a",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-04-30": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "8:30 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
           {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
+            "time": "9:40 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
           }
         ]
       },
       {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
+        "id": "eclawrence-3b",
         "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-01": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      }
-    ],
-    "2026-05-02": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
+        "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "8:30 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
           {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-03": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-04": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
+            "time": "9:40 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
           }
         ]
       },
       {
         "id": "stringfellow-1",
         "name": "Stringfellow Park",
-        "subfield": "Turf Front",
+        "subfield": "Turf Field",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "open",
@@ -2734,3211 +1311,56 @@
         "events": []
       },
       {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5a",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-05": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-06": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-07": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-08": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-09": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "8:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
           {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "9:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
           {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
+            "time": "10:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
           }
         ]
       },
       {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
+        "id": "greenbriar-5b",
         "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-10": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
+        "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-11": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "8:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
           {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
+            "time": "9:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
           {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
+            "time": "10:00 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
           }
         ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-12": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-13": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-14": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-15": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 10:00 AM",
-            "title": "Track & Field Meet Config"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      }
-    ],
-    "2026-05-16": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-17": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-18": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      }
-    ],
-    "2026-05-19": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 8:30 PM",
-            "title": "Varsity Field Hockey"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM - 10:00 PM",
-            "title": "Adult Rec League Matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
-    "2026-05-20": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "3:30 PM - 5:30 PM",
-            "title": "Girls Varsity Lacrosse Game"
-          }
-        ]
-      },
-      {
-        "id": "chantilly-hs-grass",
-        "name": "Chantilly High School",
-        "subfield": "Bermuda Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-1",
-        "name": "Arrowhead Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 11:00 AM",
-            "title": "Private Event Rental"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-park-2",
-        "name": "Arrowhead Park",
-        "subfield": "Field 2",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-3",
-        "name": "Arrowhead Park",
-        "subfield": "Field 3",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-park-4",
-        "name": "Arrowhead Park",
-        "subfield": "Field 4",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM - 7:30 PM",
-            "title": "CYA Youth Soccer Practice"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM - 12:00 PM",
-            "title": "FXA Flag Football League matches"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Front",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-1",
-        "name": "Greenbriar Park",
-        "subfield": "Turf Main",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "franklin-ms-grass",
-        "name": "Franklin Middle School",
-        "subfield": "Soccer Grass",
-        "type": "Grass",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
       }
     ]
   }

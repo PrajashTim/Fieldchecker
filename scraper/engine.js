@@ -1,93 +1,101 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import puppeteer from 'puppeteer';
 
-// Import Scraper Modules
-import { scrapeVNN } from './modules/vnn.js';
-import { scrapeLeagueApps } from './modules/fxa.js';
+import { fetchFxaEvents } from './modules/fxa.js';
+import { fetchChantillyEvents } from './modules/chantilly.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Import configuration
-const fieldsConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'fieldsConfig.json'), 'utf8'));
+const fieldsConfig = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'fieldsConfig.json'), 'utf8')
+);
 
-// Parsers imported from modules
+function localDateStr(d) {
+  return [
+    d.getFullYear(),
+    String(d.getMonth() + 1).padStart(2, '0'),
+    String(d.getDate()).padStart(2, '0'),
+  ].join('-');
+}
+
+function dateRange(start, days) {
+  const dates = [];
+  for (let i = 0; i < days; i++) {
+    const d = new Date(start);
+    d.setDate(start.getDate() + i);
+    dates.push(localDateStr(d));
+  }
+  return dates;
+}
 
 async function runScraper() {
-  console.log("🚀 Starting Pitch Scout Data Aggregator (30-Day Lookahead)...");
-  const browser = await puppeteer.launch({ headless: "new" });
-  const page = await browser.newPage();
-  
-  const outputData = {
-    lastUpdated: new Date().toISOString(),
-    schedule: {}
-  };
+  console.log('🚀 Pitch Scout — scraping next 7 days...');
 
-  // Generate an array of 30 days (strings like "2026-04-21")
   const today = new Date();
-  const dates = [];
-  for (let i = 0; i < 30; i++) {
-    const d = new Date(today);
-    d.setDate(today.getDate() + i);
-    dates.push(d.toISOString().split('T')[0]);
-  }
+  // Use local date string to avoid UTC offset issues
+  const todayStr = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, '0'),
+    String(today.getDate()).padStart(2, '0'),
+  ].join('-');
+  const endDate = new Date(today);
+  endDate.setDate(today.getDate() + 7);
+  const endStr = [
+    endDate.getFullYear(),
+    String(endDate.getMonth() + 1).padStart(2, '0'),
+    String(endDate.getDate()).padStart(2, '0'),
+  ].join('-');
 
-  // Iterate over every date
+  const dates = dateRange(today, 7);
+
+  // Fetch all data sources in parallel
+  const [fxaByField, chantillyByDate] = await Promise.all([
+    fetchFxaEvents(today, endDate),
+    fetchChantillyEvents(todayStr, endStr),
+  ]);
+
+  // Build schedule output
+  const schedule = {};
+
   for (const dateStr of dates) {
-    console.log(`\n📅 Scraping Schedule for ${dateStr}...`);
-    outputData.schedule[dateStr] = [];
-
-    // Iterate over every field target
-    for (const field of fieldsConfig) {
+    schedule[dateStr] = fieldsConfig.map(field => {
       let events = [];
-      let status = 'open';
-      let statusReason = 'Schedule Clear';
 
-      try {
-        if (field.scraperTarget === 'playon' || field.scraperTarget === 'vnn') {
-          // Pass the high school website domains
-          let domain = 'chantillyathletics.com'; 
-          if(field.targetId.includes('centreville')) domain = 'centrevilleathletics.com';
-          if(field.targetId.includes('westfield')) domain = 'westfieldathletics.com';
-          
-          events = await scrapeVNN(page, domain, dateStr);
-          
-        } else if (field.scraperTarget === 'afar' || field.scraperTarget === 'league') {
-          // Pass the league domains for park fields
-          events = await scrapeLeagueApps(page, "fxasports.com", dateStr);
-        }
-        
-        if (events.length > 0) {
-          status = 'occupied';
-          statusReason = 'Scheduled Events Found';
-        }
-        
-      } catch (e) {
-        status = 'unknown';
-        statusReason = 'Scraper Error';
+      if (field.scraperTarget === 'fxa') {
+        events = fxaByField[field.id]?.[dateStr] ?? [];
+      } else if (field.scraperTarget === 'chantilly') {
+        events = chantillyByDate[dateStr] ?? [];
       }
 
-      outputData.schedule[dateStr].push({
+      const status = events.length > 0 ? 'occupied' : 'open';
+      const statusReason = events.length > 0 ? 'Scheduled Events Found' : 'Schedule Clear';
+
+      return {
         id: field.id,
         name: field.name,
         subfield: field.subfield,
         type: field.type,
         location: field.location,
-        status: status,
-        statusReason: statusReason,
-        events: events
-      });
-    }
+        status,
+        statusReason,
+        events,
+      };
+    });
   }
 
-  await browser.close();
+  const output = {
+    lastUpdated: new Date().toISOString(),
+    schedule,
+  };
 
-  // Save the result
   const outputPath = path.join(__dirname, '../src/data/mockState.json');
-  fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2));
-  console.log("\n✅ 30-Day Data Generation Complete! Written to src/data/mockState.json");
+  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
+  console.log(`\n✅ Written to src/data/mockState.json (${dates.length} days, ${fieldsConfig.length} fields)`);
 }
 
-runScraper();
+runScraper().catch(err => {
+  console.error('Fatal error:', err);
+  process.exit(1);
+});
