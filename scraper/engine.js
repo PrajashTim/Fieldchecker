@@ -37,10 +37,10 @@ async function runScraper() {
   const today = new Date();
   const todayStr = localDateStr(today);
   const endDate = new Date(today);
-  endDate.setDate(today.getDate() + 7);
+  endDate.setDate(today.getDate() + 30);
   const endStr = localDateStr(endDate);
 
-  const dates = dateRange(today, 7);
+  const dates = dateRange(today, 30);
 
   // Fetch all data sources in parallel
   const [fxaByField, chantillyByDate, hsByField] = await Promise.all([
@@ -91,6 +91,7 @@ async function runScraper() {
   const outputPath = path.join(__dirname, '../src/data/mockState.json');
   fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
   console.log(`\n✅ Written to src/data/mockState.json (${dates.length} days, ${fieldsConfig.length} fields)`);
+  console.log(`   Coverage: ${todayStr} → ${endStr}`);
 }
 
 runScraper().catch(err => {

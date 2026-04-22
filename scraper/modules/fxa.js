@@ -74,6 +74,7 @@ const LOCATION_TO_FIELD = {
   // Lake Fairfax Park (7.7 mi)
   'Lake Fairfax Park (Field 1)':       'lake-fairfax-1',
   'Lake Fairfax Park (Field 3)':       'lake-fairfax-3',
+  'Lake Fairfax Park (Field 4)':       'lake-fairfax-4',
   'Lake Fairfax Park (Field 5)':       'lake-fairfax-5',
   // Bready Park (8.4 mi)
   'Bready Park (Field 1A)':            'bready-1a',
