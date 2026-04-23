@@ -15,6 +15,9 @@ const Dashboard = () => {
   const [filter800, setFilter800] = useState(false);
   const [filterTurf, setFilterTurf] = useState(true); // turf on by default
 
+  // Only show dates from today onward
+  const filteredDates = availableDates.filter(d => d >= todayStr);
+
   // Get the fields for the currently selected date
   const fieldsForDate = schedule[selectedDate] || [];
 
@@ -75,7 +78,7 @@ const Dashboard = () => {
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
             >
-              {availableDates.map((dateStr) => (
+              {filteredDates.map((dateStr) => (
                 <option key={dateStr} value={dateStr}>{formatDateLabel(dateStr)}</option>
               ))}
             </select>
@@ -106,7 +109,7 @@ const Dashboard = () => {
 
       <div className="fields-grid">
         {displayedFields.map((field) => (
-          <FieldCard key={field.id} field={field} filter630={filter630} filter800={filter800} />
+          <FieldCard key={field.id} field={field} filter630={filter630} filter800={filter800} selectedDate={selectedDate} todayStr={todayStr} />
         ))}
       </div>
       
