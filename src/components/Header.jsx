@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container header-content">
         <div className="logo">
           <span className="logo-icon">⚽</span>
-          Pitch Scout
+          NoVA Field Check
         </div>
         <div className="last-updated">
           Last updated: {formattedDate}

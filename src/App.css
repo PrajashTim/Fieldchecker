@@ -261,3 +261,75 @@
   border-color: var(--color-accent-primary);
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.footer-joke {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .dashboard {
+    padding: 1.5rem 0;
+  }
+
+  .dashboard-title {
+    font-size: 1.35rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .controls-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .date-picker-wrap {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .glass-select {
+    flex: 1;
+    width: 100%;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  .fields-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .header-content {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}

@@ -6,11 +6,14 @@ const Dashboard = () => {
   const { schedule } = mockData;
   const availableDates = Object.keys(schedule).sort();
   
-  // Default to the first available date (today)
-  const [selectedDate, setSelectedDate] = useState(availableDates[0]);
+  // Always default to actual today's date in local time, not just the first date in the JSON
+  const todayStr = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD local
+  const defaultDate = availableDates.includes(todayStr) ? todayStr : availableDates[0];
+
+  const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [filter630, setFilter630] = useState(false);
   const [filter800, setFilter800] = useState(false);
-  const [filterTurf, setFilterTurf] = useState(false);
+  const [filterTurf, setFilterTurf] = useState(true); // turf on by default
 
   // Get the fields for the currently selected date
   const fieldsForDate = schedule[selectedDate] || [];
@@ -41,9 +44,13 @@ const Dashboard = () => {
     return true;
   };
 
-  const formatDateLabel = (dateStr, index) => {
-    if (index === 0) return `Today (${dateStr})`;
-    if (index === 1) return `Tomorrow (${dateStr})`;
+  const formatDateLabel = (dateStr) => {
+    const today = new Date().toLocaleDateString('en-CA');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowStr = tomorrow.toLocaleDateString('en-CA');
+    if (dateStr === today) return `Today (${dateStr})`;
+    if (dateStr === tomorrowStr) return `Tomorrow (${dateStr})`;
     return dateStr;
   };
 
@@ -53,8 +60,10 @@ const Dashboard = () => {
     <main className="container dashboard">
       <div className="dashboard-header">
         <div>
-          <h2 className="dashboard-title">Live Field Status</h2>
-          <p className="dashboard-subtitle">Real-time availability for pickup soccer in NoVA</p>
+          <h2 className="dashboard-title">Which fields are open for pickup?</h2>
+          <p className="dashboard-subtitle">
+            Live data from FXA Sports · Chantilly HS · Westfield HS · Centreville HS · and more
+          </p>
         </div>
         
         <div className="controls-group">
@@ -66,8 +75,8 @@ const Dashboard = () => {
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
             >
-              {availableDates.map((dateStr, idx) => (
-                <option key={dateStr} value={dateStr}>{formatDateLabel(dateStr, idx)}</option>
+              {availableDates.map((dateStr) => (
+                <option key={dateStr} value={dateStr}>{formatDateLabel(dateStr)}</option>
               ))}
             </select>
           </div>
@@ -106,6 +115,12 @@ const Dashboard = () => {
           No fields found matching your filters for this date.
         </div>
       )}
+
+      <footer className="site-footer">
+        <p className="footer-joke">
+          Darpan Rijal is a Tori player. Cannot be trusted with the ball for the next 7 lifetimes.
+        </p>
+      </footer>
     </main>
   );
 };
