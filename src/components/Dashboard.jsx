@@ -60,7 +60,7 @@ const Dashboard = () => {
     <main className="container dashboard">
       <div className="dashboard-header">
         <div>
-          <h2 className="dashboard-title">Which fields are open for pickup?</h2>
+          <h2 className="dashboard-title">Easily check which fields are open for pickup</h2>
           <p className="dashboard-subtitle">
             Live data from FXA Sports · Chantilly HS · Westfield HS · Centreville HS · and more
           </p>
