@@ -11,6 +11,8 @@ on:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     env:
       PUPPETEER_SKIP_DOWNLOAD: true
