@@ -1,758 +1,6 @@
 {
-  "lastUpdated": "2026-04-26T22:48:48.943Z",
+  "lastUpdated": "2026-04-27T14:02:22.409Z",
   "schedule": {
-    "2026-04-26": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Turf Field",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
-            "location": "Poplar Tree Park (Field 3)"
-          },
-          {
-            "time": "7:30 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
-            "location": "Poplar Tree Park (Field 3)"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
-            "location": "Poplar Tree Park (Field 3)"
-          }
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Co-ed 7v7 Social Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Co-ed 7v7 Social Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "6:30 PM",
-            "title": "Sunday Night Men's Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "7:30 PM",
-            "title": "Sunday Night Men's Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "7:30 PM",
-            "title": "Sunday Night Men's Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "8:30 PM",
-            "title": "Sunday Night Men's Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Sunday Night Men's Football",
-            "location": "Westfield High School (Stadium Field)"
-          },
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Westfield High School (Aux Field 1)"
-          },
-          {
-            "time": "9:30 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Westfield High School (Aux Field 1)"
-          },
-          {
-            "time": "11:00 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Westfield High School (Aux Field 1)"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "11:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Co-ed 11v11 Soccer",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "7:30 PM",
-            "title": "Sunday Night Co-ed 11v11 Soccer",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Sunday Night Co-ed 11v11 Soccer",
-            "location": "EC Lawrence Park (Field 2)"
-          }
-        ]
-      },
-      {
-        "id": "eclawrence-3a",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3A",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "eclawrence-3b",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          },
-          {
-            "time": "11:00 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          },
-          {
-            "time": "8:10 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1A)"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-1b",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:10 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1B)"
-          },
-          {
-            "time": "9:20 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1B)"
-          },
-          {
-            "time": "10:30 AM",
-            "title": "Sunday Morning Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1B)"
-          },
-          {
-            "time": "8:10 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1B)"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Arrowhead Park Turf (Field 1B)"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "Arrowhead Park Turf (Field 3)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "Arrowhead Park Turf (Field 3)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "Arrowhead Park Turf (Field 3)"
-          },
-          {
-            "time": "11:00 AM",
-            "title": "Sunday Morning Men's Football",
-            "location": "Arrowhead Park Turf (Field 3)"
-          },
-          {
-            "time": "12:00 PM",
-            "title": "Sunday Morning Men's Football",
-            "location": "Arrowhead Park Turf (Field 3)"
-          }
-        ]
-      },
-      {
-        "id": "arrowhead-3a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-3b",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
-            "location": "Centreville High School (Aux Field)"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
-            "location": "Centreville High School (Aux Field)"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Sully Highlands Park (Field 1)"
-          },
-          {
-            "time": "9:30 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Sully Highlands Park (Field 1)"
-          }
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Sully Highlands Park (Field 2)"
-          },
-          {
-            "time": "9:30 AM",
-            "title": "Sunday Morning Co-ed 11v11 Soccer",
-            "location": "Sully Highlands Park (Field 2)"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-5",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Women's Lacrosse",
-            "location": "Greenbriar Park (Field 5)"
-          }
-        ]
-      },
-      {
-        "id": "greenbriar-5a",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5A",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "greenbriar-5b",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5B",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "cunningham-1",
-        "name": "Cunningham Park",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "11:10 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "12:10 PM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:10 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:10 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Cunningham Park (Field 1)"
-          }
-        ]
-      },
-      {
-        "id": "nottoway-4a",
-        "name": "Nottoway Park",
-        "subfield": "Field 4A",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4A)"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4A)"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4A)"
-          }
-        ]
-      },
-      {
-        "id": "nottoway-4b",
-        "name": "Nottoway Park",
-        "subfield": "Field 4B",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4B)"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4B)"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Sunday Night Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4B)"
-          }
-        ]
-      },
-      {
-        "id": "arrowbrook-1",
-        "name": "Arrowbrook Park",
-        "subfield": "Turf Field",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-1",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-1a",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1A",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-1b",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1B",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-1c",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1C",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-2",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-2a",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2A",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "oakmont-2b",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2B",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "lake-fairfax-1",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "lake-fairfax-3",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 3",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 3)"
-          },
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 3)"
-          },
-          {
-            "time": "8:10 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 3)"
-          },
-          {
-            "time": "9:10 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 3)"
-          }
-        ]
-      },
-      {
-        "id": "lake-fairfax-4",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 4",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "lake-fairfax-5",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 5",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          },
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          }
-        ]
-      },
-      {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
-        "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
-        "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "braddock-7",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "braddock-7a",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7A",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "braddock-7b",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7B",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
-      }
-    ],
     "2026-04-27": [
       {
         "id": "chantilly-hs-turf",
@@ -1504,15 +752,9 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "5:45 PM",
-            "title": "Boys JV Lacrosse — vs Woodson High School",
-            "location": "Westfield High School"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "eclawrence-2",
@@ -4943,26 +4185,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:10 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:10 PM",
-            "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
             "time": "9:00 AM",
             "title": "Sunday Morning Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
@@ -4980,6 +4202,26 @@
           {
             "time": "12:10 PM",
             "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:10 PM",
+            "title": "Sunday Night Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
           }
         ]
@@ -16659,6 +15901,428 @@
       }
     ],
     "2026-05-25": [
+      {
+        "id": "chantilly-hs-turf",
+        "name": "Chantilly High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "stringfellow-1",
+        "name": "Stringfellow Park",
+        "subfield": "Turf Field",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "poplar-tree-3",
+        "name": "Poplar Tree Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "poplar-tree-2",
+        "name": "Poplar Tree Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "westfield-hs-turf",
+        "name": "Westfield High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "eclawrence-2",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "eclawrence-3a",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowhead-3c",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3C",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "centreville-hs-turf",
+        "name": "Centreville High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Clifton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "sully-highlands-1",
+        "name": "Sully Highlands Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "sully-highlands-2",
+        "name": "Sully Highlands Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "greenbriar-5",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "greenbriar-5a",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "cunningham-1",
+        "name": "Cunningham Park",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "nottoway-4a",
+        "name": "Nottoway Park",
+        "subfield": "Field 4A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "nottoway-4b",
+        "name": "Nottoway Park",
+        "subfield": "Field 4B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "arrowbrook-1",
+        "name": "Arrowbrook Park",
+        "subfield": "Turf Field",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-1",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-1a",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1A",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-1b",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1B",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-1c",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1C",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-2",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-2a",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2A",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "oakmont-2b",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2B",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "lake-fairfax-1",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "lake-fairfax-3",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "lake-fairfax-4",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 4",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "lake-fairfax-5",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 5",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "bready-1a",
+        "name": "Bready Park",
+        "subfield": "Field 1A",
+        "type": "Turf",
+        "location": "Springfield, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "bready-1b",
+        "name": "Bready Park",
+        "subfield": "Field 1B",
+        "type": "Turf",
+        "location": "Springfield, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "braddock-7",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "braddock-7a",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7A",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "braddock-7b",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7B",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      },
+      {
+        "id": "south-county-hs-turf",
+        "name": "South County High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Lorton, VA",
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
+      }
+    ],
+    "2026-05-26": [
       {
         "id": "chantilly-hs-turf",
         "name": "Chantilly High School",
