@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T18:14:19.672Z",
+  "lastUpdated": "2026-04-28T23:01:42.685Z",
   "schedule": {
     "2026-04-28": [
       {
@@ -1638,33 +1638,33 @@
         "events": [
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           }
         ]
       },
@@ -3411,9 +3411,20 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Centreville High School (Aux Field)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Centreville High School (Aux Field)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-1",
@@ -6000,33 +6011,33 @@
         "events": [
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           }
         ]
       },
@@ -6091,11 +6102,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5A)"
-          },
-          {
             "time": "8:00 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
             "location": "Greenbriar Park (Field 5A)"
@@ -6103,6 +6109,11 @@
           {
             "time": "9:00 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5A)"
           }
         ]
@@ -11721,9 +11732,15 @@
         "subfield": "Field 4A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Nottoway Park (Field 4A)"
+          }
+        ]
       },
       {
         "id": "nottoway-4b",
@@ -11731,9 +11748,20 @@
         "subfield": "Field 4B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Nottoway Park (Field 4B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Nottoway Park (Field 4B)"
+          }
+        ]
       },
       {
         "id": "arrowbrook-1",
