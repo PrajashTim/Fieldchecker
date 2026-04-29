@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T14:06:24.710Z",
+  "lastUpdated": "2026-04-29T18:08:51.496Z",
   "schedule": {
     "2026-04-29": [
       {
@@ -476,6 +476,16 @@
             "location": "OakMont Park (Oak Marr) (Field 1A)"
           },
           {
+            "time": "8:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
             "time": "8:30 PM",
             "title": "Wednesday Men's 5v5 Football",
             "location": "OakMont Park (Oak Marr) (Field 1A)"
@@ -487,16 +497,6 @@
           },
           {
             "time": "9:30 PM",
-            "title": "Wednesday Men's 5v5 Football",
-            "location": "OakMont Park (Oak Marr) (Field 1A)"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 5v5 Football",
-            "location": "OakMont Park (Oak Marr) (Field 1A)"
-          },
-          {
-            "time": "10:30 PM",
             "title": "Wednesday Men's 5v5 Football",
             "location": "OakMont Park (Oak Marr) (Field 1A)"
           }
@@ -619,17 +619,17 @@
             "location": "OakMont Park (Oak Marr) (Field 2B)"
           },
           {
+            "time": "9:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 2B)"
+          },
+          {
             "time": "9:30 PM",
             "title": "Wednesday Men's 5v5 Football",
             "location": "OakMont Park (Oak Marr) (Field 2B)"
           },
           {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 5v5 Football",
-            "location": "OakMont Park (Oak Marr) (Field 2B)"
-          },
-          {
-            "time": "10:30 PM",
+            "time": "9:30 PM",
             "title": "Wednesday Men's 5v5 Football",
             "location": "OakMont Park (Oak Marr) (Field 2B)"
           }
@@ -1019,33 +1019,33 @@
         "events": [
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           }
         ]
       },
@@ -1478,9 +1478,20 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "5:45 PM",
+            "title": "Girls JV Soccer — vs James Madison High School",
+            "location": "Chantilly High School"
+          },
+          {
+            "time": "7:15 PM",
+            "title": "Girls Varsity Soccer — vs James Madison High School",
+            "location": "Chantilly High School"
+          }
+        ]
       },
       {
         "id": "stringfellow-1",
@@ -5398,33 +5409,33 @@
         "events": [
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Sully Highlands Park (Field 1B)"
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
           },
           {
             "time": "8:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "9:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           },
           {
             "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
-            "location": "Sully Highlands Park (Field 1A)"
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
           }
         ]
       },
@@ -5489,11 +5500,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "10:00 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5A)"
-          },
-          {
             "time": "8:00 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
             "location": "Greenbriar Park (Field 5A)"
@@ -5501,6 +5507,11 @@
           {
             "time": "9:00 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Thursday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5A)"
           }
         ]
