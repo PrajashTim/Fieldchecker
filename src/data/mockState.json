@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T18:10:59.205Z",
+  "lastUpdated": "2026-05-04T23:00:39.691Z",
   "schedule": {
     "2026-05-04": [
       {
@@ -1809,9 +1809,35 @@
         "subfield": "Field 1A",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          },
+          {
+            "time": "10:10 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 1A)"
+          }
+        ]
       },
       {
         "id": "oakmont-1b",
@@ -4837,16 +4863,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "8:00 PM",
-            "title": "Monday Co-ed 8v8 Soccer",
-            "location": "Nottoway Park (Field 4B)"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Monday Co-ed 8v8 Soccer",
-            "location": "Nottoway Park (Field 4B)"
-          },
-          {
             "time": "8:10 PM",
             "title": "Monday Men's 8v8 Soccer",
             "location": "Nottoway Park (Field 4B)"
@@ -5963,11 +5979,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          },
-          {
             "time": "8:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
@@ -5975,6 +5986,11 @@
           {
             "time": "9:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
@@ -13496,9 +13512,30 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Friday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Friday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Friday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Friday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
@@ -14381,6 +14418,26 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "6:00 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:10 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
             "time": "9:00 AM",
             "title": "Sunday Morning Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
@@ -14513,9 +14570,30 @@
         "subfield": "Field 3",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "9:10 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          }
+        ]
       },
       {
         "id": "lake-fairfax-4",
@@ -14533,9 +14611,20 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
