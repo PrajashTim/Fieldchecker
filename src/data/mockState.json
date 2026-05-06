@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-06T18:12:00.352Z",
+  "lastUpdated": "2026-05-06T22:57:31.535Z",
   "schedule": {
     "2026-05-06": [
       {
@@ -343,30 +343,9 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Wednesday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Wednesday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Wednesday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Wednesday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "nottoway-4a",
@@ -377,11 +356,6 @@
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
-          {
-            "time": "9:00 PM",
-            "title": "Wednesday Men's 8v8 Soccer",
-            "location": "Nottoway Park (Field 4A)"
-          },
           {
             "time": "8:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
@@ -395,6 +369,11 @@
           {
             "time": "10:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Nottoway Park (Field 4A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
             "location": "Nottoway Park (Field 4A)"
           }
         ]
@@ -4649,11 +4628,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          },
-          {
             "time": "8:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
@@ -4661,6 +4635,11 @@
           {
             "time": "9:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
@@ -13113,6 +13092,21 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "9:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "10:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "11:10 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
             "time": "6:00 PM",
             "title": "Sunday Night Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
@@ -13130,21 +13124,6 @@
           {
             "time": "9:10 PM",
             "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "11:10 AM",
-            "title": "Sunday Morning Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
           }
         ]
@@ -14470,6 +14449,16 @@
           },
           {
             "time": "7:35 PM",
+            "title": "Wednesday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Wednesday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:45 PM",
             "title": "Wednesday Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
           }
