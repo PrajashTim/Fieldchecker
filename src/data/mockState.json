@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-11T18:53:11.488Z",
+  "lastUpdated": "2026-05-11T23:00:31.722Z",
   "schedule": {
     "2026-05-11": [
       {
@@ -338,30 +338,9 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Monday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Monday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Monday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Monday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "nottoway-4a",
@@ -555,6 +534,16 @@
             "time": "7:35 PM",
             "title": "Monday Co-ed Softball",
             "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
           }
         ]
       },
@@ -574,9 +563,30 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
@@ -1603,11 +1613,6 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          },
-          {
             "time": "8:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
@@ -1615,6 +1620,11 @@
           {
             "time": "9:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
@@ -2082,9 +2092,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -2092,9 +2113,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3c",
@@ -5684,9 +5716,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -5694,9 +5737,15 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3c",
@@ -8739,9 +8788,15 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -10100,9 +10155,20 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1b",
@@ -10110,9 +10176,15 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3",
@@ -10287,9 +10359,15 @@
         "subfield": "Field 4A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's 8v8 Soccer",
+            "location": "Nottoway Park (Field 4A)"
+          }
+        ]
       },
       {
         "id": "nottoway-4b",
