@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T14:32:40.426Z",
+  "lastUpdated": "2026-05-12T18:53:04.949Z",
   "schedule": {
     "2026-05-12": [
       {
@@ -2795,12 +2795,12 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:00 PM",
+            "time": "6:30 PM",
             "title": "Sunday Night Men's 11v11 Soccer",
             "location": "Poplar Tree Park (Field 3)"
           },
           {
-            "time": "7:30 PM",
+            "time": "8:00 PM",
             "title": "Sunday Night Men's 11v11 Soccer",
             "location": "Poplar Tree Park (Field 3)"
           }
@@ -2919,9 +2919,25 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Sunday Morning Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          },
+          {
+            "time": "9:20 AM",
+            "title": "Sunday Morning Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          },
+          {
+            "time": "10:30 AM",
+            "title": "Sunday Morning Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1b",
@@ -3015,9 +3031,15 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "9:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -9471,6 +9493,11 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "9:30 AM",
+            "title": "Sunday Morning Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          },
+          {
             "time": "8:10 PM",
             "title": "Sunday Night Men's 8v8 Soccer",
             "location": "Arrowhead Park Turf (Field 1A)"
@@ -9575,9 +9602,15 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Sunday Morning Co-ed 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -9629,6 +9662,21 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "9:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "10:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "11:10 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
             "time": "6:00 PM",
             "title": "Sunday Night Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
@@ -9646,21 +9694,6 @@
           {
             "time": "9:10 PM",
             "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "11:10 AM",
-            "title": "Sunday Morning Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
           }
         ]
