@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T14:42:05.858Z",
+  "lastUpdated": "2026-05-13T18:53:29.272Z",
   "schedule": {
     "2026-05-13": [
       {
@@ -317,6 +317,11 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "10:00 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
             "time": "8:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
@@ -324,11 +329,6 @@
           {
             "time": "9:00 PM",
             "title": "Wednesday Co-ed 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Wednesday Men's 8v8 Soccer",
             "location": "Greenbriar Park (Field 5B)"
           }
         ]
@@ -3867,9 +3867,25 @@
         "subfield": "Turf Field 7A",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          }
+        ]
       },
       {
         "id": "braddock-7b",
@@ -6956,9 +6972,25 @@
         "subfield": "Turf Field 7A",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Tuesday Co-ed 7v7 Football",
+            "location": "Braddock Park Turf (Field 7A)"
+          }
+        ]
       },
       {
         "id": "braddock-7b",
@@ -8866,6 +8898,11 @@
             "location": "EC Lawrence Park (Field 2)"
           },
           {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
             "time": "7:40 PM",
             "title": "Sunday Night Co-ed 11v11 Soccer",
             "location": "EC Lawrence Park (Field 2)"
@@ -8873,11 +8910,6 @@
           {
             "time": "9:20 PM",
             "title": "Sunday Night Co-ed 11v11 Soccer",
-            "location": "EC Lawrence Park (Field 2)"
-          },
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Men's 11v11 Soccer",
             "location": "EC Lawrence Park (Field 2)"
           }
         ]
