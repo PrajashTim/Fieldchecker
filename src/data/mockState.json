@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T14:22:27.654Z",
+  "lastUpdated": "2026-05-14T18:30:45.450Z",
   "schedule": {
     "2026-05-14": [
       {
@@ -257,15 +257,9 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "7:00 PM",
-            "title": "Girls Varsity Soccer — vs Westfield High School",
-            "location": "Centreville High School"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "sully-highlands-1",
@@ -514,7 +508,7 @@
             "location": "OakMont Park (Oak Marr) (Field 2)"
           },
           {
-            "time": "10:00 PM",
+            "time": "9:00 PM",
             "title": "Thursday Men's Football",
             "location": "OakMont Park (Oak Marr) (Field 2)"
           }
@@ -1696,6 +1690,16 @@
           {
             "time": "11:00 AM",
             "title": "Sunday Morning Men's Football",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "7:30 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
             "location": "EC Lawrence Park (Field 2)"
           }
         ]
@@ -2910,9 +2914,15 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -2920,9 +2930,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1",
@@ -2940,9 +2961,20 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Tuesday Women's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Tuesday Women's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1b",
@@ -3010,9 +3042,20 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -3396,9 +3439,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "9:40 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -3456,9 +3510,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -3466,9 +3531,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3c",
@@ -6057,9 +6133,15 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -6067,9 +6149,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Tuesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1",
@@ -6087,9 +6180,15 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Tuesday Women's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1b",
@@ -6157,9 +6256,15 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -6167,9 +6272,20 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 2)"
+          }
+        ]
       },
       {
         "id": "greenbriar-5",
@@ -6495,9 +6611,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -6505,9 +6632,15 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1",
@@ -6555,9 +6688,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -8316,6 +8460,16 @@
             "time": "6:00 PM",
             "title": "Sunday Night Men's 11v11 Soccer",
             "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "7:40 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Sunday Night Co-ed 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
           }
         ]
       },
@@ -9409,9 +9563,15 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's 11v11 Soccer",
+            "location": "Sully Highlands Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
