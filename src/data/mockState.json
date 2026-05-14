@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T18:30:45.450Z",
+  "lastUpdated": "2026-05-14T23:02:54.482Z",
   "schedule": {
     "2026-05-14": [
       {
@@ -365,30 +365,9 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "nottoway-4a",
@@ -607,9 +586,30 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
@@ -3602,9 +3602,20 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          }
+        ]
       },
       {
         "id": "greenbriar-5b",
@@ -3612,9 +3623,20 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       },
       {
         "id": "cunningham-1",
@@ -3653,9 +3675,20 @@
         "subfield": "Field 4A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Nottoway Park (Field 4A)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Nottoway Park (Field 4A)"
+          }
+        ]
       },
       {
         "id": "nottoway-4b",
@@ -3733,9 +3766,30 @@
         "subfield": "Field 2A",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 2A)"
+          },
+          {
+            "time": "8:30 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 2A)"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 2A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Wednesday Men's 5v5 Football",
+            "location": "OakMont Park (Oak Marr) (Field 2A)"
+          }
+        ]
       },
       {
         "id": "oakmont-2b",
@@ -4219,6 +4273,11 @@
         "status": "occupied",
         "statusReason": "Scheduled Events Found",
         "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Thursday Men's Football",
+            "location": "OakMont Park (Oak Marr) (Field 2)"
+          },
           {
             "time": "8:00 PM",
             "title": "Thursday Men's Football",
@@ -6769,9 +6828,20 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5A)"
+          }
+        ]
       },
       {
         "id": "greenbriar-5b",
