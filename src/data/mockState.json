@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T14:13:37.018Z",
+  "lastUpdated": "2026-05-15T18:18:36.628Z",
   "schedule": {
     "2026-05-15": [
       {
@@ -1218,9 +1218,15 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Women's Lacrosse",
+            "location": "Greenbriar Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "greenbriar-5a",
@@ -3309,9 +3315,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -3477,9 +3494,20 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       },
       {
         "id": "cunningham-1",
@@ -6481,9 +6509,15 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -6547,6 +6581,11 @@
           {
             "time": "8:10 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
             "location": "Arrowhead Park Turf (Field 3A)"
           }
         ]
@@ -6633,9 +6672,20 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Greenbriar Park (Field 5B)"
+          }
+        ]
       },
       {
         "id": "cunningham-1",
@@ -6673,15 +6723,9 @@
         "subfield": "Turf Field",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Thursday Co-ed 11v11 Soccer",
-            "location": "Arrowbrook Park Turf"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "oakmont-1",
