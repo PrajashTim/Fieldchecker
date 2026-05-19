@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T18:56:26.427Z",
+  "lastUpdated": "2026-05-19T23:10:32.872Z",
   "schedule": {
     "2026-05-19": [
       {
@@ -6366,9 +6366,15 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Monday Co-ed 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 1A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1b",
