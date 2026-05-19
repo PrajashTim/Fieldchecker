@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T15:31:44.703Z",
+  "lastUpdated": "2026-05-19T18:56:26.427Z",
   "schedule": {
     "2026-05-19": [
       {
@@ -5687,9 +5687,15 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "7:40 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "Poplar Tree Park (Field 3)"
+          }
+        ]
       },
       {
         "id": "poplar-tree-2",
@@ -5961,6 +5967,21 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "9:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "10:00 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "11:10 AM",
+            "title": "Sunday Morning Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
             "time": "6:00 PM",
             "title": "Sunday Night Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
@@ -5978,21 +5999,6 @@
           {
             "time": "9:10 PM",
             "title": "Sunday Night Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Sunday Morning Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "11:10 AM",
-            "title": "Sunday Morning Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
           }
         ]
@@ -6308,9 +6314,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3b",
@@ -6318,9 +6335,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:30 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-1",
@@ -6368,9 +6396,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -6464,9 +6503,15 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Monday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
@@ -8895,9 +8940,15 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's 11v11 Soccer",
+            "location": "EC Lawrence Park (Field 2)"
+          }
+        ]
       },
       {
         "id": "eclawrence-3a",
@@ -9461,9 +9512,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
@@ -9471,9 +9533,15 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Monday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3c",
