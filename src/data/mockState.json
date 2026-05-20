@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T15:29:07.485Z",
+  "lastUpdated": "2026-05-20T19:17:13.328Z",
   "schedule": {
     "2026-05-20": [
       {
@@ -5609,6 +5609,16 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "3:50 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "4:50 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
             "time": "6:00 PM",
             "title": "Sunday Night Men's Softball",
             "location": "Lake Fairfax Park (Field 3)"
@@ -5646,20 +5656,9 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          },
-          {
-            "time": "7:00 PM",
-            "title": "Sunday Night Men's Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "bready-1a",
@@ -8801,9 +8800,30 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "9:10 PM",
+            "title": "Sunday Night Men's Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
