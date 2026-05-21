@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T18:56:07.183Z",
+  "lastUpdated": "2026-05-21T23:08:19.120Z",
   "schedule": {
     "2026-05-21": [
       {
@@ -279,30 +279,9 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Cunningham Park (Field 1)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "nottoway-4a",
@@ -493,9 +472,30 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
@@ -2506,12 +2506,12 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "6:35 PM",
+            "time": "8:00 PM",
             "title": "Tuesday Men's Softball",
             "location": "Cunningham Park (Field 1)"
           },
           {
-            "time": "8:00 PM",
+            "time": "6:35 PM",
             "title": "Tuesday Men's Softball",
             "location": "Cunningham Park (Field 1)"
           },
@@ -3364,13 +3364,13 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
-            "time": "9:20 PM",
-            "title": "Thursday Men's 8v8 Soccer",
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
             "location": "Arrowhead Park Turf (Field 3A)"
           },
           {
-            "time": "8:10 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
             "location": "Arrowhead Park Turf (Field 3A)"
           }
         ]
