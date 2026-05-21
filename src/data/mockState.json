@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T15:35:39.754Z",
+  "lastUpdated": "2026-05-21T18:56:07.183Z",
   "schedule": {
     "2026-05-21": [
       {
@@ -2502,9 +2502,25 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Tuesday Men's Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Tuesday Men's Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:25 PM",
+            "title": "Tuesday Men's Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
