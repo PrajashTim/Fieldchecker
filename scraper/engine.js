@@ -54,17 +54,14 @@ async function runScraper() {
 
   for (const dateStr of dates) {
     schedule[dateStr] = fieldsConfig.map(field => {
-      let events = [];
+      // Gather events from all provider sources
+      const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
+      const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
+      let events = [...fxaEvents, ...hsEvents];
 
-      if (field.scraperTarget === 'fxa') {
-        // FXA adult leagues + school athletics both contribute to the same field
-        const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
-        const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
-        events = [...fxaEvents, ...hsEvents];
-      } else if (field.scraperTarget === 'chantilly') {
+      if (field.scraperTarget === 'chantilly') {
         const chantillyEvents = chantillyByDate[dateStr] ?? [];
-        const hsEvents        = hsByField[field.id]?.[dateStr] ?? [];
-        events = [...chantillyEvents, ...hsEvents];
+        events = [...events, ...chantillyEvents];
       }
 
       const status = events.length > 0 ? 'occupied' : 'open';

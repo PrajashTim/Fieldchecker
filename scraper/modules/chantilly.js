@@ -69,8 +69,14 @@ function parseEventsFromHtml(html, startDateStr, endDateStr) {
 export async function fetchChantillyEvents(startDateStr, endDateStr) {
   let browser;
   try {
-    console.log('[Chantilly] Launching browser for schedule page...');
-    browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
+    const launchOptions = {
+      headless: 'new',
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+    };
+    if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+      launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+    }
+    browser = await puppeteer.launch(launchOptions);
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36');
 

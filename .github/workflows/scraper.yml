@@ -16,11 +16,13 @@ jobs:
 
     env:
       PUPPETEER_SKIP_DOWNLOAD: true
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
@@ -31,9 +33,6 @@ jobs:
       - name: Install dependencies
         run: npm install --omit=optional
 
-      - name: Install Puppeteer browser
-        run: npx puppeteer browsers install chrome
-
       - name: Run Scraper
         run: node scraper/engine.js
 
@@ -43,4 +42,4 @@ jobs:
           git config --global user.email 'bot@pitchscout.local'
           git add src/data/mockState.json
           git diff --staged --quiet || git commit -m "chore: auto-update field schedules [skip ci]"
-          git push
+          git push origin HEAD:main
