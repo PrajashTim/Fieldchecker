@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-25T18:22:33.360Z",
+  "lastUpdated": "2026-05-25T23:12:04.353Z",
   "schedule": {
     "2026-05-25": [
       {
@@ -1065,9 +1065,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Wednesday Co-ed 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3B)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3c",
@@ -1125,20 +1136,9 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Wednesday Co-ed 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5A)"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Wednesday Co-ed 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5A)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "greenbriar-5b",
@@ -1456,6 +1456,11 @@
             "time": "8:30 PM",
             "title": "Thursday Men's 8v8 (35+) Soccer",
             "location": "EC Lawrence Park (Field 3A)"
+          },
+          {
+            "time": "9:40 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "EC Lawrence Park (Field 3A)"
           }
         ]
       },
@@ -1519,13 +1524,18 @@
         "statusReason": "Scheduled Events Found",
         "events": [
           {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          },
+          {
             "time": "9:20 PM",
             "title": "Thursday Men's 8v8 Soccer",
             "location": "Arrowhead Park Turf (Field 3A)"
           },
           {
-            "time": "8:10 PM",
-            "title": "Thursday Men's 8v8 (35+) Soccer",
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
             "location": "Arrowhead Park Turf (Field 3A)"
           }
         ]
@@ -1566,9 +1576,25 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1B)"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Sully Highlands Park (Field 1A)"
+          }
+        ]
       },
       {
         "id": "sully-highlands-2",
@@ -1596,15 +1622,9 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5A)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "greenbriar-5b",
@@ -1612,20 +1632,9 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Thursday Men's 8v8 Soccer",
-            "location": "Greenbriar Park (Field 5B)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "cunningham-1",
@@ -4693,9 +4702,15 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Thursday Men's 8v8 Soccer",
+            "location": "Arrowhead Park Turf (Field 3A)"
+          }
+        ]
       },
       {
         "id": "arrowhead-3b",
