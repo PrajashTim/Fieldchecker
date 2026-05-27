@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T19:14:57.008Z",
+  "lastUpdated": "2026-05-27T23:22:07.351Z",
   "schedule": {
     "2026-05-27": [
       {
@@ -227,9 +227,15 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:00 PM",
+            "title": "Wednesday Pickleball (Chantilly)",
+            "location": "Greenbriar Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "greenbriar-5a",
