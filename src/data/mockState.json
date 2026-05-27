@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T15:53:06.520Z",
+  "lastUpdated": "2026-05-27T19:14:57.008Z",
   "schedule": {
     "2026-05-27": [
       {
@@ -743,9 +743,20 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
@@ -879,9 +890,30 @@
         "subfield": "Field 3",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 3)"
+          }
+        ]
       },
       {
         "id": "lake-fairfax-4",
@@ -899,9 +931,30 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Lake Fairfax Park (Field 5)"
+          }
+        ]
       },
       {
         "id": "bready-1a",
@@ -3809,9 +3862,20 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
