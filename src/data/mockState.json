@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28T19:33:40.228Z",
+  "lastUpdated": "2026-05-28T23:22:35.312Z",
   "schedule": {
     "2026-05-28": [
       {
@@ -273,6 +273,16 @@
             "time": "7:35 PM",
             "title": "Thursday Co-ed Softball",
             "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Thursday Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
           }
         ]
       },
@@ -449,30 +459,9 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Scheduled Events Found",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Thursday Co-ed Softball",
-            "location": "Lake Fairfax Park (Field 5)"
-          }
-        ]
+        "status": "open",
+        "statusReason": "Schedule Clear",
+        "events": []
       },
       {
         "id": "bready-1a",
