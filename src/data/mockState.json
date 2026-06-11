@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T19:30:01.731Z",
+  "lastUpdated": "2026-06-11T23:42:46.562Z",
   "schedule": {
     "2026-06-11": [
       {
@@ -1484,9 +1484,25 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "open",
-        "statusReason": "Schedule Clear",
-        "events": []
+        "status": "occupied",
+        "statusReason": "Scheduled Events Found",
+        "events": [
+          {
+            "time": "7:25 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "6:00 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          },
+          {
+            "time": "8:50 PM",
+            "title": "Sunday Night Co-ed Softball",
+            "location": "Cunningham Park (Field 1)"
+          }
+        ]
       },
       {
         "id": "nottoway-4a",
