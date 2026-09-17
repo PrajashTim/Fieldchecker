@@ -14,18 +14,18 @@ const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
   const dateLabel = isToday ? 'Today' : selectedDate;
 
   if (isTimeFilterActive) {
-    statusClass = 'status-open';
+    statusClass = status === 'unknown' ? 'status-unknown' : 'status-open';
 
     let timeLabel = '';
     if (filter630 && filter800) timeLabel = '8:00 AM & 6:30 PM';
     else if (filter630) timeLabel = '6:30 PM+';
     else if (filter800) timeLabel = '8:00 AM+';
 
-    statusLabel = `Open at ${timeLabel}`;
+    statusLabel = status === 'unknown' ? `Not verified at ${timeLabel}` : `Open at ${timeLabel}`;
 
     if (status === 'occupied') {
       displayReason = `This field has events on ${dateLabel}, but is wide open during your requested time!`;
-    } else {
+    } else if (status === 'open') {
       displayReason = 'Schedule clears - no events all day.';
     }
   } else {
@@ -35,6 +35,9 @@ const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
     } else if (status === 'occupied') {
       statusClass = 'status-occupied';
       statusLabel = 'Occupied / Scheduled';
+    } else {
+      statusClass = 'status-unknown';
+      statusLabel = 'Availability not verified';
     }
   }
 
@@ -72,7 +75,11 @@ const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
             ))}
           </ul>
         ) : (
-          <div className="status-reason" style={{ opacity: 0.6 }}>No events scheduled on {dateLabel}.</div>
+          <div className="status-reason" style={{ opacity: 0.75 }}>
+            {status === 'unknown'
+              ? `No conflicts were detected for ${dateLabel}, but source coverage is incomplete.`
+              : `No events scheduled on ${dateLabel}.`}
+          </div>
         )}
       </div>
     </div>

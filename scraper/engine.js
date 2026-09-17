@@ -43,11 +43,20 @@ async function runScraper() {
   const dates = dateRange(today, 30);
 
   // Fetch all data sources in parallel
-  const [fxaByField, chantillyByDate, hsByField] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     fetchChantillyEvents(todayStr, endStr),
     fetchHighSchoolEvents(todayStr, endStr),
   ]);
+
+  const fxaByField = fxaResult.events;
+  const chantillyByDate = chantillyResult.events;
+  const hsByField = hsResult.events;
+  const sourceHealth = {
+    fxa: fxaResult.health,
+    chantilly: chantillyResult.health,
+    ...hsResult.health,
+  };
 
   // Build schedule output
   const schedule = {};
@@ -64,8 +73,20 @@ async function runScraper() {
         events = [...events, ...chantillyEvents];
       }
 
-      const status = events.length > 0 ? 'occupied' : 'open';
-      const statusReason = events.length > 0 ? 'Scheduled Events Found' : 'Schedule Clear';
+      const relevantHealth = [sourceHealth.fxa];
+      if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
+      if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
+      if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);
+
+      const unavailableSources = relevantHealth.filter(item => !item?.ok);
+      const status = events.length > 0
+        ? 'occupied'
+        : unavailableSources.length === 0 ? 'open' : 'unknown';
+      const statusReason = events.length > 0
+        ? 'Scheduled events found'
+        : unavailableSources.length === 0
+          ? 'No conflicts found in connected sources'
+          : `Not verified — ${unavailableSources.map(item => item?.provider || 'source').join(', ')} unavailable`;
 
       return {
         id: field.id,
@@ -76,12 +97,14 @@ async function runScraper() {
         status,
         statusReason,
         events,
+        unavailableSources: unavailableSources.map(item => item?.provider || 'unknown'),
       };
     });
   }
 
   const output = {
     lastUpdated: new Date().toISOString(),
+    sourceHealth,
     schedule,
   };
 
@@ -89,6 +112,9 @@ async function runScraper() {
   fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
   console.log(`\n✅ Written to src/data/mockState.json (${dates.length} days, ${fieldsConfig.length} fields)`);
   console.log(`   Coverage: ${todayStr} → ${endStr}`);
+  for (const [source, health] of Object.entries(sourceHealth)) {
+    console.log(`   ${health?.ok ? 'OK' : 'DEGRADED'} ${source}: ${health?.message || 'No health report'}`);
+  }
 }
 
 runScraper().catch(err => {

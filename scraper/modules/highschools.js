@@ -16,19 +16,24 @@ const TURF_SPORTS = new Set([
 const SCHOOLS = [
   {
     name: 'Centreville',
-    url: 'https://www.wearecville.net/schedule?year=2025-2026',
+    baseUrl: 'https://www.wearecville.net/schedule',
     venueSubstring: 'centreville high school',
     fieldId: 'centreville-hs-turf',
     location: 'Centreville High School',
   },
   {
     name: 'Westfield',
-    url: 'https://www.westfieldathletics.org/schedule?year=2025-2026',
+    baseUrl: 'https://www.westfieldathletics.org/schedule',
     venueSubstring: 'westfield high school',
     fieldId: 'westfield-hs-turf',
     location: 'Westfield High School',
   },
 ];
+
+function schoolYearFor(date = new Date()) {
+  const startYear = date.getMonth() >= 6 ? date.getFullYear() : date.getFullYear() - 1;
+  return `${startYear}-${startYear + 1}`;
+}
 
 function toISODate(dateStr) {
   const d = new Date(dateStr);
@@ -77,6 +82,7 @@ function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
 
 export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
   const byField = {};
+  const health = {};
   let browser;
 
   try {
@@ -94,12 +100,16 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
         console.log(`[HS] Scraping ${school.name}...`);
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36');
-        await page.goto(school.url, { waitUntil: 'networkidle2', timeout: 30000 });
+        const academicYear = schoolYearFor(new Date(`${startDateStr}T12:00:00`));
+        await page.goto(`${school.baseUrl}?year=${academicYear}`, { waitUntil: 'networkidle2', timeout: 30000 });
         await new Promise(r => setTimeout(r, 4000));
 
         const html = await page.content();
         await page.close();
 
+        const sourceEventCount = new Set(
+          [...html.matchAll(/data-testid="event-(\d+)-/g)].map(match => match[1])
+        ).size;
         const events = parseEventsFromHtml(html, school, startDateStr, endDateStr);
         const total = Object.values(events).reduce((s, a) => s + a.length, 0);
         console.log(`[HS] ${school.name}: ${total} home turf events`);
@@ -107,13 +117,27 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
         if (total > 0) {
           byField[school.fieldId] = events;
         }
+        health[school.fieldId] = {
+          ok: sourceEventCount > 0,
+          provider: school.name.toLowerCase(),
+          message: sourceEventCount > 0
+            ? `${sourceEventCount} schedule rows observed for ${academicYear}`
+            : `${school.name} schedule loaded but no event rows were detected`,
+          eventCount: total,
+        };
       } catch (err) {
         console.error(`[HS] ${school.name} error:`, err.message);
+        health[school.fieldId] = {
+          ok: false,
+          provider: school.name.toLowerCase(),
+          message: err.message,
+          eventCount: 0,
+        };
       }
     }
   } finally {
     if (browser) await browser.close();
   }
 
-  return byField;
+  return { events: byField, health };
 }

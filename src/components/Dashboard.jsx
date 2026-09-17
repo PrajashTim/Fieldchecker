@@ -2,8 +2,31 @@ import React, { useState } from 'react';
 import FieldCard from './FieldCard';
 import mockData from '../data/mockState.json';
 
+const PICKUP_DURATION_MINUTES = 120;
+const EVENT_DURATION_MINUTES = 150;
+const EVENT_SETUP_BUFFER_MINUTES = 30;
+
+function parseStartMinutes(timeText = '') {
+  const match = timeText.match(/(\d{1,2}):(\d{2})\s*([AP]M)/i);
+  if (!match) return null;
+  let hour = Number(match[1]) % 12;
+  if (match[3].toUpperCase() === 'PM') hour += 12;
+  return hour * 60 + Number(match[2]);
+}
+
+function overlapsPickupWindow(events, pickupStart) {
+  const pickupEnd = pickupStart + PICKUP_DURATION_MINUTES;
+  return events.some(event => {
+    const eventStart = parseStartMinutes(event.time);
+    if (eventStart === null) return true;
+    const blockedStart = eventStart - EVENT_SETUP_BUFFER_MINUTES;
+    const blockedEnd = eventStart + EVENT_DURATION_MINUTES;
+    return pickupStart < blockedEnd && pickupEnd > blockedStart;
+  });
+}
+
 const Dashboard = () => {
-  const { schedule } = mockData;
+  const { schedule, sourceHealth = {} } = mockData;
   const availableDates = Object.keys(schedule).sort();
   
   // Always default to actual today's date in local time, not just the first date in the JSON
@@ -30,16 +53,12 @@ const Dashboard = () => {
     if (!filter630 && !filter800) return true;
 
     if (filter630) {
-      const hasEveningBlock = field.events.some(e => 
-        e.time.includes('6:00') || e.time.includes('6:30') || e.time.includes('7:00') || e.time.includes('8:00 PM') || e.time.includes('8:30 PM')
-      );
+      const hasEveningBlock = overlapsPickupWindow(field.events, 18 * 60 + 30);
       if (hasEveningBlock) return false;
     }
 
     if (filter800) {
-      const hasMorningBlock = field.events.some(e => 
-        e.time.includes('8:00 AM') || e.time.includes('8:30 AM') || e.time.includes('9:00 AM') || e.time.includes('10:00 AM')
-      );
+      const hasMorningBlock = overlapsPickupWindow(field.events, 8 * 60);
       if (hasMorningBlock) return false;
     }
     
@@ -63,9 +82,9 @@ const Dashboard = () => {
     <main className="container dashboard">
       <div className="dashboard-header">
         <div>
-          <h2 className="dashboard-title">Easily check which fields are open for pickup</h2>
+          <h2 className="dashboard-title">Check known field conflicts before pickup</h2>
           <p className="dashboard-subtitle">
-            Live data from FXA Sports · Chantilly HS · Westfield HS · Centreville HS · and more
+            Schedule signals from FXA Sports · Chantilly HS · Westfield HS · Centreville HS · and more
           </p>
         </div>
         
@@ -107,6 +126,15 @@ const Dashboard = () => {
         </div>
       </div>
 
+      {Object.values(sourceHealth).some(source => !source?.ok) && (
+        <div className="source-warning" role="status">
+          <strong>Availability is partially unverified.</strong>
+          <span>
+            One or more schedule sources are unavailable. Confirmed conflicts are shown, but an empty schedule does not mean a field is open.
+          </span>
+        </div>
+      )}
+
       <div className="fields-grid">
         {displayedFields.map((field) => (
           <FieldCard key={field.id} field={field} filter630={filter630} filter800={filter800} selectedDate={selectedDate} todayStr={todayStr} />
@@ -120,8 +148,8 @@ const Dashboard = () => {
       )}
 
       <footer className="site-footer">
-        <p className="footer-joke">
-          Darpan Rijal is a Tori player. Cannot be trusted with the ball for the next 7 lifetimes.
+        <p className="footer-disclaimer">
+          Advisory only. A clear result means no conflict was found in the connected sources; it is not a reservation or guarantee of access.
         </p>
       </footer>
     </main>

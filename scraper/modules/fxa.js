@@ -203,10 +203,28 @@ export async function fetchFxaEvents(startDate, endDate) {
     leagues = await fetchActiveLeagues();
   } catch (err) {
     console.error('[FXA] Failed to fetch leagues:', err.message);
-    return byField;
+    return {
+      events: byField,
+      health: { ok: false, provider: 'fxa', message: `FXA request failed: ${err.message}`, eventCount: 0 },
+    };
   }
 
   console.log(`[FXA] Found ${leagues.length} active leagues`);
+
+  // FXA migrated away from its legacy LeagueApps discovery flow in 2026.
+  // An empty response is therefore a source outage, not proof that every field
+  // is available. Fail closed so the UI cannot publish false "open" claims.
+  if (leagues.length === 0) {
+    return {
+      events: byField,
+      health: {
+        ok: false,
+        provider: 'fxa',
+        message: 'FXA returned no live/upcoming leagues; legacy LeagueApps feed is unavailable',
+        eventCount: 0,
+      },
+    };
+  }
 
   // Fetch schedules in parallel batches of 5
   const BATCH = 5;
@@ -245,5 +263,13 @@ export async function fetchFxaEvents(startDate, endDate) {
     [...unmappedLocations].sort().forEach(loc => console.log(`  - "${loc}"`));
   }
 
-  return byField;
+  const eventCount = Object.values(byField).reduce(
+    (fieldTotal, dates) => fieldTotal + Object.values(dates).reduce((sum, items) => sum + items.length, 0),
+    0
+  );
+
+  return {
+    events: byField,
+    health: { ok: true, provider: 'fxa', message: `${leagues.length} leagues checked`, eventCount },
+  };
 }

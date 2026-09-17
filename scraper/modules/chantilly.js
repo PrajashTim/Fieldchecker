@@ -11,7 +11,14 @@
 
 import puppeteer from 'puppeteer';
 
-const SCHEDULE_URL = 'https://www.chantillyathletics.com/schedule?year=2025-2026';
+function schoolYearFor(date = new Date()) {
+  const startYear = date.getMonth() >= 6 ? date.getFullYear() : date.getFullYear() - 1;
+  return `${startYear}-${startYear + 1}`;
+}
+
+function scheduleUrl(date = new Date()) {
+  return `https://www.chantillyathletics.com/schedule?year=${schoolYearFor(date)}`;
+}
 
 const TURF_SPORTS = new Set([
   'SOCCER', 'FOOTBALL', 'LACROSSE', 'FIELD HOCKEY', 'TRACK', 'RUGBY',
@@ -80,19 +87,36 @@ export async function fetchChantillyEvents(startDateStr, endDateStr) {
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36');
 
-    await page.goto(SCHEDULE_URL, { waitUntil: 'networkidle2', timeout: 30000 });
+    const url = scheduleUrl(new Date(`${startDateStr}T12:00:00`));
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
     // Extra wait for React streaming to complete
     await new Promise(r => setTimeout(r, 4000));
 
     const html = await page.content();
+    const sourceEventCount = new Set(
+      [...html.matchAll(/data-testid="event-(\d+)-/g)].map(match => match[1])
+    ).size;
     const events = parseEventsFromHtml(html, startDateStr, endDateStr);
 
     const total = Object.values(events).reduce((s, arr) => s + arr.length, 0);
     console.log(`[Chantilly] Found ${total} home turf events`);
-    return events;
+    return {
+      events,
+      health: {
+        ok: sourceEventCount > 0,
+        provider: 'chantilly',
+        message: sourceEventCount > 0
+          ? `${sourceEventCount} schedule rows observed for ${schoolYearFor(new Date(`${startDateStr}T12:00:00`))}`
+          : 'Chantilly schedule loaded but no event rows were detected',
+        eventCount: total,
+      },
+    };
   } catch (err) {
     console.error('[Chantilly] Error:', err.message);
-    return {};
+    return {
+      events: {},
+      health: { ok: false, provider: 'chantilly', message: err.message, eventCount: 0 },
+    };
   } finally {
     if (browser) await browser.close();
   }

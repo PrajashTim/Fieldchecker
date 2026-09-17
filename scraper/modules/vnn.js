@@ -30,7 +30,7 @@ export const scrapeVNN = async (page, domain, dateStr) => {
         if (events.length > 0) return events;
         throw new Error("No events found or DOM structure didn't match.");
 
-    } catch (e) {
+    } catch {
         // Fallback: If the scraper fails (due to wrong CSS selectors or Captcha), we simulate the data
         // so the UI MVP doesn't break.
         const types = [
