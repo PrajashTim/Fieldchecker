@@ -1,47 +1,34 @@
 import React from 'react';
 
-const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
-  const { name, subfield, location, status, statusReason, events, unavailableSources = [] } = field;
+const PERMIT_DISCLAIMER =
+  'Could not verify county or school permits, private/member practice schedules, or walk-on use. A permitted group can still have the field.';
 
-  // Determine status color class
-  let statusClass = 'status-unknown';
-  let statusLabel = 'Unknown';
-  let displayReason = statusReason;
+const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
+  const { name, subfield, location, status, events } = field;
 
   const isTimeFilterActive = filter630 || filter800;
-
   const isToday = selectedDate === todayStr;
   const dateLabel = isToday ? 'Today' : selectedDate;
 
-  if (isTimeFilterActive) {
-    const coverageIncomplete = status === 'unknown' || unavailableSources.length > 0;
-    statusClass = coverageIncomplete ? 'status-unknown' : 'status-open';
+  let statusClass = 'status-open';
+  let statusLabel = `Open on ${dateLabel}`;
+  let displayReason = PERMIT_DISCLAIMER;
 
+  if (isTimeFilterActive) {
     let timeLabel = '';
     if (filter630 && filter800) timeLabel = '8:00 AM & 6:30 PM';
     else if (filter630) timeLabel = '6:30 PM+';
     else if (filter800) timeLabel = '8:00 AM+';
 
-    statusLabel = coverageIncomplete ? `Not verified at ${timeLabel}` : `No known conflict at ${timeLabel}`;
-
-    if (status === 'occupied' && !coverageIncomplete) {
-      displayReason = `Known events do not overlap your requested time on ${dateLabel}.`;
-    } else if (coverageIncomplete) {
-      displayReason = 'No overlapping event was found, but permit coverage is incomplete.';
-    } else if (status === 'open') {
-      displayReason = 'Schedule clears - no events all day.';
-    }
-  } else {
-    if (status === 'open') {
-      statusClass = 'status-open';
-      statusLabel = `Available on ${dateLabel}`;
-    } else if (status === 'occupied') {
-      statusClass = 'status-occupied';
-      statusLabel = 'Occupied / Scheduled';
-    } else {
-      statusClass = 'status-unknown';
-      statusLabel = 'Availability not verified';
-    }
+    statusClass = 'status-open';
+    statusLabel = `Open at ${timeLabel}`;
+    displayReason = status === 'occupied'
+      ? `No connected-source event overlaps that window on ${dateLabel}. ${PERMIT_DISCLAIMER}`
+      : PERMIT_DISCLAIMER;
+  } else if (status === 'occupied') {
+    statusClass = 'status-occupied';
+    statusLabel = 'Known conflict';
+    displayReason = 'A connected public schedule has this field booked.';
   }
 
   return (
@@ -71,17 +58,27 @@ const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
         {events && events.length > 0 ? (
           <ul className="schedule-list">
             {events.map((evt, idx) => (
-              <li key={idx} className="schedule-item">
-                <span className="schedule-time">{evt.time}</span>
+              <li key={evt.eventId || idx} className="schedule-item">
+                <span className="schedule-time">{evt.time}{evt.status === 'rescheduled' ? ' · rescheduled' : ''}</span>
                 <span className="schedule-event">{evt.title}</span>
+                <span className="schedule-meta">
+                  {[
+                    evt.source,
+                    evt.precision === 'exact_subfield' ? 'exact field' : evt.precision,
+                  ].filter(Boolean).join(' · ')}
+                  {evt.sourceUrl ? (
+                    <>
+                      {(evt.source || evt.precision) ? ' · ' : ''}
+                      <a href={evt.sourceUrl} target="_blank" rel="noopener noreferrer">source</a>
+                    </>
+                  ) : null}
+                </span>
               </li>
             ))}
           </ul>
         ) : (
           <div className="status-reason" style={{ opacity: 0.75 }}>
-            {status === 'unknown'
-              ? `No conflicts were detected for ${dateLabel}, but source coverage is incomplete.`
-              : `No events scheduled on ${dateLabel}.`}
+            No public-schedule events on {dateLabel}. {PERMIT_DISCLAIMER}
           </div>
         )}
       </div>

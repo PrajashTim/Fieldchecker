@@ -39,6 +39,9 @@ export function parseFcDullesPrograms(html, windowStart, windowEnd) {
       location: 'Poplar Tree Park Field 2',
       source: 'FC Dulles',
       sourceUrl: SOURCE_URL,
+      precision: 'exact_subfield',
+      confidence: 'index',
+      status: 'scheduled',
     }];
   }
   return events;

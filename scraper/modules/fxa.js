@@ -156,9 +156,18 @@ export function parseLeagueSchedule(html, league, startDateStr, endDateStr) {
           return;
         }
         const teams = $(cell).find('.scheduledTeams').text().replace(/\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
-        games.push({ fieldId, dateStr: gameDate, time: displayTime($(cell).attr('data-gametime') || ''),
-          title: `${league.sport || 'Field sport'} — ${teams || league.name}`, location, source: 'FXA Sports',
-          sourceUrl: `${BASE_URL}/league/${league.id}/schedule` });
+        games.push({
+          fieldId,
+          dateStr: gameDate,
+          time: displayTime($(cell).attr('data-gametime') || ''),
+          title: `${league.sport || 'Field sport'} — ${teams || league.name}`,
+          location,
+          source: 'FXA Sports',
+          sourceUrl: `${BASE_URL}/league/${league.id}/schedule`,
+          precision: 'exact_subfield',
+          confidence: 'verified_live',
+          status: 'scheduled',
+        });
       });
     });
   });
@@ -192,7 +201,8 @@ export async function fetchFxaEvents(startDate, endDate) {
             byField[game.fieldId] ??= {};
             byField[game.fieldId][game.dateStr] ??= [];
             byField[game.fieldId][game.dateStr].push({ time: game.time, title: game.title,
-              location: game.location, source: game.source, sourceUrl: game.sourceUrl });
+              location: game.location, source: game.source, sourceUrl: game.sourceUrl,
+              precision: game.precision, confidence: game.confidence, status: game.status });
           }
         } catch (error) {
           failedSchedules++;

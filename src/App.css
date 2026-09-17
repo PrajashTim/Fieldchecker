@@ -260,9 +260,14 @@
   margin-bottom: 0.15rem;
 }
 
-.schedule-event {
-  color: var(--color-text-primary);
-  opacity: 0.9;
+.schedule-meta {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.schedule-meta a {
+  color: var(--color-accent-primary);
 }
 
 /* Filter Button */

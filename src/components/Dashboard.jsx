@@ -84,7 +84,7 @@ const Dashboard = () => {
         <div>
           <h2 className="dashboard-title">Check known field conflicts before pickup</h2>
           <p className="dashboard-subtitle">
-            Schedule signals from FXA Sports · Chantilly HS · Westfield HS · Centreville HS · and more
+            Public schedules from FXA, NCSL, high-school athletics, and other connected sources. Open still cannot confirm private permits.
           </p>
         </div>
         
@@ -128,9 +128,9 @@ const Dashboard = () => {
 
       {Object.values(sourceHealth).some(source => !source?.ok) && (
         <div className="source-warning" role="status">
-          <strong>Availability is partially unverified.</strong>
+          <strong>Some connected feeds are down.</strong>
           <span>
-            One or more schedule sources are unavailable. Confirmed conflicts are shown, but an empty schedule does not mean a field is open.
+            Confirmed conflicts are still shown. Open means no conflict was found in the sources we could check — not that every permit or private practice was verified.
           </span>
         </div>
       )}
@@ -149,7 +149,7 @@ const Dashboard = () => {
 
       <footer className="site-footer">
         <p className="footer-disclaimer">
-          Advisory only. A clear result means no conflict was found in the connected sources; it is not a reservation or guarantee of access.
+          Advisory only. Open means no conflict was found in connected public schedules. It is not a reservation and does not include county/school permits or private team calendars.
         </p>
       </footer>
     </main>

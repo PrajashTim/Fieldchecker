@@ -5,6 +5,7 @@ Pitch Scout aggregates public schedule signals for soccer pickup fields around C
 ## Current sources
 
 - FXA LeagueLab: current soccer, flag football, ultimate, softball and kickball schedules that map to configured fields.
+- NCSL Demosphere: public Fall 2026 field calendars mapped only at exact subfield precision.
 - Chantilly, Westfield and Centreville high-school athletics schedules.
 - Explicitly published FC Dulles programs, currently the Fall 2026 REC Academy sessions at Poplar Tree #2.
 

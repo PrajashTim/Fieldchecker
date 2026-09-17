@@ -6,6 +6,7 @@ import { fetchFxaEvents } from './modules/fxa.js';
 import { fetchChantillyEvents } from './modules/chantilly.js';
 import { fetchHighSchoolEvents } from './modules/highschools.js';
 import { fetchFcDullesEvents } from './modules/fcdulles.js';
+import { fetchNcslEvents } from './modules/ncsl.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,11 +45,12 @@ async function runScraper() {
   const dates = dateRange(today, 30);
 
   // Fetch all data sources in parallel
-  const [fxaResult, chantillyResult, hsResult, fcDullesResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     fetchChantillyEvents(todayStr, endStr),
     fetchHighSchoolEvents(todayStr, endStr),
     fetchFcDullesEvents(todayStr, endStr),
+    fetchNcslEvents(todayStr, endStr),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -59,6 +61,7 @@ async function runScraper() {
     chantilly: chantillyResult.health,
     ...hsResult.health,
     fcDulles: fcDullesResult.health,
+    ncsl: ncslResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
@@ -85,7 +88,8 @@ async function runScraper() {
       // Gather events from all provider sources
       const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
       const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
-      let events = [...fxaEvents, ...hsEvents];
+      const ncslEvents = ncslResult.events[field.id]?.[dateStr] ?? [];
+      let events = [...fxaEvents, ...hsEvents, ...ncslEvents];
 
       if (field.id === 'poplar-tree-2') {
         events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];
@@ -109,10 +113,10 @@ async function runScraper() {
         ? 'occupied'
         : unavailableSources.length === 0 ? 'open' : 'unknown';
       const statusReason = events.length > 0
-        ? 'Scheduled events found'
+        ? 'Known conflict from a connected public schedule'
         : unavailableSources.length === 0
-          ? 'No conflicts found in connected sources'
-          : `Not verified — ${unavailableSources.map(item => item?.provider || 'source').join(', ')} unavailable`;
+          ? 'No conflict found in connected sources. This is not a reservation or guarantee of access.'
+          : `Not verified — ${unavailableSources.map(item => item?.provider || 'source').join(', ')} unavailable. A missing event is not evidence the field is free.`;
 
       return {
         id: field.id,

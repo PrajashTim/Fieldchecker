@@ -14,6 +14,7 @@ This register answers two different questions:
 | Provider | Sports/signals | Coverage | Method |
 |---|---|---|---|
 | FXA Sports / LeagueLab | Soccer, flag football, ultimate, softball and kickball | All current leagues exposed by FXA's public schedule finder; only exact configured-field matches are imported | Automatic discovery and full schedule parsing three times daily |
+| NCSL / Demosphere | Youth travel and REC games with exact subfields | Configured complexes that NCSL names at subfield precision, including Poplar Tree Park #2 | Public Fall 2026 field calendars; park-level names are not mapped |
 | Chantilly HS athletics | Football, soccer, lacrosse, field hockey, rugby and track events at the home turf venue | Public interscholastic schedule | Automatic 2026–2027 school-year parsing |
 | Westfield HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
 | Centreville HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
@@ -26,7 +27,7 @@ This register answers two different questions:
 | Fairfax NCS / FCPS CommunityUse / AFAR | Controls community permits across park and school fields | Permit calendars are provided to permit holders; no comprehensive anonymous occupancy feed was found | Authoritative blind spot; partnership/export needed |
 | Chantilly Youth Association (CYA) | Uses Arrowhead, Greenbriar, Poplar Tree, Stringfellow, Sully Highlands and other nearby fields | Team/practice schedules are generally distributed inside team systems | Inventory confirmed; exact public feed not found |
 | Southwestern Youth Association (SYA) | Soccer, football, cricket and other sports around Centreville/Clifton | Public pages confirm seasons and field use, but exact assignments are sent by app/email after permits arrive | Inventory confirmed; exact public feed not found |
-| FC Dulles travel and NCSL REC | Practices and home games around Chantilly; public program pages name some fields | TeamSnap/private team schedules hold much of the exact schedule | One public recurring program connected; broader feed missing |
+| FC Dulles travel and NCSL REC | Practices and home games around Chantilly; public program pages name some fields | Public NCSL field calendars now cover exact-field games; TeamSnap/private practice schedules remain unpublished | Games connected via NCSL; practices still missing |
 | Virginia Valor FC / USL Youth | Publicly names Sully Highlands, Poplar Tree, Greenbriar, Arrowhead, Centreville HS and E.C. Lawrence as training/game locations | Team-specific schedules are shared through PlayMetrics | Inventory confirmed; exact public feed not found |
 | NVASA | Adult soccer; historical public results show Poplar Tree #2 use | Current Fall 2026 schedule was not exposed in the public results selector during the audit | Candidate adapter when current schedule appears |
 | Fairfax Soccer League | Year-round adult 50+/60+ soccer on Fairfax turf | Public site confirms activity but did not expose a field-by-field current schedule | Candidate/partnership |
@@ -51,8 +52,11 @@ FXA's current schedule includes fields the app does not yet model, including Gro
 
 ## Next connector order
 
-1. Fairfax Park Authority same-day closure status as an authoritative `closed` signal.
-2. Current NVASA schedule when Fall data becomes public.
-3. CYA/SYA/FC Dulles/Valor approved calendar exports or team-platform integrations.
-4. Cricket connector only where the fixture identifies an exact configured field, not merely the same park.
-5. Normalized Field Intelligence API for Nova Royals after event storage moves out of the Git-committed snapshot.
+1. FWSA LeagueApps public division schedules, only where the venue is an exact configured subfield.
+2. NVSL live-row verification for Braddock Park exact subfield, then connect.
+3. Fairfax Park Authority same-day closure status as an authoritative `closed` signal.
+4. Current NVASA schedule when Fall data becomes public.
+5. Authorized exports from Virginia Valor, CYA, and SYA — never scrape member systems.
+6. County/FCPS permit records through existing AFAR/CommunityUse exports (FOIA or partnership).
+7. Cricket connector only where the fixture identifies an exact configured field, not merely the same park.
+8. Normalized Field Intelligence API for Nova Royals after event storage moves out of the Git-committed snapshot.
