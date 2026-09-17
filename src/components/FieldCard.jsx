@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
-  const { name, subfield, location, status, statusReason, events } = field;
+  const { name, subfield, location, status, statusReason, events, unavailableSources = [] } = field;
 
   // Determine status color class
   let statusClass = 'status-unknown';
@@ -14,17 +14,20 @@ const FieldCard = ({ field, filter630, filter800, selectedDate, todayStr }) => {
   const dateLabel = isToday ? 'Today' : selectedDate;
 
   if (isTimeFilterActive) {
-    statusClass = status === 'unknown' ? 'status-unknown' : 'status-open';
+    const coverageIncomplete = status === 'unknown' || unavailableSources.length > 0;
+    statusClass = coverageIncomplete ? 'status-unknown' : 'status-open';
 
     let timeLabel = '';
     if (filter630 && filter800) timeLabel = '8:00 AM & 6:30 PM';
     else if (filter630) timeLabel = '6:30 PM+';
     else if (filter800) timeLabel = '8:00 AM+';
 
-    statusLabel = status === 'unknown' ? `Not verified at ${timeLabel}` : `Open at ${timeLabel}`;
+    statusLabel = coverageIncomplete ? `Not verified at ${timeLabel}` : `No known conflict at ${timeLabel}`;
 
-    if (status === 'occupied') {
-      displayReason = `This field has events on ${dateLabel}, but is wide open during your requested time!`;
+    if (status === 'occupied' && !coverageIncomplete) {
+      displayReason = `Known events do not overlap your requested time on ${dateLabel}.`;
+    } else if (coverageIncomplete) {
+      displayReason = 'No overlapping event was found, but permit coverage is incomplete.';
     } else if (status === 'open') {
       displayReason = 'Schedule clears - no events all day.';
     }

@@ -56,6 +56,13 @@ async function runScraper() {
     fxa: fxaResult.health,
     chantilly: chantillyResult.health,
     ...hsResult.health,
+    countyPermits: {
+      ok: false,
+      provider: 'fairfax-county-permits',
+      message: 'Fairfax County/FCPS permit calendars are not published as a public schedule feed',
+      eventCount: 0,
+      sourceUrl: 'https://www.fairfaxcounty.gov/neighborhood-community-services/athletics/permit-application',
+    },
   };
 
   // Build schedule output
@@ -73,7 +80,9 @@ async function runScraper() {
         events = [...events, ...chantillyEvents];
       }
 
-      const relevantHealth = [sourceHealth.fxa];
+      // FXA is only one renter. County/FCPS permits are the controlling source
+      // for community use, so a quiet FXA schedule cannot prove availability.
+      const relevantHealth = [sourceHealth.fxa, sourceHealth.countyPermits];
       if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
       if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);

@@ -1,275 +1,204 @@
 /**
- * FXA Sports / LeagueApps scraper
- *
- * Strategy:
- * 1. Hit api.fxasports.com to get all active leagues for the nova site
- * 2. For each league, fetch the LeagueApps schedule HTML for the next 7 days
- * 3. Parse game date, time, location from the HTML
- * 4. Map location strings to our field IDs
- *
- * Returns: Map of fieldId → Map of dateStr (YYYY-MM-DD) → event[]
+ * FXA Sports scraper for LeagueLab, the platform FXA moved to in 2026.
+ * Empty/unparseable feeds fail closed; they never mean every field is open.
  */
-
 import https from 'https';
+import { load } from 'cheerio';
 
-const FXA_API_KEY = 'asd2wsdasdasdasdasdasdgasdgxvasd';
-const NOVA_SITE_ID = 15768;
-
-// Maps FXA location name → our field ID(s)
-// Ordered roughly by distance from Chantilly HS
+const BASE_URL = 'https://fxasports.leaguelab.com';
 const LOCATION_TO_FIELD = {
-  // Chantilly HS — FXA adult leagues also book the stadium
-  'Chantilly High School (Stadium Field)':  'chantilly-hs-turf',
-  // Stringfellow Park (0.5 mi)
-  'Stringfellow Park':                 'stringfellow-1',
-  'Stringfellow Park (Field 1)':       'stringfellow-1',
-  'Stringfellow Park (Turf Front)':    'stringfellow-1',
-  // Poplar Tree Park (1.1 mi)
-  'Poplar Tree Park (Field 2)':        'poplar-tree-2',
-  'Poplar Tree Park (Field 3)':        'poplar-tree-3',
-  // Westfield HS (1.3 mi)
-  'Westfield High School (Aux Field 1)':   'westfield-hs-turf',
-  'Westfield High School (Stadium Field)': 'westfield-hs-turf',
-  // EC Lawrence Park (1.4 mi)
-  'EC Lawrence Park (Field 2)':        'eclawrence-2',
-  'EC Lawrence Park (Field 3A)':       'eclawrence-3a',
-  'EC Lawrence Park (Field 3B)':       'eclawrence-3b',
-  // Arrowhead Park (2.3 mi) — FXA uses "Arrowhead Park Turf (Field X)" format
-  'Arrowhead Park Turf':               'arrowhead-1',
-  'Arrowhead Park Turf (Field 1)':     'arrowhead-1',
-  'Arrowhead Park Turf (Field 1A)':    'arrowhead-1a',
-  'Arrowhead Park Turf (Field 1B)':    'arrowhead-1b',
-  'Arrowhead Park Turf (Field 3)':     'arrowhead-3',
-  'Arrowhead Park Turf (Field 3A)':    'arrowhead-3a',
-  'Arrowhead Park Turf (Field 3B)':    'arrowhead-3b',
-  'Arrowhead Park Turf (Field 3C)':    'arrowhead-3c',
-  // Centreville HS (2.5 mi)
-  'Centreville High School (Aux Field)':   'centreville-hs-turf',
-  // Sully Highlands Park (3.5 mi)
-  'Sully Highlands Park (Field 1)':    'sully-highlands-1',
-  'Sully Highlands Park (Field 1A)':   'sully-highlands-1',
-  'Sully Highlands Park (Field 1B)':   'sully-highlands-1',
-  'Sully Highlands Park (Field 2)':    'sully-highlands-2',
-  'Sully Highlands Park (Field 2A)':   'sully-highlands-2',
-  'Sully Highlands Park (Field 2B)':   'sully-highlands-2',
-  // Greenbriar Park (3.6 mi)
-  'Greenbriar Park (Field 5)':         'greenbriar-5',
-  'Greenbriar Park (Field 5A)':        'greenbriar-5a',
-  'Greenbriar Park (Field 5B)':        'greenbriar-5b',
-  // Cunningham Park (4.0 mi)
-  'Cunningham Park (Field 1)':         'cunningham-1',
-  // Nottoway Park (5.2 mi)
-  'Nottoway Park (Field 4A)':          'nottoway-4a',
-  'Nottoway Park (Field 4B)':          'nottoway-4b',
-  // Arrowbrook Park (5.3 mi)
-  'Arrowbrook Park Turf':              'arrowbrook-1',
-  // OakMont Park / Oak Marr (5.9 mi)
-  'OakMont Park (Oak Marr) (Field 1)':  'oakmont-1',
-  'OakMont Park (Oak Marr) (Field 1A)': 'oakmont-1a',
-  'OakMont Park (Oak Marr) (Field 1B)': 'oakmont-1b',
-  'OakMont Park (Oak Marr) (Field 1C)': 'oakmont-1c',
-  'OakMont Park (Oak Marr) (Field 2)':  'oakmont-2',
-  'OakMont Park (Oak Marr) (Field 2A)': 'oakmont-2a',
-  'OakMont Park (Oak Marr) (Field 2B)': 'oakmont-2b',
-  // Lake Fairfax Park (7.7 mi)
-  'Lake Fairfax Park (Field 1)':       'lake-fairfax-1',
-  'Lake Fairfax Park (Field 3)':       'lake-fairfax-3',
-  'Lake Fairfax Park (Field 4)':       'lake-fairfax-4',
-  'Lake Fairfax Park (Field 5)':       'lake-fairfax-5',
-  // Bready Park (8.4 mi)
-  'Bready Park (Field 1A)':            'bready-1a',
-  'Bready Park (Field 1B)':            'bready-1b',
-  // Braddock Park (9.2 mi)
-  'Braddock Park Turf (Field 7)':      'braddock-7',
-  'Braddock Park Turf (Field 7A)':     'braddock-7a',
-  'Braddock Park Turf (Field 7B)':     'braddock-7b',
-  // South County HS (15.8 mi)
-  'South County High School (Aux Field)': 'south-county-hs-turf',
+  'chantilly high school stadium field': 'chantilly-hs-turf',
+  'chantilly high school field 1': 'chantilly-hs-turf',
+  'stringfellow park field 1': 'stringfellow-1',
+  'stringfellow park turf front': 'stringfellow-1',
+  'poplar tree park field 2': 'poplar-tree-2',
+  'poplar tree park field 3': 'poplar-tree-3',
+  'westfield high school aux field 1': 'westfield-hs-turf',
+  'westfield high school aux field': 'westfield-hs-turf',
+  'westfield high school stadium field': 'westfield-hs-turf',
+  'westfield high school stadium': 'westfield-hs-turf',
+  'ec lawrence park field 2': 'eclawrence-2',
+  'ec lawrence park 2 ec 2': 'eclawrence-2',
+  'ec lawrence 2 turf field 2': 'eclawrence-2',
+  'ec lawrence park field 3a': 'eclawrence-3a',
+  'ec lawrence park field 3b': 'eclawrence-3b',
+  'arrowhead park turf field 1': 'arrowhead-1',
+  'arrowhead park turf field 1a': 'arrowhead-1a',
+  'arrowhead park turf field 1b': 'arrowhead-1b',
+  'arrowhead park turf field 3': 'arrowhead-3',
+  'arrowhead park turf field 3a': 'arrowhead-3a',
+  'arrowhead park turf field 3b': 'arrowhead-3b',
+  'arrowhead park turf field 3c': 'arrowhead-3c',
+  'centreville high school aux field': 'centreville-hs-turf',
+  'centreville high school field 1': 'centreville-hs-turf',
+  'sully highlands park field 1': 'sully-highlands-1',
+  'sully highlands park field 1a': 'sully-highlands-1',
+  'sully highlands park field 1b': 'sully-highlands-1',
+  'sully highlands park field 2': 'sully-highlands-2',
+  'sully highlands park field 2a': 'sully-highlands-2',
+  'sully highlands park field 2b': 'sully-highlands-2',
+  'greenbriar park field 5': 'greenbriar-5',
+  'greenbriar park field 5a': 'greenbriar-5a',
+  'greenbriar park field 5b': 'greenbriar-5b',
+  'cunningham park field 1': 'cunningham-1',
+  'nottoway park field 4a': 'nottoway-4a',
+  'nottoway park field 4b': 'nottoway-4b',
+  'arrowbrook park turf': 'arrowbrook-1',
+  'arrowbrook park field 1': 'arrowbrook-1',
+  'arrowbrook centre park field 1': 'arrowbrook-1',
+  'oakmont park oak marr field 1': 'oakmont-1',
+  'oakmont park oak marr field 1a': 'oakmont-1a',
+  'oakmont park oak marr field 1b': 'oakmont-1b',
+  'oakmont park oak marr field 1c': 'oakmont-1c',
+  'oakmont park oak marr field 2': 'oakmont-2',
+  'oakmont park oak marr field 2a': 'oakmont-2a',
+  'oakmont park oak marr field 2b': 'oakmont-2b',
+  'lake fairfax park field 1': 'lake-fairfax-1',
+  'lake fairfax park field 3': 'lake-fairfax-3',
+  'lake fairfax park field 4': 'lake-fairfax-4',
+  'lake fairfax park field 5': 'lake-fairfax-5',
+  'bready park field 1a': 'bready-1a',
+  'bready park field 1b': 'bready-1b',
+  'braddock park turf field 7': 'braddock-7',
+  'braddock park turf field 7a': 'braddock-7a',
+  'braddock park turf field 7b': 'braddock-7b',
+  'south county high school aux field': 'south-county-hs-turf',
 };
 
-function httpsGet(url, extraHeaders = {}) {
+function httpsGet(url) {
   return new Promise((resolve, reject) => {
-    const u = new URL(url);
-    const req = https.get(
-      {
-        hostname: u.hostname,
-        path: u.pathname + u.search,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
-          'Accept': 'text/html,application/json,*/*',
-          ...extraHeaders,
-        },
-      },
-      res => {
-        let body = '';
-        res.on('data', chunk => (body += chunk));
-        res.on('end', () => resolve({ status: res.statusCode, body }));
-      }
-    );
+    const req = https.get(url, { headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; PitchScout/1.0; schedule availability checker)',
+      Accept: 'text/html,application/xhtml+xml',
+    } }, res => {
+      let body = '';
+      res.on('data', chunk => (body += chunk));
+      res.on('end', () => resolve({ status: res.statusCode, body }));
+    });
     req.on('error', reject);
-    req.setTimeout(20000, () => { req.destroy(); reject(new Error('timeout')); });
+    req.setTimeout(30000, () => { req.destroy(); reject(new Error('timeout')); });
   });
 }
 
-async function fetchActiveLeagues() {
-  // API uses 0-based page numbers; currentPage in response tells us what page was returned
-  const all = [];
-  let page = 0;
-  while (true) {
-    const url =
-      `https://api.fxasports.com/dynamic/getLeagues` +
-      `?sign_up=1&perPage=100&siteId=${NOVA_SITE_ID}` +
-      `&state[0]=UPCOMING&state[1]=LIVE&paginated=true&page=${page}`;
-
-    const { body } = await httpsGet(url, { apiKey: FXA_API_KEY });
-    const json = JSON.parse(body);
-    const batch = json.data || [];
-    all.push(...batch);
-    if (batch.length < 100) break;
-    page++;
-    if (page > 10) break; // safety cap
-  }
-  return all;
+function normalizeLocation(value) {
+  return value.toLowerCase().replace(/&amp;/g, ' and ').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function parseDateStr(dayStr, year) {
-  // dayStr like "Mon, Apr 27"
-  const d = new Date(`${dayStr} ${year}`);
-  if (isNaN(d)) return null;
-  return d.toISOString().split('T')[0]; // YYYY-MM-DD
+function displayTime(raw) {
+  const [hourText, minute = '00'] = raw.split('-');
+  const hour = Number(hourText);
+  if (!Number.isFinite(hour)) return 'TBA';
+  return `${hour % 12 || 12}:${minute} ${hour >= 12 ? 'PM' : 'AM'}`;
 }
 
-function parseScheduleHtml(html, year) {
+export function parseLeagueCatalog(html) {
+  const $ = load(html);
+  const leagues = new Map();
+  $('li.league').each((_, el) => {
+    if ($(el).find('img[alt="Soccer"]').length === 0) return;
+    const link = $(el).find('a[href*="/league/"][href*="/schedule"]').first();
+    const id = link.attr('href')?.match(/\/league\/(\d+)\/schedule/)?.[1];
+    if (id) leagues.set(id, { id, name: link.text().replace(/\s+/g, ' ').trim() || 'FXA Soccer' });
+  });
+  $('.league-listing[data-leagueid][data-sport="Soccer"]').each((_, el) => {
+    const id = $(el).attr('data-leagueid');
+    if (id) leagues.set(id, { id,
+      name: $(el).attr('data-leaguename') || $(el).find('.league-name').text().trim() || 'FXA Soccer' });
+  });
+  return [...leagues.values()];
+}
+
+export function parseLeagueSchedule(html, league, startDateStr, endDateStr) {
+  const $ = load(html);
   const games = [];
-  const blocks = html.split(/class="schedule-game/i);
+  const unmappedLocations = new Set();
+  const seenGameIds = new Set();
+  let scheduleTables = 0;
 
-  for (const block of blocks.slice(1)) {
-    const dateMatch = block.match(/<span class="date">\s*([^<]+)\s*<\/span>/i);
-    const timeMatch = block.match(/<span class="time">([\s\S]{0,400}?)<\/span>/i);
-    const locMatch  = block.match(/<a href="\/location\/\d+"[^>]*>([^<]+)<\/a>/i);
+  $('.gameDate[data-date]').each((_, dateBlock) => {
+    const dateStr = $(dateBlock).attr('data-date');
+    if (!dateStr || dateStr < startDateStr || dateStr > endDateStr) return;
+    $(dateBlock).find('table.scheduleTable').each((__, table) => {
+      scheduleTables++;
+      const headers = $(table).find('th.gameField').map((___, header) => {
+        const location = $(header).find('a[href^="/location/"]').first().text().trim();
+        const field = $(header).find('.gameFieldName').text().replace(/\s+/g, ' ').trim();
+        return `${location} ${field}`.trim();
+      }).get();
+      const gameFieldKeys = [];
+      $(table).find('td[data-gamefield]').each((___, cell) => {
+        const key = $(cell).attr('data-gamefield');
+        if (key && !gameFieldKeys.includes(key)) gameFieldKeys.push(key);
+      });
+      const locationsByKey = Object.fromEntries(gameFieldKeys.map((key, index) => [key, headers[index]]));
+      $(table).find('td[data-gid][data-gamedate]').each((___, cell) => {
+        const gameId = $(cell).attr('data-gid');
+        if (!gameId || seenGameIds.has(gameId)) return;
+        seenGameIds.add(gameId);
+        const gameDate = $(cell).attr('data-gamedate');
+        if (gameDate < startDateStr || gameDate > endDateStr) return;
+        const location = locationsByKey[$(cell).attr('data-gamefield')] || '';
+        const fieldId = LOCATION_TO_FIELD[normalizeLocation(location)];
+        if (!fieldId) {
+          if (location) unmappedLocations.add(location);
+          return;
+        }
+        const teams = $(cell).find('.scheduledTeams').text().replace(/\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
+        games.push({ fieldId, dateStr: gameDate, time: displayTime($(cell).attr('data-gametime') || ''),
+          title: teams || league.name, location, source: 'FXA Sports',
+          sourceUrl: `${BASE_URL}/league/${league.id}/schedule` });
+      });
+    });
+  });
+  return { games, unmappedLocations, scheduleTables };
+}
 
-    if (!dateMatch || !locMatch) continue;
+export async function fetchFxaEvents(startDate, endDate) {
+  const startDateStr = startDate.toISOString().split('T')[0];
+  const endDateStr = endDate.toISOString().split('T')[0];
+  const byField = {};
+  try {
+    const catalogResponse = await httpsGet(`${BASE_URL}/schedule-finder`);
+    if (catalogResponse.status !== 200) throw new Error(`league catalog returned HTTP ${catalogResponse.status}`);
+    const leagues = parseLeagueCatalog(catalogResponse.body);
+    if (!leagues.length) throw new Error('league catalog contained no current/upcoming soccer leagues');
+    console.log(`[FXA] Found ${leagues.length} current/upcoming LeagueLab soccer leagues`);
+    let parsedSchedules = 0;
+    let failedSchedules = 0;
+    const unmappedLocations = new Set();
 
-    const dateStr = parseDateStr(dateMatch[1].trim(), year);
-    if (!dateStr) continue;
-
-    let time = 'TBA';
-    if (timeMatch) {
-      const raw = timeMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-      const tm = raw.match(/\d{1,2}:\d{2}\s*[AP]M/i);
-      if (tm) time = tm[0];
+    for (let i = 0; i < leagues.length; i += 6) {
+      await Promise.all(leagues.slice(i, i + 6).map(async league => {
+        try {
+          const response = await httpsGet(`${BASE_URL}/league/${league.id}/schedule`);
+          if (response.status !== 200) throw new Error(`HTTP ${response.status}`);
+          if (!response.body.includes('leagueSchedule')) throw new Error('schedule page structure not recognized');
+          const parsed = parseLeagueSchedule(response.body, league, startDateStr, endDateStr);
+          parsedSchedules++;
+          parsed.unmappedLocations.forEach(location => unmappedLocations.add(location));
+          for (const game of parsed.games) {
+            byField[game.fieldId] ??= {};
+            byField[game.fieldId][game.dateStr] ??= [];
+            byField[game.fieldId][game.dateStr].push({ time: game.time, title: game.title,
+              location: game.location, source: game.source, sourceUrl: game.sourceUrl });
+          }
+        } catch (error) {
+          failedSchedules++;
+          console.warn(`[FXA] League ${league.id} (${league.name}) failed: ${error.message}`);
+        }
+      }));
     }
 
-    const location = locMatch[1].trim();
-    const cancelled = /class="[^"]*cancel/i.test(block) || /<span[^>]*>Cancelled/i.test(block);
-
-    games.push({ dateStr, time, location, cancelled });
+    const eventCount = Object.values(byField).reduce(
+      (total, dates) => total + Object.values(dates).reduce((sum, events) => sum + events.length, 0), 0);
+    if (unmappedLocations.size) console.warn(`[FXA] Unmapped scheduled venues: ${[...unmappedLocations].sort().join('; ')}`);
+    const ok = parsedSchedules > 0 && failedSchedules === 0;
+    return { events: byField, health: { ok, provider: 'fxa',
+      message: `${parsedSchedules}/${leagues.length} LeagueLab soccer schedules checked; ${eventCount} mapped games${unmappedLocations.size ? `; ${unmappedLocations.size} unmapped venues` : ''}`,
+      eventCount, leagueCount: leagues.length, unmappedLocations: [...unmappedLocations].sort(), sourceUrl: `${BASE_URL}/schedule-finder` } };
+  } catch (error) {
+    console.error('[FXA] Failed:', error.message);
+    return { events: byField, health: { ok: false, provider: 'fxa', message: error.message,
+      eventCount: 0, sourceUrl: `${BASE_URL}/schedule-finder` } };
   }
-  return games;
-}
-
-async function fetchLeagueSchedule(programId, startDate, endDate, year) {
-  const fmt = d => `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
-  const qs = new URLSearchParams({
-    origin: 'site',
-    scope: 'program',
-    publishedOnly: 'true',
-    itemType: 'games_only',
-    programId: String(programId),
-    startsAfterDate: fmt(startDate),
-    startsBeforeDate: fmt(endDate),
-  });
-
-  const { status, body } = await httpsGet(
-    `https://fxasports.leagueapps.com/ajax/loadSchedule?${qs}`,
-    { 'X-Requested-With': 'XMLHttpRequest' }
-  );
-
-  if (status !== 200) return [];
-  return parseScheduleHtml(body, year);
-}
-
-/**
- * Main export.
- * Returns: { fieldId: { 'YYYY-MM-DD': [{ time, title, location, cancelled }] } }
- */
-export async function fetchFxaEvents(startDate, endDate) {
-  const year = startDate.getFullYear();
-  const byField = {};
-  const unmappedLocations = new Set();
-
-  let leagues;
-  try {
-    leagues = await fetchActiveLeagues();
-  } catch (err) {
-    console.error('[FXA] Failed to fetch leagues:', err.message);
-    return {
-      events: byField,
-      health: { ok: false, provider: 'fxa', message: `FXA request failed: ${err.message}`, eventCount: 0 },
-    };
-  }
-
-  console.log(`[FXA] Found ${leagues.length} active leagues`);
-
-  // FXA migrated away from its legacy LeagueApps discovery flow in 2026.
-  // An empty response is therefore a source outage, not proof that every field
-  // is available. Fail closed so the UI cannot publish false "open" claims.
-  if (leagues.length === 0) {
-    return {
-      events: byField,
-      health: {
-        ok: false,
-        provider: 'fxa',
-        message: 'FXA returned no live/upcoming leagues; legacy LeagueApps feed is unavailable',
-        eventCount: 0,
-      },
-    };
-  }
-
-  // Fetch schedules in parallel batches of 5
-  const BATCH = 5;
-  for (let i = 0; i < leagues.length; i += BATCH) {
-    const batch = leagues.slice(i, i + BATCH);
-    await Promise.all(
-      batch.map(async league => {
-        const id = league.leagueProgramId;
-        const name = league.leagueName || league.leagueNames || 'League';
-        try {
-          const games = await fetchLeagueSchedule(id, startDate, endDate, year);
-          for (const game of games) {
-            if (game.cancelled) continue;
-
-            const fieldId = LOCATION_TO_FIELD[game.location];
-            if (!fieldId) { unmappedLocations.add(game.location); continue; }
-
-            if (!byField[fieldId]) byField[fieldId] = {};
-            if (!byField[fieldId][game.dateStr]) byField[fieldId][game.dateStr] = [];
-
-            byField[fieldId][game.dateStr].push({
-              time: game.time,
-              title: name.split('|')[0].trim(),
-              location: game.location,
-            });
-          }
-        } catch (err) {
-          console.warn(`[FXA] League ${id} error: ${err.message}`);
-        }
-      })
-    );
-  }
-
-  if (unmappedLocations.size > 0) {
-    console.log('[FXA] Unmapped locations (games ignored):');
-    [...unmappedLocations].sort().forEach(loc => console.log(`  - "${loc}"`));
-  }
-
-  const eventCount = Object.values(byField).reduce(
-    (fieldTotal, dates) => fieldTotal + Object.values(dates).reduce((sum, items) => sum + items.length, 0),
-    0
-  );
-
-  return {
-    events: byField,
-    health: { ok: true, provider: 'fxa', message: `${leagues.length} leagues checked`, eventCount },
-  };
 }
