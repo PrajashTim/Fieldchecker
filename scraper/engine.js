@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { fetchFxaEvents } from './modules/fxa.js';
 import { fetchChantillyEvents } from './modules/chantilly.js';
 import { fetchHighSchoolEvents } from './modules/highschools.js';
+import { fetchFcDullesEvents } from './modules/fcdulles.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,7 +33,7 @@ function dateRange(start, days) {
 }
 
 async function runScraper() {
-  console.log('🚀 Pitch Scout — scraping next 7 days...');
+  console.log('🚀 Pitch Scout — rebuilding the rolling 30-day window...');
 
   const today = new Date();
   const todayStr = localDateStr(today);
@@ -43,10 +44,11 @@ async function runScraper() {
   const dates = dateRange(today, 30);
 
   // Fetch all data sources in parallel
-  const [fxaResult, chantillyResult, hsResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     fetchChantillyEvents(todayStr, endStr),
     fetchHighSchoolEvents(todayStr, endStr),
+    fetchFcDullesEvents(todayStr, endStr),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -56,6 +58,7 @@ async function runScraper() {
     fxa: fxaResult.health,
     chantilly: chantillyResult.health,
     ...hsResult.health,
+    fcDulles: fcDullesResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
@@ -64,6 +67,15 @@ async function runScraper() {
       sourceUrl: 'https://www.fairfaxcounty.gov/neighborhood-community-services/athletics/permit-application',
     },
   };
+
+  // Never publish a fresh-looking snapshot when a critical public feed broke.
+  // GitHub Actions will retry the entire scrape and visibly fail if all retries
+  // are exhausted, preserving the last known-good snapshot in production.
+  const criticalSources = ['fxa', 'chantilly', 'centreville-hs-turf', 'westfield-hs-turf'];
+  const failedCriticalSources = criticalSources.filter(source => !sourceHealth[source]?.ok);
+  if (failedCriticalSources.length) {
+    throw new Error(`Critical source validation failed: ${failedCriticalSources.join(', ')}`);
+  }
 
   // Build schedule output
   const schedule = {};
@@ -74,6 +86,10 @@ async function runScraper() {
       const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
       const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
       let events = [...fxaEvents, ...hsEvents];
+
+      if (field.id === 'poplar-tree-2') {
+        events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];
+      }
 
       if (field.scraperTarget === 'chantilly') {
         const chantillyEvents = chantillyByDate[dateStr] ?? [];
@@ -86,6 +102,7 @@ async function runScraper() {
       if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
       if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);
+      if (field.id === 'poplar-tree-2') relevantHealth.push(sourceHealth.fcDulles);
 
       const unavailableSources = relevantHealth.filter(item => !item?.ok);
       const status = events.length > 0
@@ -113,6 +130,8 @@ async function runScraper() {
 
   const output = {
     lastUpdated: new Date().toISOString(),
+    coverageStart: todayStr,
+    coverageEnd: endStr,
     sourceHealth,
     schedule,
   };
