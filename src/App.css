@@ -102,6 +102,64 @@
   align-items: start;
 }
 
+.recommendation {
+  margin: 0 0 1.75rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: 0.9rem;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.recommendation-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-open);
+}
+
+.recommendation-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.recommendation-when {
+  margin: 0 0 0.65rem;
+  font-weight: 600;
+  color: var(--color-accent-open);
+}
+
+.recommendation-why,
+.recommendation-disclaimer {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.recommendation-disclaimer {
+  margin-top: 0.45rem;
+  opacity: 0.9;
+}
+
+.field-card-recommended {
+  border: 1px solid rgba(34, 197, 94, 0.45);
+}
+
+.recommended-badge {
+  width: fit-content;
+  margin: -0.75rem 0 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent-open);
+  background: rgba(34, 197, 94, 0.15);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+}
+
 /* Field Card Styles */
 .field-card {
   padding: 1.5rem;
@@ -147,8 +205,29 @@
   color: var(--color-text-secondary);
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
+}
+
+.directions-link {
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+}
+
+.directions-link:hover {
+  color: var(--color-accent-primary);
+  opacity: 1;
+}
+
+.directions-link-inline {
+  margin-left: 0.7rem;
+  vertical-align: middle;
 }
 
 .field-status-block {
