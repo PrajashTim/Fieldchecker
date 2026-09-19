@@ -17,11 +17,11 @@ const PARK_COORDS = {
   'Bready Park': { lat: 38.8279, lng: -77.2372 },
   'Braddock Park': { lat: 38.8124, lng: -77.3159 },
   'South County High School': { lat: 38.7043, lng: -77.2491 },
-  'Freedom High School': { lat: 38.9148, lng: -77.5239 },
-  'J. Michael Lunsford Middle School': { lat: 38.8925, lng: -77.5278 },
-  "Byrne's Ridge Park": { lat: 38.9056, lng: -77.5364 },
-  'Hal and Berni Hanson Regional Park': { lat: 38.9370, lng: -77.5605 },
-  'John Champe High School': { lat: 38.9506, lng: -77.5819 },
+  'Freedom High School': { lat: 38.9139, lng: -77.5350 },
+  'J. Michael Lunsford Middle School': { lat: 38.8965, lng: -77.5231 },
+  "Byrne's Ridge Park": { lat: 38.9282, lng: -77.5524 },
+  'Hal and Berni Hanson Regional Park': { lat: 38.9714, lng: -77.5510 },
+  'John Champe High School': { lat: 38.9323, lng: -77.5659 },
 };
 
 const CHANTILLY = PARK_COORDS['Chantilly High School'];
