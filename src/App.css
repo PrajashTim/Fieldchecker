@@ -38,6 +38,67 @@
 .last-updated {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.last-updated a {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.last-updated a:hover {
+  color: var(--color-accent-primary);
+}
+
+.status-other-events {
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+.sources-page {
+  flex: 1;
+  padding: 3rem 0 4rem;
+}
+
+.sources-page h2 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.sources-section {
+  margin-top: 2rem;
+}
+
+.sources-section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.sources-list {
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+  padding: 0;
+}
+
+.sources-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sources-list span {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.dashboard-subtitle a {
+  color: var(--color-accent-primary);
 }
 
 /* Dashboard Styles */

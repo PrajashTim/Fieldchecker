@@ -74,6 +74,8 @@ function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
       time: timeStr || 'TBA',
       title: `${level} ${sportTitle} — ${eventName}`.trim(),
       location: school.location,
+      source: `${school.name} athletics`,
+      sourceUrl: `${school.baseUrl}?year=${schoolYearFor()}`,
     });
   }
 

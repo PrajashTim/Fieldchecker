@@ -67,6 +67,8 @@ function parseEventsFromHtml(html, startDateStr, endDateStr) {
       time: timeStr || 'TBA',
       title: `${level} ${sportTitle} — ${eventName}`.trim(),
       location: 'Chantilly High School',
+      source: 'Chantilly athletics',
+      sourceUrl: scheduleUrl(),
     });
   }
 

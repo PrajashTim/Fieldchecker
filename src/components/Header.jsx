@@ -13,7 +13,8 @@ const Header = () => {
           NoVA Field Check
         </div>
         <div className="last-updated">
-          Last updated: {formattedDate}
+          <a href="#sources">Sources</a>
+          <span>Last updated: {formattedDate}</span>
         </div>
       </div>
     </header>

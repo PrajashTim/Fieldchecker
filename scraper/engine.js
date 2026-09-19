@@ -33,6 +33,48 @@ function dateRange(start, days) {
   return dates;
 }
 
+function withSchoolSource(events, source, sourceUrl) {
+  return (events || []).map(event => (
+    event.source ? event : { ...event, source, sourceUrl }
+  ));
+}
+
+function schoolEventsByDate(snapshot, fieldId) {
+  const events = {};
+  if (!snapshot?.schedule) return events;
+  for (const [dateStr, fields] of Object.entries(snapshot.schedule)) {
+    const field = fields.find(item => item.id === fieldId);
+    const rows = withSchoolSource(
+      (field?.events || []).filter(event => event.source !== 'FXA Sports' && event.source !== 'NCSL'),
+      fieldId === 'chantilly-hs-turf' ? 'Chantilly athletics' : 'School athletics',
+      fieldId === 'chantilly-hs-turf' ? 'https://www.chantillyathletics.com/schedule' : undefined,
+    );
+    if (rows.length) events[dateStr] = rows;
+  }
+  return events;
+}
+
+function schoolEventsByField(snapshot, fieldId) {
+  const byDate = {};
+  if (!snapshot?.schedule) return byDate;
+  const source = fieldId.startsWith('westfield') ? 'Westfield athletics' : 'Centreville athletics';
+  const sourceUrl = fieldId.startsWith('westfield')
+    ? 'https://www.westfieldathletics.org/schedule'
+    : 'https://www.wearecville.net/schedule';
+  for (const [dateStr, fields] of Object.entries(snapshot.schedule)) {
+    const field = fields.find(item => item.id === fieldId);
+    const rows = withSchoolSource(
+      (field?.events || []).filter(event => event.source !== 'FXA Sports' && event.source !== 'NCSL'),
+      source,
+      sourceUrl,
+    );
+    if (rows.length) {
+      byDate[dateStr] = rows;
+    }
+  }
+  return byDate;
+}
+
 async function runScraper() {
   console.log('🚀 Pitch Scout — rebuilding the rolling 30-day window...');
 
@@ -45,10 +87,40 @@ async function runScraper() {
   const dates = dateRange(today, 30);
 
   // Fetch all data sources in parallel
+  const skipBrowser = process.env.SKIP_BROWSER === '1';
+  const previousPath = path.join(__dirname, '../src/data/mockState.json');
+  const previous = skipBrowser && fs.existsSync(previousPath)
+    ? JSON.parse(fs.readFileSync(previousPath, 'utf8'))
+    : null;
+
+  const emptyHealth = (provider, message) => ({ events: {}, health: { ok: false, provider, message, eventCount: 0 } });
+
   const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
-    fetchChantillyEvents(todayStr, endStr),
-    fetchHighSchoolEvents(todayStr, endStr),
+    skipBrowser
+      ? Promise.resolve({
+          events: schoolEventsByDate(previous, 'chantilly-hs-turf'),
+          health: previous?.sourceHealth?.chantilly || { ok: true, provider: 'chantilly', message: 'Reused previous athletics snapshot', eventCount: 0 },
+        })
+      : fetchChantillyEvents(todayStr, endStr).catch(error => emptyHealth('chantilly', error.message)),
+    skipBrowser
+      ? Promise.resolve({
+          events: {
+            'centreville-hs-turf': schoolEventsByField(previous, 'centreville-hs-turf'),
+            'westfield-hs-turf': schoolEventsByField(previous, 'westfield-hs-turf'),
+          },
+          health: {
+            'centreville-hs-turf': previous?.sourceHealth?.['centreville-hs-turf'],
+            'westfield-hs-turf': previous?.sourceHealth?.['westfield-hs-turf'],
+          },
+        })
+      : fetchHighSchoolEvents(todayStr, endStr).catch(error => ({
+          events: {},
+          health: {
+            'centreville-hs-turf': { ok: false, provider: 'centreville', message: error.message, eventCount: 0 },
+            'westfield-hs-turf': { ok: false, provider: 'westfield', message: error.message, eventCount: 0 },
+          },
+        })),
     fetchFcDullesEvents(todayStr, endStr),
     fetchNcslEvents(todayStr, endStr),
   ]);
@@ -106,7 +178,7 @@ async function runScraper() {
       if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
       if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);
-      if (field.id === 'poplar-tree-2') relevantHealth.push(sourceHealth.fcDulles);
+      if (field.id === 'poplar-tree-2') relevantHealth.push(sourceHealth.fcDulles, sourceHealth.ncsl);
 
       const unavailableSources = relevantHealth.filter(item => !item?.ok);
       const status = events.length > 0

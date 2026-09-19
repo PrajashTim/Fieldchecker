@@ -10,6 +10,10 @@ import { combineComplexAndField, resolveExactField } from './venueMap.js';
 const BASE = 'https://elements.demosphere.com';
 const DIRECTORY_URL = `${BASE}/80738/fields/directory/list.html`;
 const CURRENT_SEASON_LABEL = /fall\s+2026/i;
+const SEED_CLUBS = [
+  { id: '15599430', name: 'FC Dulles' },
+  { id: '84193232', name: 'South County Athletic Association' },
+];
 
 export function parseFieldDirectory(html) {
   const $ = load(html);
@@ -101,6 +105,50 @@ export function parseFieldCalendar(html, calendar, windowStart, windowEnd) {
   return { games, currentAsOf, rowCount: games.length };
 }
 
+export function parseClubSchedule(html, sourceUrl, windowStart, windowEnd) {
+  const $ = load(html);
+  const yearMatch = $.text().match(/Fall\s+(\d{4})/i);
+  const year = yearMatch ? yearMatch[1] : String(new Date().getFullYear());
+  const games = [];
+  $('tr.gm-row').each((_, row) => {
+    const $row = $(row);
+    const facility = $row.find('td.facility').first().text().replace(/\s+/g, ' ').trim();
+    const resolved = resolveExactField(facility);
+    if (!resolved.fieldId) return;
+    const dateStr = parseClubDate($row.find('td.date').first().text(), year);
+    if (!dateStr || dateStr < windowStart || dateStr > windowEnd) return;
+    const home = $row.find('td').eq(4).text().replace(/\s+/g, ' ').trim();
+    const away = $row.find('td').eq(6).text().replace(/\s+/g, ' ').trim();
+    const eventId = $row.find('td').first().text().replace(/\s+/g, ' ').trim().split(' ')[0];
+    games.push({
+      fieldId: resolved.fieldId,
+      dateStr,
+      eventId: eventId || `${dateStr}|${facility}|${home}|${away}`,
+      time: displayTime($row.find('td.time').first().text()),
+      title: `Soccer — ${[home, away].filter(Boolean).join(' vs ') || 'NCSL'}`,
+      location: facility,
+      source: 'NCSL',
+      sourceUrl,
+      precision: 'exact_subfield',
+      confidence: 'verified_live',
+      status: /reason(YELLOW|RED)/i.test($row.html() || '') ? 'rescheduled' : 'scheduled',
+    });
+  });
+  return games;
+}
+
+function parseClubDate(text, year) {
+  const match = String(text).match(/([A-Za-z]{3})\s+(\d{1,2})/);
+  if (!match) return null;
+  const date = new Date(`${match[1]} ${match[2]}, ${year} 12:00:00`);
+  if (Number.isNaN(date.getTime())) return null;
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, '0'),
+    String(date.getDate()).padStart(2, '0'),
+  ].join('-');
+}
+
 function teamName($cell) {
   const named = $cell.find('.tm-name').text().replace(/\s+/g, ' ').trim();
   return named || $cell.text().replace(/\s+/g, ' ').trim();
@@ -128,9 +176,9 @@ function groupByField(games) {
   const byField = {};
   const seen = new Set();
   for (const game of games) {
-    const key = game.eventId || `${game.fieldId}|${game.dateStr}|${game.time}|${game.title}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
+    const slotKey = `${game.fieldId}|${game.dateStr}|${game.time}`;
+    if (seen.has(slotKey)) continue;
+    seen.add(slotKey);
     byField[game.fieldId] ??= {};
     byField[game.fieldId][game.dateStr] ??= [];
     byField[game.fieldId][game.dateStr].push({
@@ -156,13 +204,38 @@ async function mapLimit(items, limit, mapper) {
   return results;
 }
 
+async function fetchClubScheduleGames(windowStart, windowEnd) {
+  const games = [];
+  const pages = SEED_CLUBS.map(club => `${BASE}/80738/clubs/schedule/${club.id}.html`);
+  const seenPages = new Set();
+  while (pages.length) {
+    const pageUrl = pages.shift();
+    if (seenPages.has(pageUrl)) continue;
+    seenPages.add(pageUrl);
+    try {
+      const page = await httpGet(pageUrl);
+      if (page.status !== 200) throw new Error(`HTTP ${page.status}`);
+      const $ = load(page.body);
+      $('a[href*="/clubs/schedule/"]').each((_, el) => {
+        const href = absoluteUrl($(el).attr('href'), pageUrl);
+        if (/\/clubs\/schedule\/\d/.test(href) && !seenPages.has(href) && pages.length < 24) pages.push(href);
+      });
+      games.push(...parseClubSchedule(page.body, pageUrl, windowStart, windowEnd));
+    } catch (error) {
+      console.warn(`[NCSL] Club schedule ${pageUrl} failed: ${error.message}`);
+    }
+  }
+  return games;
+}
+
 export async function fetchNcslEvents(windowStart, windowEnd) {
-  const healthBase = { provider: 'ncsl', sourceUrl: DIRECTORY_URL };
+  const healthBase = { provider: 'ncsl', sourceUrl: `${BASE}/80738/clubs/schedule/15599430.html` };
   try {
+    const clubGames = await fetchClubScheduleGames(windowStart, windowEnd);
+    const games = [...clubGames];
     const directory = await httpGet(DIRECTORY_URL);
     if (directory.status !== 200) throw new Error(`field directory returned HTTP ${directory.status}`);
     const targets = selectTargetComplexes(parseFieldDirectory(directory.body));
-    if (!targets.length) throw new Error('NCSL directory contained no exact configured subfields');
 
     const calendars = [];
     const unmappedOnTargetPages = new Set();
@@ -183,11 +256,7 @@ export async function fetchNcslEvents(windowStart, windowEnd) {
     });
 
     const uniqueCalendars = [...new Map(calendars.map(item => [item.sourceUrl, item])).values()];
-    if (!uniqueCalendars.length) {
-      throw new Error('Fall 2026 exact-field calendars were not found for configured subfields');
-    }
 
-    const games = [];
     let failedCalendars = 0;
     let currentAsOf = null;
     await mapLimit(uniqueCalendars, 4, async calendar => {
@@ -206,18 +275,20 @@ export async function fetchNcslEvents(windowStart, windowEnd) {
       }
     });
 
+    if (!games.length) throw new Error('No exact-field NCSL games were parsed from public club or field calendars');
     const events = groupByField(games);
-    const eventCount = games.length;
+    const eventCount = Object.values(events).reduce(
+      (total, dates) => total + Object.values(dates).reduce((sum, rows) => sum + rows.length, 0), 0);
     if (unmappedOnTargetPages.size) {
       console.warn(`[NCSL] Unmapped subfields on target complexes: ${[...unmappedOnTargetPages].sort().join('; ')}`);
     }
-    console.log(`[NCSL] ${uniqueCalendars.length} Fall 2026 calendars; ${eventCount} exact-field games in window`);
+    console.log(`[NCSL] ${clubGames.length} club-schedule games + ${uniqueCalendars.length} field calendars → ${eventCount} mapped events`);
     return {
       events,
       health: {
         ...healthBase,
-        ok: failedCalendars === 0 && eventCount >= 0,
-        message: `${uniqueCalendars.length} exact-field calendars checked; ${eventCount} mapped games${currentAsOf ? `; current as of ${currentAsOf}` : ''}${failedCalendars ? `; ${failedCalendars} calendars failed` : ''}`,
+        ok: eventCount > 0,
+        message: `${eventCount} exact-field games from public Demosphere pages (${clubGames.length} club rows, ${uniqueCalendars.length} field calendars)${currentAsOf ? `; current as of ${currentAsOf}` : ''}${failedCalendars ? `; ${failedCalendars} calendars failed` : ''}`,
         eventCount,
         calendarCount: uniqueCalendars.length,
         currentAsOf,

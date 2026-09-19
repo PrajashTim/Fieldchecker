@@ -100,6 +100,9 @@ const Dashboard = () => {
   const displayedFields = fieldsForDate.filter(field => !filterTurf || field.type.toLowerCase() === 'turf');
   const openAtPickup = displayedFields.filter(field => !overlapsPickupWindow(field.events, pickupMinutes));
   const recommendation = pickBestField(openAtPickup);
+  const unexpectedFailures = Object.values(sourceHealth).filter(source => (
+    source && !source.ok && source.provider !== 'fairfax-county-permits'
+  ));
 
   const setPresetTime = (minutes) => {
     setPickupMinutes(current => (current === minutes ? current : minutes));
@@ -120,7 +123,10 @@ const Dashboard = () => {
         <div>
           <h2 className="dashboard-title">Check known field conflicts before pickup</h2>
           <p className="dashboard-subtitle">
-            Public schedules from FXA, NCSL, high-school athletics, and other connected sources. Open still cannot confirm private permits.
+            {sourceHealth.ncsl?.ok
+              ? 'Public schedules from FXA, NCSL/Demosphere, high-school athletics, and other connected sources. Open still cannot confirm private permits.'
+              : 'Public schedules from FXA and high-school athletics. NCSL is listed on Sources only when its events are in this snapshot.'}
+            {' '}<a href="#sources">How we check this</a>
           </p>
         </div>
         
@@ -176,11 +182,11 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {Object.values(sourceHealth).some(source => !source?.ok) && (
+      {unexpectedFailures.length > 0 && (
         <div className="source-warning" role="status">
-          <strong>Some connected feeds are down.</strong>
+          <strong>A connected schedule feed failed.</strong>
           <span>
-            Confirmed conflicts are still shown. Open means no conflict was found in the sources we could check — not that every permit or private practice was verified.
+            {unexpectedFailures.map(source => source.provider).join(', ')} did not update this snapshot. Confirmed conflicts from healthy sources are still shown.
           </span>
         </div>
       )}

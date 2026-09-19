@@ -14,7 +14,7 @@ This register answers two different questions:
 | Provider | Sports/signals | Coverage | Method |
 |---|---|---|---|
 | FXA Sports / LeagueLab | Soccer, flag football, ultimate, softball and kickball | All current leagues exposed by FXA's public schedule finder; only exact configured-field matches are imported | Automatic discovery and full schedule parsing three times daily |
-| NCSL / Demosphere | Youth travel and REC games with exact subfields | Configured complexes that NCSL names at subfield precision, including Poplar Tree Park #2 | Public Fall 2026 field calendars; park-level names are not mapped |
+| NCSL / Demosphere | Youth travel games with exact subfields | Public club schedule pages (FC Dulles and other seed clubs) plus exact-field calendars; park-level names are not mapped | HTML ingest of Demosphere club/field pages; Excel export is JS-gated so it is not used |
 | Chantilly HS athletics | Football, soccer, lacrosse, field hockey, rugby and track events at the home turf venue | Public interscholastic schedule | Automatic 2026–2027 school-year parsing |
 | Westfield HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
 | Centreville HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |

@@ -39,6 +39,11 @@ const FieldCard = ({ field, pickupLabel, dateLabel, isRecommended, overlapsPicku
         <div className="status-reason">
           {displayReason}
         </div>
+        {!overlapsPickup && events?.length > 0 && (
+          <div className="status-reason status-other-events">
+            Other connected-source events that day are listed below; they do not overlap {pickupLabel}.
+          </div>
+        )}
       </div>
 
       <div className="schedule-container">

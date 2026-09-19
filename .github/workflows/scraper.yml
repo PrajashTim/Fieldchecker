@@ -15,13 +15,12 @@ concurrency:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     permissions:
       contents: write
 
     env:
       PUPPETEER_SKIP_DOWNLOAD: true
-      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
     steps:
       - name: Checkout repository
@@ -35,11 +34,17 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Google Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+
       - name: Install dependencies
-        run: npm ci --omit=optional
+        run: npm ci
 
       - name: Run scraper with transient-error retries
         shell: bash
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: |
           for attempt in 1 2 3; do
             echo "Scrape attempt ${attempt}/3"
