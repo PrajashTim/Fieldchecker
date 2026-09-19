@@ -10,7 +10,9 @@ const SourcesPage = () => {
   const failed = Object.values(sourceHealth).filter(source => !source?.ok && !EXPECTED_GAPS.has(source?.provider));
   const fxaUnmapped = sourceHealth.fxa?.unmappedLocations || [];
   const nvslUnmapped = sourceHealth.nvsl?.unmappedLocations || [];
-  const fwsaUnmapped = sourceHealth.fwsa?.unmappedLocations || [];
+  const syaUnmapped = sourceHealth.sya?.unmappedLocations || [];
+  const fslUnmapped = sourceHealth.fsl?.unmappedLocations || [];
+  const nvasaUnmapped = sourceHealth.nvasa?.unmappedLocations || [];
 
   return (
     <main className="container sources-page">
@@ -43,24 +45,16 @@ const SourcesPage = () => {
             </li>
           ))}
           <li>
-            <strong>Fairfax Soccer League</strong>
-            <span>The public homepage and GoSports schedule app exist, but the Fall 2026 grid is a JavaScript app without a static table we can map to exact catalog subfields yet.</span>
-          </li>
-          <li>
             <strong>NVASA</strong>
-            <span>Public team pages currently expose Spring 2026. Fall 2026 was not posted on the divisions selector, so it is not claimed in the header.</span>
+            <span>Fall 2026 is selected on the public hub and is polled each scrape. Team tables were empty of games on 19 Sep 2026, and the league’s venues (Mason District, South Run) are outside this catalog unless an exact field name matches.</span>
           </li>
           <li>
-            <strong>ZogSports DC / Arlington</strong>
-            <span>Program pages are public. Team schedules stay with registered participants, so they are not scraped.</span>
+            <strong>WAWSL and Volo (ZogSports)</strong>
+            <span>WAWSL is inactive. Volo/ZogSports is Arlington-only. Neither is ingested.</span>
           </li>
           <li>
-            <strong>WAWSL</strong>
-            <span>No current public site was found on 19 Sep 2026. Historical pages are not treated as a live schedule.</span>
-          </li>
-          <li>
-            <strong>Member club calendars</strong>
-            <span>Virginia Valor PlayMetrics, CYA Otto Sport, and SYA SportsEngine team practices are not scraped. Those stay behind login unless the club sends an authorized export.</span>
+            <strong>Member-only practices</strong>
+            <span>Virginia Valor PlayMetrics, CYA team practices beyond public rec/NCSL pages, and other roster-assigned calendars are not scraped. County/FCPS permits have no public occupancy feed.</span>
           </li>
           <li>
             <strong>Stringfellow Park</strong>
@@ -69,7 +63,7 @@ const SourcesPage = () => {
         </ul>
       </section>
 
-      {(fxaUnmapped.length > 0 || nvslUnmapped.length > 0 || fwsaUnmapped.length > 0) && (
+      {(fxaUnmapped.length > 0 || nvslUnmapped.length > 0 || fwsaUnmapped.length > 0 || syaUnmapped.length > 0 || fslUnmapped.length > 0 || nvasaUnmapped.length > 0) && (
         <section className="sources-section">
           <h3>Public games outside this 42-field catalog</h3>
           <p>
@@ -84,6 +78,15 @@ const SourcesPage = () => {
           )}
           {fwsaUnmapped.length > 0 && (
             <p><strong>FWSA ({fwsaUnmapped.length}):</strong> {fwsaUnmapped.join('; ')}</p>
+          )}
+          {syaUnmapped.length > 0 && (
+            <p><strong>SYA ({syaUnmapped.length}):</strong> {syaUnmapped.join('; ')}</p>
+          )}
+          {fslUnmapped.length > 0 && (
+            <p><strong>FSL ({fslUnmapped.length}):</strong> {fslUnmapped.join('; ')}</p>
+          )}
+          {nvasaUnmapped.length > 0 && (
+            <p><strong>NVASA ({nvasaUnmapped.length}):</strong> {nvasaUnmapped.join('; ')}</p>
           )}
         </section>
       )}
@@ -120,6 +123,9 @@ function labelFor(source) {
     ncsl: 'NCSL / Demosphere',
     nvsl: 'NVSL',
     fwsa: 'FWSA / LeagueApps',
+    sya: 'SYA rec / Otto Sport',
+    fsl: 'Fairfax Soccer League',
+    nvasa: 'NVASA',
     chantilly: 'Chantilly HS athletics',
     westfield: 'Westfield HS athletics',
     centreville: 'Centreville HS athletics',

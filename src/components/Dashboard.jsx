@@ -86,8 +86,11 @@ function connectedSubtitle(sourceHealth) {
   const named = [
     sourceHealth.fxa?.ok && 'FXA',
     sourceHealth.ncsl?.eventCount > 0 && 'NCSL/Demosphere',
+    sourceHealth.sya?.eventCount > 0 && 'SYA',
     sourceHealth.nvsl?.eventCount > 0 && 'NVSL',
+    sourceHealth.fsl?.eventCount > 0 && 'FSL',
     sourceHealth.fwsa?.eventCount > 0 && 'FWSA',
+    sourceHealth.nvasa?.eventCount > 0 && 'NVASA',
   ].filter(Boolean);
   const prefix = named.length
     ? `Public schedules from ${named.join(', ')}, and high-school athletics.`

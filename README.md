@@ -4,10 +4,10 @@ Pitch Scout aggregates public schedule signals for soccer pickup fields around C
 
 ## Current sources
 
-- FXA LeagueLab: current soccer, flag football, ultimate, softball and kickball schedules that map to configured fields.
-- NCSL Demosphere: public club schedule pages and exact-subfield field calendars. The header only names NCSL when that snapshot actually contains NCSL events.
-- NVSL: public Fall 2026 division pages, mapped only at exact subfield (for example Braddock Park #7).
-- FWSA LeagueApps: public Fall 2026 table, mapped only when the named field is in the catalog.
+- FXA LeagueLab: current soccer, flag football, ultimate, softball and kickball schedules that map to configured fields, including Sunday Co-ed 11v11 and Sunday Men’s 8v8.
+- NCSL Demosphere: public club schedule pages (FC Dulles, Virginia Valor, CYA, SCAA) and exact-subfield field calendars.
+- SYA rec: public Otto Sport widgets; mapped only at exact surfaces in the catalog.
+- NVSL, FSL (evenings), FWSA, and NVASA are polled from public pages. The header only names a source when that snapshot contains mapped events.
 - Chantilly, Westfield and Centreville high-school athletics schedules.
 - Explicitly published FC Dulles programs, currently the Fall 2026 REC Academy sessions at Poplar Tree #2.
 

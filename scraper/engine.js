@@ -9,6 +9,9 @@ import { fetchFcDullesEvents } from './modules/fcdulles.js';
 import { fetchNcslEvents } from './modules/ncsl.js';
 import { fetchNvslEvents } from './modules/nvsl.js';
 import { fetchFwsaEvents } from './modules/fwsa.js';
+import { fetchSyaEvents } from './modules/sya.js';
+import { fetchFslEvents } from './modules/fsl.js';
+import { fetchNvasaEvents } from './modules/nvasa.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -114,7 +117,7 @@ async function runScraper() {
 
   const emptyHealth = (provider, message) => ({ events: {}, health: { ok: false, provider, message, eventCount: 0 } });
 
-  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult, syaResult, fslResult, nvasaResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     skipBrowser
       ? Promise.resolve({
@@ -144,6 +147,9 @@ async function runScraper() {
     fetchNcslEvents(todayStr, endStr),
     fetchNvslEvents(todayStr, endStr),
     fetchFwsaEvents(todayStr, endStr),
+    fetchSyaEvents(todayStr, endStr),
+    fetchFslEvents(todayStr, endStr),
+    fetchNvasaEvents(todayStr, endStr),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -157,6 +163,9 @@ async function runScraper() {
     ncsl: ncslResult.health,
     nvsl: nvslResult.health,
     fwsa: fwsaResult.health,
+    sya: syaResult.health,
+    fsl: fslResult.health,
+    nvasa: nvasaResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
@@ -186,7 +195,10 @@ async function runScraper() {
       const ncslEvents = ncslResult.events[field.id]?.[dateStr] ?? [];
       const nvslEvents = nvslResult.events[field.id]?.[dateStr] ?? [];
       const fwsaEvents = fwsaResult.events[field.id]?.[dateStr] ?? [];
-      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents];
+      const syaEvents = syaResult.events[field.id]?.[dateStr] ?? [];
+      const fslEvents = fslResult.events[field.id]?.[dateStr] ?? [];
+      const nvasaEvents = nvasaResult.events[field.id]?.[dateStr] ?? [];
+      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents];
 
       if (field.id === 'poplar-tree-2') {
         events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];

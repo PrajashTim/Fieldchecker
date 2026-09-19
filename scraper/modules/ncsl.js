@@ -13,6 +13,8 @@ const CURRENT_SEASON_LABEL = /fall\s+2026/i;
 const SEED_CLUBS = [
   { id: '15599430', name: 'FC Dulles' },
   { id: '84193232', name: 'South County Athletic Association' },
+  { id: '102140686', name: 'Virginia Valor' },
+  { id: '15599435', name: 'CYA' },
 ];
 
 export function parseFieldDirectory(html) {
@@ -218,7 +220,7 @@ async function fetchClubScheduleGames(windowStart, windowEnd) {
       const $ = load(page.body);
       $('a[href*="/clubs/schedule/"]').each((_, el) => {
         const href = absoluteUrl($(el).attr('href'), pageUrl);
-        if (/\/clubs\/schedule\/\d/.test(href) && !seenPages.has(href) && pages.length < 24) pages.push(href);
+        if (/\/clubs\/schedule\/\d/.test(href) && !seenPages.has(href) && pages.length < 48) pages.push(href);
       });
       games.push(...parseClubSchedule(page.body, pageUrl, windowStart, windowEnd));
     } catch (error) {

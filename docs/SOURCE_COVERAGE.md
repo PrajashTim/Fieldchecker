@@ -20,7 +20,9 @@ This register answers two different questions:
 | Centreville HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
 | FC Dulles | Published Fall 2026 REC Academy Friday sessions | Poplar Tree Park #2, 6–7 PM, Sept. 11–Oct. 30 excluding the published holiday weekend | Automatic page validation and recurring-event generation |
 | NVSL | Adult 11v11 Fall 2026 | Public division pages; exact subfields only (e.g. Braddock Park #7). Park-level “Braddock Park” is not assigned to 7/7A/7B | HTML ingest of nvslsoccer.com Fall 2026 division pages |
-| FWSA / LeagueApps | Adult women’s soccer | Public Fall 2026 table; mapped only when the named field is in the catalog | Static LeagueApps schedule page |
+| SYA rec / Otto Sport | Youth rec games with exact surfaces | Public Fall widget; Arrowhead #3A/#3B and E.C. Lawrence #3A map into the catalog. Bull Run ES and SYA Sports Park stay unmapped | Otto Sport location/surface schedule frames, season ID re-read from syasports.org |
+| Fairfax Soccer League | Over-50 / over-60 evenings | Public GoSports HTML; exact subfield only. Not a Sunday-morning source | Static `/l/fo5sl/schedule` rows |
+| NVASA | Adult association | Public team pages and calendar export are polled; catalog overlap is currently none | `divisions.cfm?season=0` |
 
 ## Confirmed users not yet connectable to exact public schedules
 
