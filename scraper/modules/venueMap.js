@@ -82,6 +82,7 @@ const EXACT_ALIASES = {
   'braddock park 7': 'braddock-7',
   'braddock park turf field 7a': 'braddock-7a',
   'braddock park turf field 7b': 'braddock-7b',
+  'braddock park field 7b': 'braddock-7b',
 };
 
 const PARK_ONLY = new Set([

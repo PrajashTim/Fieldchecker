@@ -19,6 +19,8 @@ This register answers two different questions:
 | Westfield HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
 | Centreville HS athletics | Same turf sports | Public interscholastic schedule; venue-to-subfield can be ambiguous | Automatic school-year parsing |
 | FC Dulles | Published Fall 2026 REC Academy Friday sessions | Poplar Tree Park #2, 6–7 PM, Sept. 11–Oct. 30 excluding the published holiday weekend | Automatic page validation and recurring-event generation |
+| NVSL | Adult 11v11 Fall 2026 | Public division pages; exact subfields only (e.g. Braddock Park #7). Park-level “Braddock Park” is not assigned to 7/7A/7B | HTML ingest of nvslsoccer.com Fall 2026 division pages |
+| FWSA / LeagueApps | Adult women’s soccer | Public Fall 2026 table; mapped only when the named field is in the catalog | Static LeagueApps schedule page |
 
 ## Confirmed users not yet connectable to exact public schedules
 
@@ -31,7 +33,7 @@ This register answers two different questions:
 | Virginia Valor FC / USL Youth | Publicly names Sully Highlands, Poplar Tree, Greenbriar, Arrowhead, Centreville HS and E.C. Lawrence as training/game locations | Team-specific schedules are shared through PlayMetrics | Inventory confirmed; exact public feed not found |
 | NVASA | Adult soccer; historical public results show Poplar Tree #2 use | Current Fall 2026 schedule was not exposed in the public results selector during the audit | Candidate adapter when current schedule appears |
 | Fairfax Soccer League | Year-round adult 50+/60+ soccer on Fairfax turf | Public site confirms activity but did not expose a field-by-field current schedule | Candidate/partnership |
-| Fairfax Women's Soccer Association, NVSL, WAWSL, ZogSports | County-listed adult soccer providers | Separate platforms and incomplete public field detail | Provider-by-provider research needed |
+| ZogSports DC / WAWSL | County-listed adult soccer providers | ZogSports team schedules are participant-only; WAWSL had no live public site on 19 Sep 2026 | Not connected |
 | Washington Cricket League / Fairfax Cricket Club | Cricket activity includes Lake Fairfax and other regional grounds | Public fixtures exist across several sites, but no current fixture was found on the configured Lake Fairfax soccer subfields | Monitor; do not map a cricket ground to a soccer field without exact subfield evidence |
 | SYA youth cricket | Active spring/fall program around Centreville | Public description says Kincheloe and nearby locations; exact weekly assignments are private | Does not currently prove conflicts on configured fields |
 | Informal pickup/walk-on groups | Can occupy any otherwise vacant field | Usually no authoritative online record | Unobservable online; future moderated community reports |
@@ -52,10 +54,9 @@ FXA's current schedule includes fields the app does not yet model, including Gro
 
 ## Next connector order
 
-1. FWSA LeagueApps public division schedules, only where the venue is an exact configured subfield.
-2. NVSL live-row verification for Braddock Park exact subfield, then connect.
+1. Fairfax Soccer League GoSports schedule when a static or authorized exact-field export exists.
+2. Current NVASA Fall schedule when the public selector exposes it.
 3. Fairfax Park Authority same-day closure status as an authoritative `closed` signal.
-4. Current NVASA schedule when Fall data becomes public.
 5. Authorized exports from Virginia Valor, CYA, and SYA — never scrape member systems.
 6. County/FCPS permit records through existing AFAR/CommunityUse exports (FOIA or partnership).
 7. Cricket connector only where the fixture identifies an exact configured field, not merely the same park.

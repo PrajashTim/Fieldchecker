@@ -7,6 +7,8 @@ import { fetchChantillyEvents } from './modules/chantilly.js';
 import { fetchHighSchoolEvents } from './modules/highschools.js';
 import { fetchFcDullesEvents } from './modules/fcdulles.js';
 import { fetchNcslEvents } from './modules/ncsl.js';
+import { fetchNvslEvents } from './modules/nvsl.js';
+import { fetchFwsaEvents } from './modules/fwsa.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,6 +35,11 @@ function dateRange(start, days) {
   return dates;
 }
 
+function isAthleticsEvent(event) {
+  const source = event.source || '';
+  return !source || /athletics/i.test(source);
+}
+
 function withSchoolSource(events, source, sourceUrl) {
   return (events || []).map(event => (
     event.source ? event : { ...event, source, sourceUrl }
@@ -45,7 +52,7 @@ function schoolEventsByDate(snapshot, fieldId) {
   for (const [dateStr, fields] of Object.entries(snapshot.schedule)) {
     const field = fields.find(item => item.id === fieldId);
     const rows = withSchoolSource(
-      (field?.events || []).filter(event => event.source !== 'FXA Sports' && event.source !== 'NCSL'),
+      (field?.events || []).filter(isAthleticsEvent),
       fieldId === 'chantilly-hs-turf' ? 'Chantilly athletics' : 'School athletics',
       fieldId === 'chantilly-hs-turf' ? 'https://www.chantillyathletics.com/schedule' : undefined,
     );
@@ -64,7 +71,7 @@ function schoolEventsByField(snapshot, fieldId) {
   for (const [dateStr, fields] of Object.entries(snapshot.schedule)) {
     const field = fields.find(item => item.id === fieldId);
     const rows = withSchoolSource(
-      (field?.events || []).filter(event => event.source !== 'FXA Sports' && event.source !== 'NCSL'),
+      (field?.events || []).filter(isAthleticsEvent),
       source,
       sourceUrl,
     );
@@ -73,6 +80,18 @@ function schoolEventsByField(snapshot, fieldId) {
     }
   }
   return byDate;
+}
+
+function eventStartMinutes(timeText = '') {
+  const match = timeText.match(/(\d{1,2}):(\d{2})\s*([AP]M)/i);
+  if (!match) return 9999;
+  let hour = Number(match[1]) % 12;
+  if (match[3].toUpperCase() === 'PM') hour += 12;
+  return hour * 60 + Number(match[2]);
+}
+
+function sortEvents(events) {
+  return [...events].sort((a, b) => eventStartMinutes(a.time) - eventStartMinutes(b.time));
 }
 
 async function runScraper() {
@@ -95,7 +114,7 @@ async function runScraper() {
 
   const emptyHealth = (provider, message) => ({ events: {}, health: { ok: false, provider, message, eventCount: 0 } });
 
-  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     skipBrowser
       ? Promise.resolve({
@@ -123,6 +142,8 @@ async function runScraper() {
         })),
     fetchFcDullesEvents(todayStr, endStr),
     fetchNcslEvents(todayStr, endStr),
+    fetchNvslEvents(todayStr, endStr),
+    fetchFwsaEvents(todayStr, endStr),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -134,6 +155,8 @@ async function runScraper() {
     ...hsResult.health,
     fcDulles: fcDullesResult.health,
     ncsl: ncslResult.health,
+    nvsl: nvslResult.health,
+    fwsa: fwsaResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
@@ -161,7 +184,9 @@ async function runScraper() {
       const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
       const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
       const ncslEvents = ncslResult.events[field.id]?.[dateStr] ?? [];
-      let events = [...fxaEvents, ...hsEvents, ...ncslEvents];
+      const nvslEvents = nvslResult.events[field.id]?.[dateStr] ?? [];
+      const fwsaEvents = fwsaResult.events[field.id]?.[dateStr] ?? [];
+      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents];
 
       if (field.id === 'poplar-tree-2') {
         events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];
@@ -179,6 +204,7 @@ async function runScraper() {
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
       if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);
       if (field.id === 'poplar-tree-2') relevantHealth.push(sourceHealth.fcDulles, sourceHealth.ncsl);
+      if (field.id.startsWith('braddock')) relevantHealth.push(sourceHealth.nvsl);
 
       const unavailableSources = relevantHealth.filter(item => !item?.ok);
       const status = events.length > 0
@@ -198,7 +224,7 @@ async function runScraper() {
         location: field.location,
         status,
         statusReason,
-        events,
+        events: sortEvents(events),
         unavailableSources: unavailableSources.map(item => item?.provider || 'unknown'),
       };
     });

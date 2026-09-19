@@ -404,6 +404,19 @@
   color: var(--color-text-secondary);
   font-size: 0.75rem;
   margin-top: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  align-items: center;
+}
+
+.source-chip {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--color-accent-primary);
+  font-weight: 600;
 }
 
 .schedule-meta a {

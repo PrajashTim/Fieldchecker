@@ -55,15 +55,10 @@ const FieldCard = ({ field, pickupLabel, dateLabel, isRecommended, overlapsPicku
                 <span className="schedule-time">{evt.time}{evt.status === 'rescheduled' ? ' · rescheduled' : ''}</span>
                 <span className="schedule-event">{evt.title}</span>
                 <span className="schedule-meta">
-                  {[
-                    evt.source,
-                    evt.precision === 'exact_subfield' ? 'exact field' : evt.precision,
-                  ].filter(Boolean).join(' · ')}
+                  {evt.source ? <span className="source-chip">{evt.source}</span> : null}
+                  {evt.precision === 'exact_subfield' ? <span>exact field</span> : evt.precision ? <span>{evt.precision}</span> : null}
                   {evt.sourceUrl ? (
-                    <>
-                      {(evt.source || evt.precision) ? ' · ' : ''}
-                      <a href={evt.sourceUrl} target="_blank" rel="noopener noreferrer">source</a>
-                    </>
+                    <a href={evt.sourceUrl} target="_blank" rel="noopener noreferrer">source</a>
                   ) : null}
                 </span>
               </li>

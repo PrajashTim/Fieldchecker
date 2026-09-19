@@ -8,6 +8,9 @@ const SourcesPage = () => {
   const connected = Object.values(sourceHealth).filter(source => source?.ok);
   const expected = Object.values(sourceHealth).filter(source => !source?.ok && EXPECTED_GAPS.has(source?.provider));
   const failed = Object.values(sourceHealth).filter(source => !source?.ok && !EXPECTED_GAPS.has(source?.provider));
+  const fxaUnmapped = sourceHealth.fxa?.unmappedLocations || [];
+  const nvslUnmapped = sourceHealth.nvsl?.unmappedLocations || [];
+  const fwsaUnmapped = sourceHealth.fwsa?.unmappedLocations || [];
 
   return (
     <main className="container sources-page">
@@ -40,6 +43,22 @@ const SourcesPage = () => {
             </li>
           ))}
           <li>
+            <strong>Fairfax Soccer League</strong>
+            <span>The public homepage and GoSports schedule app exist, but the Fall 2026 grid is a JavaScript app without a static table we can map to exact catalog subfields yet.</span>
+          </li>
+          <li>
+            <strong>NVASA</strong>
+            <span>Public team pages currently expose Spring 2026. Fall 2026 was not posted on the divisions selector, so it is not claimed in the header.</span>
+          </li>
+          <li>
+            <strong>ZogSports DC / Arlington</strong>
+            <span>Program pages are public. Team schedules stay with registered participants, so they are not scraped.</span>
+          </li>
+          <li>
+            <strong>WAWSL</strong>
+            <span>No current public site was found on 19 Sep 2026. Historical pages are not treated as a live schedule.</span>
+          </li>
+          <li>
             <strong>Member club calendars</strong>
             <span>Virginia Valor PlayMetrics, CYA Otto Sport, and SYA SportsEngine team practices are not scraped. Those stay behind login unless the club sends an authorized export.</span>
           </li>
@@ -49,6 +68,25 @@ const SourcesPage = () => {
           </li>
         </ul>
       </section>
+
+      {(fxaUnmapped.length > 0 || nvslUnmapped.length > 0 || fwsaUnmapped.length > 0) && (
+        <section className="sources-section">
+          <h3>Public games outside this 42-field catalog</h3>
+          <p>
+            These venues appeared on connected public schedules. They are not mapped onto a nearby catalog field.
+            Park-level names such as “Braddock Park” without 7 / 7A / 7B stay unmapped on purpose.
+          </p>
+          {fxaUnmapped.length > 0 && (
+            <p><strong>FXA ({fxaUnmapped.length}):</strong> {fxaUnmapped.join('; ')}</p>
+          )}
+          {nvslUnmapped.length > 0 && (
+            <p><strong>NVSL ({nvslUnmapped.length}):</strong> {nvslUnmapped.join('; ')}</p>
+          )}
+          {fwsaUnmapped.length > 0 && (
+            <p><strong>FWSA ({fwsaUnmapped.length}):</strong> {fwsaUnmapped.join('; ')}</p>
+          )}
+        </section>
+      )}
 
       {failed.length > 0 && (
         <section className="sources-section">
@@ -80,6 +118,8 @@ function labelFor(source) {
   const names = {
     fxa: 'FXA Sports / LeagueLab',
     ncsl: 'NCSL / Demosphere',
+    nvsl: 'NVSL',
+    fwsa: 'FWSA / LeagueApps',
     chantilly: 'Chantilly HS athletics',
     westfield: 'Westfield HS athletics',
     centreville: 'Centreville HS athletics',

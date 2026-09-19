@@ -82,6 +82,19 @@ function pickBestField(fields) {
 
 const TIME_OPTIONS = timeOptions();
 
+function connectedSubtitle(sourceHealth) {
+  const named = [
+    sourceHealth.fxa?.ok && 'FXA',
+    sourceHealth.ncsl?.eventCount > 0 && 'NCSL/Demosphere',
+    sourceHealth.nvsl?.eventCount > 0 && 'NVSL',
+    sourceHealth.fwsa?.eventCount > 0 && 'FWSA',
+  ].filter(Boolean);
+  const prefix = named.length
+    ? `Public schedules from ${named.join(', ')}, and high-school athletics.`
+    : 'Public schedules from FXA and high-school athletics.';
+  return `${prefix} Open still cannot confirm private permits.`;
+}
+
 const Dashboard = () => {
   const { schedule, sourceHealth = {} } = mockData;
   const availableDates = Object.keys(schedule).sort();
@@ -123,9 +136,7 @@ const Dashboard = () => {
         <div>
           <h2 className="dashboard-title">Check known field conflicts before pickup</h2>
           <p className="dashboard-subtitle">
-            {sourceHealth.ncsl?.ok
-              ? 'Public schedules from FXA, NCSL/Demosphere, high-school athletics, and other connected sources. Open still cannot confirm private permits.'
-              : 'Public schedules from FXA and high-school athletics. NCSL is listed on Sources only when its events are in this snapshot.'}
+            {connectedSubtitle(sourceHealth)}
             {' '}<a href="#sources">How we check this</a>
           </p>
         </div>
