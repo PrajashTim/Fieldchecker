@@ -2,85 +2,17 @@ import React, { useState } from 'react';
 import FieldCard from './FieldCard';
 import { DirectionsLink } from './DirectionsLink';
 import mockData from '../data/mockState.json';
-import fieldsConfig from '../../scraper/fieldsConfig.json';
-
-const PICKUP_DURATION_MINUTES = 120;
-const EVENT_DURATION_MINUTES = 150;
-const EVENT_SETUP_BUFFER_MINUTES = 30;
-const DEFAULT_PICKUP_MINUTES = 18 * 60 + 30;
-const MORNING_PICKUP_MINUTES = 8 * 60;
-const PERMIT_DISCLAIMER =
-  'Could not verify county or school permits, private/member practice schedules, or walk-on use.';
-
-const DISTANCE_BY_ID = Object.fromEntries(fieldsConfig.map(field => [field.id, field.distanceMi]));
-
-function parseStartMinutes(timeText = '') {
-  const match = timeText.match(/(\d{1,2}):(\d{2})\s*([AP]M)/i);
-  if (!match) return null;
-  let hour = Number(match[1]) % 12;
-  if (match[3].toUpperCase() === 'PM') hour += 12;
-  return hour * 60 + Number(match[2]);
-}
-
-function overlapsPickupWindow(events, pickupStart) {
-  const pickupEnd = pickupStart + PICKUP_DURATION_MINUTES;
-  return events.some(event => {
-    const eventStart = parseStartMinutes(event.time);
-    if (eventStart === null) return true;
-    const blockedStart = eventStart - EVENT_SETUP_BUFFER_MINUTES;
-    const blockedEnd = eventStart + EVENT_DURATION_MINUTES;
-    return pickupStart < blockedEnd && pickupEnd > blockedStart;
-  });
-}
-
-function formatClock(minutes) {
-  const hour24 = Math.floor(minutes / 60);
-  const min = minutes % 60;
-  const suffix = hour24 >= 12 ? 'PM' : 'AM';
-  return `${hour24 % 12 || 12}:${String(min).padStart(2, '0')} ${suffix}`;
-}
-
-function timeOptions() {
-  const options = [];
-  for (let minutes = 6 * 60; minutes <= 22 * 60 + 30; minutes += 30) {
-    options.push({ value: String(minutes), label: formatClock(minutes) });
-  }
-  return options;
-}
-
-function parseLocalDate(dateStr) {
-  const [year, month, day] = dateStr.split('-').map(Number);
-  return new Date(year, month - 1, day);
-}
-
-function formatFriendlyDate(dateStr, todayStr) {
-  const date = parseLocalDate(dateStr);
-  const weekday = date.toLocaleDateString('en-US', { weekday: 'long' });
-  const short = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  if (dateStr === todayStr) return `Today, ${weekday} (${short})`;
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  if (dateStr === tomorrow.toLocaleDateString('en-CA')) return `Tomorrow, ${weekday} (${short})`;
-  return `${weekday}, ${short}`;
-}
-
-function hubRank(fieldId) {
-  if (fieldId === 'chantilly-hs-turf') return [0, 0];
-  if (fieldId === 'sully-highlands-1') return [1, 0];
-  if (fieldId === 'sully-highlands-2') return [1, 1];
-  if (fieldId.startsWith('sully-highlands')) return [1, 9];
-  return [2, DISTANCE_BY_ID[fieldId] ?? 99];
-}
-
-function pickBestField(fields) {
-  return [...fields].sort((a, b) => {
-    const [aHub, aTie] = hubRank(a.id);
-    const [bHub, bTie] = hubRank(b.id);
-    return aHub - bHub || aTie - bTie;
-  })[0] || null;
-}
-
-const TIME_OPTIONS = timeOptions();
+import {
+  DEFAULT_PICKUP_MINUTES,
+  MORNING_PICKUP_MINUTES,
+  PERMIT_DISCLAIMER,
+  TIME_OPTIONS,
+  formatClock,
+  formatFriendlyDate,
+  hubRank,
+  overlapsPickupWindow,
+  pickBestField,
+} from '../lib/pickup';
 
 function connectedSubtitle(sourceHealth) {
   const named = [

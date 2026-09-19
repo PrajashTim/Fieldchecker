@@ -20,6 +20,7 @@ const SourcesPage = () => {
       <p className="dashboard-subtitle">
         Pitch Scout reports known conflicts from public schedules. It does not reserve fields.
         A missing event is not proof a field is free. Snapshot last built {new Date(lastUpdated).toLocaleString()}.
+        {' '}iOS and other apps can read the same snapshot at <a href="/api">/api</a>.
       </p>
 
       <section className="sources-section">

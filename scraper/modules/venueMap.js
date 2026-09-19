@@ -85,6 +85,31 @@ const EXACT_ALIASES = {
   'braddock park turf field 7a': 'braddock-7a',
   'braddock park turf field 7b': 'braddock-7b',
   'braddock park field 7b': 'braddock-7b',
+  'freedom high school': 'freedom-hs-turf',
+  'freedom hs': 'freedom-hs-turf',
+  'freedom high school stadium': 'freedom-hs-turf',
+  'freedom high school stadium turf': 'freedom-hs-turf',
+  'freedom high school aux': 'freedom-hs-aux',
+  'freedom high school aux turf': 'freedom-hs-aux',
+  'lunsford middle school': 'lunsford-ms-turf',
+  'j michael lunsford middle school': 'lunsford-ms-turf',
+  'lunsford ms': 'lunsford-ms-turf',
+  'byrnes ridge park': 'byrnes-ridge-1',
+  'byrne s ridge park': 'byrnes-ridge-1',
+  'byrnes ridge park 1': 'byrnes-ridge-1',
+  'hanson park 1': 'hanson-1',
+  'hanson regional park 1': 'hanson-1',
+  'hal and berni hanson regional park 1': 'hanson-1',
+  'hanson park turf 1': 'hanson-1',
+  'hanson park 2': 'hanson-2',
+  'hanson regional park 2': 'hanson-2',
+  'hanson park turf 2': 'hanson-2',
+  'hanson park 3': 'hanson-3',
+  'hanson regional park 3': 'hanson-3',
+  'hanson park turf 3': 'hanson-3',
+  'john champe high school': 'champe-hs-turf',
+  'champe high school': 'champe-hs-turf',
+  'john champe hs stadium': 'champe-hs-turf',
 };
 
 const PARK_ONLY = new Set([
@@ -111,6 +136,10 @@ const PARK_ONLY = new Set([
   'centreville high school 2 practice',
   'centreville high school 1',
   'centreville high school 2',
+  'hanson park',
+  'hanson regional park',
+  'hal and berni hanson regional park',
+  'freedom high school south riding',
 ]);
 
 export function normalizeVenue(value = '') {
