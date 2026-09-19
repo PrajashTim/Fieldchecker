@@ -214,8 +214,8 @@
     "fxaLocation": "Cunningham Park (Field 1)",
     "name": "Cunningham Park",
     "subfield": "Field 1",
-    "type": "Turf",
-    "location": "Fairfax, VA",
+    "type": "Grass",
+    "location": "Vienna, VA",
     "distanceMi": 4.0
   },
   {
@@ -413,24 +413,34 @@
     "distanceMi": 7.7
   },
   {
-    "id": "bready-1a",
+    "id": "oakton-hs-turf",
     "scraperTarget": "fxa",
-    "fxaLocation": "Bready Park (Field 1A)",
-    "name": "Bready Park",
-    "subfield": "Field 1A",
+    "fxaLocation": "Oakton High School (Stadium Field)",
+    "name": "Oakton High School",
+    "subfield": "Stadium Turf",
     "type": "Turf",
-    "location": "Springfield, VA",
-    "distanceMi": 8.4
+    "location": "Vienna, VA",
+    "distanceMi": 9.0
   },
   {
-    "id": "bready-1b",
+    "id": "oakton-hs-1",
     "scraperTarget": "fxa",
-    "fxaLocation": "Bready Park (Field 1B)",
-    "name": "Bready Park",
-    "subfield": "Field 1B",
+    "fxaLocation": "Oakton High School (Field 1)",
+    "name": "Oakton High School",
+    "subfield": "Field 1",
     "type": "Turf",
-    "location": "Springfield, VA",
-    "distanceMi": 8.4
+    "location": "Vienna, VA",
+    "distanceMi": 9.0
+  },
+  {
+    "id": "oakton-hs-3",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Oakton High School (Field 3)",
+    "name": "Oakton High School",
+    "subfield": "Field 3",
+    "type": "Turf",
+    "location": "Vienna, VA",
+    "distanceMi": 9.0
   },
   {
     "id": "braddock-7",
@@ -461,15 +471,5 @@
     "type": "Turf",
     "location": "Burke, VA",
     "distanceMi": 9.2
-  },
-  {
-    "id": "south-county-hs-turf",
-    "scraperTarget": "fxa",
-    "fxaLocation": "South County High School (Aux Field)",
-    "name": "South County High School",
-    "subfield": "Aux Turf Field",
-    "type": "Turf",
-    "location": "Lorton, VA",
-    "distanceMi": 15.8
   }
 ]

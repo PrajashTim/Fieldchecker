@@ -1021,8 +1021,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -1313,30 +1313,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -1426,19 +1433,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -2229,8 +2223,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -2709,30 +2703,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -2766,19 +2767,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -3364,8 +3352,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -3859,30 +3847,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -3916,19 +3911,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -4540,8 +4522,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -4901,30 +4883,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -5023,19 +5012,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5601,8 +5577,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -6228,30 +6204,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -6306,19 +6289,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -7008,8 +6978,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -7390,30 +7360,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -7447,19 +7424,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -7799,8 +7763,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -8098,72 +8062,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — Blackout FC vs Goons FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Internacionales vs Franconia FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — Cootek vs Santos",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Last VIII vs La Cherada FC",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -8197,19 +8126,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -9015,8 +8931,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -9397,30 +9313,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -9510,19 +9433,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -10245,8 +10155,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -10758,30 +10668,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -10859,19 +10776,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -11457,8 +11361,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -11972,30 +11876,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -12029,19 +11940,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -12628,8 +12526,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -12989,30 +12887,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -13111,19 +13016,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13689,8 +13581,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -14316,30 +14208,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -14394,19 +14293,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -15096,8 +14982,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -15375,30 +15261,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -15497,19 +15390,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -15846,8 +15726,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -16125,72 +16005,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — NAVEGADORES FC vs Ballers FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Blackout FC vs FC Cool Arrows",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — The Side FC vs Last VIII",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — FC local 26 vs Franconia FC",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -16224,19 +16069,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -17062,8 +16894,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -17411,30 +17243,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -17535,19 +17374,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -18249,8 +18075,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -18739,30 +18565,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -18840,19 +18673,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -19438,8 +19258,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -19953,30 +19773,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -20010,19 +19837,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -20619,8 +20433,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -20980,30 +20794,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -21102,19 +20923,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -21680,8 +21488,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -22307,30 +22115,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -22385,19 +22200,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -23087,8 +22889,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -23366,30 +23168,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -23488,19 +23297,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -23826,8 +23622,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -24125,72 +23921,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — The Side FC vs GDM FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — NAVEGADORES FC vs Goons FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — Alianza fc vs Cootek",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — LND FC vs FC local 26",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -24224,19 +23985,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -24647,8 +24395,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -24905,30 +24653,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -24962,19 +24717,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -25541,8 +25283,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -25973,30 +25715,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -26041,19 +25790,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -26639,8 +26375,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -27154,30 +26890,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -27211,19 +26954,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -27820,8 +27550,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -28181,30 +27911,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -28303,19 +28040,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -28881,8 +28605,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -29508,30 +29232,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -29586,19 +29317,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -30288,8 +30006,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -30670,30 +30388,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -30727,19 +30452,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -31079,8 +30791,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -31358,72 +31070,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — AWS FC vs La Cherada FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Los potros vs LND FC",
-            "location": "Bready Park Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — Rack City FC vs Santos",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — FC local 26 vs Internacionales",
-            "location": "Bready Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -31457,19 +31134,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -32295,8 +31959,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -32621,30 +32285,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -32745,19 +32416,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
@@ -33580,8 +33238,8 @@
         "id": "cunningham-1",
         "name": "Cunningham Park",
         "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Fairfax, VA",
+        "type": "Grass",
+        "location": "Vienna, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
@@ -34082,30 +33740,37 @@
         ]
       },
       {
-        "id": "bready-1a",
-        "name": "Bready Park",
-        "subfield": "Field 1A",
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
-        "id": "bready-1b",
-        "name": "Bready Park",
-        "subfield": "Field 1B",
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
         "type": "Turf",
-        "location": "Springfield, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "braddock-7",
@@ -34183,19 +33848,6 @@
         "subfield": "Turf Field 7B",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "south-county-hs-turf",
-        "name": "South County High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Lorton, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],

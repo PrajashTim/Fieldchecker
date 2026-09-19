@@ -63,15 +63,16 @@ const LOCATION_TO_FIELD = {
   'lake fairfax park field 3': 'lake-fairfax-3',
   'lake fairfax park field 4': 'lake-fairfax-4',
   'lake fairfax park field 5': 'lake-fairfax-5',
-  'bready park field 1a': 'bready-1a',
-  'bready park field 1b': 'bready-1b',
+  'oakton high school stadium field': 'oakton-hs-turf',
+  'oakton high school stadium': 'oakton-hs-turf',
+  'oakton high school field 1': 'oakton-hs-1',
+  'oakton high school field 3': 'oakton-hs-3',
   'braddock park turf field 7': 'braddock-7',
   'braddock park field 7': 'braddock-7',
   'braddock park turf field 7a': 'braddock-7a',
   'braddock park field 7a': 'braddock-7a',
   'braddock park turf field 7b': 'braddock-7b',
   'braddock park field 7b': 'braddock-7b',
-  'south county high school aux field': 'south-county-hs-turf',
 };
 
 function httpsGet(url) {
