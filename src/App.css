@@ -671,19 +671,18 @@
 }
 
 .glow-pin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.12rem;
-  width: 132px;
-  height: 72px;
+  position: relative;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   pointer-events: auto;
 }
 
 .glow-pin-name,
 .glow-pin-sub {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 128px;
   padding: 0.1rem 0.35rem;
   border-radius: 0.35rem;
@@ -697,19 +696,28 @@
 }
 
 .glow-pin-name {
+  bottom: calc(100% + 4px);
   font-size: 11px;
 }
 
 .glow-pin-sub {
   display: none;
+  bottom: calc(100% + 22px);
   font-size: 10px;
   font-weight: 600;
   color: #e2e8f0;
-  margin-top: -0.15rem;
 }
 
 .glow-pin.show-sub .glow-pin-sub {
   display: block;
+}
+
+.glow-pin.show-sub .glow-pin-name {
+  bottom: calc(100% + 22px);
+}
+
+.glow-pin.show-sub .glow-pin-sub {
+  bottom: calc(100% + 4px);
 }
 
 .glow-pin.hide-name .glow-pin-name {
@@ -717,9 +725,13 @@
 }
 
 .glow-pin-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 22px;
   height: 22px;
   border-radius: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: none;
   background: #22c55e;
   box-shadow:

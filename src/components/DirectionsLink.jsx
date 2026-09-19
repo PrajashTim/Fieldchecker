@@ -1,7 +1,7 @@
 import { coordsForField } from '../data/fieldCoords';
 
-export function mapsDirectionsUrl(field) {
-  const coords = field ? coordsForField(field) : null;
+export function mapsDirectionsUrl(field, siblings = []) {
+  const coords = field ? coordsForField(field, siblings) : null;
   if (coords?.lat != null && coords?.lng != null) {
     return `https://www.google.com/maps/dir/?api=1&destination=${coords.lat},${coords.lng}`;
   }
@@ -9,11 +9,11 @@ export function mapsDirectionsUrl(field) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`;
 }
 
-export function DirectionsLink({ field, className = 'directions-link' }) {
+export function DirectionsLink({ field, siblings = [], className = 'directions-link' }) {
   return (
     <a
       className={className}
-      href={mapsDirectionsUrl(field)}
+      href={mapsDirectionsUrl(field, siblings)}
       target="_blank"
       rel="noopener noreferrer"
     >

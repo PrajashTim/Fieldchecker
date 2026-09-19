@@ -3,7 +3,7 @@ import L from 'leaflet';
 import '../vendor/leaflet.css';
 
 import { DirectionsLink } from './DirectionsLink';
-import { coordsForField, CHANTILLY } from '../data/fieldCoords';
+import { coordsForField, CHANTILLY, PARK_COORDS } from '../data/fieldCoords';
 import { overlappingEvents, PERMIT_DISCLAIMER } from '../lib/pickup';
 
 function escapeHtml(value = '') {
@@ -30,8 +30,8 @@ function pinIcon(field, open, isRec, isSelected) {
   return L.divIcon({
     className: 'glow-pin-icon',
     html: `<div class="${classes}" data-park="${escapeHtml(field.name)}"><span class="glow-pin-name">${escapeHtml(field.name)}</span>${field.subfield ? `<span class="glow-pin-sub">${escapeHtml(field.subfield)}</span>` : ''}<span class="glow-pin-dot"></span></div>`,
-    iconSize: [132, 72],
-    iconAnchor: [66, 62],
+    iconSize: [40, 40],
+    iconAnchor: [20, 20],
   });
 }
 
@@ -152,7 +152,7 @@ const FieldMap = ({
       markersRef.current.set(field.id, { marker, field });
     });
     applyZoomLabels(markersRef.current, map.getZoom(), selectedRef.current, recommendation?.id);
-  }, [fields, recommendation]);
+  }, [fields, recommendation, PARK_COORDS]);
 
   useEffect(() => {
     selectedRef.current = selectedId;
@@ -212,7 +212,7 @@ const FieldMap = ({
           ) : (
             <p className="simple-map-note">{PERMIT_DISCLAIMER}</p>
           )}
-          <DirectionsLink field={selected} />
+          <DirectionsLink field={selected} siblings={fields} />
           <span className="simple-map-date">{dateLabel}</span>
           <button
             type="button"
