@@ -91,9 +91,6 @@ const EXACT_ALIASES = {
   'freedom high school stadium turf': 'freedom-hs-turf',
   'freedom high school aux': 'freedom-hs-aux',
   'freedom high school aux turf': 'freedom-hs-aux',
-  'lunsford middle school': 'lunsford-ms-turf',
-  'j michael lunsford middle school': 'lunsford-ms-turf',
-  'lunsford ms': 'lunsford-ms-turf',
   'byrnes ridge park': 'byrnes-ridge-1',
   'byrne s ridge park': 'byrnes-ridge-1',
   'byrnes ridge park 1': 'byrnes-ridge-1',
@@ -141,6 +138,12 @@ const PARK_ONLY = new Set([
   'hanson regional park',
   'hal and berni hanson regional park',
   'freedom high school south riding',
+  'lunsford middle school',
+  'j michael lunsford middle school',
+  'lunsford ms',
+  'herndon middle school',
+  'jackson middle school',
+  'south county middle school',
 ]);
 
 export function normalizeVenue(value = '') {

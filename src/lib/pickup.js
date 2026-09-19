@@ -40,6 +40,10 @@ export function overlappingEvents(events, pickupStart) {
   });
 }
 
+export function turfFilterLabel(turfOnly) {
+  return turfOnly ? 'Turf' : 'Showing turf plus grass';
+}
+
 export function formatClock(minutes) {
   const hour24 = Math.floor(minutes / 60);
   const min = minutes % 60;

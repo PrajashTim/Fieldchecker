@@ -613,6 +613,11 @@
   color: var(--color-text-secondary);
 }
 
+.map-page-bar .filter-btn {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.85rem;
+}
+
 .map-page-hint {
   margin-left: auto;
   font-size: 0.78rem;

@@ -18,7 +18,6 @@ const PARK_COORDS = {
   'Braddock Park': { lat: 38.8124, lng: -77.3159 },
   'South County High School': { lat: 38.7043, lng: -77.2491 },
   'Freedom High School': { lat: 38.9139, lng: -77.5350 },
-  'J. Michael Lunsford Middle School': { lat: 38.8965, lng: -77.5231 },
   "Byrne's Ridge Park": { lat: 38.9282, lng: -77.5524 },
   'Hal and Berni Hanson Regional Park': { lat: 38.9714, lng: -77.5510 },
   'John Champe High School': { lat: 38.9323, lng: -77.5659 },

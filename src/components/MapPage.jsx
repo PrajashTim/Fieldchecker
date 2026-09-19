@@ -8,6 +8,7 @@ import {
   formatFriendlyDate,
   overlapsPickupWindow,
   pickBestField,
+  turfFilterLabel,
 } from '../lib/pickup';
 
 const MapPage = () => {
@@ -19,12 +20,15 @@ const MapPage = () => {
 
   const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [pickupMinutes, setPickupMinutes] = useState(DEFAULT_PICKUP_MINUTES);
+  const [filterTurf, setFilterTurf] = useState(true);
 
   const pickupLabel = formatClock(pickupMinutes);
   const dateLabel = formatFriendlyDate(selectedDate, todayStr);
 
   const fields = useMemo(() => {
-    const rows = (schedule[selectedDate] || []).filter(field => field.type.toLowerCase() === 'turf');
+    const rows = (schedule[selectedDate] || []).filter(field => (
+      !filterTurf || String(field.type).toLowerCase() === 'turf'
+    ));
     const open = [];
     const mapped = rows.map(field => {
       const overlapsPickup = overlapsPickupWindow(field.events, pickupMinutes);
@@ -33,7 +37,7 @@ const MapPage = () => {
       return next;
     });
     return { mapped, recommendation: pickBestField(open) };
-  }, [schedule, selectedDate, pickupMinutes]);
+  }, [schedule, selectedDate, pickupMinutes, filterTurf]);
 
   return (
     <main className="map-page">
@@ -62,10 +66,18 @@ const MapPage = () => {
             ))}
           </select>
         </label>
+        <button
+          type="button"
+          className={`filter-btn ${filterTurf ? 'active' : ''}`}
+          aria-pressed={filterTurf}
+          onClick={() => setFilterTurf(current => !current)}
+        >
+          {turfFilterLabel(filterTurf)}
+        </button>
         <p className="map-page-hint">Green open · Red conflict · Starts on the top pick</p>
       </div>
       <FieldMap
-        key={`${selectedDate}-${fields.recommendation?.id || 'none'}`}
+        key={`${selectedDate}-${filterTurf ? 'turf' : 'all'}-${fields.recommendation?.id || 'none'}`}
         fields={fields.mapped}
         recommendation={fields.recommendation}
         pickupLabel={pickupLabel}

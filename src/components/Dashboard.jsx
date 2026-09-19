@@ -12,6 +12,7 @@ import {
   hubRank,
   overlapsPickupWindow,
   pickBestField,
+  turfFilterLabel,
 } from '../lib/pickup';
 
 function connectedSubtitle(sourceHealth) {
@@ -105,11 +106,13 @@ const Dashboard = () => {
             </select>
           </div>
 
-          <button 
+          <button
+            type="button"
             className={`filter-btn ${filterTurf ? 'active' : ''}`}
+            aria-pressed={filterTurf}
             onClick={() => setFilterTurf(!filterTurf)}
           >
-            {filterTurf ? '🌿 Turf Only' : '🌿 Show Turf'}
+            {turfFilterLabel(filterTurf)}
           </button>
 
           <button 
