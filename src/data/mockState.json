@@ -577,19 +577,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -690,19 +677,6 @@
             "eventId": "11649249"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -819,19 +793,6 @@
             "eventId": "110126"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -1808,13 +1769,13 @@
         ]
       },
       {
-        "id": "arrowhead-1",
+        "id": "arrowhead-1a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
+        "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [
           {
             "time": "8:00 AM",
@@ -1852,19 +1813,6 @@
         ]
       },
       {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
@@ -1872,20 +1820,62 @@
         "location": "Centreville, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — Spartans FC vs A.F.C. Blue Sunshine Rainbow Ponies",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — FC Fairfax vs Les Bleus (FA 1)",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — Free Agent Team 2 (FA 2) vs R2S FC",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
       },
       {
-        "id": "arrowhead-3",
+        "id": "arrowhead-3a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
+        "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — VISTA Premier Gunners U12B vs NB1523 VRSC U12B Black",
+            "location": "Arrowhead #3A",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.6763:80738+Elements/Display+E+46241+++++116702823+111835593",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11635122"
+          },
           {
             "time": "3:00 PM",
             "title": "Soccer — VISTA Porcupines U13G vs NG1404 VRSC U13G Black",
@@ -1914,31 +1904,6 @@
         ]
       },
       {
-        "id": "arrowhead-3a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — VISTA Premier Gunners U12B vs NB1523 VRSC U12B Black",
-            "location": "Arrowhead #3A",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.6763:80738+Elements/Display+E+46241+++++116702823+111835593",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11635122"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
@@ -1957,21 +1922,30 @@
             "confidence": "verified_live",
             "status": "scheduled",
             "eventId": "11635328"
+          },
+          {
+            "time": "3:00 PM",
+            "title": "Soccer — VISTA Porcupines U13G vs NG1404 VRSC U13G Black",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.3960:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11635911"
+          },
+          {
+            "time": "4:30 PM",
+            "title": "Soccer — VISTA Spirit U13G vs NG1314 MCLN U13 Girls White",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.3960:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11635910"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -2933,19 +2907,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -3014,19 +2975,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -3043,19 +2991,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -4103,19 +4038,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -4132,19 +4054,6 @@
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -4218,19 +4127,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5238,19 +5134,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -5319,19 +5202,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -5395,19 +5265,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6507,19 +6364,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -6588,19 +6432,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -6664,19 +6495,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -7549,19 +7367,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -7630,19 +7435,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -7659,19 +7451,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -8484,19 +8263,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -8646,19 +8412,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -8770,19 +8523,6 @@
             "eventId": "110130"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -9785,13 +9525,13 @@
         ]
       },
       {
-        "id": "arrowhead-1",
+        "id": "arrowhead-1a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
+        "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [
           {
             "time": "8:00 AM",
@@ -9829,19 +9569,6 @@
         ]
       },
       {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
@@ -9849,20 +9576,38 @@
         "location": "Centreville, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — Del Fuego vs Two Right Feet FC",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — FC Fairfax vs Hangover 96",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — 1 Star Weak Foot vs Lavender Lightning",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -9896,19 +9641,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -10942,19 +10674,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -11023,19 +10742,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -11052,19 +10758,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -12128,19 +11821,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -12157,19 +11837,6 @@
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -12243,19 +11910,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13242,19 +12896,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -13323,19 +12964,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -13399,19 +13027,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14511,19 +14126,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -14592,19 +14194,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -14668,19 +14257,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -15512,19 +15088,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -15593,19 +15156,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -15622,19 +15172,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -16491,19 +16028,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -16604,19 +16128,6 @@
             "eventId": "11649283"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -16733,19 +16244,6 @@
             "eventId": "110135"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -17701,13 +17199,13 @@
         ]
       },
       {
-        "id": "arrowhead-1",
+        "id": "arrowhead-1a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
+        "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [
           {
             "time": "8:00 AM",
@@ -17745,19 +17243,6 @@
         ]
       },
       {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
@@ -17765,30 +17250,36 @@
         "location": "Centreville, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "3:00 PM",
-            "title": "Soccer — VISTA Spirit U13G vs NG13106 NVSC 2013/14G White",
-            "location": "Arrowhead #3",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.3960:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "time": "8:00 AM",
+            "title": "Soccer — R2S FC vs Les Bleus (FA 1)",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
             "precision": "exact_subfield",
             "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11634938"
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — Two Right Feet FC vs Free Agent Team 2 (FA 2)",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — A.F.C. Blue Sunshine Rainbow Ponies vs Kicking It Old School (FA 3)",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -17814,6 +17305,17 @@
             "confidence": "verified_live",
             "status": "scheduled",
             "eventId": "11632681"
+          },
+          {
+            "time": "3:00 PM",
+            "title": "Soccer — VISTA Spirit U13G vs NG13106 NVSC 2013/14G White",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.3960:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11634938"
           }
         ],
         "unavailableSources": [
@@ -17839,21 +17341,19 @@
             "confidence": "verified_live",
             "status": "scheduled",
             "eventId": "11632474"
+          },
+          {
+            "time": "3:00 PM",
+            "title": "Soccer — VISTA Spirit U13G vs NG13106 NVSC 2013/14G White",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:216192.3960:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11634938"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -18839,19 +18339,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -18920,19 +18407,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -18949,19 +18423,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -20014,19 +19475,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -20043,19 +19491,6 @@
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -20129,19 +19564,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -21149,19 +20571,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -21230,19 +20639,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -21306,19 +20702,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22418,19 +21801,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -22499,19 +21869,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -22575,19 +21932,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -23408,19 +22752,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -23489,19 +22820,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -23518,19 +22836,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -24161,19 +23466,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -24200,19 +23492,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -24229,19 +23508,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -24945,13 +24211,13 @@
         ]
       },
       {
-        "id": "arrowhead-1",
+        "id": "arrowhead-1a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
+        "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [
           {
             "time": "8:00 AM",
@@ -24989,19 +24255,6 @@
         ]
       },
       {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
@@ -25009,20 +24262,38 @@
         "location": "Centreville, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — Coco Locos FC vs 1 Star Weak Foot",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — Atletico United vs Bazooka FC",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — Del Fuego vs A.F.C. Blue Sunshine Rainbow Ponies",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -25044,19 +24315,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -25956,19 +25214,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -26037,19 +25282,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -26066,19 +25298,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -27131,19 +26350,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -27160,19 +26366,6 @@
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -27246,19 +26439,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -28266,19 +27446,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -28347,19 +27514,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -28423,19 +27577,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -29535,19 +28676,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -29616,19 +28744,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -29692,19 +28807,6 @@
             "status": "scheduled"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -30577,19 +29679,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -30658,19 +29747,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -30687,19 +29763,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",
@@ -31534,19 +30597,6 @@
         ]
       },
       {
-        "id": "arrowhead-1",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1A",
@@ -31674,19 +30724,6 @@
         ]
       },
       {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-3a",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3A",
@@ -31798,19 +30835,6 @@
             "eventId": "110137"
           }
         ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -32855,13 +31879,13 @@
         ]
       },
       {
-        "id": "arrowhead-1",
+        "id": "arrowhead-1a",
         "name": "Arrowhead Park",
-        "subfield": "Turf Field 1",
+        "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [
           {
             "time": "8:00 AM",
@@ -32899,19 +31923,6 @@
         ]
       },
       {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
         "id": "arrowhead-1b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 1B",
@@ -32919,20 +31930,38 @@
         "location": "Centreville, VA",
         "status": "unknown",
         "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — CONKERS FC vs 1 Star Weak Foot",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — Hangover 96 vs R2S FC",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — Del Fuego vs Kicking It Old School (FA 3)",
+            "location": "Arrowhead Park Turf Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105793/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -32966,19 +31995,6 @@
         "id": "arrowhead-3b",
         "name": "Arrowhead Park",
         "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3c",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3C",
         "type": "Turf",
         "location": "Centreville, VA",
         "status": "unknown",

@@ -31,8 +31,9 @@ const EXACT_ALIASES = {
   'arrowhead 3': 'arrowhead-3',
   'arrowhead park turf field 3': 'arrowhead-3',
   'arrowhead 3a': 'arrowhead-3a',
+  'arrowhead park turf field 3a': 'arrowhead-3a',
   'arrowhead 3b': 'arrowhead-3b',
-  'arrowhead 3c': 'arrowhead-3c',
+  'arrowhead park turf field 3b': 'arrowhead-3b',
   'greenbriar park 5': 'greenbriar-5',
   'greenbriar park field 5': 'greenbriar-5',
   'greenbriar 5': 'greenbriar-5',
@@ -121,6 +122,13 @@ const PARK_ONLY = new Set([
   'oakton high school',
   'arrowhead',
   'arrowhead park',
+  'arrowhead 2',
+  'arrowhead park 2',
+  'arrowhead park field 2',
+  'arrowhead park turf field 2',
+  'arrowhead 3c',
+  'arrowhead park 3c',
+  'arrowhead park turf field 3c',
   'sully highlands',
   'sully highlands park',
   'sully highlands park main field',
@@ -174,6 +182,18 @@ function fxaAliases() {
 const FIELD_IDS = new Set(fieldsConfig.map(field => field.id));
 const COMBINED_ALIASES = { ...fxaAliases(), ...EXACT_ALIASES };
 
+/** Full-size Arrowhead turfs split into the four 8v8 surfaces. Events on the parent occupy both halves. */
+export const PARENT_FIELD_SPLITS = {
+  'arrowhead-1': ['arrowhead-1a', 'arrowhead-1b'],
+  'arrowhead-3': ['arrowhead-3a', 'arrowhead-3b'],
+};
+
+export function parentIdsForField(fieldId) {
+  return Object.entries(PARENT_FIELD_SPLITS)
+    .filter(([, children]) => children.includes(fieldId))
+    .map(([parent]) => parent);
+}
+
 export function resolveExactField(rawName) {
   const key = normalizeVenue(rawName);
   if (!key) return { fieldId: null, precision: 'unresolved', reason: 'empty' };
@@ -181,7 +201,7 @@ export function resolveExactField(rawName) {
     return { fieldId: null, precision: 'park', reason: 'park-level label is not an exact subfield' };
   }
   const fieldId = COMBINED_ALIASES[key];
-  if (fieldId && FIELD_IDS.has(fieldId)) {
+  if (fieldId && (FIELD_IDS.has(fieldId) || PARENT_FIELD_SPLITS[fieldId])) {
     return { fieldId, precision: 'exact_subfield', reason: null };
   }
   return { fieldId: null, precision: 'unresolved', reason: 'no exact configured subfield match' };

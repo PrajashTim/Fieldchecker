@@ -33,7 +33,6 @@ const LOCATION_TO_FIELD = {
   'arrowhead park turf field 3': 'arrowhead-3',
   'arrowhead park turf field 3a': 'arrowhead-3a',
   'arrowhead park turf field 3b': 'arrowhead-3b',
-  'arrowhead park turf field 3c': 'arrowhead-3c',
   'centreville high school aux field': 'centreville-hs-turf',
   'centreville high school aux filed': 'centreville-hs-turf',
   'centreville high school field 1': 'centreville-hs-turf',

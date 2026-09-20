@@ -12,6 +12,7 @@ import { fetchFwsaEvents } from './modules/fwsa.js';
 import { fetchSyaEvents } from './modules/sya.js';
 import { fetchFslEvents } from './modules/fsl.js';
 import { fetchNvasaEvents } from './modules/nvasa.js';
+import { parentIdsForField } from './modules/venueMap.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -95,6 +96,11 @@ function eventStartMinutes(timeText = '') {
 
 function sortEvents(events) {
   return [...events].sort((a, b) => eventStartMinutes(a.time) - eventStartMinutes(b.time));
+}
+
+function eventsOnDate(byField, fieldId, dateStr) {
+  const keys = [fieldId, ...parentIdsForField(fieldId)];
+  return keys.flatMap(id => byField?.[id]?.[dateStr] ?? []);
 }
 
 async function runScraper() {
@@ -190,14 +196,14 @@ async function runScraper() {
   for (const dateStr of dates) {
     schedule[dateStr] = fieldsConfig.map(field => {
       // Gather events from all provider sources
-      const fxaEvents = fxaByField[field.id]?.[dateStr] ?? [];
-      const hsEvents  = hsByField[field.id]?.[dateStr] ?? [];
-      const ncslEvents = ncslResult.events[field.id]?.[dateStr] ?? [];
-      const nvslEvents = nvslResult.events[field.id]?.[dateStr] ?? [];
-      const fwsaEvents = fwsaResult.events[field.id]?.[dateStr] ?? [];
-      const syaEvents = syaResult.events[field.id]?.[dateStr] ?? [];
-      const fslEvents = fslResult.events[field.id]?.[dateStr] ?? [];
-      const nvasaEvents = nvasaResult.events[field.id]?.[dateStr] ?? [];
+      const fxaEvents = eventsOnDate(fxaByField, field.id, dateStr);
+      const hsEvents  = eventsOnDate(hsByField, field.id, dateStr);
+      const ncslEvents = eventsOnDate(ncslResult.events, field.id, dateStr);
+      const nvslEvents = eventsOnDate(nvslResult.events, field.id, dateStr);
+      const fwsaEvents = eventsOnDate(fwsaResult.events, field.id, dateStr);
+      const syaEvents = eventsOnDate(syaResult.events, field.id, dateStr);
+      const fslEvents = eventsOnDate(fslResult.events, field.id, dateStr);
+      const nvasaEvents = eventsOnDate(nvasaResult.events, field.id, dateStr);
       let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents];
 
       if (field.id === 'poplar-tree-2') {
