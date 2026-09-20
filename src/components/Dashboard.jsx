@@ -75,7 +75,7 @@ const Dashboard = ({ pickup }) => {
         
         <div className="controls-group">
           <div className="date-picker-wrap">
-            <label htmlFor="scheduleDate">Select Date:</label>
+            <label htmlFor="scheduleDate">Date</label>
             <select 
               id="scheduleDate"
               className="glass-select"
@@ -89,7 +89,7 @@ const Dashboard = ({ pickup }) => {
           </div>
 
           <div className="date-picker-wrap">
-            <label htmlFor="pickupTime">Pickup time:</label>
+            <label htmlFor="pickupTime">Time</label>
             <select
               id="pickupTime"
               className="glass-select"

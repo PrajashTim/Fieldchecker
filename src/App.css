@@ -1,7 +1,14 @@
 .app-container {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
+}
+
+.app-container.is-map {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 /* Header Styles */
@@ -518,19 +525,49 @@
   }
 
   .date-picker-wrap {
-    grid-column: 1 / -1;
+    grid-column: auto;
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
   }
 
   .glass-select {
     flex: 1;
     width: 100%;
+    min-width: 0;
+    padding: 0.65rem 0.55rem;
+  }
+
+  .controls-group > .filter-btn:first-of-type {
+    grid-column: 1 / -1;
   }
 
   .filter-btn {
     padding: 0.6rem 0.5rem;
     font-size: 0.78rem;
     text-align: center;
+  }
+
+  .field-header {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .field-location {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .recommendation-when .directions-link-inline {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0.15rem;
+  }
+
+  .recommendation {
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.15rem;
   }
 
   .fields-grid {
@@ -627,7 +664,7 @@
 .simple-map {
   position: relative;
   flex: 1;
-  min-height: calc(100vh - 9.5rem);
+  min-height: 0;
 }
 
 .simple-map-stage {
@@ -832,8 +869,16 @@
 
 .simple-map-sheet .directions-link {
   display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.simple-map-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.85rem;
   margin-top: 0.45rem;
-  margin-right: 0.6rem;
 }
 
 .simple-map-date {
@@ -874,17 +919,124 @@
 }
 
 @media (max-width: 800px) {
+  .header {
+    padding: 0.65rem 0 0.5rem;
+    position: sticky;
+  }
+
   .header-content {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .last-updated {
+    display: none;
   }
 
   .site-nav {
-    order: 3;
+    order: 2;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: stretch;
+    gap: 0.25rem;
+  }
+
+  .site-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 0.42rem 0.35rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-rest {
+    display: none;
+  }
+
+  .map-page {
+    overflow: hidden;
+  }
+
+  .map-page-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 0.45rem 0.5rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .map-page-control:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .map-page-control {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .map-page-control .glass-select {
+    padding: 0.55rem 0.45rem;
+    font-size: 0.78rem;
+  }
+
+  .map-page-bar .filter-btn {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .map-page-hint {
-    margin-left: 0;
+    display: none;
+  }
+
+  .simple-map {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .simple-map-stage {
+    position: relative;
+    inset: auto;
+    flex: 1 1 auto;
+    min-height: 10rem;
+  }
+
+  .simple-map-sheet {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    z-index: 700;
+    width: 100%;
+    max-height: min(42dvh, 20rem);
+    padding: 0.75rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    border-radius: 0.9rem 0.9rem 0 0;
+  }
+
+  .simple-map-sheet h2 {
+    font-size: 1.02rem;
+  }
+
+  .simple-map-note {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .simple-map .map-recenter {
+    top: 0.55rem;
+    right: 0.55rem;
+  }
+
+  .simple-map-canvas .leaflet-control-zoom {
+    margin-top: 0.55rem;
+    margin-left: 0.55rem;
+  }
+
+  .glow-pin-name {
+    max-width: 96px;
+    font-size: 10px;
   }
 }

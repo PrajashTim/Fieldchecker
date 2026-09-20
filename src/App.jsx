@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container${page === 'map' ? ' is-map' : ''}`}>
       <Header page={page} />
       {page === 'sources' ? <SourcesPage /> : page === 'map' ? <MapPage pickup={pickup} /> : <Dashboard pickup={pickup} />}
     </div>

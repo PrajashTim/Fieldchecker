@@ -14,7 +14,7 @@ const Header = ({ page }) => {
         </a>
         <nav className="site-nav" aria-label="Main">
           <a href="#" className={page === 'home' ? 'is-active' : undefined}>Fields</a>
-          <a href="#map" className={page === 'map' ? 'is-active' : undefined}>Map version</a>
+          <a href="#map" className={page === 'map' ? 'is-active' : undefined}>Map<span className="nav-rest"> version</span></a>
           <a href="#sources" className={page === 'sources' ? 'is-active' : undefined}>Sources</a>
         </nav>
         <div className="last-updated">

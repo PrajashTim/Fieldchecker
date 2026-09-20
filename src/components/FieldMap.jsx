@@ -212,8 +212,10 @@ const FieldMap = ({
           ) : (
             <p className="simple-map-note">{PERMIT_DISCLAIMER}</p>
           )}
-          <DirectionsLink field={selected} siblings={fields} />
-          <span className="simple-map-date">{dateLabel}</span>
+          <div className="simple-map-actions">
+            <DirectionsLink field={selected} siblings={fields} />
+            <span className="simple-map-date">{dateLabel}</span>
+          </div>
           <button
             type="button"
             className="map-schedule-toggle"
