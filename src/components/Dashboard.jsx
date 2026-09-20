@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FieldCard from './FieldCard';
 import { DirectionsLink } from './DirectionsLink';
 import mockData from '../data/mockState.json';
@@ -31,15 +31,11 @@ function connectedSubtitle(sourceHealth) {
   return `${prefix} Open still cannot confirm private permits.`;
 }
 
-const Dashboard = () => {
+const Dashboard = ({ pickup }) => {
   const { schedule, sourceHealth = {} } = mockData;
   const availableDates = Object.keys(schedule).sort();
   const todayStr = new Date().toLocaleDateString('en-CA');
-  const defaultDate = availableDates.includes(todayStr) ? todayStr : availableDates[0];
-
-  const [selectedDate, setSelectedDate] = useState(defaultDate);
-  const [pickupMinutes, setPickupMinutes] = useState(DEFAULT_PICKUP_MINUTES);
-  const [filterTurf, setFilterTurf] = useState(true);
+  const { selectedDate, setSelectedDate, pickupMinutes, setPickupMinutes, filterTurf, setFilterTurf } = pickup;
 
   const filteredDates = availableDates.filter(d => d >= todayStr);
   const fieldsForDate = schedule[selectedDate] || [];

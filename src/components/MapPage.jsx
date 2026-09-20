@@ -1,8 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import FieldMap from './FieldMap';
 import mockData from '../data/mockState.json';
 import {
-  DEFAULT_PICKUP_MINUTES,
   TIME_OPTIONS,
   formatClock,
   formatFriendlyDate,
@@ -11,16 +10,12 @@ import {
   turfFilterLabel,
 } from '../lib/pickup';
 
-const MapPage = () => {
+const MapPage = ({ pickup }) => {
   const { schedule } = mockData;
   const availableDates = Object.keys(schedule).sort();
   const todayStr = new Date().toLocaleDateString('en-CA');
-  const defaultDate = availableDates.includes(todayStr) ? todayStr : availableDates[0];
   const filteredDates = availableDates.filter(date => date >= todayStr);
-
-  const [selectedDate, setSelectedDate] = useState(defaultDate);
-  const [pickupMinutes, setPickupMinutes] = useState(DEFAULT_PICKUP_MINUTES);
-  const [filterTurf, setFilterTurf] = useState(true);
+  const { selectedDate, setSelectedDate, pickupMinutes, setPickupMinutes, filterTurf, setFilterTurf } = pickup;
 
   const pickupLabel = formatClock(pickupMinutes);
   const dateLabel = formatFriendlyDate(selectedDate, todayStr);
