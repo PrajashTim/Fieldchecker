@@ -1,4 +1,4 @@
-import snapshot from '../data/mockState.json';
+import snapshot from '../data/mockState.json' with { type: 'json' };
 import {
   DEFAULT_PICKUP_MINUTES,
   formatClock,
@@ -43,8 +43,7 @@ function availableDates() {
 function resolveDate(query = {}) {
   const dates = availableDates();
   const today = new Date().toLocaleDateString('en-CA');
-  const requested = query.date;
-  if (requested && snapshot.schedule[requested]) return requested;
+  if (query.date) return query.date;
   return dates.includes(today) ? today : dates[0];
 }
 
@@ -69,10 +68,15 @@ function slimField(field, pickupMinutes) {
     type: field.type,
     location: field.location,
     overlapsPickup,
-    status: overlapsPickup ? 'conflict' : 'open',
+    status: overlapsPickup ? 'conflict' : 'no_conflict',
     events: (field.events || []).map(slimEvent),
     overlappingEvents: overlappingEvents(field.events, pickupMinutes).map(slimEvent),
   };
+}
+
+function withoutHttpStatus(payload) {
+  const { httpStatus, ...body } = payload;
+  return { status: httpStatus || 200, body };
 }
 
 export function apiIndex() {
@@ -82,13 +86,27 @@ export function apiIndex() {
     lastUpdated: snapshot.lastUpdated,
     coverageStart: snapshot.coverageStart,
     coverageEnd: snapshot.coverageEnd,
+    occupancy:
+      'Per-field status is no_conflict or conflict. no_conflict means no overlap was found in connected public schedules; it is not a reservation or proof the field is free.',
     endpoints: {
       status: '/api',
+      sourceHealth: '/api/status',
       fields: '/api/fields',
       schedule: '/api/schedule?date=YYYY-MM-DD&time=6:30PM',
       fieldDay: '/api/schedule?date=YYYY-MM-DD&field=poplar-tree-2',
     },
     time: 'Accepts 6:30PM, 18:30, or pickupMinutes=1110. Default is 6:30 PM.',
+    turfOnly: 'Pass turfOnly=1 to hide grass fields. Default is all catalog fields.',
+  };
+}
+
+export function apiStatus() {
+  return {
+    lastUpdated: snapshot.lastUpdated,
+    coverageStart: snapshot.coverageStart,
+    coverageEnd: snapshot.coverageEnd,
+    disclaimer: PERMIT,
+    sourceHealth: snapshot.sourceHealth || {},
   };
 }
 
@@ -97,6 +115,7 @@ export function apiFields() {
   const rows = snapshot.schedule[date] || [];
   return {
     lastUpdated: snapshot.lastUpdated,
+    disclaimer: PERMIT,
     fields: rows.map(field => ({
       id: field.id,
       name: field.name,
@@ -108,15 +127,35 @@ export function apiFields() {
 }
 
 export function apiSchedule(query = {}) {
+  const dates = availableDates();
+  if (query.date && !snapshot.schedule[query.date]) {
+    return {
+      httpStatus: 400,
+      error: 'invalid_date',
+      message: `No snapshot for date ${query.date}`,
+      dates,
+    };
+  }
   const date = resolveDate(query);
   const pickupMinutes = parsePickupMinutes(query);
-  const turfOnly = query.turfOnly !== '0' && query.turfOnly !== 'false';
-  let rows = snapshot.schedule[date] || [];
-  if (turfOnly) rows = rows.filter(field => String(field.type).toLowerCase() === 'turf');
-  if (query.field) rows = rows.filter(field => field.id === query.field);
+  const turfOnly = query.turfOnly === '1' || query.turfOnly === 'true';
+  const dayRows = snapshot.schedule[date] || [];
+  if (query.field && !dayRows.some(field => field.id === query.field)) {
+    return {
+      httpStatus: 404,
+      error: 'unknown_field',
+      message: `Unknown field id ${query.field}`,
+    };
+  }
+  let rows = dayRows;
+  if (query.field) {
+    rows = dayRows.filter(field => field.id === query.field);
+  } else if (turfOnly) {
+    rows = dayRows.filter(field => String(field.type).toLowerCase() === 'turf');
+  }
   const mapped = rows.map(field => slimField(field, pickupMinutes));
-  const open = mapped.filter(field => !field.overlapsPickup);
-  const recommendation = pickBestField(open);
+  const clear = mapped.filter(field => !field.overlapsPickup);
+  const recommendation = pickBestField(clear);
   return {
     lastUpdated: snapshot.lastUpdated,
     date,
@@ -135,8 +174,34 @@ export function handleApi(url, send) {
   const parsed = new URL(url, 'http://localhost');
   const path = parsed.pathname.replace(/\/$/, '') || '/';
   const query = Object.fromEntries(parsed.searchParams.entries());
+  const reply = (payload) => {
+    const { status, body } = withoutHttpStatus(payload);
+    return send(status, body);
+  };
   if (path === '/api' || path === '/api/') return send(200, apiIndex());
+  if (path === '/api/status') return send(200, apiStatus());
   if (path === '/api/fields') return send(200, apiFields());
-  if (path === '/api/schedule') return send(200, apiSchedule(query));
-  return send(404, { error: 'Not found', endpoints: ['/api', '/api/fields', '/api/schedule'] });
+  if (path === '/api/schedule') return reply(apiSchedule(query));
+  return send(404, { error: 'Not found', endpoints: ['/api', '/api/status', '/api/fields', '/api/schedule'] });
+}
+
+export function asVercelHandler(build) {
+  return function handler(req, res) {
+    cors(res);
+    if (req.method === 'OPTIONS') {
+      res.status(204).end();
+      return;
+    }
+    if (req.method !== 'GET') {
+      res.status(405).json({ error: 'Method not allowed' });
+      return;
+    }
+    try {
+      const payload = build(req.query || {});
+      const { status, body } = withoutHttpStatus(payload && payload.httpStatus ? payload : { httpStatus: 200, ...payload });
+      res.status(status).json(body);
+    } catch (error) {
+      res.status(500).json({ error: error.message || 'API error' });
+    }
+  };
 }

@@ -1,4 +1,4 @@
-import fieldsConfig from '../../scraper/fieldsConfig.json';
+import fieldsConfig from '../../scraper/fieldsConfig.json' with { type: 'json' };
 
 export const PICKUP_DURATION_MINUTES = 120;
 export const EVENT_DURATION_MINUTES = 150;
