@@ -42,6 +42,7 @@ const MapPage = ({ pickup }) => {
           <select
             className="glass-select"
             value={selectedDate}
+            aria-label="Date"
             onChange={event => setSelectedDate(event.target.value)}
           >
             {filteredDates.map(dateStr => (
@@ -54,6 +55,7 @@ const MapPage = ({ pickup }) => {
           <select
             className="glass-select"
             value={String(pickupMinutes)}
+            aria-label="Time"
             onChange={event => setPickupMinutes(Number(event.target.value))}
           >
             {TIME_OPTIONS.map(option => (
