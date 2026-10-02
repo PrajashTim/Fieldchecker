@@ -10,6 +10,7 @@ const SourcesPage = () => {
   const failed = Object.values(sourceHealth).filter(source => !source?.ok && !EXPECTED_GAPS.has(source?.provider));
   const fxaUnmapped = sourceHealth.fxa?.unmappedLocations || [];
   const nvslUnmapped = sourceHealth.nvsl?.unmappedLocations || [];
+  const fwsaUnmapped = sourceHealth.fwsa?.unmappedLocations || [];
   const syaUnmapped = sourceHealth.sya?.unmappedLocations || [];
   const fslUnmapped = sourceHealth.fsl?.unmappedLocations || [];
   const nvasaUnmapped = sourceHealth.nvasa?.unmappedLocations || [];
@@ -54,19 +55,19 @@ const SourcesPage = () => {
             <span>WAWSL is inactive. Volo/ZogSports is Arlington-only. Neither is ingested.</span>
           </li>
           <li>
-            <strong>Member-only practices</strong>
-            <span>Virginia Valor PlayMetrics, CYA team practices beyond public rec/NCSL pages, and other roster-assigned calendars are not scraped. County/FCPS permits have no public occupancy feed.</span>
+            <strong>Member-only Fairfax practices</strong>
+            <span>Virginia Valor PlayMetrics, CYA team practices beyond public rec/NCSL pages, and Fairfax County/FCPS permits still have no public occupancy feed. Loudoun PRCS private reservations from the county export are now overlaid on Freedom, Champe, Hanson, and Bolen turf.</span>
           </li>
           <li>
             <strong>Stringfellow Park</strong>
-            <span>The catalog still has 42 fields. Turf Only hides Stringfellow because it is grass, which is why 41 turf cards show by default.</span>
+            <span>Turf Only hides Stringfellow because it is grass. Loudoun turf now includes Freedom, Champe (stadium + turf 2), Hanson RF1/RF2, and Bolen 18/19. Middle schools stay unmapped.</span>
           </li>
         </ul>
       </section>
 
       {(fxaUnmapped.length > 0 || nvslUnmapped.length > 0 || fwsaUnmapped.length > 0 || syaUnmapped.length > 0 || fslUnmapped.length > 0 || nvasaUnmapped.length > 0) && (
         <section className="sources-section">
-          <h3>Public games outside this 42-field catalog</h3>
+          <h3>Public games outside this catalog</h3>
           <p>
             These venues appeared on connected public schedules. They are not mapped onto a nearby catalog field.
             Park-level names such as “Braddock Park” without 7 / 7A / 7B stay unmapped on purpose.
@@ -132,6 +133,7 @@ function labelFor(source) {
     centreville: 'Centreville HS athletics',
     'fc-dulles': 'FC Dulles published programs',
     'fairfax-county-permits': 'Fairfax County / FCPS permits',
+    'loudoun-prcs': 'Loudoun County PRCS permits',
   };
   return names[source.provider] || source.provider;
 }

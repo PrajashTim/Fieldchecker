@@ -12,6 +12,7 @@ import { fetchFwsaEvents } from './modules/fwsa.js';
 import { fetchSyaEvents } from './modules/sya.js';
 import { fetchFslEvents } from './modules/fsl.js';
 import { fetchNvasaEvents } from './modules/nvasa.js';
+import { fetchLoudounEvents, LOUDOUN_FIELD_IDS } from './modules/loudounPrcs.js';
 import { parentIdsForField } from './modules/venueMap.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -86,6 +87,25 @@ function schoolEventsByField(snapshot, fieldId) {
   return byDate;
 }
 
+function splitLegacyWestfieldAthletics(snapshot) {
+  const aux = schoolEventsByField(snapshot, 'westfield-hs-turf');
+  const existingStadium = schoolEventsByField(snapshot, 'westfield-hs-stadium');
+  const nextAux = {};
+  const stadium = { ...existingStadium };
+  for (const [dateStr, rows] of Object.entries(aux)) {
+    for (const event of rows) {
+      const text = `${event.location || ''} ${event.title || ''}`.toLowerCase();
+      const target = /\baux\b|practice turf|rec field/.test(text) ? nextAux : stadium;
+      if (!target[dateStr]) target[dateStr] = [];
+      target[dateStr].push(event);
+    }
+  }
+  return {
+    'westfield-hs-turf': nextAux,
+    'westfield-hs-stadium': stadium,
+  };
+}
+
 function eventStartMinutes(timeText = '') {
   const match = timeText.match(/(\d{1,2}):(\d{2})\s*([AP]M)/i);
   if (!match) return 9999;
@@ -123,7 +143,7 @@ async function runScraper() {
 
   const emptyHealth = (provider, message) => ({ events: {}, health: { ok: false, provider, message, eventCount: 0 } });
 
-  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult, syaResult, fslResult, nvasaResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult, syaResult, fslResult, nvasaResult, loudounResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     skipBrowser
       ? Promise.resolve({
@@ -135,11 +155,12 @@ async function runScraper() {
       ? Promise.resolve({
           events: {
             'centreville-hs-turf': schoolEventsByField(previous, 'centreville-hs-turf'),
-            'westfield-hs-turf': schoolEventsByField(previous, 'westfield-hs-turf'),
+            ...splitLegacyWestfieldAthletics(previous),
           },
           health: {
             'centreville-hs-turf': previous?.sourceHealth?.['centreville-hs-turf'],
             'westfield-hs-turf': previous?.sourceHealth?.['westfield-hs-turf'],
+            'westfield-hs-stadium': previous?.sourceHealth?.['westfield-hs-stadium'] || previous?.sourceHealth?.['westfield-hs-turf'],
           },
         })
       : fetchHighSchoolEvents(todayStr, endStr).catch(error => ({
@@ -147,6 +168,7 @@ async function runScraper() {
           health: {
             'centreville-hs-turf': { ok: false, provider: 'centreville', message: error.message, eventCount: 0 },
             'westfield-hs-turf': { ok: false, provider: 'westfield', message: error.message, eventCount: 0 },
+            'westfield-hs-stadium': { ok: false, provider: 'westfield', message: error.message, eventCount: 0 },
           },
         })),
     fetchFcDullesEvents(todayStr, endStr),
@@ -156,6 +178,7 @@ async function runScraper() {
     fetchSyaEvents(todayStr, endStr),
     fetchFslEvents(todayStr, endStr),
     fetchNvasaEvents(todayStr, endStr),
+    Promise.resolve(fetchLoudounEvents()),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -172,6 +195,7 @@ async function runScraper() {
     sya: syaResult.health,
     fsl: fslResult.health,
     nvasa: nvasaResult.health,
+    loudounPrcs: loudounResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
@@ -204,7 +228,8 @@ async function runScraper() {
       const syaEvents = eventsOnDate(syaResult.events, field.id, dateStr);
       const fslEvents = eventsOnDate(fslResult.events, field.id, dateStr);
       const nvasaEvents = eventsOnDate(nvasaResult.events, field.id, dateStr);
-      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents];
+      const loudounEvents = eventsOnDate(loudounResult.events, field.id, dateStr);
+      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents, ...loudounEvents];
 
       if (field.id === 'poplar-tree-2') {
         events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];
@@ -217,10 +242,14 @@ async function runScraper() {
 
       // FXA is only one renter. County/FCPS permits are the controlling source
       // for community use, so a quiet FXA schedule cannot prove availability.
-      const relevantHealth = [sourceHealth.fxa, sourceHealth.countyPermits];
+      const relevantHealth = LOUDOUN_FIELD_IDS.has(field.id)
+        ? [sourceHealth.loudounPrcs]
+        : [sourceHealth.fxa, sourceHealth.countyPermits];
       if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
-      if (field.id === 'westfield-hs-turf') relevantHealth.push(sourceHealth['westfield-hs-turf']);
+      if (field.id === 'westfield-hs-turf' || field.id === 'westfield-hs-stadium') {
+        relevantHealth.push(sourceHealth['westfield-hs-turf']);
+      }
       if (field.id === 'poplar-tree-2') relevantHealth.push(sourceHealth.fcDulles, sourceHealth.ncsl);
       if (field.id.startsWith('braddock')) relevantHealth.push(sourceHealth.nvsl);
 

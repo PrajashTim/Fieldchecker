@@ -23,6 +23,7 @@ const PARK_COORDS = {
   "Byrne's Ridge Park": { lat: 38.9282, lng: -77.5524 },
   'Hal and Berni Hanson Regional Park': { lat: 38.9714, lng: -77.5510 },
   'John Champe High School': { lat: 38.9323, lng: -77.5659 },
+  'Philip A. Bolen Park': { lat: 39.1037, lng: -77.5414 },
 };
 
 const CHANTILLY = PARK_COORDS['Chantilly High School'];

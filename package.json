@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "scrape": "node scraper/engine.js",
+    "merge-loudoun": "node scraper/mergeSnapshot.js",
     "preview": "vite preview"
   },
   "dependencies": {

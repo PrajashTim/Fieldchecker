@@ -40,8 +40,15 @@ function toISODate(dateStr) {
   return isNaN(d) ? null : d.toISOString().split('T')[0];
 }
 
+function resolveSchoolFieldId(school, venue) {
+  if (school.name !== 'Westfield') return school.fieldId;
+  const text = String(venue || '').toLowerCase();
+  if (/\baux\b|practice turf|rec field/.test(text)) return 'westfield-hs-turf';
+  return 'westfield-hs-stadium';
+}
+
 function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
-  const events = {};
+  const byField = {};
 
   const indices = new Set(
     [...html.matchAll(/data-testid="event-(\d+)-/g)].map(m => m[1])
@@ -68,9 +75,11 @@ function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
     if (!dateStr) continue;
     if (dateStr < startDateStr || dateStr > endDateStr) continue;
 
-    if (!events[dateStr]) events[dateStr] = [];
+    const fieldId = resolveSchoolFieldId(school, venue);
+    if (!byField[fieldId]) byField[fieldId] = {};
+    if (!byField[fieldId][dateStr]) byField[fieldId][dateStr] = [];
     const sportTitle = sport.charAt(0) + sport.slice(1).toLowerCase();
-    events[dateStr].push({
+    byField[fieldId][dateStr].push({
       time: timeStr || 'TBA',
       title: `${level} ${sportTitle} — ${eventName}`.trim(),
       location: school.location,
@@ -79,7 +88,7 @@ function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
     });
   }
 
-  return events;
+  return byField;
 }
 
 export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
@@ -112,14 +121,17 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
         const sourceEventCount = new Set(
           [...html.matchAll(/data-testid="event-(\d+)-/g)].map(match => match[1])
         ).size;
-        const events = parseEventsFromHtml(html, school, startDateStr, endDateStr);
-        const total = Object.values(events).reduce((s, a) => s + a.length, 0);
+        const eventsByField = parseEventsFromHtml(html, school, startDateStr, endDateStr);
+        const total = Object.values(eventsByField).reduce(
+          (sum, dates) => sum + Object.values(dates).reduce((inner, rows) => inner + rows.length, 0),
+          0,
+        );
         console.log(`[HS] ${school.name}: ${total} home turf events`);
 
-        if (total > 0) {
-          byField[school.fieldId] = events;
+        for (const [fieldId, dates] of Object.entries(eventsByField)) {
+          byField[fieldId] = dates;
         }
-        health[school.fieldId] = {
+        const healthRow = {
           ok: sourceEventCount > 0,
           provider: school.name.toLowerCase(),
           message: sourceEventCount > 0
@@ -127,6 +139,8 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
             : `${school.name} schedule loaded but no event rows were detected`,
           eventCount: total,
         };
+        health[school.fieldId] = healthRow;
+        if (school.name === 'Westfield') health['westfield-hs-stadium'] = healthRow;
       } catch (err) {
         console.error(`[HS] ${school.name} error:`, err.message);
         health[school.fieldId] = {

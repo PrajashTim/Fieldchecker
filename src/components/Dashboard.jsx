@@ -24,6 +24,7 @@ function connectedSubtitle(sourceHealth) {
     sourceHealth.fsl?.eventCount > 0 && 'FSL',
     sourceHealth.fwsa?.eventCount > 0 && 'FWSA',
     sourceHealth.nvasa?.eventCount > 0 && 'NVASA',
+    sourceHealth.loudounPrcs?.ok && 'Loudoun PRCS permits',
   ].filter(Boolean);
   const prefix = named.length
     ? `Public schedules from ${named.join(', ')}, and high-school athletics.`

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T17:39:35.086Z",
+  "lastUpdated": "2026-10-02T18:29:50.691Z",
   "coverageStart": "2026-10-02",
   "coverageEnd": "2026-11-01",
   "sourceHealth": {
@@ -170,6 +170,19 @@
       "message": "Fairfax County/FCPS permit calendars are not published as a public schedule feed",
       "eventCount": 0,
       "sourceUrl": "https://www.fairfaxcounty.gov/neighborhood-community-services/athletics/permit-application"
+    },
+    "loudounPrcs": {
+      "ok": true,
+      "provider": "loudoun-prcs",
+      "message": "County reservation export applied (1433 turf/soccer-used sessions, 246 dates). Middle schools and diamond fields omitted.",
+      "eventCount": 1433,
+      "lastUpdated": "2026-10-02"
+    },
+    "westfield-hs-stadium": {
+      "ok": true,
+      "provider": "westfield",
+      "message": "9 schedule rows observed for 2026-2027",
+      "eventCount": 1
     }
   },
   "schedule": {
@@ -241,6 +254,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "occupied",
@@ -548,12 +574,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -561,12 +585,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -587,12 +609,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 10:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -600,12 +635,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -613,12 +654,66 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 8:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -1023,6 +1118,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -1685,12 +1793,18 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:00 AM – 7:30 PM",
+            "title": "DYS Football, Rob",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -1698,12 +1812,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -1724,12 +1836,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:15 AM – 11:15 AM",
+            "title": "26FCKTD2W (2026 Fall",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:45 AM – 2:45 PM",
+            "title": "26FCKTD2W (2026 Fall",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:15 PM – 6:15 PM",
+            "title": "26FCKTD2W (2026 Fall",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:45 PM – 9:45 PM",
+            "title": "26FCKTD2W (2026 Fall",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -1737,12 +1876,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 AM – 5:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -1750,12 +1902,94 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:15 AM – 11:15 AM",
+            "title": "KTD3W (2026 Fall",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:45 AM – 2:45 PM",
+            "title": "KTD1E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:15 PM – 6:15 PM",
+            "title": "KTD1E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:45 PM – 9:45 PM",
+            "title": "KTD1E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 AM – 3:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:30 PM – 6:30 PM",
+            "title": "KTD3W (2026 Fall Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:00 PM – 10:00 PM",
+            "title": "KTD3W (2026 Fall Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -2160,6 +2394,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -2929,12 +3176,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -2942,12 +3187,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -2968,12 +3211,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:15 AM – 11:15 AM",
+            "title": "6FCKTD2E (2026 Fall C",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:45 AM – 2:45 PM",
+            "title": "26FCKTD2E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:15 PM – 6:15 PM",
+            "title": "26FCKTD2W (2026 Fall Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:45 PM – 9:45 PM",
+            "title": "26FCKTD3E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -2981,12 +3251,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:45 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:45 PM – 9:45 PM",
+            "title": "26FCKTD4 (2026 Fall Cri Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -2994,12 +3277,96 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 2:30 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 2:30 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:15 AM – 11:15 AM",
+            "title": "KTD1W (2026 Fall Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:15 PM – 6:15 PM",
+            "title": "KTD1E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:45 PM – 9:45 PM",
+            "title": "KTD4 (2026 Fall Cri Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:30 PM – 6:30 PM",
+            "title": "KTD3W (2026 Fall Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:00 PM – 10:00 PM",
+            "title": "KTD3E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -3448,6 +3815,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4024,12 +4404,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -4037,12 +4415,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -4063,12 +4439,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "SYSA Soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -4076,12 +4472,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -4089,12 +4498,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -4570,6 +5026,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -5157,12 +5626,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -5170,12 +5637,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -5196,12 +5661,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:30 PM – 8:00 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -5209,12 +5694,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -5222,12 +5720,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -5690,6 +6235,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6233,12 +6791,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -6246,12 +6802,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -6272,12 +6826,46 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 8:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:30 PM – 9:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -6285,12 +6873,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM – 10:00 PM",
+            "title": "26FCKTD1E (2026 Fall C Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -6298,12 +6892,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -6922,6 +7563,19 @@
         ]
       },
       {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
         "id": "eclawrence-2",
         "name": "E.C. Lawrence Park",
         "subfield": "Turf Field 2",
@@ -7530,12 +8184,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -7543,12 +8195,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -7569,12 +8219,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -7582,12 +8259,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM – 10:00 PM",
+            "title": "26FCKTD1E (2026 Fall C",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -7595,12 +8278,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -8015,6 +8745,19 @@
         ]
       },
       {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
         "id": "eclawrence-2",
         "name": "E.C. Lawrence Park",
         "subfield": "Turf Field 2",
@@ -8324,12 +9067,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -8337,12 +9078,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -8363,12 +9102,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 10:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -8376,12 +9128,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -8389,12 +9147,66 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 8:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -8675,6 +9487,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -9035,12 +9860,18 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:00 AM – 7:30 PM",
+            "title": "DYS Football, Rob",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -9048,12 +9879,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -9074,12 +9903,18 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 7:30 PM",
+            "title": "WAGS",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -9087,12 +9922,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 7:30 PM",
+            "title": "WAGS",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -9100,12 +9941,43 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -9453,6 +10325,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -10107,12 +10992,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -10120,12 +11003,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -10146,12 +11027,18 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 5:00 PM",
+            "title": "WAGS",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -10159,12 +11046,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 5:00 PM",
+            "title": "WAGS",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -10172,12 +11065,58 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "9:00 AM – 10:30 AM",
+            "title": "Loudoun County Virgi prcs@lo (703)77",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:00 AM – 12:30 PM",
+            "title": "Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -10505,6 +11444,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -11087,12 +12039,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -11100,12 +12050,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -11126,12 +12074,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "SYSA Soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -11139,12 +12107,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -11152,12 +12133,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -11612,6 +12640,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -12199,12 +13240,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -12212,12 +13251,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -12238,12 +13275,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:30 PM – 8:00 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -12251,12 +13308,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -12264,12 +13334,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -12732,6 +13849,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13275,12 +14405,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -13288,12 +14416,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -13314,12 +14440,46 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 8:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:30 PM – 9:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi p",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -13327,12 +14487,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -13340,12 +14498,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -13959,6 +15164,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14613,12 +15831,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -14626,12 +15842,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -14652,12 +15866,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -14665,12 +15906,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -14678,12 +15917,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -15109,6 +16395,19 @@
         ]
       },
       {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
         "id": "eclawrence-2",
         "name": "E.C. Lawrence Park",
         "subfield": "Turf Field 2",
@@ -15398,12 +16697,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -15411,12 +16708,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -15437,12 +16732,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 10:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -15450,12 +16758,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -15463,12 +16777,66 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 8:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -15873,6 +17241,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -16524,12 +17905,18 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:00 AM – 7:30 PM",
+            "title": "DYS Football, Rob",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -16537,12 +17924,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -16563,12 +17948,10 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -16576,12 +17959,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 AM – 5:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -16589,12 +17985,51 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 AM – 3:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -17101,6 +18536,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -17882,12 +19330,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -17895,12 +19341,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -17921,12 +19365,10 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -17934,12 +19376,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:45 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -17947,12 +19395,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "12:00 PM – 6:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "12:00 PM – 6:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -18366,6 +19861,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -18928,12 +20436,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -18941,12 +20447,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -18967,12 +20471,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "SYSA Soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -18980,12 +20504,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -18993,12 +20530,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -19453,6 +21037,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -20040,12 +21637,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -20053,12 +21648,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -20079,12 +21672,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:30 PM – 8:00 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "26FUFDL (2026 Fall COE Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -20092,12 +21705,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -20105,12 +21731,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -20573,6 +22246,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -21116,12 +22802,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -21129,12 +22813,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -21155,12 +22837,46 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 8:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:30 PM – 9:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi p",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -21168,12 +22884,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -21181,12 +22895,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -21800,6 +23561,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22434,12 +24208,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -22447,12 +24219,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -22473,12 +24243,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -22486,12 +24283,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -22499,12 +24294,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -22889,6 +24731,19 @@
         ]
       },
       {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
         "id": "eclawrence-2",
         "name": "E.C. Lawrence Park",
         "subfield": "Turf Field 2",
@@ -23198,12 +25053,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -23211,12 +25064,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -23237,12 +25088,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 10:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -23250,12 +25114,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -23263,12 +25133,66 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 8:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -23606,6 +25530,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -24279,12 +26216,18 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:00 AM – 7:30 PM",
+            "title": "DYS Football, Rob",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -24292,12 +26235,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -24318,12 +26259,10 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -24331,12 +26270,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 AM – 5:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -24344,12 +26296,51 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 AM – 3:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -24832,6 +26823,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -25550,12 +27554,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -25563,12 +27565,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -25589,12 +27589,10 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -25602,12 +27600,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM – 6:45 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -25615,12 +27619,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:30 AM – 5:30 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:30 AM – 5:30 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -26004,6 +28055,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -26566,12 +28630,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -26579,12 +28641,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -26605,12 +28665,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "SYSA Soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -26618,12 +28691,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -26631,12 +28717,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -27091,6 +29224,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -27637,12 +29783,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -27650,12 +29794,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -27676,12 +29818,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "6:30 PM – 8:00 PM",
+            "title": "Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun County Virgi",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -27689,12 +29851,25 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -27702,12 +29877,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -28129,6 +30351,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -28631,12 +30866,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -28644,12 +30877,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -28670,12 +30901,32 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 8:30 PM",
+            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi p",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -28683,12 +30934,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -28696,12 +30945,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -29132,6 +31428,19 @@
             "status": "scheduled"
           }
         ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -29745,12 +32054,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -29758,12 +32065,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -29784,12 +32089,39 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 7:15 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:30 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -29797,12 +32129,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -29810,12 +32140,59 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -30200,6 +32577,19 @@
         ]
       },
       {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
         "id": "eclawrence-2",
         "name": "E.C. Lawrence Park",
         "subfield": "Turf Field 2",
@@ -30509,12 +32899,10 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -30522,12 +32910,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -30548,12 +32934,25 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Dulles Lax Games",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 10:00 PM",
+            "title": "ODFC soccer",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -30561,12 +32960,18 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 9:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -30574,12 +32979,66 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 7:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "5:00 PM – 8:00 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          },
+          {
+            "time": "5:00 PM – 8:30 PM",
+            "title": "Loudoun Soccer practice",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",
@@ -30973,6 +33432,19 @@
         "id": "westfield-hs-turf",
         "name": "Westfield High School",
         "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
@@ -31635,12 +34107,18 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "11:00 AM – 10:00 PM",
+            "title": "DYS Football, Rob",
+            "source": "Loudoun PRCS permits",
+            "precision": "permit",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": []
       },
       {
         "id": "freedom-hs-aux",
@@ -31648,12 +34126,10 @@
         "subfield": "Aux Turf Field",
         "type": "Turf",
         "location": "South Riding, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "byrnes-ridge-1",
@@ -31674,12 +34150,10 @@
         "subfield": "RF1 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "hanson-2",
@@ -31687,12 +34161,10 @@
         "subfield": "RF2 Turf",
         "type": "Turf",
         "location": "Brambleton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
       },
       {
         "id": "champe-hs-turf",
@@ -31700,12 +34172,43 @@
         "subfield": "Stadium Turf",
         "type": "Turf",
         "location": "Aldie, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
         "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
       },
       {
         "id": "oakmont-1",

@@ -49,6 +49,16 @@
     "distanceMi": 1.3
   },
   {
+    "id": "westfield-hs-stadium",
+    "scraperTarget": "fxa",
+    "fxaLocation": "Westfield High School (Stadium Field)",
+    "name": "Westfield High School",
+    "subfield": "Stadium Turf",
+    "type": "Turf",
+    "location": "Chantilly, VA",
+    "distanceMi": 1.3
+  },
+  {
     "id": "eclawrence-2",
     "scraperTarget": "fxa",
     "fxaLocation": "EC Lawrence Park (Field 2)",
@@ -271,6 +281,33 @@
     "type": "Turf",
     "location": "Aldie, VA",
     "distanceMi": 7.4
+  },
+  {
+    "id": "champe-hs-turf-2",
+    "scraperTarget": "none",
+    "name": "John Champe High School",
+    "subfield": "Turf 2",
+    "type": "Turf",
+    "location": "Aldie, VA",
+    "distanceMi": 7.4
+  },
+  {
+    "id": "bolen-18",
+    "scraperTarget": "none",
+    "name": "Philip A. Bolen Park",
+    "subfield": "Turf 18",
+    "type": "Turf",
+    "location": "Leesburg, VA",
+    "distanceMi": 18.4
+  },
+  {
+    "id": "bolen-19",
+    "scraperTarget": "none",
+    "name": "Philip A. Bolen Park",
+    "subfield": "Turf 19",
+    "type": "Turf",
+    "location": "Leesburg, VA",
+    "distanceMi": 18.4
   },
   {
     "id": "oakmont-1",
