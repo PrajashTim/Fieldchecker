@@ -56,7 +56,7 @@ const SourcesPage = () => {
           </li>
           <li>
             <strong>Member-only Fairfax practices</strong>
-            <span>Virginia Valor PlayMetrics, CYA team practices beyond public rec/NCSL pages, and Fairfax County/FCPS permits still have no public occupancy feed. Loudoun PRCS private reservations from the county export are now overlaid on Freedom, Champe, Hanson, and Bolen turf.</span>
+            <span>Virginia Valor PlayMetrics and CYA practices beyond public pages are still private. FCPS community-use permits are checked for Chantilly, Centreville, Oakton, and Westfield high school turf. Fairfax park permits are still missing.</span>
           </li>
           <li>
             <strong>Stringfellow Park</strong>
@@ -132,8 +132,9 @@ function labelFor(source) {
     westfield: 'Westfield HS athletics',
     centreville: 'Centreville HS athletics',
     'fc-dulles': 'FC Dulles published programs',
-    'fairfax-county-permits': 'Fairfax County / FCPS permits',
+    'fairfax-county-permits': 'Fairfax park permits',
     'loudoun-prcs': 'Loudoun County PRCS permits',
+    'fcps-community-use': 'FCPS Community Use',
   };
   return names[source.provider] || source.provider;
 }

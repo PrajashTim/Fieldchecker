@@ -1,14 +1,13 @@
 import React from 'react';
 import { DirectionsLink } from './DirectionsLink';
-
-const PERMIT_DISCLAIMER =
-  'Could not verify county or school permits, private/member practice schedules, or walk-on use. A permitted group can still have the field.';
+import { permitDisclaimer } from '../lib/pickup';
 
 const FieldCard = ({ field, pickupLabel, dateLabel, isRecommended, overlapsPickup }) => {
-  const { name, subfield, location, events } = field;
+  const { name, subfield, location, events, id } = field;
+  const note = permitDisclaimer(id);
   let statusClass = 'status-open';
   let statusLabel = `Open ${dateLabel} at ${pickupLabel}`;
-  let displayReason = PERMIT_DISCLAIMER;
+  let displayReason = note;
 
   if (overlapsPickup) {
     statusClass = 'status-occupied';
@@ -66,7 +65,7 @@ const FieldCard = ({ field, pickupLabel, dateLabel, isRecommended, overlapsPicku
           </ul>
         ) : (
           <div className="status-reason" style={{ opacity: 0.75 }}>
-            No public-schedule events on {dateLabel}. {PERMIT_DISCLAIMER}
+            No public-schedule events on {dateLabel}. {note}
           </div>
         )}
       </div>

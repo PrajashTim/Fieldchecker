@@ -25,6 +25,7 @@ function connectedSubtitle(sourceHealth) {
     sourceHealth.fwsa?.eventCount > 0 && 'FWSA',
     sourceHealth.nvasa?.eventCount > 0 && 'NVASA',
     sourceHealth.loudounPrcs?.ok && 'Loudoun PRCS permits',
+    sourceHealth.fcpsCommunityUse?.ok && 'FCPS community use',
   ].filter(Boolean);
   const prefix = named.length
     ? `Public schedules from ${named.join(', ')}, and high-school athletics.`
@@ -180,7 +181,7 @@ const Dashboard = ({ pickup }) => {
 
       <footer className="site-footer">
         <p className="footer-disclaimer">
-          Advisory only. Open means no conflict was found in connected public schedules. It is not a reservation and does not include county/school permits or private team calendars. The top pick prefers Chantilly High School, then Sully Highlands Park, then the next-closest field.
+          Advisory only. Open means no conflict was found in connected schedules. It is not a reservation. FCPS community-use permits are included for Chantilly, Centreville, Oakton, and Westfield turf. Park permits and other private calendars are still missing. The top pick prefers Chantilly High School, then Sully Highlands Park, then the next-closest field.
         </p>
       </footer>
     </main>

@@ -15,7 +15,7 @@ concurrency:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     permissions:
       contents: write
 

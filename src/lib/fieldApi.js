@@ -9,7 +9,7 @@ import {
 } from './pickup.js';
 
 const PERMIT =
-  'Could not verify county or school permits, private/member practice schedules, or walk-on use.';
+  'FCPS community-use permits are checked for Chantilly, Centreville, Oakton, and Westfield high school turf. Fairfax park permits, other private calendars, and walk-on use are still not verified.';
 
 export function cors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');

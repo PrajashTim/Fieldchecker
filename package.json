@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "scrape": "node scraper/engine.js",
     "merge-loudoun": "node scraper/mergeSnapshot.js",
+    "merge-fcps": "node scraper/mergeFcpsSnapshot.js",
     "preview": "vite preview"
   },
   "dependencies": {

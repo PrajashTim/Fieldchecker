@@ -13,6 +13,7 @@ import { fetchSyaEvents } from './modules/sya.js';
 import { fetchFslEvents } from './modules/fsl.js';
 import { fetchNvasaEvents } from './modules/nvasa.js';
 import { fetchLoudounEvents, LOUDOUN_FIELD_IDS } from './modules/loudounPrcs.js';
+import { fetchFcpsCommunityUseEvents, FCPS_FIELD_IDS } from './modules/fcpsCommunityUse.js';
 import { parentIdsForField } from './modules/venueMap.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -143,7 +144,7 @@ async function runScraper() {
 
   const emptyHealth = (provider, message) => ({ events: {}, health: { ok: false, provider, message, eventCount: 0 } });
 
-  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult, syaResult, fslResult, nvasaResult, loudounResult] = await Promise.all([
+  const [fxaResult, chantillyResult, hsResult, fcDullesResult, ncslResult, nvslResult, fwsaResult, syaResult, fslResult, nvasaResult, loudounResult, fcpsResult] = await Promise.all([
     fetchFxaEvents(today, endDate),
     skipBrowser
       ? Promise.resolve({
@@ -179,6 +180,7 @@ async function runScraper() {
     fetchFslEvents(todayStr, endStr),
     fetchNvasaEvents(todayStr, endStr),
     Promise.resolve(fetchLoudounEvents()),
+    fetchFcpsCommunityUseEvents(todayStr, endStr),
   ]);
 
   const fxaByField = fxaResult.events;
@@ -196,10 +198,11 @@ async function runScraper() {
     fsl: fslResult.health,
     nvasa: nvasaResult.health,
     loudounPrcs: loudounResult.health,
+    fcpsCommunityUse: fcpsResult.health,
     countyPermits: {
       ok: false,
       provider: 'fairfax-county-permits',
-      message: 'Fairfax County/FCPS permit calendars are not published as a public schedule feed',
+      message: 'Fairfax park permits are still not a public occupancy feed. FCPS high-school community use is checked separately.',
       eventCount: 0,
       sourceUrl: 'https://www.fairfaxcounty.gov/neighborhood-community-services/athletics/permit-application',
     },
@@ -229,7 +232,8 @@ async function runScraper() {
       const fslEvents = eventsOnDate(fslResult.events, field.id, dateStr);
       const nvasaEvents = eventsOnDate(nvasaResult.events, field.id, dateStr);
       const loudounEvents = eventsOnDate(loudounResult.events, field.id, dateStr);
-      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents, ...loudounEvents];
+      const fcpsEvents = eventsOnDate(fcpsResult.events, field.id, dateStr);
+      let events = [...fxaEvents, ...hsEvents, ...ncslEvents, ...nvslEvents, ...fwsaEvents, ...syaEvents, ...fslEvents, ...nvasaEvents, ...loudounEvents, ...fcpsEvents];
 
       if (field.id === 'poplar-tree-2') {
         events = [...events, ...(fcDullesResult.events[dateStr] ?? [])];
@@ -244,7 +248,9 @@ async function runScraper() {
       // for community use, so a quiet FXA schedule cannot prove availability.
       const relevantHealth = LOUDOUN_FIELD_IDS.has(field.id)
         ? [sourceHealth.loudounPrcs]
-        : [sourceHealth.fxa, sourceHealth.countyPermits];
+        : FCPS_FIELD_IDS.has(field.id)
+          ? [sourceHealth.fxa, sourceHealth.fcpsCommunityUse]
+          : [sourceHealth.fxa, sourceHealth.countyPermits];
       if (field.id === 'chantilly-hs-turf') relevantHealth.push(sourceHealth.chantilly);
       if (field.id === 'centreville-hs-turf') relevantHealth.push(sourceHealth['centreville-hs-turf']);
       if (field.id === 'westfield-hs-turf' || field.id === 'westfield-hs-stadium') {

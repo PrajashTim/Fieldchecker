@@ -6,7 +6,25 @@ export const EVENT_SETUP_BUFFER_MINUTES = 30;
 export const DEFAULT_PICKUP_MINUTES = 18 * 60 + 30;
 export const MORNING_PICKUP_MINUTES = 8 * 60;
 export const PERMIT_DISCLAIMER =
-  'Could not verify county or school permits, private/member practice schedules, or walk-on use.';
+  'Park permits, some private calendars, and walk-on use are still not verified.';
+
+export const FCPS_SCHOOL_FIELD_IDS = new Set([
+  'chantilly-hs-turf',
+  'centreville-hs-turf',
+  'centreville-hs-stadium',
+  'oakton-hs-turf',
+  'oakton-hs-1',
+  'oakton-hs-3',
+  'westfield-hs-turf',
+  'westfield-hs-stadium',
+]);
+
+export function permitDisclaimer(fieldId) {
+  if (FCPS_SCHOOL_FIELD_IDS.has(fieldId)) {
+    return 'FCPS community-use permits were checked for this school field. Walk-on use can still occupy it.';
+  }
+  return PERMIT_DISCLAIMER;
+}
 
 const DISTANCE_BY_ID = Object.fromEntries(fieldsConfig.map(field => [field.id, field.distanceMi]));
 
@@ -18,25 +36,38 @@ export function parseStartMinutes(timeText = '') {
   return hour * 60 + Number(match[2]);
 }
 
+export function eventBounds(timeText = '') {
+  const clocks = [...String(timeText).matchAll(/(\d{1,2}):(\d{2})\s*([AP]M)/gi)];
+  if (!clocks.length) return null;
+  const toMinutes = (match) => {
+    let hour = Number(match[1]) % 12;
+    if (match[3].toUpperCase() === 'PM') hour += 12;
+    return hour * 60 + Number(match[2]);
+  };
+  const start = toMinutes(clocks[0]);
+  let end = clocks[1] ? toMinutes(clocks[1]) : start + EVENT_DURATION_MINUTES;
+  if (end <= start) end += 12 * 60;
+  return {
+    start: start - EVENT_SETUP_BUFFER_MINUTES,
+    end,
+  };
+}
+
 export function overlapsPickupWindow(events, pickupStart) {
   const pickupEnd = pickupStart + PICKUP_DURATION_MINUTES;
   return (events || []).some(event => {
-    const eventStart = parseStartMinutes(event.time);
-    if (eventStart === null) return true;
-    const blockedStart = eventStart - EVENT_SETUP_BUFFER_MINUTES;
-    const blockedEnd = eventStart + EVENT_DURATION_MINUTES;
-    return pickupStart < blockedEnd && pickupEnd > blockedStart;
+    const bounds = eventBounds(event.time);
+    if (!bounds) return true;
+    return pickupStart < bounds.end && pickupEnd > bounds.start;
   });
 }
 
 export function overlappingEvents(events, pickupStart) {
   const pickupEnd = pickupStart + PICKUP_DURATION_MINUTES;
   return (events || []).filter(event => {
-    const eventStart = parseStartMinutes(event.time);
-    if (eventStart === null) return true;
-    const blockedStart = eventStart - EVENT_SETUP_BUFFER_MINUTES;
-    const blockedEnd = eventStart + EVENT_DURATION_MINUTES;
-    return pickupStart < blockedEnd && pickupEnd > blockedStart;
+    const bounds = eventBounds(event.time);
+    if (!bounds) return true;
+    return pickupStart < bounds.end && pickupEnd > bounds.start;
   });
 }
 
