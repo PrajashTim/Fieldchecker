@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-10-21T20:29:55.946Z",
-  "coverageStart": "2026-10-21",
-  "coverageEnd": "2026-11-20",
+  "lastUpdated": "2026-10-22T00:37:13.467Z",
+  "coverageStart": "2026-10-22",
+  "coverageEnd": "2026-11-21",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "45/45 LeagueLab field-sport schedules checked; 791 mapped games; 31 unmapped venues",
-      "eventCount": 791,
-      "leagueCount": 45,
+      "message": "46/46 LeagueLab field-sport schedules checked; 735 mapped games; 31 unmapped venues",
+      "eventCount": 735,
+      "leagueCount": 46,
       "unmappedLocations": [
         "Baron Cameron Park Field 4",
         "Braddock Park Field 7C",
@@ -30,6 +30,7 @@
         "Ken Lawrence Park Main Field",
         "Lake Braddock Secondary School Aux Field",
         "Liberty MS Grass Fields Field 5",
+        "Mason District Park Field 2",
         "Nottoway Park Field 3",
         "OakMont Park (Oak Marr) Field 2C",
         "Pine Ridge Park Field 4A",
@@ -39,8 +40,7 @@
         "Rolling Valley West Park Field 1",
         "Rolling Valley West Park Field 2",
         "South County Middle School Field 1A",
-        "South County Middle School Field 1B",
-        "South Run Park Field 2"
+        "South County Middle School Field 1B"
       ],
       "sourceUrl": "https://fxasports.leaguelab.com/schedule-finder"
     },
@@ -79,13 +79,14 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "152 exact-field games from public Demosphere pages (67 club rows, 34 field calendars); current as of 10/21/2026 2:20 pm; 4 calendars failed",
-      "eventCount": 152,
-      "calendarCount": 34,
+      "message": "118 exact-field games from public Demosphere pages (67 club rows, 28 field calendars); current as of 10/21/2026 2:20 pm; 3 calendars failed",
+      "eventCount": 118,
+      "calendarCount": 28,
       "currentAsOf": "10/21/2026 2:20 pm",
       "unmappedLocations": [
-        "Arrowhead #2",
         "Braddock Park Field",
+        "EC Lawrence Park Field #1",
+        "EC Lawrence Park Field #3",
         "Lake Fairfax Park #2",
         "Lake Fairfax Park #6",
         "Lake Fairfax Park #7 A",
@@ -134,24 +135,16 @@
     "sya": {
       "provider": "sya",
       "sourceUrl": "https://syasports.org/sports/soccer/recreational-soccer/",
-      "ok": true,
-      "message": "Public Otto Sport rec widget checked (8 surfaces); 35 games mapped to catalog fields; 5 venues outside catalog",
-      "eventCount": 35,
-      "unmappedLocations": [
-        "Bull Run ES Rectangle Field 1A & 1B",
-        "SYA Sports Park 3B",
-        "SYA Sports Park 4A",
-        "SYA Sports Park 4B",
-        "SYA Sports Park 4C"
-      ],
-      "seasonId": "6aa1707c1998a8cd44808221"
+      "ok": false,
+      "message": "timeout fetching https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
+      "eventCount": 0
     },
     "fsl": {
       "provider": "fsl",
       "sourceUrl": "https://gosportsleague.com/l/fo5sl/schedule",
       "ok": true,
-      "message": "Over-50/over-60 GoSports schedule checked; 5 games mapped to catalog fields (evening/Sunday 9 PM, not Sunday morning); venues outside catalog: Arrowbrook Centre Park, EC Lawrence #3, Lake Braddock Secondary School, South County High School (RF#4 Track), Westfield HS Rec Field",
-      "eventCount": 5,
+      "message": "Over-50/over-60 GoSports schedule checked; 4 games mapped to catalog fields (evening/Sunday 9 PM, not Sunday morning); venues outside catalog: Arrowbrook Centre Park, EC Lawrence #3, Lake Braddock Secondary School, South County High School (RF#4 Track), Westfield HS Rec Field",
+      "eventCount": 4,
       "unmappedLocations": [
         "Arrowbrook Centre Park",
         "EC Lawrence #3",
@@ -177,7 +170,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5826 upcoming rows, 549 mapped turf sessions 2026-10-21 to 2026-11-20). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5826 upcoming rows, 549 mapped turf sessions 2026-10-22 to 2026-11-21). Park fields are not on this calendar.",
       "eventCount": 549,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -191,1530 +184,6 @@
     }
   },
   "schedule": {
-    "2026-10-21": [
-      {
-        "id": "chantilly-hs-turf",
-        "name": "Chantilly High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 7:00 PM",
-            "title": "Fall Team Stadium Practices (M-F) — Chantilly High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4700069"
-          },
-          {
-            "time": "6:00 PM – 9:30 PM",
-            "title": "Marching Band Field Practice — Chantilly High School - Fine Arts",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4700101"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "stringfellow-1",
-        "name": "Stringfellow Park",
-        "subfield": "Grass Field",
-        "type": "Grass",
-        "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "poplar-tree-3",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 3",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Soccer — Land Warriors vs Lumark",
-            "location": "Poplar Tree #3",
-            "source": "FSL",
-            "sourceUrl": "https://gosportsleague.com/l/fo5sl/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "poplar-tree-2",
-        "name": "Poplar Tree Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 PM",
-            "title": "Ultimate — Flick It Good vs Huck Huck Goose (FA 1) - Black",
-            "location": "Poplar Tree Park Field 2",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105713/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Ultimate — Spin Itch vs Fly Hard with a Vengeance",
-            "location": "Poplar Tree Park Field 2",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105713/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "westfield-hs-turf",
-        "name": "Westfield High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 6:00 PM",
-            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4698913"
-          },
-          {
-            "time": "6:00 PM – 8:00 PM",
-            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4698917"
-          },
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — Red Hot Silly Peppers vs Ninos Chucos",
-            "location": "Westfield High School Aux Field",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:00 PM – 11:00 PM",
-            "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4751066"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Hashira FC vs Les Bleus (FA 2)",
-            "location": "Westfield High School Aux Field",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "westfield-hs-stadium",
-        "name": "Westfield High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 9:00 PM",
-            "title": "Fall HS Sports Practices — Westfield High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4698889"
-          },
-          {
-            "time": "9:00 PM – 9:30 PM",
-            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4698905"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "eclawrence-2",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "eclawrence-3a",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3A",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — Squad 7 vs Green Tea Shooters",
-            "location": "EC Lawrence Park Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — FC Randy vs Flamasos United",
-            "location": "EC Lawrence Park Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — Walking Wounded FC (FA 3) vs Holder FC",
-            "location": "EC Lawrence Park Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — North London vs Chaos",
-            "location": "EC Lawrence Park Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Bingle FC vs Full Send FC (FA 1)",
-            "location": "EC Lawrence Park Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "eclawrence-3b",
-        "name": "E.C. Lawrence Park",
-        "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Deportivo de Cerveza vs Murphys FC",
-            "location": "EC Lawrence Park Field 3B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-1a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — Jinro FC vs ICUnited",
-            "location": "Arrowhead Park Turf Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — FireCrackers (FA 1) vs CMTA",
-            "location": "Arrowhead Park Turf Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-1b",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 1B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — Titos FC vs FC Rosea",
-            "location": "Arrowhead Park Turf Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — Galacticos FC vs Hazen Sludge Strikers",
-            "location": "Arrowhead Park Turf Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3a",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3A",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — Wannabe FC vs 2 Goals 1 Cup",
-            "location": "Arrowhead Park Turf Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — Benito Camela FC vs Luna FC",
-            "location": "Arrowhead Park Turf Field 3A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowhead-3b",
-        "name": "Arrowhead Park",
-        "subfield": "Turf Field 3B",
-        "type": "Turf",
-        "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — Apollo FC vs Entry Level FC",
-            "location": "Arrowhead Park Turf Field 3B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — World Class Wednesdays vs BHR",
-            "location": "Arrowhead Park Turf Field 3B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "centreville-hs-turf",
-        "name": "Centreville High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 5:45 PM",
-            "title": "Sports Practice — Centreville High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4764115"
-          },
-          {
-            "time": "5:45 PM – 8:00 PM",
-            "title": "NCS - Field: Southwestern Youth Association (Footb — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4809391"
-          },
-          {
-            "time": "8:00 PM",
-            "title": "Ultimate — Huckees vs DILFs",
-            "location": "Centreville High School Aux Filed",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105713/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:00 PM – 11:00 PM",
-            "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4765804"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Ultimate — Blackbirds vs The Washington Frisbee Team",
-            "location": "Centreville High School Aux Filed",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105713/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "centreville-hs-stadium",
-        "name": "Centreville High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Clifton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 10:00 PM",
-            "title": "Sports Practice — Centreville High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4764114"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "sully-highlands-1",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 1",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "sully-highlands-2",
-        "name": "Sully Highlands Park",
-        "subfield": "Turf Field 2",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "greenbriar-5",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "greenbriar-5a",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5A",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — Kingdom FC vs Benchwarmers United",
-            "location": "Greenbriar Park Field 5A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Cookout FC vs Super Sip Scholars",
-            "location": "Greenbriar Park Field 5A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "greenbriar-5b",
-        "name": "Greenbriar Park",
-        "subfield": "Field 5B",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — migos fc vs Amigos United",
-            "location": "Greenbriar Park Field 5B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — Red Storm vs Pink Panthers",
-            "location": "Greenbriar Park Field 5B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Roster Roulette vs Bench Warmers FC",
-            "location": "Greenbriar Park Field 5B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "cunningham-1",
-        "name": "Cunningham Park",
-        "subfield": "Field 1",
-        "type": "Grass",
-        "location": "Vienna, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "6:35 PM",
-            "title": "Softball — Advanced Placement vs YOBB",
-            "location": "Cunningham Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105779/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "7:35 PM",
-            "title": "Softball — YOBB vs Advanced Placement",
-            "location": "Cunningham Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105779/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:45 PM",
-            "title": "Softball — Hit Happens vs memoryBlue",
-            "location": "Cunningham Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105779/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:45 PM",
-            "title": "Softball — memoryBlue vs Hit Happens",
-            "location": "Cunningham Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105779/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "nottoway-4a",
-        "name": "Nottoway Park",
-        "subfield": "Field 4A",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — G squad vs unathletico madrid",
-            "location": "Nottoway Park Field 4A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Home Owners vs Wasabi FC",
-            "location": "Nottoway Park Field 4A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "nottoway-4b",
-        "name": "Nottoway Park",
-        "subfield": "Field 4B",
-        "type": "Turf",
-        "location": "Fairfax, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 PM",
-            "title": "Soccer — Metaknights vs Washed up",
-            "location": "Nottoway Park Field 4B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Soccer — Chopped FC (FA 2) vs Foxes",
-            "location": "Nottoway Park Field 4B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "arrowbrook-1",
-        "name": "Arrowbrook Park",
-        "subfield": "Turf Field",
-        "type": "Turf",
-        "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "freedom-hs-turf",
-        "name": "Freedom High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "South Riding, VA",
-        "status": "open",
-        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
-        "events": [],
-        "unavailableSources": []
-      },
-      {
-        "id": "freedom-hs-aux",
-        "name": "Freedom High School",
-        "subfield": "Aux Turf Field",
-        "type": "Turf",
-        "location": "South Riding, VA",
-        "status": "open",
-        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
-        "events": [],
-        "unavailableSources": []
-      },
-      {
-        "id": "byrnes-ridge-1",
-        "name": "Byrne's Ridge Park",
-        "subfield": "Soccer Field 1",
-        "type": "Grass",
-        "location": "Stone Ridge, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "hanson-1",
-        "name": "Hal and Berni Hanson Regional Park",
-        "subfield": "RF1 Turf",
-        "type": "Turf",
-        "location": "Brambleton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "5:00 PM – 8:00 PM",
-            "title": "Dulles Lax Games",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          },
-          {
-            "time": "5:00 PM – 7:15 PM",
-            "title": "ODFC soccer",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          },
-          {
-            "time": "7:30 PM – 8:30 PM",
-            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:00 PM – 9:30 PM",
-            "title": "Loudoun Soccer practice",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:30 PM – 9:30 PM",
-            "title": "26FSOC7M (2026 Fall 7v Loudoun County Virgi p",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "hanson-2",
-        "name": "Hal and Berni Hanson Regional Park",
-        "subfield": "RF2 Turf",
-        "type": "Turf",
-        "location": "Brambleton, VA",
-        "status": "open",
-        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
-        "events": [],
-        "unavailableSources": []
-      },
-      {
-        "id": "champe-hs-turf",
-        "name": "John Champe High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Aldie, VA",
-        "status": "open",
-        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
-        "events": [],
-        "unavailableSources": []
-      },
-      {
-        "id": "champe-hs-turf-2",
-        "name": "John Champe High School",
-        "subfield": "Turf 2",
-        "type": "Turf",
-        "location": "Aldie, VA",
-        "status": "open",
-        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
-        "events": [],
-        "unavailableSources": []
-      },
-      {
-        "id": "bolen-18",
-        "name": "Philip A. Bolen Park",
-        "subfield": "Turf 18",
-        "type": "Turf",
-        "location": "Leesburg, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "5:00 PM – 8:00 PM",
-            "title": "Loudoun Soccer practice",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "bolen-19",
-        "name": "Philip A. Bolen Park",
-        "subfield": "Turf 19",
-        "type": "Turf",
-        "location": "Leesburg, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "5:00 PM – 9:30 PM",
-            "title": "Loudoun Soccer practice",
-            "source": "Loudoun PRCS permits",
-            "precision": "permit",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "oakmont-1",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-1a",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1A",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Flag Football — The Order vs Bishop Sycamore",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:30 PM",
-            "title": "Flag Football — Bishop Sycamore vs The Order",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Flag Football — Baggywork vs Dirty Mike and The Boys",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Flag Football — Dirty Mike and The Boys vs Baggywork",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Flag Football — The Hash Slinging Slashers vs No Flags Given",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:30 PM",
-            "title": "Flag Football — No Flags Given vs The Hash Slinging Slashers",
-            "location": "OakMont Park (Oak Marr) Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-1b",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1B",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Flag Football — Certified Crashouts vs Dirty Dick’s Crab Shack",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:30 PM",
-            "title": "Flag Football — Dirty Dick’s Crab Shack vs Certified Crashouts",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Flag Football — VA Ambessas vs Matts Team",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Flag Football — Matts Team vs VA Ambessas",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Flag Football — Rogue vs God Bods",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:30 PM",
-            "title": "Flag Football — God Bods vs Rogue",
-            "location": "OakMont Park (Oak Marr) Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-1c",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 1C",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-2",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-2a",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2A",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Flag Football — Backdoor Coverages vs Matrix Escapers",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:30 PM",
-            "title": "Flag Football — Matrix Escapers vs Backdoor Coverages",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Flag Football — William and Mary's Finest vs Lil' Jordan Humphrey's",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Flag Football — Lil' Jordan Humphrey's vs William and Mary's Finest",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Flag Football — Aura Farmers vs Red Scare",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:30 PM",
-            "title": "Flag Football — Red Scare vs Aura Farmers",
-            "location": "OakMont Park (Oak Marr) Field 2A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakmont-2b",
-        "name": "OakMont Park (Oak Marr)",
-        "subfield": "Field 2B",
-        "type": "Turf",
-        "location": "Oakton, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Flag Football — Subzero vs Dima",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:30 PM",
-            "title": "Flag Football — Dima vs Subzero",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Flag Football — Wings Mafia vs DMV Speed (FA 1)",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Flag Football — DMV Speed (FA 1) vs Wings Mafia",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:00 PM",
-            "title": "Flag Football — Redskins vs PickSix",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "10:30 PM",
-            "title": "Flag Football — PickSix vs Redskins",
-            "location": "OakMont Park (Oak Marr) Field 2B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105503/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "lake-fairfax-1",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — Shakier Shots vs Skidmark Washdays",
-            "location": "Lake Fairfax Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — Monsters Inc vs Free Agent Team 1 (FA 1)",
-            "location": "Lake Fairfax Park Field 1",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "lake-fairfax-3",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 3",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "6:45 PM",
-            "title": "Kickball — Herston Crew vs Ball Busters",
-            "location": "Lake Fairfax Park Field 3",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105629/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "7:30 PM",
-            "title": "Kickball — WAP vs Thunder Puntz",
-            "location": "Lake Fairfax Park Field 3",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105629/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "8:15 PM",
-            "title": "Kickball — Orange Kickball Club vs Pitch Dont Kill My Vibe - Navy",
-            "location": "Lake Fairfax Park Field 3",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105629/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "lake-fairfax-4",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 4",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — Alianza FC vs Pain in Diaz",
-            "location": "Lake Fairfax Park Field 4",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:30 PM",
-            "title": "Soccer — 2 FAT 2 Furious vs Dino Nugs FC (FA 3)",
-            "location": "Lake Fairfax Park Field 4",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "lake-fairfax-5",
-        "name": "Lake Fairfax Park",
-        "subfield": "Field 5",
-        "type": "Turf",
-        "location": "Reston, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "oakton-hs-turf",
-        "name": "Oakton High School",
-        "subfield": "Stadium Turf",
-        "type": "Turf",
-        "location": "Vienna, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 11:00 PM",
-            "title": "OHS Use - Stadium — Oakton High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4696478"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "oakton-hs-1",
-        "name": "Oakton High School",
-        "subfield": "Field 1",
-        "type": "Turf",
-        "location": "Vienna, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 7:00 PM",
-            "title": "OHS Field 1 use — Oakton High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4696471"
-          },
-          {
-            "time": "7:00 PM – 9:00 PM",
-            "title": "NCS - Field: Vienna Youth Inc (Football) — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4745379"
-          },
-          {
-            "time": "9:00 PM – 11:00 PM",
-            "title": "NCS - Field: Fairfax Ultimate (Ultfrisbee) — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4743623"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "oakton-hs-3",
-        "name": "Oakton High School",
-        "subfield": "Field 3",
-        "type": "Turf",
-        "location": "Vienna, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "3:00 PM – 7:00 PM",
-            "title": "OHS Use - Field 3 — Oakton High School - Athletics",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4696474"
-          },
-          {
-            "time": "7:00 PM – 11:00 PM",
-            "title": "NCS - Field: Vienna Youth Soccer (Soccer) — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4756113"
-          }
-        ],
-        "unavailableSources": []
-      },
-      {
-        "id": "braddock-7",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Flag Football — The Average Joes (FA 1) vs The B Team",
-            "location": "Braddock Park Field 7",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105538/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:00 PM",
-            "title": "Flag Football — Squirtle Squad vs Washington Redskins",
-            "location": "Braddock Park Field 7",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105538/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "braddock-7a",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7A",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      },
-      {
-        "id": "braddock-7b",
-        "name": "Braddock Park",
-        "subfield": "Turf Field 7B",
-        "type": "Turf",
-        "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
-        "unavailableSources": [
-          "fairfax-county-permits"
-        ]
-      }
-    ],
     "2026-10-22": [
       {
         "id": "chantilly-hs-turf",
@@ -4079,32 +2548,9 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R BU13 Blamphin Dragons (F26) vs RB1405 CDS-R Perez",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650236"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R BU13-CYA1 Campbell (F26) vs RB1347 GFR-R 04 U13B Osman",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650241"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4123,7 +2569,7 @@
             "title": "Soccer — CYA-R GU19-CYA1 Wilke (F26) vs RG0518 GSC-R U19 G Gunston (BURKE)",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -4134,7 +2580,7 @@
             "title": "Soccer — FCD-R U11B Jewell vs RB1576 HERN-R HYS U11B1 - Scott Alexander",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -4145,7 +2591,7 @@
             "title": "Soccer — FCD-R U12B- Estrada vs RB14106 CYA-R BU12-CYA4 Nix (F26)",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -4269,83 +2715,6 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "9:00 AM",
-            "title": "Soccer — Hartley, Ben vs Urrutia, Marvin",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10916"
-          },
-          {
-            "time": "10:15 AM",
-            "title": "Soccer — Stagliano, Brian U10 vs CYA Roberts",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105039"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — Lee, Kyu vs Hohenwarter, Vanessa U10",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105051"
-          },
-          {
-            "time": "12:45 PM",
-            "title": "Soccer — Tran, David vs Nunes, JR",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10917"
-          },
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — CYA Day vs Stagliano, Brian U10",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105041"
-          },
-          {
-            "time": "3:15 PM",
-            "title": "Soccer — Spinelli, Greg vs Ingram, Allen",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10918"
-          },
-          {
-            "time": "4:30 PM",
-            "title": "Soccer — CYA Saleh vs McDaniel, Matthew",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105040"
-          },
-          {
             "time": "8:00 PM",
             "title": "Soccer — MP FC vs FALLS CHURCH F.C",
             "location": "EC Lawrence Park Field 3A",
@@ -4441,54 +2810,9 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R GU12-CYA3 Day GOATS (F26) vs RG1430 FPYC-R Glashow FPYC 1",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649314"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R GU12-CYA4 Vestal (F26) vs RG1501 MCLN-R U12 Girls Team 1",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649313"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — CYA-R GU12-CYA2 Poultney (F26) vs RG1428 GFR-R 02 U12G Mendonca",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11649315"
-          },
-          {
-            "time": "1:15 PM",
-            "title": "Soccer — CYA-R BU16-CYA1 Murphy (F26) vs RB1097 SYA-R SYA (Hernandez U16B)",
-            "location": "Arrowhead #1",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4179:80738+Elements/Display+E+46241+++++116748152+15615464",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11651090"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4499,54 +2823,9 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:45 AM",
-            "title": "Soccer — CYA-R GU11-CYA1 Williams/Page (F26) vs RG1570 SOTH-R U11G Thunderbolts",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11648968"
-          },
-          {
-            "time": "10:15 AM",
-            "title": "Soccer — CYA-R BU11-CYA3 Al Hakim (F26) Scorpions vs RB1570 CYA-R BU11-CYA2 Keller (F26)",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11649178"
-          },
-          {
-            "time": "11:45 AM",
-            "title": "Soccer — CYA-R GU12-CYA1 Snow (F26) vs RG1519 GFR-R 01 U12G Sypal",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11649316"
-          },
-          {
-            "time": "1:15 PM",
-            "title": "Soccer — CYA-R BU16-CYA1 Murphy (F26) vs RB1097 SYA-R SYA (Hernandez U16B)",
-            "location": "Arrowhead #1",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4179:80738+Elements/Display+E+46241+++++116748152+15615464",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11651090"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4557,76 +2836,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Soccer — O'Brien, Scott vs Vanderburgh, Jason",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11725"
-          },
-          {
-            "time": "10:20 AM",
-            "title": "Soccer — Gleason, Brendan vs Jovanelly, Nick",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11726"
-          },
-          {
-            "time": "11:40 AM",
-            "title": "Soccer — Robinson, Dan vs Fulginiti, Vince",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11727"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — Vanderburgh, Jason vs dos Santos, Robert",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11728"
-          },
-          {
-            "time": "2:45 PM",
-            "title": "Soccer — SYA-R SYA (Madani) vs RB1341 STER-R U14B Sterling 1-Shah",
-            "location": "Arrowhead #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2978:80738+Elements/Display+E+46241+++++116748152+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650676"
-          },
-          {
-            "time": "4:15 PM",
-            "title": "Soccer — SYA-R SYA (Eanes) vs RG0513 CYA-R GU19-CYA2 Campbell/Schaad (F26)",
-            "location": "Arrowhead #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2978:80738+Elements/Display+E+46241+++++116748152+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649798"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4637,76 +2849,9 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Soccer — Walsh, Derek vs Baptiste, Michael",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110141"
-          },
-          {
-            "time": "10:20 AM",
-            "title": "Soccer — Larson, Jonathan vs Donatone, Phillip",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110142"
-          },
-          {
-            "time": "11:40 AM",
-            "title": "Soccer — Johnson, Mike vs Cabrera, Eddie",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110143"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — Tadesse, Abel vs Campbell, Phillip",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110144"
-          },
-          {
-            "time": "2:45 PM",
-            "title": "Soccer — SYA-R SYA (Madani) vs RB1341 STER-R U14B Sterling 1-Shah",
-            "location": "Arrowhead #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2978:80738+Elements/Display+E+46241+++++116748152+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650676"
-          },
-          {
-            "time": "4:15 PM",
-            "title": "Soccer — SYA-R SYA (Eanes) vs RG0513 CYA-R GU19-CYA2 Campbell/Schaad (F26)",
-            "location": "Arrowhead #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2978:80738+Elements/Display+E+46241+++++116748152+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649798"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5129,9 +3274,54 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — FPYC-R Lanphere FPYC 1 vs RG1366 BAC-R U13G Klunder",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11654411"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — FPYC-R Petrusiak FPYC 2 vs RB1441 ABGC-R U13-B: 5-Mary Angel Salazar",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650222"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — FPYC-R Segarra FPYC 3 vs RB1474 ABGC-R U13-B: 6-Eddy Vargas",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650224"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Soccer — FPYC-R Cruz FPYC 1 vs RB13117 BRYC-R U14B BRYC Blue",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650693"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5228,7 +3418,7 @@
             "title": "Soccer — GFR-R 01 U19G Shea vs RG0716 NVSC-R 2007G VV - Burgess",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -5239,7 +3429,7 @@
             "title": "Soccer — GFR U15B Green vs NB12198 SYC U15B Blue",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.8270:80738+Elements/Display+E+46241+++++116702823+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5871:80738+Elements/Display+E+46241+++++116702823+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -5250,7 +3440,7 @@
             "title": "Soccer — GFR-R 02 U13B Mendoza vs RB13169 HERN-R HYS U13B3 - Theodora Ahrens",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5261,7 +3451,7 @@
             "title": "Soccer — GFR-R 01 U14G Englund vs RG1314 MCLN-R U14 MYS Girls 1",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5272,7 +3462,7 @@
             "title": "Soccer — GFR-R 03 U13B Ramos vs RB1445 STER-R U13B Sterling 4 - Benavides",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5408,7 +3598,7 @@
             "title": "Soccer — SYA-R SYA (Nigussie) vs RB1345 STER-R U13B Sterling 5 -Ham",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5419,7 +3609,7 @@
             "title": "Soccer — SYA-R SYA (Miraminy) vs RB1444 STER-R U13B Sterling 2 Hays",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5430,7 +3620,7 @@
             "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1333 GFR-R 02 U14G Gibbens",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5441,7 +3631,7 @@
             "title": "Soccer — SYA-R SYA (Garver) vs RG1319 CYA-R GU14-CYA2 Sprowls (F26)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5452,7 +3642,7 @@
             "title": "Soccer — SYA-R SYA (Alim) vs RG1405 MCLN-R U13 Girls Team 1",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5463,7 +3653,7 @@
             "title": "Soccer — SYA-R SYA (Stagliano) vs RG1413 CYA-R GU13-CYA3 Kramer/Ibarra (F26)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -5474,7 +3664,7 @@
             "title": "Soccer — SYA-R SYA (Hernandez U16G) vs RG1212 CYA-R GU16-Heier WildCATs",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -6058,32 +4248,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — VISTA Premier Gunners U12B vs NB1501 BRYC Academy B2014/15 Black",
-            "location": "Arrowhead #3A",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2484:80738+Elements/Display+E+46241+++++116702823+111835593",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11632640"
-          },
-          {
-            "time": "3:30 PM",
-            "title": "Soccer — VISTA Spirit U13G vs NG13129 PPA 13/14 NCSL Girls",
-            "location": "Arrowhead #3",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4741:80738+Elements/Display+E+46241+++++116702823+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11634088"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6107,17 +4274,6 @@
             "confidence": "verified_live",
             "status": "scheduled",
             "eventId": "12734"
-          },
-          {
-            "time": "3:30 PM",
-            "title": "Soccer — VISTA Spirit U13G vs NG13129 PPA 13/14 NCSL Girls",
-            "location": "Arrowhead #3",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4741:80738+Elements/Display+E+46241+++++116702823+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11634088"
           }
         ],
         "unavailableSources": [
@@ -6728,7 +4884,7 @@
             "title": "Soccer — FPYC Spirit 11/12 vs NG1266 SYC U15G Blue",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -6739,7 +4895,7 @@
             "title": "Soccer — FPYC Fairfax Lions 11/12 vs NVU - N1 NVU N1 B2010/2011 Orange (VA)",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -7782,6 +5938,26 @@
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Softball — Resting Pitch Face (FA 1) - Blue vs Pura Vodka",
+            "location": "Cunningham Park Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Softball — Pura Vodka vs Resting Pitch Face (FA 1) - Blue",
+            "location": "Cunningham Park Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -8300,9 +6476,50 @@
         "subfield": "Field 3",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Softball — Big Sticks and Tight Mitts vs Sherlock Homers",
+            "location": "Lake Fairfax Park Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Softball — Sherlock Homers vs Big Sticks and Tight Mitts",
+            "location": "Lake Fairfax Park Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Softball — Sherlock Homers vs Free Agent Team 2 (FA 2)",
+            "location": "Lake Fairfax Park Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Softball — Free Agent Team 2 (FA 2) vs Sherlock Homers",
+            "location": "Lake Fairfax Park Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -8326,9 +6543,50 @@
         "subfield": "Field 5",
         "type": "Turf",
         "location": "Reston, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "6:35 PM",
+            "title": "Softball — Free Agent Team 2 (FA 2) vs Hits Different",
+            "location": "Lake Fairfax Park Field 5",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "7:35 PM",
+            "title": "Softball — Hits Different vs Free Agent Team 2 (FA 2)",
+            "location": "Lake Fairfax Park Field 5",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Softball — Casual League Only vs The Cakes",
+            "location": "Lake Fairfax Park Field 5",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:45 PM",
+            "title": "Softball — The Cakes vs Casual League Only",
+            "location": "Lake Fairfax Park Field 5",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105755/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13204,7 +11462,7 @@
             "title": "Soccer — CYA-R BU16-CYA2 Murdoch (F26) vs RB1166 GFR-R 01 U16B Roth",
             "location": "Chantilly High School Stadium Field",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:431853.6129:80738+Elements/Display+E+46241+++++116748152+58601832",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:387159.541:80738+Elements/Display+E+46241+++++116748152+58601832",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -13224,7 +11482,7 @@
             "title": "Soccer — CYA-R BU19-CYA2 Lee (F26) vs RB0521 MCLN-R U19 MYS Boys 2",
             "location": "Chantilly High School Stadium Field",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:431853.6129:80738+Elements/Display+E+46241+++++116748152+58601832",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:387159.541:80738+Elements/Display+E+46241+++++116748152+58601832",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -13261,65 +11519,9 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R GU14-CYA1 Weber (S26) vs RG1315 MCLN-R U14 MYS Girls 2",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650330"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R BU13 Bader The Majestics (F26) vs RB1403 ABGC-R U13-B: 1-David Larrea",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650065"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — CYA-R BU14-CYA1 MacKay (F26) vs RB13112 NVSC-R 2012B HW - King",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650512"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — CYA-R BU14-CYA2 McNulty (F26) vs RB1323 MCLN-R U14 MYS Boys 2",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650699"
-          },
-          {
-            "time": "2:30 PM",
-            "title": "Soccer — CYA-R BU13-CYA5 Constable (F26) vs RB1301 NPSC-R 2013B Black (U13) - Hillstrom",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650066"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13338,7 +11540,7 @@
             "title": "Soccer — CYA-R GU16-Heier WildCATs vs RG1233 NVSC-R 2010G SH - Arauz",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -13349,7 +11551,7 @@
             "title": "Soccer — CYA-R BU16-CYA4 Murphy (F26) vs RB1163 STER-R U16B Sterling 3- Villatoro",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -13360,7 +11562,7 @@
             "title": "Soccer — FCD-R U11B Jewell vs RB1577 HERN-R HYS U11B2 - Evan Wise",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -13472,72 +11674,6 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "9:00 AM",
-            "title": "Soccer — McDaniel, Matthew vs CYA Roberts",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105043"
-          },
-          {
-            "time": "10:15 AM",
-            "title": "Soccer — Lee, Kyu vs CYA Saleh",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105044"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — Stagliano, Brian U10 vs Hohenwarter, Vanessa U10",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105045"
-          },
-          {
-            "time": "12:45 PM",
-            "title": "Soccer — Hartley, Ben vs Nunes, JR",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10921"
-          },
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — Ingram, Allen vs Tran, David",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10919"
-          },
-          {
-            "time": "3:15 PM",
-            "title": "Soccer — Spinelli, Greg vs Urrutia, Marvin",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "10920"
-          },
-          {
             "time": "8:00 PM",
             "title": "Soccer — Los Niños del Norte vs Atletico Pupusas",
             "location": "EC Lawrence Park Field 3A",
@@ -13622,76 +11758,9 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R Candy Thieves (CYA1 Williams) vs RB1569 STER-R u11B Sterling 1 - Gabriel",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649176"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R BU11-CYA3 Al Hakim (F26) Scorpions vs RB1571 CYA-R BU11-CYA4 Hawk (F26)",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11649179"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — CYA-R BU11-CYA6 Merrill (F26) vs RB1535 GFR-R 01 U11B Bailey",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649181"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — CYA-R BU11-CYA5 Baldyga (F26) The Bananas vs RB1554 PSA-R U11 Boys",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649180"
-          },
-          {
-            "time": "2:30 PM",
-            "title": "Soccer — CYA-R BU12-CYA2 Andrade (F26) vs RB1508 MCLN-R U12 Boys Team 2",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649386"
-          },
-          {
-            "time": "4:00 PM",
-            "title": "Soccer — CYA-R BU12-CYA3 Tito (F26) vs RB14116 HERN-R HYS U12B4 - Marianela Leiva",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649547"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13702,65 +11771,9 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:45 AM",
-            "title": "Soccer — CYA-R BU11-CYA2 Keller (F26) vs RB1594 STER-R u11B Sterling 2 - Pineda",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649177"
-          },
-          {
-            "time": "10:15 AM",
-            "title": "Soccer — CYA-R BU12-CYA4 Nix (F26) vs RB1512 MCLN-R U12 Boys Team 6",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11649549"
-          },
-          {
-            "time": "11:45 AM",
-            "title": "Soccer — CYA-R BU11-CYA7 Rahimzai (F26) vs RB1536 GFR-R 02 U11B Davis",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649182"
-          },
-          {
-            "time": "1:15 PM",
-            "title": "Soccer — CYA-R Go-Go Squeezers (CYA1 Williams) vs RB14113 HERN-R HYS U12B1 - Brian Galindo",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649385"
-          },
-          {
-            "time": "2:45 PM",
-            "title": "Soccer — CYA-R BU12-CYA3 Hernandez (F26) vs RB1531 STER-R u12B Sterling 3 - Dajani",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649544"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13771,54 +11784,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Soccer — Vanderburgh, Jason vs Jovanelly, Nick",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11735"
-          },
-          {
-            "time": "10:20 AM",
-            "title": "Soccer — O'Brien, Scott vs dos Santos, Robert",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11734"
-          },
-          {
-            "time": "11:40 AM",
-            "title": "Soccer — Fulginiti, Vince vs Gleason, Brendan",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11733"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — Jovanelly, Nick vs Robinson, Dan",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11732"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -13829,54 +11797,9 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Soccer — Tadesse, Abel vs Cabrera, Eddie",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110145"
-          },
-          {
-            "time": "10:20 AM",
-            "title": "Soccer — Baptiste, Michael vs Donatone, Phillip",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110147"
-          },
-          {
-            "time": "11:40 AM",
-            "title": "Soccer — Campbell, Phillip vs Larson, Jonathan",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110146"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — Walsh, Derek vs Johnson, Mike",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110148"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14276,9 +12199,32 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "9:45 AM",
+            "title": "Soccer — FPYC-R Sanchez FPYC 1 vs RG0717 SYC-R U19G03 Croft",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11649733"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — FPYC-R Chishty FPYC 1 vs RB0907 SYC-R U19B03 Jonuzaj",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11649680"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14375,7 +12321,7 @@
             "title": "Soccer — GFR-R 02 U14B Bahumian vs RB12149 HERN-R HYS U14B3 - Lee Nault",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14386,7 +12332,7 @@
             "title": "Soccer — GFR-R 02 U14G Gibbens vs RG1319 CYA-R GU14-CYA2 Sprowls (F26)",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14397,7 +12343,7 @@
             "title": "Soccer — GFR-R 01 U16G Kowalcyk vs RG1223 GFR-R 02 U16G Elliott",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14408,7 +12354,7 @@
             "title": "Soccer — GFR-R 02 U16B Dalton vs RB1092 ACAD-R JC Academy",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14419,7 +12365,7 @@
             "title": "Soccer — GFR-R 03 U16G Alexander vs RG0902 VSA-R u16G vsa 1",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14573,7 +12519,7 @@
             "title": "Soccer — SYA-R SYA (Mabout) vs RB1423 CYA-R BU13-CYA1 Campbell (F26)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14584,7 +12530,7 @@
             "title": "Soccer — SYA-R SYA (Bange) vs RB12102 SYA-R SYA (Nigussie)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14595,7 +12541,7 @@
             "title": "Soccer — SYA-R SYA (Corado Revolorio) vs RB1581 VPFC-R Phoenix Eagles (B) U14",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14606,7 +12552,7 @@
             "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1379 VPFC-R Phoenix Queens",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -14617,7 +12563,7 @@
             "title": "Soccer — SYA-R SYA (Koser) vs RB1412 MCLN-R U13 Boys Team 4",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -15134,21 +13080,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "4:30 PM",
-            "title": "Soccer — VISTA Fury U11G vs NG1629 VSA U11G Premier Red",
-            "location": "Arrowhead #3A",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2484:80738+Elements/Display+E+46241+++++116702823+111835593",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11632066"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -15760,7 +13694,7 @@
             "title": "Soccer — FPYC Spirit 11/12 vs NG1175 STER REIGN U15 Academy I",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -15771,7 +13705,7 @@
             "title": "Soccer — FPYC United Gold 11/12 vs NB12131 BVBIA-PAC B2011/12 Yellow",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -15835,7 +13769,7 @@
             "title": "Soccer — VYS-R Rec U19 Girls Red vs RG0839 ALEX-R 1 Sidley/Irwin",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.8058:80738+Elements/Display+E+46241+++++116748152+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.2738:80738+Elements/Display+E+46241+++++116748152+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -16109,7 +14043,7 @@
             "title": "Soccer — VYS NCSL G2014/15 Red vs NG13106 NVSC 2013/14G White",
             "location": "Oakton High School Stadium",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:269765.4893:80738+Elements/Display+E+46241+++++116702823+64607429",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:537392.9792:80738+Elements/Display+E+46241+++++116702823+64607429",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -16120,7 +14054,7 @@
             "title": "Soccer — VYS NCSL G2012/13 Red vs NG1318 BRYC Academy G2012/13 Blue",
             "location": "Oakton High School Stadium",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:269765.4893:80738+Elements/Display+E+46241+++++116702823+64607429",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:537392.9792:80738+Elements/Display+E+46241+++++116702823+64607429",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -16131,7 +14065,7 @@
             "title": "Soccer — VYS NCSL G2008/09 Red vs NG0897 SYC U19G Blue",
             "location": "Oakton High School Stadium",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:269765.4893:80738+Elements/Display+E+46241+++++116702823+64607429",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:537392.9792:80738+Elements/Display+E+46241+++++116702823+64607429",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -16142,7 +14076,7 @@
             "title": "Soccer — VYS N1 G2011/12 Red vs BAC N1 G2011/12 Spirit (VA)",
             "location": "Oakton High School Stadium",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:269765.4893:80738+Elements/Display+E+46241+++++116702823+64607429",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:537392.9792:80738+Elements/Display+E+46241+++++116702823+64607429",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -22324,7 +20258,7 @@
             "title": "Soccer — CYA-R GU19-CYA1 Wilke (F26) vs RG0912 SYC-R U19G02 Frank",
             "location": "Chantilly High School Stadium Field",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:431853.6129:80738+Elements/Display+E+46241+++++116748152+58601832",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:387159.541:80738+Elements/Display+E+46241+++++116748152+58601832",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -22344,7 +20278,7 @@
             "title": "Soccer — CYA-R BU16-CYA Constable TITANS (F26) vs RB1192 FFC-R u15 Boys Galaxy",
             "location": "Chantilly High School Stadium Field",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:431853.6129:80738+Elements/Display+E+46241+++++116748152+58601832",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:387159.541:80738+Elements/Display+E+46241+++++116748152+58601832",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -22381,76 +20315,9 @@
         "subfield": "Turf Field 3",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R GU13-CYA3 Kramer/Ibarra (F26) vs RG1427 STER-R U13G Sterling 2 - Koehler",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11654455"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R BU13-CYA1 Campbell (F26) vs RB13164 SYA-R SYA (Koser)",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650295"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — CYA-R GU14-CYA2 Sprowls (F26) vs RG1313 MCLN-R U14 MYS Girls 3",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650443"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — CYA-R BU13 Blamphin Dragons (F26) vs RB13169 HERN-R HYS U13B3 - Theodora Ahrens",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650298"
-          },
-          {
-            "time": "2:30 PM",
-            "title": "Soccer — CYA-R GU16-Heier WildCATs vs RG1054 NPSC-R 2011G Black - Fitzpatrick",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650887"
-          },
-          {
-            "time": "4:15 PM",
-            "title": "Soccer — CYA-R BU16-CYA1 Murphy (F26) vs RB1254 GFR-R 02 U16B Dalton",
-            "location": "Poplar Tree Park #3",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.5912:80738+Elements/Display+E+46241+++++116748152+15615245",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11651150"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22581,17 +20448,6 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105046"
-          },
-          {
             "time": "8:00 PM",
             "title": "Soccer — TwStD vs Migos FC",
             "location": "EC Lawrence Park Field 3A",
@@ -22676,54 +20532,9 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:30 AM",
-            "title": "Soccer — CYA-R GU12-CYA3 Day GOATS (F26) vs RG1502 MCLN-R U12 Girls Team 2",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649346"
-          },
-          {
-            "time": "10:00 AM",
-            "title": "Soccer — CYA-R GU11-CYA2 Foster Lucky Charms (F26) vs RG1569 SOTH-R U11G Smith",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11648989"
-          },
-          {
-            "time": "11:30 AM",
-            "title": "Soccer — CYA-R GU12-CYA2 Poultney (F26) vs RG1501 MCLN-R U12 Girls Team 1",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649347"
-          },
-          {
-            "time": "1:00 PM",
-            "title": "Soccer — CYA-R GU12-CYA4 Vestal (F26) vs RG1503 MCLN-R U12 Girls Team 3",
-            "location": "Arrowhead #1A",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.8219:80738+Elements/Display+E+46241+++++116748152+96900827",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649345"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22734,43 +20545,9 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:45 AM",
-            "title": "Soccer — CYA-R GU11-CYA1 Williams/Page (F26) vs RG1439 FFC-R u11 Girls Gotham",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11648990"
-          },
-          {
-            "time": "10:15 AM",
-            "title": "Soccer — CYA-R BU12-CYA3 Hernandez (F26) vs RB1457 ACAD-R Sportif U12",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649568"
-          },
-          {
-            "time": "11:45 AM",
-            "title": "Soccer — CYA-R GU12-CYA1 Snow (F26) vs RG1430 FPYC-R Glashow FPYC 1",
-            "location": "Arrowhead #1B",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.6766:80738+Elements/Display+E+46241+++++116748152+96900828",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649348"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22781,21 +20558,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11736"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -22806,21 +20571,9 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110149"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -23179,9 +20932,54 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — FPYC-R Lanphere FPYC 1 vs RG1369 BRYC-R U13G Nelson",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11654453"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Soccer — FPYC-R Segarra FPYC 3 vs RB1335 FPYC-R Bustillos FPYC 1",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650272"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Soccer — FPYC-R Petrusiak FPYC 2 vs RB1474 ABGC-R U13-B: 6-Eddy Vargas",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650280"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Soccer — FPYC-R Orend FPYC 2 vs RB1337 FPYC-R Cruz FPYC 1",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650755"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -23278,7 +21076,7 @@
             "title": "Soccer — GFR U16B White vs NB1158 FFC B16 NCSL Elite",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.8270:80738+Elements/Display+E+46241+++++116702823+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5871:80738+Elements/Display+E+46241+++++116702823+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -23289,7 +21087,7 @@
             "title": "Soccer — GFR-R 02 U16G Elliott vs RG1106 NVSC-R 2010G HW - Price",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23300,7 +21098,7 @@
             "title": "Soccer — GFR-R 03 U13B Ramos vs RB1408 MCLN-R U13 Boys Team 1",
             "location": "Lake Fairfax Park #1",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:925961.9494:80738+Elements/Display+E+46241+++++116748152+15615185",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:323778.5618:80738+Elements/Display+E+46241+++++116748152+15615185",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23454,7 +21252,7 @@
             "title": "Soccer — SYA-R SYA (Madani) vs RB12144 SYA-R SYA (Corado Revolorio)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23465,7 +21263,7 @@
             "title": "Soccer — SYA-R SYA (Nigussie) vs RB1341 STER-R U14B Sterling 1-Shah",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23476,7 +21274,7 @@
             "title": "Soccer — SYA-R SYA (Alim) vs RG1408 MCLN-R U13 Girls Team 4",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23487,7 +21285,7 @@
             "title": "Soccer — SYA-R SYA (Miraminy) vs RB1405 CDS-R Perez",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23498,7 +21296,7 @@
             "title": "Soccer — SYA-R SYA (Stagliano) vs RG1405 MCLN-R U13 Girls Team 1",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23509,7 +21307,7 @@
             "title": "Soccer — SYA-R SYA (Garver) vs RG1131 VSA-R u14G vsa 1",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -23889,17 +21687,6 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "EC Lawrence Park #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "105048"
-          },
-          {
             "time": "8:00 AM",
             "title": "Soccer — NB17203 VALR B2017/18 Silver vs NB1801 CIP MONTCLAIR FC 2018",
             "location": "EC Lawrence Park Field #3A",
@@ -24087,43 +21874,9 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "Arrowhead #3A",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc202d066d69a617058/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11738"
-          },
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — VISTA Spirit U13G vs NG14110 VISTA Porcupines U13G",
-            "location": "Arrowhead #3",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4741:80738+Elements/Display+E+46241+++++116702823+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11634269"
-          },
-          {
-            "time": "3:30 PM",
-            "title": "Soccer — VISTA Premier Gunners U12B vs NB1529 GSC Boys 14/15 Red",
-            "location": "Arrowhead #3A",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.2484:80738+Elements/Display+E+46241+++++116702823+111835593",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11631557"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -24134,32 +21887,9 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "12:00 AM",
-            "title": "Soccer — Finals vs Finals",
-            "location": "Arrowhead #3B",
-            "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aa1707c1998a8cd44808221/surfaces/5d013bc302d066d69a617093/schedules?page=",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "110150"
-          },
-          {
-            "time": "2:00 PM",
-            "title": "Soccer — VISTA Spirit U13G vs NG14110 VISTA Porcupines U13G",
-            "location": "Arrowhead #3",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:385859.4741:80738+Elements/Display+E+46241+++++116702823+15615465",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11634269"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -24615,7 +22345,7 @@
             "title": "Soccer — FPYC United Gold 11/12 vs NB12133 BRYC Academy B2011/12 Silver",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -24626,7 +22356,7 @@
             "title": "Soccer — FPYC Wild Things 13/14 vs NG1329 BRU U13G Orange",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -24637,7 +22367,7 @@
             "title": "Soccer — FPYC Hurricanes 13/14 vs NG1483 BRU U13G Blue",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.1448:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.4869:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -24701,7 +22431,7 @@
             "title": "Soccer — VYS-R Rec U19 Girls Red vs RG0818 LMVS-R GU19 Benz",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:133177.8058:80738+Elements/Display+E+46241+++++116748152+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.2738:80738+Elements/Display+E+46241+++++116748152+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -30211,7 +27941,7 @@
             "title": "Soccer — FCD-R U12B- Estrada vs RB14107 CYA-R BU12-CYA3 Tito (F26)",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -30222,7 +27952,7 @@
             "title": "Soccer — FCD-R U11B Jewell vs RB1471 ACAD-R CHIVITAS F.C.",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:221899.674:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:540306.3463:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -30744,9 +28474,21 @@
         "subfield": "Field 1",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 AM",
+            "title": "Soccer — FPYC-R Lanphere FPYC 1 vs RG1384 ALEX-R 1 Koster",
+            "location": "Oakmont Center (previously Oak Marr) Field #1",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:918350.5317:80738+Elements/Display+E+46241+++++116748152+15615294",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11654327"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -30985,7 +28727,7 @@
             "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1255 SYA-R SYA (Garver)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -30996,7 +28738,7 @@
             "title": "Soccer — SYA-R SYA (Bange) vs RB1345 STER-R U13B Sterling 5 -Ham",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -31007,7 +28749,7 @@
             "title": "Soccer — SYA-R SYA (Mabout) vs RB1469 STER-R u13B Sterling 6- Amine",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -31018,7 +28760,7 @@
             "title": "Soccer — SYA-R SYA (Antayhua) vs RB1254 GFR-R 02 U16B Dalton",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:421103.30:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:162894.8632:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -35278,6 +33020,790 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4756131"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "braddock-7",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "braddock-7a",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7A",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "braddock-7b",
+        "name": "Braddock Park",
+        "subfield": "Turf Field 7B",
+        "type": "Turf",
+        "location": "Burke, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      }
+    ],
+    "2026-11-20": [
+      {
+        "id": "chantilly-hs-turf",
+        "name": "Chantilly High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 6:00 PM",
+            "title": "Winter Team Stadium Practices (M-F) — Chantilly High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4720830"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "stringfellow-1",
+        "name": "Stringfellow Park",
+        "subfield": "Grass Field",
+        "type": "Grass",
+        "location": "Centreville, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "poplar-tree-3",
+        "name": "Poplar Tree Park",
+        "subfield": "Turf Field 3",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "poplar-tree-2",
+        "name": "Poplar Tree Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "westfield-hs-turf",
+        "name": "Westfield High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 6:00 PM",
+            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4698913"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "westfield-hs-stadium",
+        "name": "Westfield High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 9:00 PM",
+            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4698896"
+          },
+          {
+            "time": "9:00 PM – 10:00 PM",
+            "title": "HS Fall Sports Practices — Westfield High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4698909"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "eclawrence-2",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "eclawrence-3a",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "eclawrence-3b",
+        "name": "E.C. Lawrence Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Chantilly, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "arrowhead-1a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "arrowhead-1b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 1B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Blackout FC vs FC Cool Arrows",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — FC Cool Arrows vs NEEGY FC",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "arrowhead-3a",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3A",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "arrowhead-3b",
+        "name": "Arrowhead Park",
+        "subfield": "Turf Field 3B",
+        "type": "Turf",
+        "location": "Centreville, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "centreville-hs-turf",
+        "name": "Centreville High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "Clifton, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 5:00 PM",
+            "title": "sports practice — Centreville High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4806683"
+          },
+          {
+            "time": "5:45 PM – 8:00 PM",
+            "title": "NCS - Field: Southwestern Youth Association (Socce — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4809439"
+          },
+          {
+            "time": "8:00 PM – 11:00 PM",
+            "title": "NCS - Field: Northern Virginia Soccer League (Socc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4784651"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "centreville-hs-stadium",
+        "name": "Centreville High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Clifton, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 10:00 PM",
+            "title": "Sports Practice — Centreville High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4764114"
+          },
+          {
+            "time": "3:00 PM – 5:30 PM",
+            "title": "sports practice — Centreville High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4806686"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "sully-highlands-1",
+        "name": "Sully Highlands Park",
+        "subfield": "Turf Field 1",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "sully-highlands-2",
+        "name": "Sully Highlands Park",
+        "subfield": "Turf Field 2",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "greenbriar-5",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "greenbriar-5a",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "greenbriar-5b",
+        "name": "Greenbriar Park",
+        "subfield": "Field 5B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "cunningham-1",
+        "name": "Cunningham Park",
+        "subfield": "Field 1",
+        "type": "Grass",
+        "location": "Vienna, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "nottoway-4a",
+        "name": "Nottoway Park",
+        "subfield": "Field 4A",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "nottoway-4b",
+        "name": "Nottoway Park",
+        "subfield": "Field 4B",
+        "type": "Turf",
+        "location": "Fairfax, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "arrowbrook-1",
+        "name": "Arrowbrook Park",
+        "subfield": "Turf Field",
+        "type": "Turf",
+        "location": "Herndon, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "freedom-hs-turf",
+        "name": "Freedom High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "South Riding, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "freedom-hs-aux",
+        "name": "Freedom High School",
+        "subfield": "Aux Turf Field",
+        "type": "Turf",
+        "location": "South Riding, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "byrnes-ridge-1",
+        "name": "Byrne's Ridge Park",
+        "subfield": "Soccer Field 1",
+        "type": "Grass",
+        "location": "Stone Ridge, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "hanson-1",
+        "name": "Hal and Berni Hanson Regional Park",
+        "subfield": "RF1 Turf",
+        "type": "Turf",
+        "location": "Brambleton, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "hanson-2",
+        "name": "Hal and Berni Hanson Regional Park",
+        "subfield": "RF2 Turf",
+        "type": "Turf",
+        "location": "Brambleton, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf",
+        "name": "John Champe High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "champe-hs-turf-2",
+        "name": "John Champe High School",
+        "subfield": "Turf 2",
+        "type": "Turf",
+        "location": "Aldie, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-18",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 18",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "bolen-19",
+        "name": "Philip A. Bolen Park",
+        "subfield": "Turf 19",
+        "type": "Turf",
+        "location": "Leesburg, VA",
+        "status": "open",
+        "statusReason": "No conflict found in connected sources. This is not a reservation or guarantee of access.",
+        "events": [],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakmont-1",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-1a",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1A",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-1b",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1B",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-1c",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 1C",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-2",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-2a",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2A",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakmont-2b",
+        "name": "OakMont Park (Oak Marr)",
+        "subfield": "Field 2B",
+        "type": "Turf",
+        "location": "Oakton, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "lake-fairfax-1",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "lake-fairfax-3",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "lake-fairfax-4",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 4",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "lake-fairfax-5",
+        "name": "Lake Fairfax Park",
+        "subfield": "Field 5",
+        "type": "Turf",
+        "location": "Reston, VA",
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
+        "unavailableSources": [
+          "fairfax-county-permits"
+        ]
+      },
+      {
+        "id": "oakton-hs-turf",
+        "name": "Oakton High School",
+        "subfield": "Stadium Turf",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 11:00 PM",
+            "title": "OHS Use - Stadium — Oakton High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4696478"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-1",
+        "name": "Oakton High School",
+        "subfield": "Field 1",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 7:00 PM",
+            "title": "OHS Field 1 use — Oakton High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4696471"
+          },
+          {
+            "time": "7:00 PM – 9:00 PM",
+            "title": "NCS - Field: Vienna Youth Inc (Football) — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4745398"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: GTMD@JermantownRd (Soccer) — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4790505"
+          }
+        ],
+        "unavailableSources": []
+      },
+      {
+        "id": "oakton-hs-3",
+        "name": "Oakton High School",
+        "subfield": "Field 3",
+        "type": "Turf",
+        "location": "Vienna, VA",
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "3:00 PM – 7:00 PM",
+            "title": "OHS Use - Field 3 — Oakton High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4696474"
+          },
+          {
+            "time": "7:00 PM – 11:00 PM",
+            "title": "NCS - Field: Vienna Youth Soccer (Soccer) — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4756132"
           }
         ],
         "unavailableSources": []
