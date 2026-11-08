@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T17:49:47.243Z",
+  "lastUpdated": "2026-11-08T20:59:35.273Z",
   "coverageStart": "2026-11-08",
   "coverageEnd": "2026-12-08",
   "sourceHealth": {
@@ -59,9 +59,9 @@
       "eventCount": 0
     },
     "fcDulles": {
-      "ok": false,
+      "ok": true,
       "provider": "fc-dulles",
-      "message": "fetch failed",
+      "message": "Published Fall program checked; 0 Poplar Tree #2 sessions in range",
       "eventCount": 0,
       "sourceUrl": "https://www.fcdulles.org/grassroots-rec-u5-u10/"
     },
@@ -69,11 +69,12 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "37 exact-field games from public Demosphere pages (38 club rows, 28 field calendars); current as of 11/8/2026 8:41 am; 1 calendars failed",
-      "eventCount": 37,
-      "calendarCount": 28,
-      "currentAsOf": "11/8/2026 8:41 am",
+      "message": "36 exact-field games from public Demosphere pages (36 club rows, 41 field calendars); current as of 11/8/2026 10:21 am; 2 calendars failed",
+      "eventCount": 36,
+      "calendarCount": 41,
+      "currentAsOf": "11/8/2026 10:21 am",
       "unmappedLocations": [
+        "Arrowhead #2",
         "Braddock Park Field",
         "EC Lawrence Park Field #1",
         "EC Lawrence Park Field #3",
@@ -81,6 +82,11 @@
         "Lake Fairfax Park #6",
         "Lake Fairfax Park #7 A",
         "Lake Fairfax Park #7 B",
+        "Oakton High School 2",
+        "Oakton High School 3",
+        "Oakton High School 3L",
+        "Oakton High School 3R",
+        "Oakton High School RF #01",
         "Poplar Tree Park #1",
         "Westfield High School RF #01/Track Aux Field"
       ]
@@ -116,7 +122,7 @@
       "unmappedLocations": [
         "SYA Sports Park 3B"
       ],
-      "seasonId": "6aefca1b8b4324a2e215e504"
+      "seasonId": "6af0d80b8b4324a2e21628b5"
     },
     "fsl": {
       "provider": "fsl",
@@ -272,7 +278,7 @@
             "title": "Soccer — CYA-R GU19-CYA2 Campbell/Schaad (F26) vs RG0718 CYA-R GU19-CYA1 Wilke (F26)",
             "location": "Poplar Tree Park #3",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:336809.6139:80738+Elements/Display+E+46241+++++116748152+15615245",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:464411.5431:80738+Elements/Display+E+46241+++++116748152+15615245",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -349,8 +355,7 @@
           }
         ],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -490,17 +495,6 @@
             "confidence": "verified_live",
             "status": "scheduled",
             "eventId": "12383"
-          },
-          {
-            "time": "10:30 AM",
-            "title": "Soccer — NB1536 VALR B2014/15 White vs NB16160 SDor U12 Classic",
-            "location": "EC Lawrence Park Field #2",
-            "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/102140686.html",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "12744"
           }
         ],
         "unavailableSources": [
@@ -554,7 +548,7 @@
             "title": "Soccer — Spinelli, Greg vs Tran, David",
             "location": "EC Lawrence Park #3A",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -565,7 +559,7 @@
             "title": "Soccer — CYA Day vs Hohenwarter, Vanessa U10",
             "location": "EC Lawrence Park #3A",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -576,7 +570,7 @@
             "title": "Soccer — Jovanelly, Nick vs Fulginiti, Vince",
             "location": "EC Lawrence Park #3A",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -587,7 +581,7 @@
             "title": "Soccer — Donatone, Phillip vs Cabrera, Eddie",
             "location": "EC Lawrence Park #3A",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fbc02d066d69a432255/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -632,7 +626,7 @@
             "title": "Soccer — Stagliano, Brian U10 vs CYA Saleh",
             "location": "EC Lawrence Park #3B",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -643,7 +637,7 @@
             "title": "Soccer — Gleason, Brendan vs dos Santos, Robert",
             "location": "EC Lawrence Park #3B",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -654,7 +648,7 @@
             "title": "Soccer — Tadesse, Abel vs Larson, Jonathan",
             "location": "EC Lawrence Park #3B",
             "source": "SYA",
-            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6aefca1b8b4324a2e215e504/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
+            "sourceUrl": "https://app.ottosport.ai/_widgets/v1/6af0d80b8b4324a2e21628b5/surfaces/5ca23fac02d066d69a42e237/schedules?page=",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -779,9 +773,32 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — VISTA Spirit U13G vs NG14110 VISTA Porcupines U13G",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:211304.2096:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11634269"
+          },
+          {
+            "time": "3:30 PM",
+            "title": "Soccer — VISTA Premier Gunners U12B vs NB1529 GSC Boys 14/15 Red",
+            "location": "Arrowhead #3A",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:211304.5076:80738+Elements/Display+E+46241+++++116702823+111835593",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11631557"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -792,9 +809,21 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — VISTA Spirit U13G vs NG14110 VISTA Porcupines U13G",
+            "location": "Arrowhead #3",
+            "source": "NCSL",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:211304.2096:80738+Elements/Display+E+46241+++++116702823+15615465",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11634269"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -1303,7 +1332,7 @@
             "title": "Soccer — FPYC United Gold 11/12 vs NB12133 BRYC Academy B2011/12 Silver",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.7543:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.8659:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1314,7 +1343,7 @@
             "title": "Soccer — FPYC Wild Things 13/14 vs NG1329 BRU U13G Orange",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.7543:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.8659:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1325,7 +1354,7 @@
             "title": "Soccer — FPYC Hurricanes 13/14 vs NG1483 BRU U13G Blue",
             "location": "Oakmont Center (previously Oak Marr) Field #1",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.7543:80738+Elements/Display+E+46241+++++116702823+15615294",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.8659:80738+Elements/Display+E+46241+++++116702823+15615294",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1389,7 +1418,7 @@
             "title": "Soccer — VYS-R Rec U19 Girls Black vs RG0905 SOTH-R U19G1",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.4938:80738+Elements/Display+E+46241+++++116748152+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.2444:80738+Elements/Display+E+46241+++++116748152+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -1400,7 +1429,7 @@
             "title": "Soccer — VYS-R Rec U19 Girls Red vs RG0818 LMVS-R GU19 Benz",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.4938:80738+Elements/Display+E+46241+++++116748152+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.2444:80738+Elements/Display+E+46241+++++116748152+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -1477,7 +1506,7 @@
             "title": "Soccer — GFR U15B Green vs NB11209 VISTA Warriors FC U15B",
             "location": "Lake Fairfax Park #4",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:630246.4157:80738+Elements/Display+E+46241+++++116702823+15615593",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:461534.2925:80738+Elements/Display+E+46241+++++116702823+15615593",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1488,7 +1517,7 @@
             "title": "Soccer — GFR U13B White vs NB14166 MSI U13 (13/14) Boys Green",
             "location": "Lake Fairfax Park #4",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:630246.4157:80738+Elements/Display+E+46241+++++116702823+15615593",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:461534.2925:80738+Elements/Display+E+46241+++++116702823+15615593",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1499,7 +1528,7 @@
             "title": "Soccer — GFR U16B White vs NB11191 TAPK Takoma GraspYouth 2011B",
             "location": "Lake Fairfax Park #4",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:630246.4157:80738+Elements/Display+E+46241+++++116702823+15615593",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:461534.2925:80738+Elements/Display+E+46241+++++116702823+15615593",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1521,7 +1550,7 @@
             "title": "Soccer — GFR U14G White vs NG12125 VISTA Warriors U14G",
             "location": "Lake Fairfax Park #4",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:630246.4157:80738+Elements/Display+E+46241+++++116702823+15615593",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:461534.2925:80738+Elements/Display+E+46241+++++116702823+15615593",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1800,11 +1829,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -2944,11 +2972,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -4026,8 +4053,7 @@
           }
         ],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -5155,11 +5181,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -6293,11 +6318,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -7054,7 +7078,7 @@
             "title": "Soccer — SYA-R SYA (Bange) vs RB1345 STER-R U13B Sterling 5 -Ham",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:270017.7276:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:471516.5415:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -7172,7 +7196,7 @@
             "title": "Soccer — FCD-R U12B- Estrada vs RB14107 CYA-R BU12-CYA3 Tito (F26)",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:336809.3326:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:464411.2866:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -7183,7 +7207,7 @@
             "title": "Soccer — FCD-R U11B Jewell vs RB1471 ACAD-R CHIVITAS F.C.",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:336809.3326:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:464411.2866:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -7191,8 +7215,7 @@
           }
         ],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -7279,32 +7302,9 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:00 AM",
-            "title": "Soccer — SYA-R SYA (Kozemchak) vs RB1000 BAC-R United - Pineda/Sommar",
-            "location": "EC Lawrence Park Field #2",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:259294.562:80738+Elements/Display+E+46241+++++116748152+15615395",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649670"
-          },
-          {
-            "time": "10:45 AM",
-            "title": "Soccer — SYA-R SYA (Milla) vs RB0705 CYA-R BU19-CYA2 Lee (F26)",
-            "location": "EC Lawrence Park Field #2",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:259294.562:80738+Elements/Display+E+46241+++++116748152+15615395",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11649671"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -7980,7 +7980,7 @@
             "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1255 SYA-R SYA (Garver)",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:270017.7276:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:471516.5415:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -7991,7 +7991,7 @@
             "title": "Soccer — SYA-R SYA (Mabout) vs RB1469 STER-R u13B Sterling 6- Amine",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:270017.7276:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:471516.5415:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -8002,7 +8002,7 @@
             "title": "Soccer — SYA-R SYA (Antayhua) vs RB1254 GFR-R 02 U16B Dalton",
             "location": "Braddock Park #7",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:270017.7276:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:471516.5415:80738+Elements/Display+E+46241+++++116748152+15615566",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -8113,11 +8113,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -9125,11 +9124,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -10020,11 +10018,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -10834,11 +10831,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -11679,11 +11675,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -12452,11 +12447,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -13276,11 +13270,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -14058,11 +14051,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -14578,7 +14570,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:446628.5032:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:403034.5993:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -14834,11 +14826,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -15607,11 +15598,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -16389,11 +16379,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -17162,11 +17151,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -17926,11 +17914,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -18708,11 +18695,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -19472,11 +19458,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -20236,11 +20221,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -21036,11 +21020,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -21809,11 +21792,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -22591,11 +22573,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -23346,11 +23327,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -24085,11 +24065,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -24813,11 +24792,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
@@ -25541,11 +25519,10 @@
         "type": "Turf",
         "location": "Chantilly, VA",
         "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits, fc-dulles unavailable. A missing event is not evidence the field is free.",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
         "events": [],
         "unavailableSources": [
-          "fairfax-county-permits",
-          "fc-dulles"
+          "fairfax-county-permits"
         ]
       },
       {
