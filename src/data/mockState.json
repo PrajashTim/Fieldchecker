@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-11-13T19:26:20.009Z",
+  "lastUpdated": "2026-11-13T22:23:17.865Z",
   "coverageStart": "2026-11-13",
   "coverageEnd": "2026-12-13",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "25/25 LeagueLab field-sport schedules checked; 77 mapped games; 12 unmapped venues",
-      "eventCount": 77,
+      "message": "25/25 LeagueLab field-sport schedules checked; 76 mapped games; 12 unmapped venues",
+      "eventCount": 76,
       "leagueCount": 25,
       "unmappedLocations": [
         "Eagle View ES Field 2",
@@ -60,13 +60,12 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "8 exact-field games from public Demosphere pages (2 club rows, 36 field calendars); current as of 11/13/2026 1:57 pm; 2 calendars failed",
-      "eventCount": 8,
-      "calendarCount": 36,
-      "currentAsOf": "11/13/2026 1:57 pm",
+      "message": "6 exact-field games from public Demosphere pages (2 club rows, 38 field calendars); current as of 11/13/2026 2:55 pm; 4 calendars failed",
+      "eventCount": 6,
+      "calendarCount": 38,
+      "currentAsOf": "11/13/2026 2:55 pm",
       "unmappedLocations": [
         "Arrowhead #2",
-        "Braddock Park Field",
         "EC Lawrence Park Field #1",
         "EC Lawrence Park Field #3",
         "Lake Fairfax Park #2",
@@ -78,6 +77,7 @@
         "Oakton High School 3L",
         "Oakton High School 3R",
         "Oakton High School RF #01",
+        "Poplar Tree Park #1",
         "Westfield High School RF #01/Track Aux Field"
       ]
     },
@@ -104,9 +104,11 @@
     "sya": {
       "provider": "sya",
       "sourceUrl": "https://syasports.org/sports/soccer/recreational-soccer/",
-      "ok": false,
-      "message": "timeout fetching https://app.ottosport.ai/_widgets/v1/6af1f9365fdeeab73b8745b8/surfaces/5d014ac202d066d69a9fb9ee/schedules?page=",
-      "eventCount": 0
+      "ok": true,
+      "message": "Public Otto Sport rec widget checked (5 surfaces); 0 games mapped to catalog fields",
+      "eventCount": 0,
+      "unmappedLocations": [],
+      "seasonId": "6af1f9365fdeeab73b8745b8"
     },
     "fsl": {
       "provider": "fsl",
@@ -139,7 +141,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5816 upcoming rows, 476 mapped turf sessions 2026-11-13 to 2026-12-13). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5823 upcoming rows, 476 mapped turf sessions 2026-11-13 to 2026-12-13). Park fields are not on this calendar.",
       "eventCount": 476,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -359,16 +361,6 @@
           {
             "time": "8:10 PM",
             "title": "Soccer — Last VIII vs GDM FC",
-            "location": "Arrowhead Park Turf Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — Franconia FC vs FC local 26",
             "location": "Arrowhead Park Turf Field 1B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
@@ -979,21 +971,9 @@
         "subfield": "Turf Field 7",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "6:30 PM",
-            "title": "Soccer — SYA-R SYA (Bange) vs RB1345 STER-R U13B Sterling 5 -Ham",
-            "location": "Braddock Park #7",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:205957.5237:80738+Elements/Display+E+46241+++++116748152+15615566",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11650757"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -1097,9 +1077,32 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — FCD-R U12B- Estrada vs RB14107 CYA-R BU12-CYA3 Tito (F26)",
+            "location": "Poplar Tree Park #2",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:697345.2597:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11649587"
+          },
+          {
+            "time": "3:30 PM",
+            "title": "Soccer — FCD-R U11B Jewell vs RB1471 ACAD-R CHIVITAS F.C.",
+            "location": "Poplar Tree Park #2",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:697345.2597:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11649020"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -1196,7 +1199,7 @@
             "title": "Soccer — SYA-R SYA (Kozemchak) vs RB1000 BAC-R United - Pineda/Sommar",
             "location": "EC Lawrence Park Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:366643.5360:80738+Elements/Display+E+46241+++++116748152+15615395",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:604933.7315:80738+Elements/Display+E+46241+++++116748152+15615395",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1207,7 +1210,7 @@
             "title": "Soccer — SYA-R SYA (Milla) vs RB0705 CYA-R BU19-CYA2 Lee (F26)",
             "location": "EC Lawrence Park Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:366643.5360:80738+Elements/Display+E+46241+++++116748152+15615395",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:604933.7315:80738+Elements/Display+E+46241+++++116748152+15615395",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -1935,43 +1938,9 @@
         "subfield": "Turf Field 7",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "10:30 AM",
-            "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1255 SYA-R SYA (Garver)",
-            "location": "Braddock Park #7",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:205957.5237:80738+Elements/Display+E+46241+++++116748152+15615566",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "rescheduled",
-            "eventId": "11650450"
-          },
-          {
-            "time": "12:00 PM",
-            "title": "Soccer — SYA-R SYA (Mabout) vs RB1469 STER-R u13B Sterling 6- Amine",
-            "location": "Braddock Park #7",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:205957.5237:80738+Elements/Display+E+46241+++++116748152+15615566",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11650100"
-          },
-          {
-            "time": "1:30 PM",
-            "title": "Soccer — SYA-R SYA (Antayhua) vs RB1254 GFR-R 02 U16B Dalton",
-            "location": "Braddock Park #7",
-            "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:205957.5237:80738+Elements/Display+E+46241+++++116748152+15615566",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled",
-            "eventId": "11651096"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -8804,7 +8773,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:471288.7098:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:140752.6567:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
