@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-11-14T02:12:19.591Z",
+  "lastUpdated": "2026-11-14T17:50:49.297Z",
   "coverageStart": "2026-11-14",
   "coverageEnd": "2026-12-14",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "25/25 LeagueLab field-sport schedules checked; 73 mapped games; 12 unmapped venues",
-      "eventCount": 73,
-      "leagueCount": 25,
+      "message": "24/24 LeagueLab field-sport schedules checked; 74 mapped games; 12 unmapped venues",
+      "eventCount": 74,
+      "leagueCount": 24,
       "unmappedLocations": [
         "Eagle View ES Field 2",
         "Eagle View ES Field 3",
@@ -60,11 +60,12 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "6 exact-field games from public Demosphere pages (2 club rows, 27 field calendars); current as of 11/13/2026 2:55 pm; 2 calendars failed",
-      "eventCount": 6,
-      "calendarCount": 27,
-      "currentAsOf": "11/13/2026 2:55 pm",
+      "message": "9 exact-field games from public Demosphere pages (2 club rows, 40 field calendars); current as of 11/14/2026 11:40 am",
+      "eventCount": 9,
+      "calendarCount": 40,
+      "currentAsOf": "11/14/2026 11:40 am",
       "unmappedLocations": [
+        "Arrowhead #2",
         "Braddock Park Field",
         "EC Lawrence Park Field #1",
         "EC Lawrence Park Field #3",
@@ -140,7 +141,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5823 upcoming rows, 472 mapped turf sessions 2026-11-14 to 2026-12-14). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5786 upcoming rows, 472 mapped turf sessions 2026-11-14 to 2026-12-14). Park fields are not on this calendar.",
       "eventCount": 472,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -234,7 +235,7 @@
             "title": "Soccer — FCD-R U12B- Estrada vs RB14107 CYA-R BU12-CYA3 Tito (F26)",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:560568.354:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:290764.4774:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -245,7 +246,7 @@
             "title": "Soccer — FCD-R U11B Jewell vs RB1471 ACAD-R CHIVITAS F.C.",
             "location": "Poplar Tree Park #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:560568.354:80738+Elements/Display+E+46241+++++116748152+15615208",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:290764.4774:80738+Elements/Display+E+46241+++++116748152+15615208",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -349,7 +350,7 @@
             "title": "Soccer — SYA-R SYA (Kozemchak) vs RB1000 BAC-R United - Pineda/Sommar",
             "location": "EC Lawrence Park Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:834304.6631:80738+Elements/Display+E+46241+++++116748152+15615395",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:467469.3407:80738+Elements/Display+E+46241+++++116748152+15615395",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -360,7 +361,7 @@
             "title": "Soccer — SYA-R SYA (Milla) vs RB0705 CYA-R BU19-CYA2 Lee (F26)",
             "location": "EC Lawrence Park Field #2",
             "source": "NCSL REC",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:834304.6631:80738+Elements/Display+E+46241+++++116748152+15615395",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:467469.3407:80738+Elements/Display+E+46241+++++116748152+15615395",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled",
@@ -504,6 +505,16 @@
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Flag Football — Skeam Team vs PRIME",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105506/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -522,6 +533,16 @@
           {
             "time": "8:30 AM",
             "title": "Flag Football — Skeam Team vs Ultimatum",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105506/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Flag Football — Skeam Team vs PRIME",
             "location": "Arrowhead Park Turf Field 3",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/105506/schedule",
@@ -1088,9 +1109,43 @@
         "subfield": "Turf Field 7",
         "type": "Turf",
         "location": "Burke, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "10:30 AM",
+            "title": "Soccer — SYA-R SYA (McCarthy U14G) vs RG1255 SYA-R SYA (Garver)",
+            "location": "Braddock Park #7",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:527044.9285:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "rescheduled",
+            "eventId": "11650450"
+          },
+          {
+            "time": "12:00 PM",
+            "title": "Soccer — SYA-R SYA (Mabout) vs RB1469 STER-R u13B Sterling 6- Amine",
+            "location": "Braddock Park #7",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:527044.9285:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11650100"
+          },
+          {
+            "time": "1:30 PM",
+            "title": "Soccer — SYA-R SYA (Antayhua) vs RB1254 GFR-R 02 U16B Dalton",
+            "location": "Braddock Park #7",
+            "source": "NCSL REC",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:527044.9285:80738+Elements/Display+E+46241+++++116748152+15615566",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled",
+            "eventId": "11651096"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -7931,7 +7986,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:883700.5274:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:960275.9610:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
