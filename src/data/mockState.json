@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-11-15T18:41:25.154Z",
+  "lastUpdated": "2026-11-15T21:29:35.968Z",
   "coverageStart": "2026-11-15",
   "coverageEnd": "2026-12-15",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "25/25 LeagueLab field-sport schedules checked; 98 mapped games; 14 unmapped venues",
-      "eventCount": 98,
-      "leagueCount": 25,
+      "message": "26/26 LeagueLab field-sport schedules checked; 99 mapped games; 14 unmapped venues",
+      "eventCount": 99,
+      "leagueCount": 26,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
         "Arrowhead Park Turf Field 3C",
@@ -143,7 +143,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5748 upcoming rows, 470 mapped turf sessions 2026-11-15 to 2026-12-15). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5750 upcoming rows, 470 mapped turf sessions 2026-11-15 to 2026-12-15). Park fields are not on this calendar.",
       "eventCount": 470,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -4228,6 +4228,16 @@
             "eventId": "4809438"
           },
           {
+            "time": "8:00 PM",
+            "title": "Ultimate — Gridiron Fris Party vs Ultimate Humans",
+            "location": "Centreville High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105714/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -7293,7 +7303,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:134968.3498:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:874873.250:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
