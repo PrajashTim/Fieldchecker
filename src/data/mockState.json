@@ -1,17 +1,19 @@
 {
-  "lastUpdated": "2026-11-16T01:47:00.340Z",
+  "lastUpdated": "2026-11-16T21:50:11.502Z",
   "coverageStart": "2026-11-16",
   "coverageEnd": "2026-12-16",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "27/27 LeagueLab field-sport schedules checked; 82 mapped games; 9 unmapped venues",
-      "eventCount": 82,
-      "leagueCount": 27,
+      "message": "26/26 LeagueLab field-sport schedules checked; 179 mapped games; 11 unmapped venues",
+      "eventCount": 179,
+      "leagueCount": 26,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
         "Arrowhead Park Turf Field 3C",
+        "Colin L. Powell ES Diamond Field 1",
+        "Colin L. Powell ES Diamond Field 2",
         "Grove Point Park Field 4",
         "Hutchison Park Field 4",
         "Hutchison Park Field 4A",
@@ -31,7 +33,7 @@
     "centreville-hs-turf": {
       "ok": true,
       "provider": "centreville",
-      "message": "10 schedule rows observed for 2026-2027",
+      "message": "7 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "westfield-hs-turf": {
@@ -57,10 +59,10 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "1 exact-field games from public Demosphere pages (0 club rows, 40 field calendars); current as of 11/15/2026 8:42 pm",
+      "message": "1 exact-field games from public Demosphere pages (0 club rows, 40 field calendars); current as of 11/16/2026 10:15 am; 2 calendars failed",
       "eventCount": 1,
       "calendarCount": 40,
-      "currentAsOf": "11/15/2026 8:42 pm",
+      "currentAsOf": "11/16/2026 10:15 am",
       "unmappedLocations": [
         "Arrowhead #2",
         "Braddock Park Field",
@@ -138,8 +140,8 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5765 upcoming rows, 464 mapped turf sessions 2026-11-16 to 2026-12-16). Park fields are not on this calendar.",
-      "eventCount": 464,
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5750 upcoming rows, 470 mapped turf sessions 2026-11-16 to 2026-12-16). Park fields are not on this calendar.",
+      "eventCount": 470,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
     },
@@ -291,16 +293,6 @@
             "eventId": "4698893"
           },
           {
-            "time": "9:00 PM",
-            "title": "Soccer — Real Inter United vs Wolves of Ballston",
-            "location": "Westfield High School Stadium",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105718/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
             "time": "9:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -378,30 +370,9 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — AstroKicks vs PTS FC",
-            "location": "Arrowhead Park Turf Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — Pathetico Madrid F.C vs Arroz con frijoles",
-            "location": "Arrowhead Park Turf Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -412,30 +383,9 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:10 PM",
-            "title": "Soccer — My Neck, My Back, My Knees and Ankles Crack vs Pathetico Madrid F.C",
-            "location": "Arrowhead Park Turf Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          },
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — Pitch Please (FA 2) vs ALPA FC",
-            "location": "Arrowhead Park Turf Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -595,9 +545,40 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — AstroKicks vs PTS FC",
+            "location": "Sully Highlands Park Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — My Neck, My Back, My Knees and Ankles Crack vs Pathetico Madrid F.C",
+            "location": "Sully Highlands Park Field 2B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Pathetico Madrid F.C vs Arroz con frijoles",
+            "location": "Sully Highlands Park Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -2330,7 +2311,7 @@
           {
             "time": "8:00 PM",
             "title": "Ultimate — Huckees vs Flick It Good",
-            "location": "Centreville High School Aux Filed",
+            "location": "Centreville High School Aux Field",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/105713/schedule",
             "precision": "exact_subfield",
@@ -3073,9 +3054,30 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Yurpington FC vs El Gordo y El Flaco CF",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Boca Seniors FC vs RICH SHOOTERS",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3086,9 +3088,30 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — *** vs Brewventus FC",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Manassas City FC vs SOUTH LAKES FC",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3230,9 +3253,20 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — AS Copa vs Justice for busters",
+            "location": "Sully Highlands Park Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3243,9 +3277,40 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Casey fc vs Arsenal",
+            "location": "Sully Highlands Park Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Illegoals FC vs FC Palestino",
+            "location": "Sully Highlands Park Field 2B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Habibis & Amigos FC vs ABDJ. FC",
+            "location": "Sully Highlands Park Field 2B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3269,9 +3334,40 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — Pitches be crazy vs MAPS",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 PM",
+            "title": "Soccer — Chilli Peppers FC vs United FC",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Soccer — Maverick vs POST-MLS NEXT",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3282,9 +3378,30 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Putt Pirates FC vs Shiraz - White",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Silver Wolves vs FFX United",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3460,6 +3577,16 @@
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Soccer — Rosé FC vs Big Zar FC",
+            "location": "OakMont Park (Oak Marr) Field 1",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105787/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -3524,9 +3651,30 @@
         "subfield": "Field 2A",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Flag Football — Lights Out vs Str8 No Chaser",
+            "location": "OakMont Park (Oak Marr) Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:00 PM",
+            "title": "Flag Football — Rogue vs God Bods",
+            "location": "OakMont Park (Oak Marr) Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -3537,9 +3685,20 @@
         "subfield": "Field 2B",
         "type": "Turf",
         "location": "Oakton, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Flag Football — Too Old For This vs Cheesecake and Cappuccinos",
+            "location": "OakMont Park (Oak Marr) Field 2B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -4747,8 +4906,28 @@
             "status": "scheduled"
           },
           {
+            "time": "8:30 AM",
+            "title": "Flag Football — A2 vs A1",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "9:00 AM",
             "title": "Flag Football — B3 vs B4",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Flag Football — B4 vs B3",
             "location": "Arrowhead Park Turf Field 1A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4767,8 +4946,28 @@
             "status": "scheduled"
           },
           {
+            "time": "10:30 AM",
+            "title": "Flag Football — D2 vs D1",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "11:00 AM",
             "title": "Flag Football — A4 vs A2",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Flag Football — A2 vs A4",
             "location": "Arrowhead Park Turf Field 1A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4787,8 +4986,28 @@
             "status": "scheduled"
           },
           {
+            "time": "12:30 PM",
+            "title": "Flag Football — C3 vs C1",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "1:00 PM",
             "title": "Flag Football — D4 vs D2",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:30 PM",
+            "title": "Flag Football — D2 vs D4",
             "location": "Arrowhead Park Turf Field 1A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4807,8 +5026,28 @@
             "status": "scheduled"
           },
           {
+            "time": "2:30 PM",
+            "title": "Flag Football — B4 vs B1",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "3:00 PM",
             "title": "Flag Football — C2 vs C3",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:30 PM",
+            "title": "Flag Football — C3 vs C2",
             "location": "Arrowhead Park Turf Field 1A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4841,8 +5080,28 @@
             "status": "scheduled"
           },
           {
+            "time": "8:30 AM",
+            "title": "Flag Football — A4 vs A3",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "9:00 AM",
             "title": "Flag Football — C1 vs C2",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 AM",
+            "title": "Flag Football — C2 vs C1",
             "location": "Arrowhead Park Turf Field 1B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4861,8 +5120,28 @@
             "status": "scheduled"
           },
           {
+            "time": "10:30 AM",
+            "title": "Flag Football — D4 vs D3",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "11:00 AM",
             "title": "Flag Football — B1 vs B3",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Flag Football — B3 vs B1",
             "location": "Arrowhead Park Turf Field 1B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4881,8 +5160,28 @@
             "status": "scheduled"
           },
           {
+            "time": "12:30 PM",
+            "title": "Flag Football — C2 vs C4",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "1:00 PM",
             "title": "Flag Football — A1 vs A4",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:30 PM",
+            "title": "Flag Football — A4 vs A1",
             "location": "Arrowhead Park Turf Field 1B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4901,8 +5200,28 @@
             "status": "scheduled"
           },
           {
+            "time": "2:30 PM",
+            "title": "Flag Football — B3 vs B2",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "3:00 PM",
             "title": "Flag Football — D1 vs D4",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:30 PM",
+            "title": "Flag Football — D4 vs D1",
             "location": "Arrowhead Park Turf Field 1B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107579/schedule",
@@ -4926,7 +5245,7 @@
         "events": [
           {
             "time": "8:00 AM",
-            "title": "Flag Football — A1 vs A2",
+            "title": "Flag Football — BackYardBoys vs Miami Vice",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4936,7 +5255,7 @@
           },
           {
             "time": "9:00 AM",
-            "title": "Flag Football — B3 vs B4",
+            "title": "Flag Football — cookies n cream vs Sacks & TDs",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4946,7 +5265,7 @@
           },
           {
             "time": "10:00 AM",
-            "title": "Flag Football — D1 vs D2",
+            "title": "Flag Football — HennyMigos vs Locked In",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4956,7 +5275,7 @@
           },
           {
             "time": "11:00 AM",
-            "title": "Flag Football — A4 vs A2",
+            "title": "Flag Football — Toonami vs Miami Vice",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4966,7 +5285,7 @@
           },
           {
             "time": "12:00 PM",
-            "title": "Flag Football — C1 vs C3",
+            "title": "Flag Football — Cuyffalo Cills vs God Bods",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4976,7 +5295,7 @@
           },
           {
             "time": "1:00 PM",
-            "title": "Flag Football — D4 vs D2",
+            "title": "Flag Football — Inn It vs Locked In",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4986,7 +5305,7 @@
           },
           {
             "time": "2:00 PM",
-            "title": "Flag Football — B1 vs B4",
+            "title": "Flag Football — Clucking around vs Sacks & TDs",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4996,7 +5315,7 @@
           },
           {
             "time": "3:00 PM",
-            "title": "Flag Football — C2 vs C3",
+            "title": "Flag Football — Rush Hour vs God Bods",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5020,7 +5339,7 @@
         "events": [
           {
             "time": "8:00 AM",
-            "title": "Flag Football — A3 vs A4",
+            "title": "Flag Football — Big Backs vs Toonami",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5030,7 +5349,7 @@
           },
           {
             "time": "9:00 AM",
-            "title": "Flag Football — C1 vs C2",
+            "title": "Flag Football — Cuyffalo Cills vs Rush Hour",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5040,7 +5359,7 @@
           },
           {
             "time": "10:00 AM",
-            "title": "Flag Football — D3 vs D4",
+            "title": "Flag Football — Kick in a Box vs Inn It",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5050,7 +5369,7 @@
           },
           {
             "time": "11:00 AM",
-            "title": "Flag Football — B1 vs B3",
+            "title": "Flag Football — Clucking around vs cookies n cream",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5060,7 +5379,7 @@
           },
           {
             "time": "12:00 PM",
-            "title": "Flag Football — C4 vs C2",
+            "title": "Flag Football — Past Our Primetime vs Rush Hour",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5070,7 +5389,7 @@
           },
           {
             "time": "1:00 PM",
-            "title": "Flag Football — A1 vs A4",
+            "title": "Flag Football — BackYardBoys vs Toonami",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5080,7 +5399,7 @@
           },
           {
             "time": "2:00 PM",
-            "title": "Flag Football — B2 vs B3",
+            "title": "Flag Football — Squad 0 vs cookies n cream",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5090,7 +5409,7 @@
           },
           {
             "time": "3:00 PM",
-            "title": "Flag Football — D1 vs D4",
+            "title": "Flag Football — HennyMigos vs Inn It",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -5229,6 +5548,16 @@
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Sterling Ops vs C3 united",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105792/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -5241,9 +5570,20 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Monterrey vs Migos FC",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105792/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5832,9 +6172,80 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "10:00 AM",
+            "title": "Soccer — Wild Cats vs Fifty Shades of Play",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:50 AM",
+            "title": "Soccer — Blue Balls vs Dream Team Casseroles",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:40 AM",
+            "title": "Soccer — Jas and the Girls vs Wild Cats",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Soccer — Blue Balls vs Girls Want Goals FC",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:20 PM",
+            "title": "Soccer — Fifty Shades of Play vs Jas and the Girls",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:10 PM",
+            "title": "Soccer — Blue Balls vs Turf Queens",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:00 PM",
+            "title": "Soccer — Amigas United vs Fifty Shades of Play",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5845,9 +6256,80 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "10:00 AM",
+            "title": "Soccer — Amigas United vs Jas and the Girls",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:50 AM",
+            "title": "Soccer — Girls Want Goals FC vs Turf Queens",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:40 AM",
+            "title": "Soccer — Amigas United vs Trot It Like It’s Hot",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Soccer — Turf Queens vs Dream Team Casseroles",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:20 PM",
+            "title": "Soccer — Trot It Like It’s Hot vs Wild Cats",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:10 PM",
+            "title": "Soccer — Dream Team Casseroles vs Girls Want Goals FC",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "3:00 PM",
+            "title": "Soccer — Trot It Like It’s Hot vs Wild Cats",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108033/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5858,9 +6340,100 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Above Average Joes vs Celtic",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Bird’s United vs Byblos Fc",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — Brewventus FC vs Heat",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Above Average Joes vs Plaza Sesamo",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Bird’s United vs Good Time FC",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — Brewventus FC vs Son of a Pitch",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:10 PM",
+            "title": "Soccer — Above Average Joes vs Turf Ferguson",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — Bird’s United vs Stangs",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:50 PM",
+            "title": "Soccer — Brewventus FC vs To Be Determined FC",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5871,9 +6444,100 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Plaza Sesamo vs Turf Ferguson",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Good Time FC vs Stangs",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — Son of a Pitch vs To Be Determined FC",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Turf Ferguson vs Celtic",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Stangs vs Byblos Fc",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — To Be Determined FC vs Heat",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:10 PM",
+            "title": "Soccer — Celtic vs Plaza Sesamo",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — Byblos Fc vs Good Time FC",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:50 PM",
+            "title": "Soccer — Heat vs Son of a Pitch",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5884,9 +6548,110 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Benchwarmers FC vs FCFDFC",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Conejos Malos vs Goodfellas FC",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — DC SERBS vs Gli Azzuri",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Benchwarmers FC vs Monterrey",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Conejos Malos vs Once A Year Cardio",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — DC SERBS vs Raiders FC",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:10 PM",
+            "title": "Soccer — Benchwarmers FC vs Sierra",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — Conejos Malos vs Washed Up FC",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:50 PM",
+            "title": "Soccer — DC SERBS vs Titans Fc",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:45 PM",
+            "title": "Soccer — rundown fc vs UNC INTERNATIONAL ACADEMY",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105797/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5897,9 +6662,100 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Monterrey vs Sierra",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Once A Year Cardio vs Washed Up FC",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — Raiders FC vs Titans Fc",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Sierra vs FCFDFC",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Washed Up FC vs Goodfellas FC",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — Titans Fc vs Gli Azzuri",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "1:10 PM",
+            "title": "Soccer — FCFDFC vs Monterrey",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:00 PM",
+            "title": "Soccer — Goodfellas FC vs Once A Year Cardio",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "2:50 PM",
+            "title": "Soccer — Gli Azzuri vs Raiders FC",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6009,9 +6865,70 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Diamond FC vs Inwood FC",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Dream Team vs Kaizen FC",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — Diamond FC vs Mushroom FC",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Dream Team vs Real Sociedad CA",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Diamond FC vs Spice Boys CF",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — Dream Team vs Tj gooners",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6022,9 +6939,70 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 AM",
+            "title": "Soccer — Mushroom FC vs Spice Boys CF",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:00 AM",
+            "title": "Soccer — Real Sociedad CA vs Tj gooners",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:50 AM",
+            "title": "Soccer — Spice Boys CF vs Inwood FC",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "10:40 AM",
+            "title": "Soccer — Tj gooners vs Kaizen FC",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Soccer — Inwood FC vs Mushroom FC",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "12:20 PM",
+            "title": "Soccer — Kaizen FC vs Real Sociedad CA",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/108031/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6248,7 +7226,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:478992.9625:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:593186.6267:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -12732,6 +13710,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4836048"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: Fairfax Over Fifty Soccer League (Soc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4843729"
           }
         ],
         "unavailableSources": []
@@ -13664,6 +14651,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4834375"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: Fairfax Over Fifty Soccer League (Soc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4843742"
           }
         ],
         "unavailableSources": []
@@ -14476,9 +15472,20 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — ZF vs Mandio-k",
+            "location": "Sully Highlands Park Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -17994,6 +19001,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4836053"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: Fairfax Over Fifty Soccer League (Soc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4843730"
           }
         ],
         "unavailableSources": []
@@ -18917,6 +19933,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4806635"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: Fairfax Over Fifty Soccer League (Soc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4843743"
           }
         ],
         "unavailableSources": []
@@ -23217,6 +24242,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4836058"
+          },
+          {
+            "time": "9:00 PM – 11:00 PM",
+            "title": "NCS - Field: Fairfax Over Fifty Soccer League (Soc — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4843731"
           }
         ],
         "unavailableSources": []
