@@ -1,19 +1,21 @@
 {
-  "lastUpdated": "2026-11-17T00:39:47.009Z",
+  "lastUpdated": "2026-11-17T04:27:13.449Z",
   "coverageStart": "2026-11-17",
   "coverageEnd": "2026-12-17",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "26/26 LeagueLab field-sport schedules checked; 163 mapped games; 10 unmapped venues",
-      "eventCount": 163,
-      "leagueCount": 26,
+      "message": "27/27 LeagueLab field-sport schedules checked; 166 mapped games; 12 unmapped venues",
+      "eventCount": 166,
+      "leagueCount": 27,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
         "Arrowhead Park Turf Field 3C",
         "Colin L. Powell ES Diamond Field 1",
         "Colin L. Powell ES Diamond Field 2",
+        "Eagle View ES Field 2",
+        "Eagle View ES Field 3",
         "Hutchison Park Field 4",
         "Hutchison Park Field 4A",
         "Hutchison Park Field 4B",
@@ -4316,7 +4318,7 @@
           },
           {
             "time": "10:00 AM",
-            "title": "Flag Football — Clucking around B to D vs Locked In",
+            "title": "Flag Football — Clucking around vs Locked In",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4326,7 +4328,7 @@
           },
           {
             "time": "11:00 AM",
-            "title": "Flag Football — God Bods C to A vs Miami Vice",
+            "title": "Flag Football — God Bods vs Miami Vice",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4336,7 +4338,7 @@
           },
           {
             "time": "12:00 PM",
-            "title": "Flag Football — Cuyffalo Cills vs Toonami A to C",
+            "title": "Flag Football — Cuyffalo Cills vs Toonami",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4356,7 +4358,7 @@
           },
           {
             "time": "2:00 PM",
-            "title": "Flag Football — HennyMigos D to B vs Sacks & TDs",
+            "title": "Flag Football — HennyMigos vs Sacks & TDs",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4366,7 +4368,7 @@
           },
           {
             "time": "3:00 PM",
-            "title": "Flag Football — Rush Hour vs Toonami A to C",
+            "title": "Flag Football — Rush Hour vs Toonami",
             "location": "Arrowhead Park Turf Field 3A",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4390,7 +4392,7 @@
         "events": [
           {
             "time": "8:00 AM",
-            "title": "Flag Football — God Bods C to A vs Toonami A to C",
+            "title": "Flag Football — God Bods vs Toonami",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4420,7 +4422,7 @@
           },
           {
             "time": "11:00 AM",
-            "title": "Flag Football — HennyMigos D to B vs cookies n cream",
+            "title": "Flag Football — HennyMigos vs cookies n cream",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4440,7 +4442,7 @@
           },
           {
             "time": "1:00 PM",
-            "title": "Flag Football — God Bods C to A vs Toonami A to C",
+            "title": "Flag Football — God Bods vs Toonami",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -4460,7 +4462,7 @@
           },
           {
             "time": "3:00 PM",
-            "title": "Flag Football — Clucking around B to D vs Inn It",
+            "title": "Flag Football — Clucking around vs Inn It",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -6277,7 +6279,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:521758.496:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:514250.4567:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -6783,6 +6785,16 @@
         "events": [
           {
             "time": "8:10 PM",
+            "title": "Soccer — Shaky Shots vs Unc international",
+            "location": "Sully Highlands Park Field 2A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:10 PM",
             "title": "Soccer — Los Parceros vs Fades 2.0",
             "location": "Sully Highlands Park Field 2B",
             "source": "FXA Sports",
@@ -6815,9 +6827,20 @@
         "subfield": "Field 5A",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — FC Madrid vs Halal Boyz FC",
+            "location": "Greenbriar Park Field 5A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105728/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6828,9 +6851,20 @@
         "subfield": "Field 5B",
         "type": "Turf",
         "location": "Fairfax, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Average Joes vs LOS FC",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105728/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
