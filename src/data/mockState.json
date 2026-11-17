@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-11-17T04:27:13.449Z",
+  "lastUpdated": "2026-11-17T20:41:17.401Z",
   "coverageStart": "2026-11-17",
   "coverageEnd": "2026-12-17",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "27/27 LeagueLab field-sport schedules checked; 166 mapped games; 12 unmapped venues",
-      "eventCount": 166,
+      "message": "27/27 LeagueLab field-sport schedules checked; 177 mapped games; 12 unmapped venues",
+      "eventCount": 177,
       "leagueCount": 27,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
@@ -34,7 +34,7 @@
     "centreville-hs-turf": {
       "ok": true,
       "provider": "centreville",
-      "message": "7 schedule rows observed for 2026-2027",
+      "message": "6 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "westfield-hs-turf": {
@@ -60,9 +60,9 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "1 exact-field games from public Demosphere pages (0 club rows, 40 field calendars); current as of 11/16/2026 10:15 am",
+      "message": "1 exact-field games from public Demosphere pages (0 club rows, 31 field calendars); current as of 11/16/2026 10:15 am; 2 calendars failed",
       "eventCount": 1,
-      "calendarCount": 40,
+      "calendarCount": 31,
       "currentAsOf": "11/16/2026 10:15 am",
       "unmappedLocations": [
         "Arrowhead #2",
@@ -139,8 +139,8 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5750 upcoming rows, 469 mapped turf sessions 2026-11-17 to 2026-12-17). Park fields are not on this calendar.",
-      "eventCount": 469,
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5726 upcoming rows, 471 mapped turf sessions 2026-11-17 to 2026-12-17). Park fields are not on this calendar.",
+      "eventCount": 471,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
     },
@@ -6279,7 +6279,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:514250.4567:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:775722.9618:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -6560,6 +6560,16 @@
             "eventId": "4748663"
           },
           {
+            "time": "8:00 PM",
+            "title": "Soccer — ATown FC vs Snacks That Smile Back",
+            "location": "Westfield High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105724/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -6567,6 +6577,16 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4751080"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Soccer — Total 90 FC vs The Gunners Fc 🔝🔥",
+            "location": "Westfield High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105724/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": []
@@ -6590,6 +6610,16 @@
             "eventId": "4698896"
           },
           {
+            "time": "8:00 PM",
+            "title": "Soccer — Futbol Is Life - Black vs APEX",
+            "location": "Westfield High School Stadium",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105718/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "9:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -6597,6 +6627,16 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4751157"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Soccer — ATLÉTICO vs Humongous Melonheads",
+            "location": "Westfield High School Stadium",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105718/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": []
@@ -6607,9 +6647,30 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — Liverfools vs Real Inter United",
+            "location": "EC Lawrence 2 Turf Field 2",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105718/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Soccer — Lethal Shooters vs Blue Lock Fc",
+            "location": "EC Lawrence 2 Turf Field 2",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105718/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6720,6 +6781,16 @@
             "eventId": "4809440"
           },
           {
+            "time": "8:00 PM",
+            "title": "Soccer — VTP FC vs Black Hole FC",
+            "location": "Centreville High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105724/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -6767,9 +6838,40 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — AstroKicks vs Crash Outs",
+            "location": "Sully Highlands Park Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — The Turtle School vs Internationals FC",
+            "location": "Sully Highlands Park Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "9:20 PM",
+            "title": "Soccer — Chupa Cabra FC vs Afro Kix FC",
+            "location": "Sully Highlands Park Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105726/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6854,6 +6956,16 @@
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Halfrica vs Casey fc",
+            "location": "Greenbriar Park Field 5B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105728/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
           {
             "time": "9:20 PM",
             "title": "Soccer — Average Joes vs LOS FC",
@@ -10394,6 +10506,15 @@
             "eventId": "4720844"
           },
           {
+            "time": "9:00 AM – 10:30 AM",
+            "title": "Boys Soccer Green Days — Chantilly High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4839951"
+          },
+          {
             "time": "3:00 PM – 8:00 PM",
             "title": "NCS - Field: Chantilly Youth Association (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -10631,15 +10752,6 @@
         "status": "occupied",
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
-          {
-            "time": "8:00 AM – 8:00 PM",
-            "title": "NCS - Field: Southwestern Youth Association (Socce — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4757943"
-          },
           {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: Stringfellow Soccer Group (Soccer) — Fairfax County - Neighborhood and Community Services",
@@ -15809,6 +15921,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4720844"
+          },
+          {
+            "time": "9:00 AM – 10:30 AM",
+            "title": "Boys Soccer Green Days — Chantilly High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4839951"
           }
         ],
         "unavailableSources": []
@@ -21069,6 +21190,15 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4720844"
+          },
+          {
+            "time": "9:00 AM – 10:30 AM",
+            "title": "Boys Soccer Green Days — Chantilly High School - Athletics",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4839951"
           }
         ],
         "unavailableSources": []
