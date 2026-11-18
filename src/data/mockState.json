@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-11-18T20:13:51.713Z",
+  "lastUpdated": "2026-11-18T23:17:49.692Z",
   "coverageStart": "2026-11-18",
   "coverageEnd": "2026-12-18",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "26/26 LeagueLab field-sport schedules checked; 173 mapped games; 12 unmapped venues",
-      "eventCount": 173,
+      "message": "26/26 LeagueLab field-sport schedules checked; 174 mapped games; 11 unmapped venues",
+      "eventCount": 174,
       "leagueCount": 26,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
@@ -20,7 +20,6 @@
         "Hutchison Park Field 4B",
         "Jackson Middle School Field 1B",
         "Ken Lawrence Park Main Field",
-        "Pine Ridge Park Field 4A",
         "Pine Ridge Park Field 4B"
       ],
       "sourceUrl": "https://fxasports.leaguelab.com/schedule-finder"
@@ -60,13 +59,12 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "1 exact-field games from public Demosphere pages (0 club rows, 11 field calendars); current as of 11/17/2026 6:11 pm; 1 calendars failed",
+      "message": "1 exact-field games from public Demosphere pages (0 club rows, 10 field calendars); current as of 11/17/2026 6:11 pm; 2 calendars failed",
       "eventCount": 1,
-      "calendarCount": 11,
+      "calendarCount": 10,
       "currentAsOf": "11/17/2026 6:11 pm",
       "unmappedLocations": [
         "Arrowhead #2",
-        "Braddock Park Field",
         "EC Lawrence Park Field #1",
         "EC Lawrence Park Field #3",
         "Lake Fairfax Park #2",
@@ -135,7 +133,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5793 upcoming rows, 465 mapped turf sessions 2026-11-18 to 2026-12-18). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5785 upcoming rows, 465 mapped turf sessions 2026-11-18 to 2026-12-18). Park fields are not on this calendar.",
       "eventCount": 465,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -10992,7 +10990,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:477970.9387:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:376296.7329:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -14465,20 +14463,9 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "9:20 PM",
-            "title": "Soccer — AWS FC vs GDM FC",
-            "location": "Arrowhead Park Turf Field 1A",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14514,6 +14501,16 @@
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — NAVEGADORES FC vs Santos",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": [
@@ -14532,6 +14529,16 @@
           {
             "time": "7:00 PM",
             "title": "Soccer — NEEGY FC vs Alianza fc",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — Goons FC vs Alianza fc",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
