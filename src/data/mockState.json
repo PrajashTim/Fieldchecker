@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-11-18T03:34:45.963Z",
+  "lastUpdated": "2026-11-18T20:13:51.713Z",
   "coverageStart": "2026-11-18",
   "coverageEnd": "2026-12-18",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "27/27 LeagueLab field-sport schedules checked; 168 mapped games; 10 unmapped venues",
-      "eventCount": 168,
-      "leagueCount": 27,
+      "message": "26/26 LeagueLab field-sport schedules checked; 173 mapped games; 12 unmapped venues",
+      "eventCount": 173,
+      "leagueCount": 26,
       "unmappedLocations": [
         "Arrowhead Park Turf Field 1C",
         "Arrowhead Park Turf Field 3C",
@@ -18,6 +18,8 @@
         "Eagle View ES Field 3",
         "Hutchison Park Field 4A",
         "Hutchison Park Field 4B",
+        "Jackson Middle School Field 1B",
+        "Ken Lawrence Park Main Field",
         "Pine Ridge Park Field 4A",
         "Pine Ridge Park Field 4B"
       ],
@@ -26,25 +28,25 @@
     "chantilly": {
       "ok": true,
       "provider": "chantilly",
-      "message": "10 schedule rows observed for 2026-2027",
+      "message": "8 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "centreville-hs-turf": {
       "ok": true,
       "provider": "centreville",
-      "message": "6 schedule rows observed for 2026-2027",
+      "message": "10 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "westfield-hs-turf": {
       "ok": true,
       "provider": "westfield",
-      "message": "10 schedule rows observed for 2026-2027",
+      "message": "7 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "westfield-hs-stadium": {
       "ok": true,
       "provider": "westfield",
-      "message": "10 schedule rows observed for 2026-2027",
+      "message": "7 schedule rows observed for 2026-2027",
       "eventCount": 0
     },
     "fcDulles": {
@@ -58,10 +60,10 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "1 exact-field games from public Demosphere pages (0 club rows, 31 field calendars); current as of 11/17/2026 6:12 pm; 2 calendars failed",
+      "message": "1 exact-field games from public Demosphere pages (0 club rows, 11 field calendars); current as of 11/17/2026 6:11 pm; 1 calendars failed",
       "eventCount": 1,
-      "calendarCount": 31,
-      "currentAsOf": "11/17/2026 6:12 pm",
+      "calendarCount": 11,
+      "currentAsOf": "11/17/2026 6:11 pm",
       "unmappedLocations": [
         "Arrowhead #2",
         "Braddock Park Field",
@@ -133,7 +135,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5834 upcoming rows, 465 mapped turf sessions 2026-11-18 to 2026-12-18). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5793 upcoming rows, 465 mapped turf sessions 2026-11-18 to 2026-12-18). Park fields are not on this calendar.",
       "eventCount": 465,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -2919,16 +2921,7 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
-            "time": "8:00 AM – 1:00 PM",
-            "title": "NCS - Field: Southwestern Youth Association (Field — Fairfax County - Neighborhood and Community Services",
-            "source": "FCPS Community Use",
-            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
-            "precision": "permit",
-            "status": "scheduled",
-            "eventId": "4742907"
-          },
-          {
-            "time": "1:00 PM – 8:00 PM",
+            "time": "8:00 AM – 8:00 PM",
             "title": "NCS - Field: Aim High Youth Sports Association (Fl — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
             "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
@@ -3479,7 +3472,7 @@
         "events": [
           {
             "time": "8:00 AM",
-            "title": "Flag Football — God Bods vs Toonami",
+            "title": "Flag Football — God Bods vs Big Backs",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -3529,7 +3522,7 @@
           },
           {
             "time": "1:00 PM",
-            "title": "Flag Football — God Bods vs Toonami",
+            "title": "Flag Football — God Bods vs BackYardBoys",
             "location": "Arrowhead Park Turf Field 3B",
             "source": "FXA Sports",
             "sourceUrl": "https://fxasports.leaguelab.com/league/107580/schedule",
@@ -6609,9 +6602,20 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — Dyslexia Untied vs Bust a Net",
+            "location": "EC Lawrence Park Field 2",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105730/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6646,9 +6650,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:10 PM",
+            "title": "Soccer — Elite FC vs Los Adultos",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105731/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -6733,6 +6748,16 @@
             "eventId": "4809441"
           },
           {
+            "time": "8:00 PM",
+            "title": "Soccer — Black Jesus vs Goons",
+            "location": "Centreville High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105729/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -6740,6 +6765,16 @@
             "precision": "permit",
             "status": "scheduled",
             "eventId": "4765827"
+          },
+          {
+            "time": "9:30 PM",
+            "title": "Soccer — CORONA FC vs Classic XI",
+            "location": "Centreville High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105729/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
           }
         ],
         "unavailableSources": []
@@ -9860,6 +9895,15 @@
         "statusReason": "Known conflict from a connected public schedule",
         "events": [
           {
+            "time": "10:00 AM – 12:00 PM",
+            "title": "NCS - Field: KCPC (Soccer) — Fairfax County - Neighborhood and Community Services",
+            "source": "FCPS Community Use",
+            "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
+            "precision": "permit",
+            "status": "scheduled",
+            "eventId": "4848506"
+          },
+          {
             "time": "8:00 PM – 11:00 PM",
             "title": "NCS - Field: Stringfellow Soccer Group (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -10948,7 +10992,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:957382.4971:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:477970.9387:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -13788,20 +13832,9 @@
         "subfield": "Turf Field 1",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "occupied",
-        "statusReason": "Known conflict from a connected public schedule",
-        "events": [
-          {
-            "time": "8:00 PM",
-            "title": "Soccer — ZF vs Mandio-k",
-            "location": "Sully Highlands Park Field 1B",
-            "source": "FXA Sports",
-            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
-            "precision": "exact_subfield",
-            "confidence": "verified_live",
-            "status": "scheduled"
-          }
-        ],
+        "status": "unknown",
+        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
+        "events": [],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14469,9 +14502,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — Shots & Giggles vs Santos",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -14482,9 +14526,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — NEEGY FC vs Alianza fc",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105790/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
