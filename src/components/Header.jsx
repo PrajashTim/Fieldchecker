@@ -4,7 +4,7 @@ import { relativeUpdated } from '../lib/pickup';
 import { IconLayers, IconList, IconMap, LogoMark } from './Icons';
 
 const TABS = [
-  { key: 'home', href: '#', label: 'Fields', Icon: IconList },
+  { key: 'home', href: '#fields', label: 'Fields', Icon: IconList },
   { key: 'map', href: '#map', label: 'Map', Icon: IconMap },
   { key: 'sources', href: '#sources', label: 'Sources', Icon: IconLayers },
 ];

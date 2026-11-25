@@ -1175,6 +1175,67 @@
 
 .sheet-grip { display: none; }
 
+.sheet-list {
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.sheet-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sheet-list-head span {
+  font-family: var(--font);
+  font-size: 0.76rem;
+  text-transform: none;
+}
+
+.sheet-list ul { list-style: none; }
+
+.sheet-row {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 72px 14px;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.55rem 0.1rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+}
+
+.sheet-row:hover { background: rgba(255, 255, 255, 0.03); }
+.sheet-row .status-icon { width: 22px; height: 22px; }
+
+.sheet-row-text { display: grid; min-width: 0; }
+
+.sheet-row-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sheet-row-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sheet-row-go { color: var(--faint); transform: rotate(-90deg); }
+
 .sheet-head {
   display: flex;
   align-items: flex-start;
@@ -1299,15 +1360,35 @@
     padding: 0.4rem 1rem 1rem;
     border-radius: var(--radius) var(--radius) 0 0;
     border-bottom: 0;
-    margin-top: -1rem;
     gap: 0.6rem;
   }
 
+  .simple-map-sheet {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    transition: max-height 0.25s ease;
+  }
+
+  .simple-map-sheet.is-expanded { max-height: 78dvh; }
+
   .sheet-grip {
-    display: block;
-    justify-self: center;
-    width: 38px;
-    height: 4px;
+    position: sticky;
+    top: -0.4rem;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    justify-self: stretch;
+    height: 22px;
+    margin: -0.4rem -1rem 0;
+    border: 0;
+    background: rgba(17, 26, 23, 0.98);
+    cursor: pointer;
+  }
+
+  .sheet-grip span {
+    width: 42px;
+    height: 5px;
     border-radius: 999px;
     background: var(--line-2);
   }

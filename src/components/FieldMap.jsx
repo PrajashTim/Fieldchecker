@@ -4,9 +4,9 @@ import '../vendor/leaflet.css';
 
 import { mapsDirectionsUrl } from './DirectionsLink';
 import DayTimeline from './DayTimeline';
-import { IconNav, IconPin, IconStar, IconTarget } from './Icons';
+import { IconCheck, IconChevron, IconNav, IconPin, IconStar, IconTarget, IconX } from './Icons';
 import { coordsForField, CHANTILLY, PARK_COORDS } from '../data/fieldCoords';
-import { overlappingEvents } from '../lib/pickup';
+import { hubRank, overlappingEvents } from '../lib/pickup';
 
 function escapeHtml(value = '') {
   return String(value)
@@ -70,6 +70,8 @@ const FieldMap = ({
   const recommendationRef = useRef(recommendation?.id);
   const [selectedId, setSelectedId] = useState(selectedRef.current);
   const [showDaySchedule, setShowDaySchedule] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const sheetRef = useRef(null);
 
   recommendationRef.current = recommendation?.id;
 
@@ -186,7 +188,23 @@ const FieldMap = ({
     map?.flyTo([origin.lat, origin.lng], 13, { duration: 0.45 });
   };
 
+  const focusField = (field) => {
+    selectField(field.id);
+    const map = mapRef.current;
+    const origin = coordsForField(field, fields);
+    map?.flyTo([origin.lat, origin.lng], Math.max(map.getZoom(), 14), { duration: 0.45 });
+    sheetRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const selected = fields.find(field => field.id === selectedId) || null;
+  const others = fields
+    .filter(field => field.id !== selectedId)
+    .sort((a, b) => {
+      const [ah, at] = hubRank(a.id);
+      const [bh, bt] = hubRank(b.id);
+      return Number(a.overlapsPickup) - Number(b.overlapsPickup) || ah - bh || at - bt;
+    });
+  const freeCount = fields.filter(field => !field.overlapsPickup).length;
   const conflicts = selected ? overlappingEvents(selected.events, pickupMinutes) : [];
 
   return (
@@ -196,8 +214,19 @@ const FieldMap = ({
         <button type="button" className="map-recenter" onClick={showTopPick}><IconTarget size={14} /> Top pick</button>
       </div>
       {selected && (
-        <aside className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}`}>
-          <div className="sheet-grip" aria-hidden="true" />
+        <aside
+          ref={sheetRef}
+          className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}${expanded ? ' is-expanded' : ''}`}
+        >
+          <button
+            type="button"
+            className="sheet-grip"
+            onClick={() => setExpanded(v => !v)}
+            aria-label={expanded ? 'Shrink field list' : 'Expand field list'}
+            aria-expanded={expanded}
+          >
+            <span />
+          </button>
           <div className="sheet-head">
             <div>
               <p className="simple-map-kicker">
@@ -248,6 +277,33 @@ const FieldMap = ({
               )}
             </div>
           )}
+
+          <div className="sheet-list">
+            <p className="sheet-list-head">
+              All fields <span><b className="txt-open">{freeCount} free</b> · <b className="txt-busy">{fields.length - freeCount} busy</b></span>
+            </p>
+            <ul>
+              {others.map(field => (
+                <li key={field.id}>
+                  <button
+                    type="button"
+                    className={`sheet-row${field.overlapsPickup ? ' is-busy' : ' is-open'}`}
+                    onClick={() => focusField(field)}
+                  >
+                    <span className="status-icon">
+                      {field.overlapsPickup ? <IconX size={12} strokeWidth={3} /> : <IconCheck size={12} strokeWidth={3} />}
+                    </span>
+                    <span className="sheet-row-text">
+                      <span className="sheet-row-name">{field.name}</span>
+                      <span className="sheet-row-sub">{field.subfield}{field.id === recommendation?.id ? ' · Top pick' : ''}</span>
+                    </span>
+                    <DayTimeline events={field.events} pickupMinutes={pickupMinutes} busy={field.overlapsPickup} mini />
+                    <IconChevron size={14} className="sheet-row-go" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </aside>
       )}
     </div>
