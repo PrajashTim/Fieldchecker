@@ -36,7 +36,7 @@ const FieldRow = ({ field, siblings, pickupMinutes, pickupLabel, isTop }) => {
               : events.length ? `Free at ${pickupLabel} · ${events.length} other event${events.length > 1 ? 's' : ''}` : `Free all day`}
           </span>
         </span>
-        <DayTimeline events={events} pickupMinutes={pickupMinutes} busy={busy} />
+        <DayTimeline events={events} pickupMinutes={pickupMinutes} busy={busy} mini />
         <IconChevron size={16} className="row-chevron" />
       </button>
 

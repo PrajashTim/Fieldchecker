@@ -11,14 +11,14 @@ const pct = minutes => `${(Math.min(Math.max(minutes, TIMELINE_START), TIMELINE_
 const width = (start, end) => `${(Math.min(end, TIMELINE_END) - Math.max(start, TIMELINE_START)) / SPAN * 100}%`;
 
 /** A 6 AM – 11 PM bar: grey/red blocks are booked, the outlined box is your pickup window. */
-const DayTimeline = ({ events, pickupMinutes, busy, showLabels = false }) => {
+const DayTimeline = ({ events, pickupMinutes, busy, showLabels = false, mini = false }) => {
   const blocks = eventBlocks(events);
   const hasUnknown = blocks.some(b => b.unknown);
   const pickupEnd = pickupMinutes + PICKUP_DURATION_MINUTES;
 
   return (
     <div className="timeline-wrap">
-      <div className={`timeline${hasUnknown ? ' has-unknown' : ''}`}>
+      <div className={`timeline${hasUnknown ? ' has-unknown' : ''}${mini ? ' is-mini' : ''}`}>
         {blocks.filter(b => !b.unknown && b.end > TIMELINE_START && b.start < TIMELINE_END).map((b, i) => {
           const hit = pickupMinutes < b.end + 30 && pickupEnd > b.start - 30;
           return (
