@@ -2,12 +2,15 @@
  * High School Athletics scraper (PlayOn Sports platform)
  *
  * Covers: Centreville HS, Westfield HS
- * Same Next.js/PlayOn structure as chantilly.js — shared parser.
+ * Parsing uses the JSON event objects embedded in the RSC payload
+ * (see playon.js). PlayOn removed the data-testid="event-<n>-*"
+ * attributes in November 2026; the testid parser remains as a fallback.
  *
  * Returns: { fieldId: { 'YYYY-MM-DD': [{ time, title, location }] } }
  */
 
 import puppeteer from 'puppeteer';
+import { extractPlayOnEvents, easternDateAndTime } from './playon.js';
 
 const TURF_SPORTS = new Set([
   'SOCCER', 'FOOTBALL', 'LACROSSE', 'FIELD HOCKEY', 'TRACK', 'RUGBY',
@@ -18,6 +21,7 @@ const SCHOOLS = [
     name: 'Centreville',
     baseUrl: 'https://www.wearecville.net/schedule',
     venueSubstring: 'centreville high school',
+    schoolName: 'Centreville High School',
     fieldId: 'centreville-hs-turf',
     location: 'Centreville High School',
   },
@@ -25,6 +29,7 @@ const SCHOOLS = [
     name: 'Westfield',
     baseUrl: 'https://www.westfieldathletics.org/schedule',
     venueSubstring: 'westfield high school',
+    schoolName: 'Westfield High School',
     fieldId: 'westfield-hs-turf',
     location: 'Westfield High School',
   },
@@ -47,7 +52,7 @@ function resolveSchoolFieldId(school, venue) {
   return 'westfield-hs-stadium';
 }
 
-function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
+function parseEventsFromTestids(html, school, startDateStr, endDateStr) {
   const byField = {};
 
   const indices = new Set(
@@ -88,7 +93,45 @@ function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
     });
   }
 
-  return byField;
+  return { byField, rowsObserved: indices.size };
+}
+
+function parseEventsFromPayload(html, school, startDateStr, endDateStr) {
+  const playonEvents = extractPlayOnEvents(html);
+  const byField = {};
+
+  for (const e of playonEvents) {
+    if (e.isCancelled) continue;
+    const venue = e.venueName || e.locationSchool || '';
+    if (!venue.toLowerCase().includes(school.venueSubstring)) continue;
+    const sport = (e.sports[0]?.name || '').toUpperCase();
+    if (!TURF_SPORTS.has(sport)) continue;
+
+    const { date, time } = easternDateAndTime(e.startISO);
+    if (!date || date < startDateStr || date > endDateStr) continue;
+
+    const displayName = e.teams[0]?.displayName || sport.charAt(0) + sport.slice(1).toLowerCase();
+    const opponent = e.schoolNames.map(s => s.name).find(n => n !== school.schoolName);
+    const suffix = e.eventName || (opponent ? `vs ${opponent}` : '');
+    const fieldId = resolveSchoolFieldId(school, venue);
+    if (!byField[fieldId]) byField[fieldId] = {};
+    if (!byField[fieldId][date]) byField[fieldId][date] = [];
+    byField[fieldId][date].push({
+      time,
+      title: suffix ? `${displayName} — ${suffix}` : displayName,
+      location: school.location,
+      source: `${school.name} athletics`,
+      sourceUrl: `${school.baseUrl}?year=${schoolYearFor()}`,
+    });
+  }
+
+  return { byField, rowsObserved: playonEvents.length };
+}
+
+export function parseEventsFromHtml(html, school, startDateStr, endDateStr) {
+  const fromPayload = parseEventsFromPayload(html, school, startDateStr, endDateStr);
+  if (fromPayload.rowsObserved > 0) return fromPayload;
+  return parseEventsFromTestids(html, school, startDateStr, endDateStr);
 }
 
 export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
@@ -118,24 +161,21 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
         const html = await page.content();
         await page.close();
 
-        const sourceEventCount = new Set(
-          [...html.matchAll(/data-testid="event-(\d+)-/g)].map(match => match[1])
-        ).size;
-        const eventsByField = parseEventsFromHtml(html, school, startDateStr, endDateStr);
-        const total = Object.values(eventsByField).reduce(
+        const { byField: schoolFields, rowsObserved } = parseEventsFromHtml(html, school, startDateStr, endDateStr);
+        const total = Object.values(schoolFields).reduce(
           (sum, dates) => sum + Object.values(dates).reduce((inner, rows) => inner + rows.length, 0),
           0,
         );
         console.log(`[HS] ${school.name}: ${total} home turf events`);
 
-        for (const [fieldId, dates] of Object.entries(eventsByField)) {
+        for (const [fieldId, dates] of Object.entries(schoolFields)) {
           byField[fieldId] = dates;
         }
         const healthRow = {
-          ok: sourceEventCount > 0,
+          ok: rowsObserved > 0,
           provider: school.name.toLowerCase(),
-          message: sourceEventCount > 0
-            ? `${sourceEventCount} schedule rows observed for ${academicYear}`
+          message: rowsObserved > 0
+            ? `${rowsObserved} schedule rows observed for ${academicYear}`
             : `${school.name} schedule loaded but no event rows were detected`,
           eventCount: total,
         };
@@ -149,6 +189,9 @@ export async function fetchHighSchoolEvents(startDateStr, endDateStr) {
           message: err.message,
           eventCount: 0,
         };
+        if (school.name === 'Westfield') {
+          health['westfield-hs-stadium'] = health[school.fieldId];
+        }
       }
     }
   } finally {
