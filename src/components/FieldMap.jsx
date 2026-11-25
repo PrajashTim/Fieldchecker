@@ -21,6 +21,15 @@ function pinLabel(field) {
 }
 
 const SUBFIELD_ZOOM = 15;
+const PHONE_QUERY = '(max-width: 860px)';
+const PEEK_HEIGHT = 112;
+
+/** On phones the sheet covers the bottom of the map; shift the view so a point lands in the visible part. */
+function visibleCenter(map, latlng, zoom, coveredPx) {
+  if (!coveredPx) return latlng;
+  const point = map.project(latlng, zoom).add([0, coveredPx / 2]);
+  return map.unproject(point, zoom);
+}
 
 function pinIcon(field, open, isRec, isSelected) {
   const classes = [
@@ -70,8 +79,84 @@ const FieldMap = ({
   const recommendationRef = useRef(recommendation?.id);
   const [selectedId, setSelectedId] = useState(selectedRef.current);
   const [showDaySchedule, setShowDaySchedule] = useState(false);
-  const [expanded, setExpanded] = useState(false);
   const sheetRef = useRef(null);
+  const areaRef = useRef(null);
+  const dragRef = useRef(null);
+  const [isPhone, setIsPhone] = useState(() => window.matchMedia?.(PHONE_QUERY).matches ?? false);
+  const [areaH, setAreaH] = useState(0);
+  const [snap, setSnap] = useState('mid');
+  const [dragH, setDragH] = useState(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia?.(PHONE_QUERY);
+    if (!mq) return undefined;
+    const onChange = () => setIsPhone(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  useEffect(() => {
+    const el = areaRef.current;
+    if (!el || typeof ResizeObserver === 'undefined') return undefined;
+    const ro = new ResizeObserver(([entry]) => setAreaH(entry.contentRect.height));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const snapHeights = {
+    peek: PEEK_HEIGHT,
+    mid: Math.round(Math.max(areaH * 0.5, PEEK_HEIGHT + 120)),
+    full: Math.round(Math.max(areaH - 44, PEEK_HEIGHT + 200)),
+  };
+
+  const coveredPx = () => (isPhone ? (dragH ?? snapHeights[snap]) : 0);
+
+  const onDragStart = (event) => {
+    if (!isPhone || (event.pointerType === 'mouse' && event.button !== 0)) return;
+    dragRef.current = {
+      startY: event.clientY,
+      startH: dragH ?? snapHeights[snap],
+      lastY: event.clientY,
+      lastT: performance.now(),
+      velocity: 0,
+      moved: false,
+    };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+  };
+
+  const onDragMove = (event) => {
+    const drag = dragRef.current;
+    if (!drag) return;
+    const dy = drag.startY - event.clientY;
+    if (!drag.moved && Math.abs(dy) < 5) return;
+    drag.moved = true;
+    const now = performance.now();
+    drag.velocity = (drag.lastY - event.clientY) / Math.max(now - drag.lastT, 1);
+    drag.lastY = event.clientY;
+    drag.lastT = now;
+    setDragH(Math.min(Math.max(drag.startH + dy, PEEK_HEIGHT - 24), snapHeights.full));
+  };
+
+  const onDragEnd = () => {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (!drag) return;
+    const order = ['peek', 'mid', 'full'];
+    if (!drag.moved) {
+      // A tap on the handle steps the sheet: peek → mid → full → peek.
+      setSnap(current => order[(order.indexOf(current) + 1) % order.length]);
+      return;
+    }
+    const height = dragH ?? drag.startH;
+    let target;
+    if (drag.velocity > 0.45) target = order.find(key => snapHeights[key] > height + 10) || 'full';
+    else if (drag.velocity < -0.45) target = [...order].reverse().find(key => snapHeights[key] < height - 10) || 'peek';
+    else target = order.reduce((best, key) => (
+      Math.abs(snapHeights[key] - height) < Math.abs(snapHeights[best] - height) ? key : best
+    ), 'mid');
+    setSnap(target);
+    setDragH(null);
+  };
 
   recommendationRef.current = recommendation?.id;
 
@@ -90,11 +175,16 @@ const FieldMap = ({
     const start = fields.find(field => field.id === recommendation?.id) || fields[0];
     const origin = start ? coordsForField(start, fields) : CHANTILLY;
     const map = L.map(mapEl.current, {
-      zoomControl: true,
+      zoomControl: false,
       scrollWheelZoom: true,
       dragging: true,
       tap: true,
     }).setView([origin.lat, origin.lng], 12);
+    if (window.matchMedia?.(PHONE_QUERY).matches) {
+      const covered = Math.max(mapEl.current.clientHeight * 0.5, PEEK_HEIGHT + 120);
+      map.setView(visibleCenter(map, L.latLng(origin.lat, origin.lng), 12, covered), 12, { animate: false });
+    }
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap',
@@ -185,15 +275,20 @@ const FieldMap = ({
     selectField(start.id);
     const map = mapRef.current;
     const origin = coordsForField(start, fields);
-    map?.flyTo([origin.lat, origin.lng], 13, { duration: 0.45 });
+    if (map) map.flyTo(visibleCenter(map, L.latLng(origin.lat, origin.lng), 13, coveredPx()), 13, { duration: 0.45 });
   };
 
   const focusField = (field) => {
     selectField(field.id);
     const map = mapRef.current;
     const origin = coordsForField(field, fields);
-    map?.flyTo([origin.lat, origin.lng], Math.max(map.getZoom(), 14), { duration: 0.45 });
+    if (map) {
+      const zoom = Math.max(map.getZoom(), 14);
+      const covered = isPhone ? snapHeights[snap === 'full' ? 'mid' : snap] : 0;
+      map.flyTo(visibleCenter(map, L.latLng(origin.lat, origin.lng), zoom, covered), zoom, { duration: 0.45 });
+    }
     sheetRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    if (snap === 'full') setSnap('mid');
   };
 
   const selected = fields.find(field => field.id === selectedId) || null;
@@ -208,37 +303,49 @@ const FieldMap = ({
   const conflicts = selected ? overlappingEvents(selected.events, pickupMinutes) : [];
 
   return (
-    <div className="simple-map">
+    <div
+      className="simple-map"
+      ref={areaRef}
+      style={isPhone && selected ? { '--sheet-h': `${dragH ?? snapHeights[snap]}px` } : undefined}
+    >
       <div className="simple-map-stage">
         <div ref={mapEl} className="simple-map-canvas" role="application" aria-label="Field map" />
         <button type="button" className="map-recenter" onClick={showTopPick}><IconTarget size={14} /> Top pick</button>
       </div>
       {selected && (
         <aside
-          ref={sheetRef}
-          className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}${expanded ? ' is-expanded' : ''}`}
+          className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}${isPhone ? ` snap-${dragH != null ? 'drag' : snap}` : ''}${dragH != null ? ' is-dragging' : ''}`}
+          style={isPhone ? { height: dragH ?? snapHeights[snap] } : undefined}
         >
-          <button
-            type="button"
-            className="sheet-grip"
-            onClick={() => setExpanded(v => !v)}
-            aria-label={expanded ? 'Shrink field list' : 'Expand field list'}
-            aria-expanded={expanded}
+          <div
+            className="sheet-drag"
+            onPointerDown={onDragStart}
+            onPointerMove={onDragMove}
+            onPointerUp={onDragEnd}
+            onPointerCancel={onDragEnd}
           >
-            <span />
-          </button>
-          <div className="sheet-head">
-            <div>
-              <p className="simple-map-kicker">
-                {recommendation?.id === selected.id ? <><IconStar size={12} /> Top pick</> : <><IconPin size={12} /> {selected.location}</>}
-              </p>
-              <h2>{selected.name}</h2>
-              {selected.subfield && <p className="sheet-sub">{selected.subfield}</p>}
+            <button
+              type="button"
+              className="sheet-grip"
+              aria-label={snap === 'full' ? 'Shrink panel' : 'Expand panel'}
+              onClick={event => event.preventDefault()}
+            >
+              <span />
+            </button>
+            <div className="sheet-head">
+              <div>
+                <p className="simple-map-kicker">
+                  {recommendation?.id === selected.id ? <><IconStar size={12} /> Top pick</> : <><IconPin size={12} /> {selected.location}</>}
+                </p>
+                <h2>{selected.name}</h2>
+                {selected.subfield && <p className="sheet-sub">{selected.subfield}</p>}
+              </div>
+              <span className={`status-pill ${selected.overlapsPickup ? 'is-busy' : 'is-open'}`}>
+                {selected.overlapsPickup ? 'Busy' : 'Free'} · {pickupLabel}
+              </span>
             </div>
-            <span className={`status-pill ${selected.overlapsPickup ? 'is-busy' : 'is-open'}`}>
-              {selected.overlapsPickup ? 'Busy' : 'Free'} · {pickupLabel}
-            </span>
           </div>
+          <div className="sheet-body" ref={sheetRef}>
           <DayTimeline events={selected.events} pickupMinutes={pickupMinutes} busy={selected.overlapsPickup} showLabels />
           {selected.overlapsPickup && conflicts.length > 0 && (
             <ul className="sheet-conflicts">
@@ -303,6 +410,7 @@ const FieldMap = ({
                 </li>
               ))}
             </ul>
+          </div>
           </div>
         </aside>
       )}

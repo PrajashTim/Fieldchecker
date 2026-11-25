@@ -1160,20 +1160,32 @@
   position: absolute;
   left: 1rem;
   bottom: 1rem;
-  z-index: 700;
+  z-index: 1100;
   width: min(23rem, calc(100% - 2rem));
   max-height: calc(100% - 2rem);
-  overflow: auto;
-  padding: 1rem 1.1rem 1.1rem;
+  overflow: hidden;
+  padding: 1rem 1.1rem 0;
   border-radius: var(--radius);
-  background: rgba(17, 26, 23, 0.96);
+  background: #111a17;
   border: 1px solid var(--line-2);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  display: grid;
-  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .sheet-grip { display: none; }
+
+.sheet-drag { flex: 0 0 auto; padding-bottom: 0.75rem; }
+
+.sheet-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding-bottom: 1.1rem;
+}
 
 .sheet-list {
   margin-top: 0.25rem;
@@ -1342,55 +1354,66 @@
   .map-page-bar .pickup-controls { flex-direction: column; align-items: stretch; }
   .map-legend { display: none; }
 
-  .simple-map { display: flex; flex-direction: column; }
-
-  .simple-map-stage {
-    position: relative;
-    inset: auto;
-    flex: 1 1 auto;
-    min-height: 9rem;
-  }
-
+  /* Map fills the area; the field panel is a draggable bottom sheet on top of it. */
   .simple-map-sheet {
-    position: relative;
-    left: auto;
-    bottom: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    max-height: 46dvh;
-    padding: 0.4rem 1rem 1rem;
-    border-radius: var(--radius) var(--radius) 0 0;
+    max-height: none;
+    padding: 0;
+    gap: 0;
+    border-radius: 20px 20px 0 0;
     border-bottom: 0;
-    gap: 0.6rem;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.55);
+    z-index: 1100;
+    transition: height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: height;
   }
 
-  .simple-map-sheet {
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
-    transition: max-height 0.25s ease;
+  .simple-map-sheet.is-dragging { transition: none; }
+
+  .sheet-drag {
+    flex: 0 0 auto;
+    padding: 0 1rem 0.7rem;
+    touch-action: none;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
-  .simple-map-sheet.is-expanded { max-height: 78dvh; }
+  .is-dragging .sheet-drag { cursor: grabbing; }
 
   .sheet-grip {
-    position: sticky;
-    top: -0.4rem;
-    z-index: 2;
     display: grid;
     place-items: center;
-    justify-self: stretch;
-    height: 22px;
-    margin: -0.4rem -1rem 0;
+    width: 100%;
+    height: 24px;
     border: 0;
-    background: rgba(17, 26, 23, 0.98);
-    cursor: pointer;
+    background: transparent;
+    cursor: inherit;
   }
 
   .sheet-grip span {
-    width: 42px;
+    width: 44px;
     height: 5px;
     border-radius: 999px;
-    background: var(--line-2);
+    background: rgba(255, 255, 255, 0.28);
+  }
+
+  .sheet-body {
+    padding: 0 1rem 1rem;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .snap-peek .sheet-body { overflow: hidden; visibility: hidden; }
+
+  .simple-map .map-recenter { top: 0.6rem; right: 0.6rem; }
+
+  .simple-map-canvas .leaflet-bottom {
+    bottom: var(--sheet-h, 0px);
+    transition: bottom 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 }
 
