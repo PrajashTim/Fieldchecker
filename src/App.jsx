@@ -7,10 +7,15 @@ import mockData from './data/mockState.json';
 import { DEFAULT_PICKUP_MINUTES } from './lib/pickup';
 import './App.css';
 
+const PHONE_QUERY = '(max-width: 860px)';
+
 function pageFromHash() {
-  if (window.location.hash === '#sources') return 'sources';
-  if (window.location.hash === '#map') return 'map';
-  return 'home';
+  const { hash } = window.location;
+  if (hash === '#sources') return 'sources';
+  if (hash === '#map') return 'map';
+  if (hash === '#fields') return 'home';
+  // No tab picked yet: phones start on the map, desktop on the field list.
+  return window.matchMedia?.(PHONE_QUERY).matches ? 'map' : 'home';
 }
 
 function defaultPickupDate() {
@@ -26,7 +31,10 @@ function App() {
   const [filterTurf, setFilterTurf] = useState(true);
 
   useEffect(() => {
-    const onHash = () => setPage(pageFromHash());
+    const onHash = () => {
+      setPage(pageFromHash());
+      window.scrollTo(0, 0);
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);

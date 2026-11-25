@@ -1,5 +1,6 @@
 import React from 'react';
 import mockData from '../data/mockState.json';
+import { IconAlert, IconCheck, IconExternal, IconInfo, IconX } from './Icons';
 
 const EXPECTED_GAPS = new Set(['fairfax-county-permits']);
 
@@ -16,29 +17,36 @@ const SourcesPage = () => {
   const nvasaUnmapped = sourceHealth.nvasa?.unmappedLocations || [];
 
   return (
-    <main className="container sources-page">
-      <h2>Sources and methodology</h2>
-      <p className="dashboard-subtitle">
-        Pitch Scout reports known conflicts from public schedules. It does not reserve fields.
+    <main className="page container sources-page">
+      <section className="hero">
+        <h1>How it works</h1>
+      </section>
+      <div className="how-steps">
+        <div><span className="step-num">1</span><p><b>We read public schedules</b> from leagues, clubs, schools and county permits three times a day.</p></div>
+        <div><span className="step-num">2</span><p><b>We match games to exact fields</b> and pad each one with 30 min of warm-up time.</p></div>
+        <div><span className="step-num">3</span><p><b>You pick a time.</b> If nothing overlaps your 2-hour game, the field shows as free.</p></div>
+      </div>
+      <p className="sources-intro">
+        Field Check reports known conflicts from public schedules. It does not reserve fields.
         A missing event is not proof a field is free. Snapshot last built {new Date(lastUpdated).toLocaleString()}.
         {' '}iOS and other apps can read the same snapshot at <a href="/api">/api</a> and source health at <a href="/api/status">/api/status</a>.
       </p>
 
       <section className="sources-section">
-        <h3>What we check automatically</h3>
+        <h3><span className="h-icon is-ok"><IconCheck size={14} strokeWidth={3} /></span> Checked automatically <span className="h-count">{connected.length}</span></h3>
         <ul className="sources-list">
           {connected.map(source => (
             <li key={source.provider}>
               <strong>{labelFor(source)}</strong>
               <span>{source.message}</span>
-              {source.sourceUrl ? <a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">Open source</a> : null}
+              {source.sourceUrl ? <a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">Open source <IconExternal size={11} /></a> : null}
             </li>
           ))}
         </ul>
       </section>
 
       <section className="sources-section">
-        <h3>Known gaps</h3>
+        <h3><span className="h-icon is-gap"><IconInfo size={14} /></span> Known gaps</h3>
         <ul className="sources-list">
           {expected.map(source => (
             <li key={source.provider}>
@@ -67,35 +75,35 @@ const SourcesPage = () => {
 
       {(fxaUnmapped.length > 0 || nvslUnmapped.length > 0 || fwsaUnmapped.length > 0 || syaUnmapped.length > 0 || fslUnmapped.length > 0 || nvasaUnmapped.length > 0) && (
         <section className="sources-section">
-          <h3>Public games outside this catalog</h3>
+          <h3><span className="h-icon"><IconInfo size={14} /></span> Games at venues we don’t track</h3>
           <p>
             These venues appeared on connected public schedules. They are not mapped onto a nearby catalog field.
             Park-level names such as “Braddock Park” without 7 / 7A / 7B stay unmapped on purpose.
           </p>
           {fxaUnmapped.length > 0 && (
-            <p><strong>FXA ({fxaUnmapped.length}):</strong> {fxaUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>FXA</strong> <span className='h-count'>{fxaUnmapped.length}</span></summary><p>{fxaUnmapped.join(' · ')}</p></details>
           )}
           {nvslUnmapped.length > 0 && (
-            <p><strong>NVSL ({nvslUnmapped.length}):</strong> {nvslUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>NVSL</strong> <span className='h-count'>{nvslUnmapped.length}</span></summary><p>{nvslUnmapped.join(' · ')}</p></details>
           )}
           {fwsaUnmapped.length > 0 && (
-            <p><strong>FWSA ({fwsaUnmapped.length}):</strong> {fwsaUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>FWSA</strong> <span className='h-count'>{fwsaUnmapped.length}</span></summary><p>{fwsaUnmapped.join(' · ')}</p></details>
           )}
           {syaUnmapped.length > 0 && (
-            <p><strong>SYA ({syaUnmapped.length}):</strong> {syaUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>SYA</strong> <span className='h-count'>{syaUnmapped.length}</span></summary><p>{syaUnmapped.join(' · ')}</p></details>
           )}
           {fslUnmapped.length > 0 && (
-            <p><strong>FSL ({fslUnmapped.length}):</strong> {fslUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>FSL</strong> <span className='h-count'>{fslUnmapped.length}</span></summary><p>{fslUnmapped.join(' · ')}</p></details>
           )}
           {nvasaUnmapped.length > 0 && (
-            <p><strong>NVASA ({nvasaUnmapped.length}):</strong> {nvasaUnmapped.join('; ')}</p>
+            <details className='unmapped'><summary><strong>NVASA</strong> <span className='h-count'>{nvasaUnmapped.length}</span></summary><p>{nvasaUnmapped.join(' · ')}</p></details>
           )}
         </section>
       )}
 
       {failed.length > 0 && (
         <section className="sources-section">
-          <h3>Connectors that failed this snapshot</h3>
+          <h3><span className="h-icon is-bad"><IconAlert size={14} /></span> Didn’t refresh this time</h3>
           <ul className="sources-list">
             {failed.map(source => (
               <li key={source.provider}>
@@ -108,7 +116,7 @@ const SourcesPage = () => {
       )}
 
       <section className="sources-section">
-        <h3>How status is labeled</h3>
+        <h3><span className="h-icon"><IconX size={14} /></span> What “free” and “busy” mean</h3>
         <p>
           Known conflict means a connected public schedule overlaps the selected time.
           Open means no connected-source conflict was found at that time. Other events that day can still appear on the card.

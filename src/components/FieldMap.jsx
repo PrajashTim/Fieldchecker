@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import '../vendor/leaflet.css';
 
-import { DirectionsLink } from './DirectionsLink';
+import { mapsDirectionsUrl } from './DirectionsLink';
+import DayTimeline from './DayTimeline';
+import { IconCheck, IconChevron, IconNav, IconPin, IconStar, IconTarget, IconX } from './Icons';
 import { coordsForField, CHANTILLY, PARK_COORDS } from '../data/fieldCoords';
-import { overlappingEvents, PERMIT_DISCLAIMER } from '../lib/pickup';
+import { hubRank, overlappingEvents } from '../lib/pickup';
 
 function escapeHtml(value = '') {
   return String(value)
@@ -68,6 +70,8 @@ const FieldMap = ({
   const recommendationRef = useRef(recommendation?.id);
   const [selectedId, setSelectedId] = useState(selectedRef.current);
   const [showDaySchedule, setShowDaySchedule] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const sheetRef = useRef(null);
 
   recommendationRef.current = recommendation?.id;
 
@@ -90,7 +94,7 @@ const FieldMap = ({
       scrollWheelZoom: true,
       dragging: true,
       tap: true,
-    }).setView([origin.lat, origin.lng], 14);
+    }).setView([origin.lat, origin.lng], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap',
@@ -181,69 +185,125 @@ const FieldMap = ({
     selectField(start.id);
     const map = mapRef.current;
     const origin = coordsForField(start, fields);
-    map?.flyTo([origin.lat, origin.lng], 14, { duration: 0.45 });
+    map?.flyTo([origin.lat, origin.lng], 13, { duration: 0.45 });
+  };
+
+  const focusField = (field) => {
+    selectField(field.id);
+    const map = mapRef.current;
+    const origin = coordsForField(field, fields);
+    map?.flyTo([origin.lat, origin.lng], Math.max(map.getZoom(), 14), { duration: 0.45 });
+    sheetRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const selected = fields.find(field => field.id === selectedId) || null;
+  const others = fields
+    .filter(field => field.id !== selectedId)
+    .sort((a, b) => {
+      const [ah, at] = hubRank(a.id);
+      const [bh, bt] = hubRank(b.id);
+      return Number(a.overlapsPickup) - Number(b.overlapsPickup) || ah - bh || at - bt;
+    });
+  const freeCount = fields.filter(field => !field.overlapsPickup).length;
   const conflicts = selected ? overlappingEvents(selected.events, pickupMinutes) : [];
 
   return (
     <div className="simple-map">
       <div className="simple-map-stage">
         <div ref={mapEl} className="simple-map-canvas" role="application" aria-label="Field map" />
-        <button type="button" className="map-recenter" onClick={showTopPick}>Top pick</button>
+        <button type="button" className="map-recenter" onClick={showTopPick}><IconTarget size={14} /> Top pick</button>
       </div>
       {selected && (
-        <aside className="simple-map-sheet">
-          <p className="simple-map-kicker">{recommendation?.id === selected.id ? 'Top pick' : selected.location}</p>
-          <h2>
-            {selected.name}
-            {selected.subfield ? ` · ${selected.subfield}` : ''}
-          </h2>
-          <p className={selected.overlapsPickup ? 'simple-map-busy' : 'simple-map-open'}>
-            {selected.overlapsPickup ? `Conflict at ${pickupLabel}` : `Open at ${pickupLabel}`}
-          </p>
-          {selected.overlapsPickup ? (
-            <ul>
-              {conflicts.slice(0, 2).map((event, index) => (
-                <li key={event.eventId || index}>{event.time} {event.title}</li>
-              ))}
-            </ul>
-          ) : (
-            <p className="simple-map-note">{PERMIT_DISCLAIMER}</p>
-          )}
-          <div className="simple-map-actions">
-            <DirectionsLink field={selected} siblings={fields} />
-            <span className="simple-map-date">{dateLabel}</span>
-          </div>
+        <aside
+          ref={sheetRef}
+          className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}${expanded ? ' is-expanded' : ''}`}
+        >
           <button
             type="button"
-            className="map-schedule-toggle"
-            onClick={() => setShowDaySchedule(open => !open)}
-            aria-expanded={showDaySchedule}
+            className="sheet-grip"
+            onClick={() => setExpanded(v => !v)}
+            aria-label={expanded ? 'Shrink field list' : 'Expand field list'}
+            aria-expanded={expanded}
           >
-            {showDaySchedule ? 'Hide full day schedule' : 'Show full day schedule'}
+            <span />
           </button>
+          <div className="sheet-head">
+            <div>
+              <p className="simple-map-kicker">
+                {recommendation?.id === selected.id ? <><IconStar size={12} /> Top pick</> : <><IconPin size={12} /> {selected.location}</>}
+              </p>
+              <h2>{selected.name}</h2>
+              {selected.subfield && <p className="sheet-sub">{selected.subfield}</p>}
+            </div>
+            <span className={`status-pill ${selected.overlapsPickup ? 'is-busy' : 'is-open'}`}>
+              {selected.overlapsPickup ? 'Busy' : 'Free'} · {pickupLabel}
+            </span>
+          </div>
+          <DayTimeline events={selected.events} pickupMinutes={pickupMinutes} busy={selected.overlapsPickup} showLabels />
+          {selected.overlapsPickup && conflicts.length > 0 && (
+            <ul className="sheet-conflicts">
+              {conflicts.slice(0, 2).map((event, index) => (
+                <li key={event.eventId || index}><b>{event.time}</b> {event.title}</li>
+              ))}
+            </ul>
+          )}
+          <div className="simple-map-actions">
+            <a className="btn btn-primary btn-sm" href={mapsDirectionsUrl(selected, fields)} target="_blank" rel="noopener noreferrer">
+              <IconNav size={14} /> Directions
+            </a>
+            <button
+              type="button"
+              className="btn btn-ghost btn-sm"
+              onClick={() => setShowDaySchedule(open => !open)}
+              aria-expanded={showDaySchedule}
+            >
+              {showDaySchedule ? 'Hide schedule' : `Day schedule (${selected.events?.length || 0})`}
+            </button>
+          </div>
           {showDaySchedule && (
             <div className="map-day-schedule">
               {selected.events?.length > 0 ? (
-                <ul className="schedule-list">
+                <ul className="event-list">
                   {selected.events.map((evt, idx) => (
-                    <li key={evt.eventId || idx} className="schedule-item">
-                      <span className="schedule-time">{evt.time}{evt.status === 'rescheduled' ? ' · rescheduled' : ''}</span>
-                      <span className="schedule-event">{evt.title}</span>
-                      <span className="schedule-meta">
-                        {evt.source ? <span className="source-chip">{evt.source}</span> : null}
-                        {evt.precision === 'exact_subfield' ? <span>exact field</span> : evt.precision ? <span>{evt.precision}</span> : null}
-                      </span>
+                    <li key={evt.eventId || idx} className={conflicts.includes(evt) ? 'is-hit' : undefined}>
+                      <span className="event-time">{evt.time}{evt.status === 'rescheduled' ? ' · moved' : ''}</span>
+                      <span className="event-title">{evt.title}</span>
+                      {evt.source && <span className="event-meta"><span className="source-chip">{evt.source}</span></span>}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="simple-map-note">No public-schedule events on {dateLabel}.</p>
+                <p className="event-empty">Nothing on the public schedules for {dateLabel}.</p>
               )}
             </div>
           )}
+
+          <div className="sheet-list">
+            <p className="sheet-list-head">
+              All fields <span><b className="txt-open">{freeCount} free</b> · <b className="txt-busy">{fields.length - freeCount} busy</b></span>
+            </p>
+            <ul>
+              {others.map(field => (
+                <li key={field.id}>
+                  <button
+                    type="button"
+                    className={`sheet-row${field.overlapsPickup ? ' is-busy' : ' is-open'}`}
+                    onClick={() => focusField(field)}
+                  >
+                    <span className="status-icon">
+                      {field.overlapsPickup ? <IconX size={12} strokeWidth={3} /> : <IconCheck size={12} strokeWidth={3} />}
+                    </span>
+                    <span className="sheet-row-text">
+                      <span className="sheet-row-name">{field.name}</span>
+                      <span className="sheet-row-sub">{field.subfield}{field.id === recommendation?.id ? ' · Top pick' : ''}</span>
+                    </span>
+                    <DayTimeline events={field.events} pickupMinutes={pickupMinutes} busy={field.overlapsPickup} mini />
+                    <IconChevron size={14} className="sheet-row-go" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </aside>
       )}
     </div>
