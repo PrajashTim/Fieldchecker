@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import '../vendor/leaflet.css';
 
-import { DirectionsLink } from './DirectionsLink';
+import { mapsDirectionsUrl } from './DirectionsLink';
+import DayTimeline from './DayTimeline';
+import { IconNav, IconPin, IconStar, IconTarget } from './Icons';
 import { coordsForField, CHANTILLY, PARK_COORDS } from '../data/fieldCoords';
-import { overlappingEvents, PERMIT_DISCLAIMER } from '../lib/pickup';
+import { overlappingEvents } from '../lib/pickup';
 
 function escapeHtml(value = '') {
   return String(value)
@@ -90,7 +92,7 @@ const FieldMap = ({
       scrollWheelZoom: true,
       dragging: true,
       tap: true,
-    }).setView([origin.lat, origin.lng], 14);
+    }).setView([origin.lat, origin.lng], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap',
@@ -181,7 +183,7 @@ const FieldMap = ({
     selectField(start.id);
     const map = mapRef.current;
     const origin = coordsForField(start, fields);
-    map?.flyTo([origin.lat, origin.lng], 14, { duration: 0.45 });
+    map?.flyTo([origin.lat, origin.lng], 13, { duration: 0.45 });
   };
 
   const selected = fields.find(field => field.id === selectedId) || null;
@@ -191,56 +193,58 @@ const FieldMap = ({
     <div className="simple-map">
       <div className="simple-map-stage">
         <div ref={mapEl} className="simple-map-canvas" role="application" aria-label="Field map" />
-        <button type="button" className="map-recenter" onClick={showTopPick}>Top pick</button>
+        <button type="button" className="map-recenter" onClick={showTopPick}><IconTarget size={14} /> Top pick</button>
       </div>
       {selected && (
-        <aside className="simple-map-sheet">
-          <p className="simple-map-kicker">{recommendation?.id === selected.id ? 'Top pick' : selected.location}</p>
-          <h2>
-            {selected.name}
-            {selected.subfield ? ` · ${selected.subfield}` : ''}
-          </h2>
-          <p className={selected.overlapsPickup ? 'simple-map-busy' : 'simple-map-open'}>
-            {selected.overlapsPickup ? `Conflict at ${pickupLabel}` : `Open at ${pickupLabel}`}
-          </p>
-          {selected.overlapsPickup ? (
-            <ul>
+        <aside className={`simple-map-sheet${selected.overlapsPickup ? ' is-busy' : ' is-open'}`}>
+          <div className="sheet-grip" aria-hidden="true" />
+          <div className="sheet-head">
+            <div>
+              <p className="simple-map-kicker">
+                {recommendation?.id === selected.id ? <><IconStar size={12} /> Top pick</> : <><IconPin size={12} /> {selected.location}</>}
+              </p>
+              <h2>{selected.name}</h2>
+              {selected.subfield && <p className="sheet-sub">{selected.subfield}</p>}
+            </div>
+            <span className={`status-pill ${selected.overlapsPickup ? 'is-busy' : 'is-open'}`}>
+              {selected.overlapsPickup ? 'Busy' : 'Free'} · {pickupLabel}
+            </span>
+          </div>
+          <DayTimeline events={selected.events} pickupMinutes={pickupMinutes} busy={selected.overlapsPickup} showLabels />
+          {selected.overlapsPickup && conflicts.length > 0 && (
+            <ul className="sheet-conflicts">
               {conflicts.slice(0, 2).map((event, index) => (
-                <li key={event.eventId || index}>{event.time} {event.title}</li>
+                <li key={event.eventId || index}><b>{event.time}</b> {event.title}</li>
               ))}
             </ul>
-          ) : (
-            <p className="simple-map-note">{PERMIT_DISCLAIMER}</p>
           )}
           <div className="simple-map-actions">
-            <DirectionsLink field={selected} siblings={fields} />
-            <span className="simple-map-date">{dateLabel}</span>
+            <a className="btn btn-primary btn-sm" href={mapsDirectionsUrl(selected, fields)} target="_blank" rel="noopener noreferrer">
+              <IconNav size={14} /> Directions
+            </a>
+            <button
+              type="button"
+              className="btn btn-ghost btn-sm"
+              onClick={() => setShowDaySchedule(open => !open)}
+              aria-expanded={showDaySchedule}
+            >
+              {showDaySchedule ? 'Hide schedule' : `Day schedule (${selected.events?.length || 0})`}
+            </button>
           </div>
-          <button
-            type="button"
-            className="map-schedule-toggle"
-            onClick={() => setShowDaySchedule(open => !open)}
-            aria-expanded={showDaySchedule}
-          >
-            {showDaySchedule ? 'Hide full day schedule' : 'Show full day schedule'}
-          </button>
           {showDaySchedule && (
             <div className="map-day-schedule">
               {selected.events?.length > 0 ? (
-                <ul className="schedule-list">
+                <ul className="event-list">
                   {selected.events.map((evt, idx) => (
-                    <li key={evt.eventId || idx} className="schedule-item">
-                      <span className="schedule-time">{evt.time}{evt.status === 'rescheduled' ? ' · rescheduled' : ''}</span>
-                      <span className="schedule-event">{evt.title}</span>
-                      <span className="schedule-meta">
-                        {evt.source ? <span className="source-chip">{evt.source}</span> : null}
-                        {evt.precision === 'exact_subfield' ? <span>exact field</span> : evt.precision ? <span>{evt.precision}</span> : null}
-                      </span>
+                    <li key={evt.eventId || idx} className={conflicts.includes(evt) ? 'is-hit' : undefined}>
+                      <span className="event-time">{evt.time}{evt.status === 'rescheduled' ? ' · moved' : ''}</span>
+                      <span className="event-title">{evt.title}</span>
+                      {evt.source && <span className="event-meta"><span className="source-chip">{evt.source}</span></span>}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="simple-map-note">No public-schedule events on {dateLabel}.</p>
+                <p className="event-empty">Nothing on the public schedules for {dateLabel}.</p>
               )}
             </div>
           )}

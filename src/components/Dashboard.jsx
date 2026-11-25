@@ -1,189 +1,192 @@
-import React from 'react';
-import FieldCard from './FieldCard';
-import { DirectionsLink } from './DirectionsLink';
+import React, { useMemo, useState } from 'react';
+import ParkCard from './ParkCard';
+import PickupControls from './PickupControls';
+import DayTimeline from './DayTimeline';
+import { mapsDirectionsUrl } from './DirectionsLink';
 import mockData from '../data/mockState.json';
 import {
-  DEFAULT_PICKUP_MINUTES,
-  MORNING_PICKUP_MINUTES,
-  PERMIT_DISCLAIMER,
-  TIME_OPTIONS,
+  PICKUP_DURATION_MINUTES,
   formatClock,
   formatFriendlyDate,
+  groupByPark,
   hubRank,
+  isPermitChecked,
   overlapsPickupWindow,
   pickBestField,
-  turfFilterLabel,
 } from '../lib/pickup';
+import {
+  IconAlert, IconInfo, IconMap, IconNav, IconShield, IconStar, PitchArt,
+} from './Icons';
 
-function connectedSubtitle(sourceHealth) {
-  const named = [
-    sourceHealth.fxa?.ok && 'FXA',
-    sourceHealth.ncsl?.eventCount > 0 && 'NCSL/Demosphere',
-    sourceHealth.sya?.eventCount > 0 && 'SYA',
-    sourceHealth.nvsl?.eventCount > 0 && 'NVSL',
-    sourceHealth.fsl?.eventCount > 0 && 'FSL',
-    sourceHealth.fwsa?.eventCount > 0 && 'FWSA',
-    sourceHealth.nvasa?.eventCount > 0 && 'NVASA',
-    sourceHealth.loudounPrcs?.ok && 'Loudoun PRCS permits',
-    sourceHealth.fcpsCommunityUse?.ok && 'FCPS community use',
-  ].filter(Boolean);
-  const prefix = named.length
-    ? `Public schedules from ${named.join(', ')}, and high-school athletics.`
-    : 'Public schedules from FXA and high-school athletics.';
-  return `${prefix} Open still cannot confirm private permits.`;
+const SOURCE_NAMES = {
+  fxa: 'FXA', ncsl: 'NCSL', sya: 'SYA', nvsl: 'NVSL', fsl: 'FSL', fwsa: 'FWSA', nvasa: 'NVASA',
+  loudounPrcs: 'Loudoun permits', fcpsCommunityUse: 'FCPS permits',
+};
+
+function connectedSources(sourceHealth) {
+  return Object.entries(SOURCE_NAMES)
+    .filter(([key]) => {
+      const s = sourceHealth[key];
+      return key === 'fxa' || key === 'loudounPrcs' || key === 'fcpsCommunityUse' ? s?.ok : s?.eventCount > 0;
+    })
+    .map(([, name]) => name);
 }
+
+const FILTERS = [
+  { key: 'all', label: 'All' },
+  { key: 'open', label: 'Free' },
+  { key: 'busy', label: 'Busy' },
+];
 
 const Dashboard = ({ pickup }) => {
   const { schedule, sourceHealth = {} } = mockData;
-  const availableDates = Object.keys(schedule).sort();
   const todayStr = new Date().toLocaleDateString('en-CA');
-  const { selectedDate, setSelectedDate, pickupMinutes, setPickupMinutes, filterTurf, setFilterTurf } = pickup;
+  const { selectedDate, pickupMinutes, filterTurf } = pickup;
+  const [view, setView] = useState('all');
 
-  const filteredDates = availableDates.filter(d => d >= todayStr);
-  const fieldsForDate = schedule[selectedDate] || [];
   const pickupLabel = formatClock(pickupMinutes);
+  const endLabel = formatClock(Math.min(pickupMinutes + PICKUP_DURATION_MINUTES, 24 * 60 - 1));
   const dateLabel = formatFriendlyDate(selectedDate, todayStr);
 
-  const displayedFields = fieldsForDate.filter(field => !filterTurf || field.type.toLowerCase() === 'turf');
-  const openAtPickup = displayedFields.filter(field => !overlapsPickupWindow(field.events, pickupMinutes));
-  const recommendation = pickBestField(openAtPickup);
+  const { fields, recommendation, parks, openCount } = useMemo(() => {
+    const rows = (schedule[selectedDate] || [])
+      .filter(field => !filterTurf || String(field.type).toLowerCase() === 'turf')
+      .map(field => ({ ...field, overlapsPickup: overlapsPickupWindow(field.events, pickupMinutes) }));
+    const open = rows.filter(f => !f.overlapsPickup);
+    const grouped = groupByPark(rows).sort((a, b) => {
+      const aOpen = a.fields.some(f => !f.overlapsPickup) ? 0 : 1;
+      const bOpen = b.fields.some(f => !f.overlapsPickup) ? 0 : 1;
+      return aOpen - bOpen || a.rank[0] - b.rank[0] || a.distance - b.distance;
+    });
+    return { fields: rows, recommendation: pickBestField(open), parks: grouped, openCount: open.length };
+  }, [schedule, selectedDate, pickupMinutes, filterTurf]);
+
+  const visibleParks = parks
+    .map(park => ({
+      ...park,
+      fields: view === 'all' ? park.fields : park.fields.filter(f => (view === 'open' ? !f.overlapsPickup : f.overlapsPickup)),
+    }))
+    .filter(park => park.fields.length);
+
   const unexpectedFailures = Object.values(sourceHealth).filter(source => (
     source && !source.ok && source.provider !== 'fairfax-county-permits'
   ));
-
-  const setPresetTime = (minutes) => {
-    setPickupMinutes(current => (current === minutes ? current : minutes));
-  };
+  const sources = connectedSources(sourceHealth);
 
   const recHub = recommendation ? hubRank(recommendation.id)[0] : null;
   const why = recHub === 0
-    ? 'Chantilly High School is the group midpoint, and it is clear at this time in connected public schedules.'
+    ? 'Our home base, and nothing is booked here.'
     : recHub === 1
-      ? 'Chantilly High School is booked at this time. Sully Highlands Park is the next hub pick.'
-      : recommendation
-        ? 'Chantilly High School and Sully Highlands Park are booked at this time. Next pick is the closest remaining field.'
-        : '';
+      ? 'Chantilly HS is booked, so Sully Highlands is next up.'
+      : 'Chantilly HS and Sully Highlands are both booked. This is the closest free field.';
 
   return (
-    <main className="container dashboard">
-      <div className="dashboard-header">
-        <div>
-          <h2 className="dashboard-title">Check known field conflicts before pickup</h2>
-          <p className="dashboard-subtitle">
-            {connectedSubtitle(sourceHealth)}
-            {' '}<a href="#sources">How we check this</a>
-          </p>
-        </div>
-        
-        <div className="controls-group">
-          <div className="date-picker-wrap">
-            <label htmlFor="scheduleDate">Date</label>
-            <select 
-              id="scheduleDate"
-              className="glass-select"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-            >
-              {filteredDates.map((dateStr) => (
-                <option key={dateStr} value={dateStr}>{formatFriendlyDate(dateStr, todayStr)}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="date-picker-wrap">
-            <label htmlFor="pickupTime">Time</label>
-            <select
-              id="pickupTime"
-              className="glass-select"
-              value={String(pickupMinutes)}
-              onChange={(e) => setPickupMinutes(Number(e.target.value))}
-            >
-              {TIME_OPTIONS.map(option => (
-                <option key={option.value} value={option.value}>{option.label}</option>
-              ))}
-            </select>
-          </div>
-
-          <button
-            type="button"
-            className={`filter-btn ${filterTurf ? 'active' : ''}`}
-            aria-pressed={filterTurf}
-            onClick={() => setFilterTurf(!filterTurf)}
-          >
-            {turfFilterLabel(filterTurf)}
-          </button>
-
-          <button 
-            className={`filter-btn ${pickupMinutes === DEFAULT_PICKUP_MINUTES ? 'active' : ''}`}
-            onClick={() => setPresetTime(DEFAULT_PICKUP_MINUTES)}
-          >
-            ⏱️ 6:30 PM+ Open
-          </button>
-          
-          <button 
-            className={`filter-btn ${pickupMinutes === MORNING_PICKUP_MINUTES ? 'active' : ''}`}
-            onClick={() => setPresetTime(MORNING_PICKUP_MINUTES)}
-          >
-            ☀️ 8:00 AM+ Open
-          </button>
-        </div>
-      </div>
-
-      {unexpectedFailures.length > 0 && (
-        <div className="source-warning" role="status">
-          <strong>A connected schedule feed failed.</strong>
-          <span>
-            {unexpectedFailures.map(source => source.provider).join(', ')} did not update this snapshot. Confirmed conflicts from healthy sources are still shown.
-          </span>
-        </div>
-      )}
-
-      <section className="recommendation" aria-label="Best field available">
-        <p className="recommendation-kicker">Best field available</p>
-        {recommendation ? (
-          <>
-            <h3 className="recommendation-title">
-              {recommendation.name}
-              {recommendation.subfield ? ` · ${recommendation.subfield}` : ''}
-            </h3>
-            <p className="recommendation-when">
-              Open {dateLabel} at {pickupLabel}
-              <DirectionsLink field={recommendation} className="directions-link directions-link-inline" />
-            </p>
-            <p className="recommendation-why">{why}</p>
-            <p className="recommendation-disclaimer">{PERMIT_DISCLAIMER}</p>
-          </>
-        ) : (
-          <p className="recommendation-why">
-            No connected-source opening at {pickupLabel} on {dateLabel}. Try another time.
-          </p>
-        )}
+    <main className="page dashboard">
+      <section className="hero container">
+        <h1>Where are we playing?</h1>
+        <p className="hero-sub">
+          We check league, club, school and permit schedules{sources.length ? ` like ${sources.slice(0, 3).join(', ')}` : ''} so you don’t show up to a field that’s booked.
+          {' '}<a href="#sources">How it works</a>
+        </p>
       </section>
 
-      <div className="fields-grid">
-        {displayedFields.map((field) => (
-          <FieldCard
-            key={field.id}
-            field={field}
-            pickupLabel={pickupLabel}
-            dateLabel={dateLabel}
-            isRecommended={recommendation?.id === field.id}
-            overlapsPickup={overlapsPickupWindow(field.events, pickupMinutes)}
-          />
-        ))}
-      </div>
-      
-      {displayedFields.length === 0 && (
-        <div style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>
-          No fields found matching your filters for this date.
+      <div className="controls-shell">
+        <div className="container">
+          <PickupControls pickup={pickup} />
         </div>
-      )}
+      </div>
 
-      <footer className="site-footer">
-        <p className="footer-disclaimer">
-          Advisory only. Open means no conflict was found in connected schedules. It is not a reservation. FCPS community-use permits are included for Chantilly, Centreville, Oakton, and Westfield turf. Park permits and other private calendars are still missing. The top pick prefers Chantilly High School, then Sully Highlands Park, then the next-closest field.
-        </p>
-      </footer>
+      <div className="container">
+        {unexpectedFailures.length > 0 && (
+          <a className="notice" href="#sources" role="status">
+            <IconAlert size={15} />
+            <span>
+              {unexpectedFailures.map(s => SOURCE_NAMES[s.provider] || s.provider.toUpperCase()).join(', ')} didn’t refresh this time — other sources are still current.
+            </span>
+          </a>
+        )}
+
+        <section className="top-pick" aria-label="Top pick">
+          <PitchArt className="top-pick-art" />
+          {recommendation ? (
+            <>
+              <span className="eyebrow"><IconStar size={13} /> Top pick · {dateLabel.split(' (')[0]}</span>
+              <h2>{recommendation.name}</h2>
+              <p className="top-pick-sub">
+                {recommendation.subfield}
+                {isPermitChecked(recommendation.id) && <span className="mini-badge"><IconShield size={11} /> Permits checked</span>}
+              </p>
+              <div className="top-pick-time">
+                <span className="big-status">Free {pickupLabel} – {endLabel}</span>
+                <DayTimeline events={recommendation.events} pickupMinutes={pickupMinutes} busy={false} showLabels />
+              </div>
+              <p className="top-pick-why">{why}</p>
+              <div className="top-pick-actions">
+                <a className="btn btn-primary" href={mapsDirectionsUrl(recommendation, fields)} target="_blank" rel="noopener noreferrer">
+                  <IconNav size={16} /> Directions
+                </a>
+                <a className="btn btn-ghost" href="#map"><IconMap size={16} /> See on map</a>
+              </div>
+            </>
+          ) : (
+            <>
+              <span className="eyebrow is-busy">No free fields</span>
+              <h2>Everything’s booked at {pickupLabel}</h2>
+              <p className="top-pick-why">Try a different time or include grass fields.</p>
+            </>
+          )}
+        </section>
+
+        <div className="list-head">
+          <div>
+            <h2>All fields</h2>
+            <p><strong className="txt-open">{openCount} free</strong> · <strong className="txt-busy">{fields.length - openCount} busy</strong> at {pickupLabel}</p>
+          </div>
+          <div className="seg seg-sm" role="group" aria-label="Show">
+            {FILTERS.map(f => (
+              <button
+                key={f.key}
+                type="button"
+                className={`seg-btn${view === f.key ? ' is-active' : ''}`}
+                aria-pressed={view === f.key}
+                onClick={() => setView(f.key)}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="legend" aria-hidden="true">
+          <span><i className="lg-window" /> Your 2-hr game</span>
+          <span><i className="lg-booked" /> Booked</span>
+          <span><i className="lg-hit" /> Clashes</span>
+        </div>
+
+        <div className="park-grid">
+          {visibleParks.map(park => (
+            <ParkCard
+              key={park.name}
+              park={park}
+              pickupMinutes={pickupMinutes}
+              pickupLabel={pickupLabel}
+              recommendationId={recommendation?.id}
+            />
+          ))}
+        </div>
+
+        {visibleParks.length === 0 && (
+          <p className="empty">No fields match this filter.</p>
+        )}
+
+        <footer className="site-footer">
+          <IconInfo size={15} />
+          <p>
+            “Free” means no public schedule we track shows a game or practice then — it’s not a reservation.
+            Fairfax park permits, private practices and walk-ons can’t be seen. <a href="#sources">Details</a>
+          </p>
+        </footer>
+      </div>
     </main>
   );
 };

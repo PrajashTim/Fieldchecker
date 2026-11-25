@@ -26,7 +26,10 @@ function App() {
   const [filterTurf, setFilterTurf] = useState(true);
 
   useEffect(() => {
-    const onHash = () => setPage(pageFromHash());
+    const onHash = () => {
+      setPage(pageFromHash());
+      window.scrollTo(0, 0);
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);

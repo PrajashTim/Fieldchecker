@@ -123,3 +123,65 @@ export function pickBestField(fields) {
     return aHub - bHub || aTie - bTie;
   })[0] || null;
 }
+
+export function distanceFor(fieldId) {
+  return DISTANCE_BY_ID[fieldId];
+}
+
+export function isPermitChecked(fieldId) {
+  return FCPS_SCHOOL_FIELD_IDS.has(fieldId);
+}
+
+/** Timeline range drawn on each field row (6 AM – 11 PM). */
+export const TIMELINE_START = 6 * 60;
+export const TIMELINE_END = 23 * 60;
+
+/** Event blocks as minutes from midnight, without the setup buffer, for drawing. */
+export function eventBlocks(events = []) {
+  return events.map(event => {
+    const bounds = eventBounds(event.time);
+    if (!bounds) return { unknown: true, event };
+    return { start: bounds.start + EVENT_SETUP_BUFFER_MINUTES, end: bounds.end, event };
+  });
+}
+
+export function dayChipParts(dateStr, todayStr) {
+  const date = parseLocalDate(dateStr);
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  let top = date.toLocaleDateString('en-US', { weekday: 'short' });
+  if (dateStr === todayStr) top = 'Today';
+  else if (dateStr === tomorrow.toLocaleDateString('en-CA')) top = 'Tmrw';
+  return { top, day: date.getDate(), month: date.toLocaleDateString('en-US', { month: 'short' }) };
+}
+
+export function relativeUpdated(iso) {
+  const ms = Date.now() - new Date(iso).getTime();
+  if (!Number.isFinite(ms)) return '';
+  const mins = Math.round(ms / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.round(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.round(hours / 24)}d ago`;
+}
+
+/** Groups field rows by park, keeping order of best hub rank inside each park. */
+export function groupByPark(fields) {
+  const parks = new Map();
+  fields.forEach(field => {
+    if (!parks.has(field.name)) parks.set(field.name, { name: field.name, location: field.location, fields: [] });
+    parks.get(field.name).fields.push(field);
+  });
+  return [...parks.values()].map(park => {
+    park.fields.sort((a, b) => {
+      const [ah, at] = hubRank(a.id);
+      const [bh, bt] = hubRank(b.id);
+      return ah - bh || at - bt || String(a.subfield).localeCompare(String(b.subfield));
+    });
+    const ranks = park.fields.map(f => hubRank(f.id));
+    park.rank = ranks.reduce((best, r) => (r[0] < best[0] || (r[0] === best[0] && r[1] < best[1]) ? r : best), [9, 999]);
+    park.distance = Math.min(...park.fields.map(f => distanceFor(f.id) ?? 99));
+    return park;
+  });
+}
