@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-11-26T04:05:49.694Z",
+  "lastUpdated": "2026-11-26T21:10:32.509Z",
   "coverageStart": "2026-11-26",
   "coverageEnd": "2026-12-26",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "3/3 LeagueLab field-sport schedules checked; 4 mapped games; 1 unmapped venues",
-      "eventCount": 4,
-      "leagueCount": 3,
+      "message": "6/6 LeagueLab field-sport schedules checked; 11 mapped games; 1 unmapped venues",
+      "eventCount": 11,
+      "leagueCount": 6,
       "unmappedLocations": [
         "Hutchison Park Field 4"
       ],
@@ -49,7 +49,7 @@
       "provider": "ncsl",
       "sourceUrl": "https://elements.demosphere.com/80738/clubs/schedule/15599430.html",
       "ok": true,
-      "message": "1 exact-field games from public Demosphere pages (0 club rows, 5 field calendars); current as of 11/17/2026 6:11 pm; 1 calendars failed",
+      "message": "1 exact-field games from public Demosphere pages (0 club rows, 5 field calendars); current as of 11/17/2026 6:11 pm",
       "eventCount": 1,
       "calendarCount": 5,
       "currentAsOf": "11/17/2026 6:11 pm",
@@ -121,7 +121,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5610 upcoming rows, 463 mapped turf sessions 2026-11-26 to 2026-12-26). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5579 upcoming rows, 463 mapped turf sessions 2026-11-26 to 2026-12-26). Park fields are not on this calendar.",
       "eventCount": 463,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -3025,7 +3025,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:355035.5964:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:425495.2579:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -4935,6 +4935,16 @@
             "eventId": "4836049"
           },
           {
+            "time": "9:00 PM",
+            "title": "Soccer — Ninos Chucos vs Shakier Shots",
+            "location": "Westfield High School Aux Field",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
             "time": "9:00 PM – 11:00 PM",
             "title": "NCS - Field: FXA Sports (Soccer) — Fairfax County - Neighborhood and Community Services",
             "source": "FCPS Community Use",
@@ -5012,9 +5022,20 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 PM",
+            "title": "Soccer — Amigos United vs A-Team",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5025,9 +5046,20 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 PM",
+            "title": "Soccer — Kingdom FC vs Metaknights",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5038,9 +5070,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "8:00 PM",
+            "title": "Soccer — Glory Boys Fc vs Long-Ball United FC",
+            "location": "Arrowhead Park Turf Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5051,9 +5094,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — Alianza FC vs Entry Level FC",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105736/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5155,9 +5209,20 @@
         "subfield": "Turf Field 2",
         "type": "Turf",
         "location": "Herndon, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:30 PM",
+            "title": "Soccer — Alianza FC vs Rocky FC",
+            "location": "Sully Highlands Park Field 2",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105734/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -10374,9 +10439,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — Benchwarmers United vs Green Tea Shooters",
+            "location": "Arrowhead Park Turf Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105737/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
