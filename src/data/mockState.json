@@ -1,16 +1,20 @@
 {
-  "lastUpdated": "2026-11-27T04:04:07.764Z",
+  "lastUpdated": "2026-11-27T20:54:50.733Z",
   "coverageStart": "2026-11-27",
   "coverageEnd": "2026-12-27",
   "sourceHealth": {
     "fxa": {
       "ok": true,
       "provider": "fxa",
-      "message": "6/6 LeagueLab field-sport schedules checked; 11 mapped games; 1 unmapped venues",
-      "eventCount": 11,
-      "leagueCount": 6,
+      "message": "9/9 LeagueLab field-sport schedules checked; 17 mapped games; 5 unmapped venues",
+      "eventCount": 17,
+      "leagueCount": 9,
       "unmappedLocations": [
-        "Hutchison Park Field 4"
+        "Hutchison Park Field 4",
+        "Hutchison Park Field 4A",
+        "Hutchison Park Field 4B",
+        "Jackson Middle School Field 1A",
+        "Jackson Middle School Field 1B"
       ],
       "sourceUrl": "https://fxasports.leaguelab.com/schedule-finder"
     },
@@ -90,9 +94,11 @@
     "sya": {
       "provider": "sya",
       "sourceUrl": "https://syasports.org/sports/soccer/recreational-soccer/",
-      "ok": false,
-      "message": "read ECONNRESET",
-      "eventCount": 0
+      "ok": true,
+      "message": "Public Otto Sport rec widget checked (5 surfaces); 0 games mapped to catalog fields",
+      "eventCount": 0,
+      "unmappedLocations": [],
+      "seasonId": "6af1f9365fdeeab73b8745b8"
     },
     "fsl": {
       "provider": "fsl",
@@ -119,7 +125,7 @@
     "fcpsCommunityUse": {
       "ok": true,
       "provider": "fcps-community-use",
-      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5579 upcoming rows, 460 mapped turf sessions 2026-11-27 to 2026-12-27). Park fields are not on this calendar.",
+      "message": "Guest calendar checked for Chantilly, Centreville, Oakton, and Westfield (5554 upcoming rows, 460 mapped turf sessions 2026-11-27 to 2026-12-27). Park fields are not on this calendar.",
       "eventCount": 460,
       "sourceUrl": "https://www.communityuse.com/default.asp?acctnum=738652987",
       "unmappedRooms": []
@@ -2260,7 +2266,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:714203.1898:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:400527.2639:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
@@ -5085,9 +5091,20 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — Boca Seniors FC vs Rodents",
+            "location": "EC Lawrence Park Field 3A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5098,9 +5115,20 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Chantilly, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — SOUTH LAKES FC vs Brewventus FC",
+            "location": "EC Lawrence Park Field 3B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105788/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5111,9 +5139,20 @@
         "subfield": "Turf Field 1A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — MAPS vs Silver Panthers",
+            "location": "Arrowhead Park Turf Field 1A",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5124,9 +5163,20 @@
         "subfield": "Turf Field 1B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Soccer — Chilli Peppers FC vs POST-MLS NEXT",
+            "location": "Arrowhead Park Turf Field 1B",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/105789/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5137,9 +5187,30 @@
         "subfield": "Turf Field 3A",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Flag Football — God Bods vs Strawhats",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Flag Football — Cheesecake and Cappuccinos vs LOUD",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
@@ -5150,9 +5221,30 @@
         "subfield": "Turf Field 3B",
         "type": "Turf",
         "location": "Centreville, VA",
-        "status": "unknown",
-        "statusReason": "Not verified — fairfax-county-permits unavailable. A missing event is not evidence the field is free.",
-        "events": [],
+        "status": "occupied",
+        "statusReason": "Known conflict from a connected public schedule",
+        "events": [
+          {
+            "time": "7:00 PM",
+            "title": "Flag Football — God Bods vs Strawhats",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          },
+          {
+            "time": "8:00 PM",
+            "title": "Flag Football — Cheesecake and Cappuccinos vs LOUD",
+            "location": "Arrowhead Park Turf Field 3",
+            "source": "FXA Sports",
+            "sourceUrl": "https://fxasports.leaguelab.com/league/103132/schedule",
+            "precision": "exact_subfield",
+            "confidence": "verified_live",
+            "status": "scheduled"
+          }
+        ],
         "unavailableSources": [
           "fairfax-county-permits"
         ]
