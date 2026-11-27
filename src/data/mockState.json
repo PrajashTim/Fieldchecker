@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-27T00:58:08.547Z",
+  "lastUpdated": "2026-11-27T04:04:07.764Z",
   "coverageStart": "2026-11-27",
   "coverageEnd": "2026-12-27",
   "sourceHealth": {
@@ -90,11 +90,9 @@
     "sya": {
       "provider": "sya",
       "sourceUrl": "https://syasports.org/sports/soccer/recreational-soccer/",
-      "ok": true,
-      "message": "Public Otto Sport rec widget checked (5 surfaces); 0 games mapped to catalog fields",
-      "eventCount": 0,
-      "unmappedLocations": [],
-      "seasonId": "6af1f9365fdeeab73b8745b8"
+      "ok": false,
+      "message": "read ECONNRESET",
+      "eventCount": 0
     },
     "fsl": {
       "provider": "fsl",
@@ -2262,7 +2260,7 @@
             "title": "Soccer — Elite Kickers Soccer Club - N1 EKS 2011B (Elite) vs LMVS LMVSC N1 B2010/11",
             "location": "Oakmont Center (previously Oak Marr) Field #2",
             "source": "NCSL",
-            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:289284.8111:80738+Elements/Display+E+46241+++++116702823+15615362",
+            "sourceUrl": "https://elements.demosphere.com/scripts/runisa.dll?M2:gp:714203.1898:80738+Elements/Display+E+46241+++++116702823+15615362",
             "precision": "exact_subfield",
             "confidence": "verified_live",
             "status": "rescheduled",
